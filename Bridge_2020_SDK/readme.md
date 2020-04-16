@@ -6,12 +6,12 @@ _____________________________________________________________________________
 This readme contains the latest information for the Adobe Bridge 2020 SDK. The 
 information applies to Adobe Bridge 2020. It has the following sections:
 
-    [Introduction](#1-introduction)
-    [SDK content overview](#2-sdk-content-overview)
-    [Development environment](#3-development-environment)
-    [Running snippets](#4-running-snippets)
-    [Known issues in the SDK](#5-known-issues-in-the-sdk)
-    [Adobe Solutions Network](#6-adobe-solutions-network)
+ 1. [Introduction](#1-introduction)
+ 2. [SDK content overview](#2-sdk-content-overview)
+ 3. [Development environment](#3-development-environment)
+ 4. [Running snippets](#4-running-snippets-samples)
+ 5. [Known issues in the SDK](#5-known-issues-in-the-sdk)
+ 6. [Adobe Solutions Network](#6-adobe-partner-connection)
 
 ## 1. Introduction
 
@@ -75,7 +75,6 @@ platform: Microsoft Visual Studio 2017 version 15.5.7 for Windows and XCode 9.3 
 
 ## 4. Running snippets/ samples
 
-
  1. Start Adobe Bridge 2020.
  2. Start the ExtendScript Toolkit.
  3. From the ExtendScript Toolkit, open the .jsx file that you want to run.
@@ -87,7 +86,6 @@ platform: Microsoft Visual Studio 2017 version 15.5.7 for Windows and XCode 9.3 
 
 
 ## 5. Known issues in the SDK
-
 
 The following are issues in this release:
 
@@ -110,7 +108,6 @@ The following are issues in this release:
 
 ## 6. Adobe Partner Connection
 
-
 To learn more about the Adobe Partner Connection Programs, go to:
 
 http://www.adobe.com/partners
@@ -119,34 +116,34 @@ or contact one of the following locations:
 
 In the USA or Canada, contact:
 
-Adobe Partner Connection
-3601 SW Murray Boulevard, Suite 200
-Beaverton, OR 97005
-Phone: 800 685.3510
-Fax: 800 955.1610
-Membership questions email: partners@adobe.com
+> Adobe Partner Connection
+> 3601 SW Murray Boulevard, Suite 200
+> Beaverton, OR 97005
+> Phone: 800 685.3510
+> Fax: 800 955.1610
+> Membership questions email: partners@adobe.com
 
 In Europe, the Middle East or Africa, contact:
 
-Adobe Partner Connection
-Postbus 20623
-1001 NP Amsterdam
-The Netherlands
-Phone: +31 20 582 0850
-Fax: +31 20 582 0851
-Membership questions email: europartners@adobe.com
+> Adobe Partner Connection
+> Postbus 20623
+> 1001 NP Amsterdam
+> The Netherlands
+> Phone: +31 20 582 0850
+> Fax: +31 20 582 0851
+> Membership questions email: europartners@adobe.com
  
 
 In South America or Asia-Pacific, contact:
 
-Adobe Partner Connection
-45th Floor,
-One San Miguel Avenue Building San Miguel Avenue,
-Corner Shaw Boulevard,
-Ortigas Center Pasig City, Metro Manila 1600 Philippines 
-Phone +63 2 636 8450 
-Fax +63 2 636 8534 
-Membership questions email: apacpartners@adobe.com
+> Adobe Partner Connection
+> 45th Floor,
+> One San Miguel Avenue Building San Miguel Avenue,
+> Corner Shaw Boulevard,
+> Ortigas Center Pasig City, Metro Manila 1600 Philippines 
+> Phone +63 2 636 8450 
+> Fax +63 2 636 8534 
+> Membership questions email: apacpartners@adobe.com
  
 
 In Japan, contact:
