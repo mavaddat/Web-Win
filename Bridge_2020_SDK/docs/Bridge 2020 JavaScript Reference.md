@@ -92,8 +92,7 @@
 >
 > [JavaScript conventions 8](#javascript-conventions)
 >
-> [Where to go for more information
-> 8](#where-to-go-for-more-information)
+> [Where to go for more information 8](#where-to-go-for-more-information)
 
 1. [Adobe Bridge DOM Object Reference > 10](#adobe-bridge-dom-object-reference)
 
@@ -175,18 +174,15 @@
 
 [MenuElement properties 61](#menuelement-properties)
 
-[Adobe Bridge menu and command identifiers
-63](#adobe-bridge-menu-and-command-identifiers)
+[Adobe Bridge menu and command identifiers 63](#adobe-bridge-menu-and-command-identifiers)
 
 [Top-level menu identifiers 63](#top-level-menu-identifiers)
 
-[Menu bar submenu and command identifiers
-64](#menu-bar-submenu-and-command-identifiers)
+[Menu bar submenu and command identifiers 64](#menu-bar-submenu-and-command-identifiers)
 
 [Toolbar menus and commands 69](#toolbar-menus-and-commands)
 
-[Context and flyout submenus and commands
-71](#context-and-flyout-submenus-and-commands)
+[Context and flyout submenus and commands 71](#context-and-flyout-submenus-and-commands)
 
 [Metadata Object 78](#metadata-object)
 
@@ -242,8 +238,7 @@
 
 [Thumbnail object constructor 98](#thumbnail-object-constructor)
 
-[Multiple references to the same node
-99](#multiple-references-to-the-same-node)
+[Multiple references to the same node 99](#multiple-references-to-the-same-node)
 
 [Thumbnail properties 100](#thumbnail-properties)
 
@@ -273,8 +268,7 @@
 
 > [ExtensionHandler Object 113](#extensionhandler-object)
 
-[ExtensionHandler object constructor
-113](#extensionhandler-object-constructor)
+[ExtensionHandler object constructor 113](#extensionhandler-object-constructor)
 
 [ExtensionHandler properties 114](#extensionhandler-properties)
 
@@ -314,11 +308,9 @@
 
 [InfosetMemberDescription Object 138](#infosetmemberdescription-object)
 
-[InfosetMemberDescription constructor
-138](#infosetmemberdescription-constructor)
+[InfosetMemberDescription constructor 138](#infosetmemberdescription-constructor)
 
-[InfosetMemberDescription properties
-138](#infosetmemberdescription-properties)
+[InfosetMemberDescription properties 138](#infosetmemberdescription-properties)
 
 [ModalOperator Object 139](#modaloperator-object)
 
@@ -354,43 +346,37 @@
 
 [SearchCondition Object 150](#searchcondition-object)
 
-> [SearchCondition object constructor
-> 150](#searchcondition-object-constructor)
+> [SearchCondition object constructor 150](#searchcondition-object-constructor)
 >
 > [SearchCondition properties 150](#searchcondition-properties)
 >
 > [SearchCriteria Object 151](#searchcriteria-object)
 >
-> [SearchCriteria object constructor
-> 151](#searchcriteria-object-constructor)
+> [SearchCriteria object constructor 151](#searchcriteria-object-constructor)
 >
 > [SearchCriteria properties 151](#searchcriteria-properties)
 >
 > [SearchDefinition Object 153](#searchdefinition-object)
 >
-> [SearchDefinition object constructor
-> 153](#searchdefinition-object-constructor)
+> [SearchDefinition object constructor 153](#searchdefinition-object-constructor)
 >
 > [SearchDefinition properties 153](#searchdefinition-properties)
 >
 > [SearchDetails Object 154](#searchdetails-object)
 >
-> [SearchDetails object constructor
-> 154](#searchdetails-object-constructor)
+> [SearchDetails object constructor 154](#searchdetails-object-constructor)
 >
 > [SearchDetails properties 154](#searchdetails-properties)
 >
 > [SearchSpecification Object 155](#searchspecification-object)
 >
-> [SearchSpecification object constructor
-> 155](#searchspecification-object-constructor)
+> [SearchSpecification object constructor 155](#searchspecification-object-constructor)
 >
 > [SearchSpecification properties 155](#searchspecification-properties)
 >
 > [SortCriterion Object 157](#sortcriterion-object)
 >
-> [SortCriterion object constructor
-> 157](#sortcriterion-object-constructor)
+> [SortCriterion object constructor 157](#sortcriterion-object-constructor)
 >
 > [SortCriterion properties 157](#sortcriterion-properties)
 
@@ -400,16 +386,13 @@
 >
 > [FtpConnection object 159](#ftpconnection-object)
 >
-> [Using File objects with the FtpConnection object
-> 159](#using-file-objects-with-the-ftpconnection-object)
+> [Using File objects with the FtpConnection object 159](#using-file-objects-with-the-ftpconnection-object)
 >
-> [Synchronous and asynchronous operation
-> 160](#synchronous-and-asynchronous-operation)
+> [Synchronous and asynchronous operation 160](#synchronous-and-asynchronous-operation)
 
 [FtpConnection object reference 161](#ftpconnection-object-reference)
 
-[FtpConnection object constructor
-161](#ftpconnection-object-constructor)
+[FtpConnection object constructor 161](#ftpconnection-object-constructor)
 
 [FtpConnection object properties 161](#ftpconnection-object-properties)
 
@@ -425,11 +408,9 @@
 
 [HttpConnection object reference 172](#httpconnection-object-reference)
 
-[HttpConnection object constructor
-172](#httpconnection-object-constructor)
+[HttpConnection object constructor 172](#httpconnection-object-constructor)
 
-[HttpConnection object properties
-172](#httpconnection-object-properties)
+[HttpConnection object properties 172](#httpconnection-object-properties)
 
 [HttpConnection object functions 176](#httpconnection-object-functions)
 
@@ -472,24 +453,22 @@
 >
 > This book contains the following chapters:
 
-- [[Chapter 1, "Adobe Bridge DOM Object]{.underline}
-
-  > [Reference]{.underline}](#adobe-bridge-dom-object-reference),"
+- [Chapter 1, "Adobe Bridge DOM Object Reference](#adobe-bridge-dom-object-reference),"
   > provides a complete API reference for the objects, properties, and
   > functions defined in the Adobe Bridge document object model, which
   > any script can use to program Adobe Bridge functionality and
   > interactions with users.
 
-- [[Chapter 2, "Node-Handling Extension Object
+- [ [Chapter 2, "Node-Handling Extension Object
 
-  > Reference]{.underline}](#node-handling-extension-object-reference),"
+  > Reference](#node-handling-extension-object-reference),"
   > provides a complete API reference for the objects, properties, and
   > functions that allow a product or plug-in developer to extend
   > Adobe Bridge functionality, in order to provide compatibility with
   > another product or plug-in.
 
-- [[Chapter 3, "External Communication
-  > Tools]{.underline}](#external-communication-tools)," provides a
+- [ [Chapter 3, "External Communication
+  > Tools](#external-communication-tools)," provides a
   > complete API reference for the Web Access library, which supplies
   > tools for communicating with other computers or the Internet using
   > standard protocols FTP and HTTP.
@@ -581,13 +560,8 @@ including:
 > publicly available web resources or any of numerous works on this
 > subject, including the following:
 
-- []{#\_bookmark10 .anchor}The public JavaScript standards organization
-  > web site:
-  > [[www.ecma-international.org]{.underline}](http://www.ecma-international.org/)
-
-```{=html}
-<!-- -->
-```
+- []The public JavaScript standards organization
+  > web site: [www.ecma-international.org](http://www.ecma-international.org/)
 
 - _JavaScript: The Definitive Guide, 4th Edition_; Flanagan, D.;
 
@@ -608,12 +582,12 @@ including:
 > Adobe Bridge document object model (DOM). An overview of the objects
 > and usage details are provided in the _Adobe Bridge JavaScript Guide_.
 >
-> []{#\_bookmark13 .anchor}This chapter presents the primary objects.
+> [ ]{#\_bookmark13 .anchor}This chapter presents the primary objects.
 > Additional objects are available to advanced developers who wish to
 > extend the node-handling capability of Adobe Bridge by defined their
 > own node types; these objects are described in [[Chapter 2,
 > "Node-Handling Extension Object
-> Reference]{.underline}](#node-handling-extension-object-reference).\"
+> Reference](#node-handling-extension-object-reference).\"
 >
 > In addition to these Adobe Bridge-specific objects, an API common to
 > most JavaScript-enabled Adobe applications is supplied by
@@ -621,7 +595,7 @@ including:
 > tools are described in detail in the _JavaScript Tools Guide_. The
 > tools include:
 
-- []{#bookmark14 .anchor}_ScriptUI_ objects that provide
+- [ ]{#bookmark14 .anchor}_ScriptUI_ objects that provide
   > user-interface capability.
 
 ```{=html}
@@ -644,37 +618,34 @@ including:
 > each object, complete syntax details are provided for the constructor,
 > properties, and functions.
 
-[[AdobePortfolio Object]{.underline}](#adobeportfolio-object) Creates a new portfolio project based on the project name and the list of files provided.
+[[AdobePortfolio Object](#adobeportfolio-object) Creates a new portfolio project based on the project name and the list of files provided.
 
 ---
 
-[[AdobeStock Object]{.underline}](#adobestock-object) Provides capability to upload selected images in Bridge to Adobe Stock directly.
-[[App Object]{.underline}](#app-object) Global information about the Adobe Bridge application.
-[[BitmapData Object]{.underline}](#bitmapdata-object) Represents an image as a matrix of pixels.
-[[Color Object]{.underline}](#color-object) An RGB color description.
-[[Document Object]{.underline}](#document-object) An Adobe Bridge browser window.
-[[Event Object]{.underline}](#event-object) A user-interaction event.
-[[Favorites]{.underline} [Object]{.underline}](#favorites-object) Two arrays of the thumbnails shown in the Standard and User sections of the Favorites palette.
-[[IconListPanelette Object]{.underline}](#iconlistpanelette-object) A member sub-panel in an Inspector panel that displays two or three columns.
-[[InspectorPanel Object]{.underline}](#inspectorpanel-object) An object-inspection panel in the tabbed palettes.
-[[MenuElement Object]{.underline}](#menuelement-object) Access to the Adobe Bridge menus and commands.
-[[Metadata Object]{.underline}](#metadata-object) Access to file metadata through a thumbnail.
-
-**10**
-
-[[NavBar Object]{.underline}](#navbar-object) A configurable navigation bar that can display user-interface controls.
+[AdobeStock Object](#adobestock-object) Provides capability to upload selected images in Bridge to Adobe Stock directly.
+[App Object](#app-object) Global information about the Adobe Bridge application.
+[BitmapData Object](#bitmapdata-object) Represents an image as a matrix of pixels.
+[Color Object](#color-object) An RGB color description.
+[Document Object](#document-object) An Adobe Bridge browser window.
+[Event Object](#event-object) A user-interaction event.
+[FavoritesObject](#favorites-object) Two arrays of the thumbnails shown in the Standard and User sections of the Favorites palette.
+[IconListPanelette Object](#iconlistpanelette-object) A member sub-panel in an Inspector panel that displays two or three columns.
+[InspectorPanel Object](#inspectorpanel-object) An object-inspection panel in the tabbed palettes.
+[MenuElement Object](#menuelement-object) Access to the Adobe Bridge menus and commands.
+[Metadata Object](#metadata-object) Access to file metadata through a thumbnail.
+[NavBar Object](#navbar-object) A configurable navigation bar that can display user-interface controls.
 
 ---
 
-[[Panelette Base Class]{.underline}](#panelette-base-class) A base class for sub-panels in an Inspector panel.
-[[PDFOutput Object]{.underline}](#pdfoutput-object) Provides capability to generate a PDF using the Bridge\'s native PDF Output module.
-[[Preferences]{.underline} [Object]{.underline}](#preferences-object) Access to application preferences.
-[[PreferencesDialog]{.underline} [Object]{.underline}](#preferencesdialog-object) Access to the Preferences dialog.
-[[QuickSearch Object]{.underline}](#quicksearch-object) Provides capability to use bridge quick search feature
-[[TabbedPalette Object]{.underline}](#tabbedpalette-object) A tabbed panel in the Adobe Bridge browser window.
-[[TextPanelette Object]{.underline}](#textpanelette-object) A member sub-panel in an Inspector panel that displays text.
-[[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object) A navigable node representing a file, folder, or web page.
-[[ThumbnailPanelette Object]{.underline}](#thumbnailpanelette-object) A member sub-panel in an Inspector panel that displays thumbnails.
+[Panelette Base Class](#panelette-base-class) A base class for sub-panels in an Inspector panel.
+[PDFOutput Object](#pdfoutput-object) Provides capability to generate a PDF using the Bridge\'s native PDF Output module.
+[PreferencesObject](#preferences-object) Access to application preferences.
+[PreferencesDialogObject](#preferencesdialog-object) Access to the Preferences dialog.
+[QuickSearch Object](#quicksearch-object) Provides capability to use bridge quick search feature
+[TabbedPalette Object](#tabbedpalette-object) A tabbed panel in the Adobe Bridge browser window.
+[TextPanelette Object](#textpanelette-object) A member sub-panel in an Inspector panel that displays text.
+[ThumbnailObject](#thumbnail-object) A navigable node representing a file, folder, or web page.
+[ThumbnailPanelette Object](#thumbnailpanelette-object) A member sub-panel in an Inspector panel that displays thumbnails.
 
 ## AdobePortfolio Object
 
@@ -763,8 +734,7 @@ including:
 | | | [[FilterDescription] |
 | | | {.underline}](#filte |
 | | | rdescription-object) |
-| | | > [[Object]{ |
-| | | .underline}](#filter |
+| | | > [Object](#filter |
 | | | description-object)s |
 | | | > used to populate |
 | | | > the Filter |
@@ -775,7 +745,7 @@ including:
 | .anchor | > SortCriterion | > the default |
 | }defaultSortCriteria | | > [[SortCriterion |
 | | | > Obje |
-| | | ct]{.underline}](#so |
+| | | ct](#so |
 | | | rtcriterion-object)s |
 | | | > used to sort the |
 | | | > contents of |
@@ -832,11 +802,9 @@ including:
 | | | > Read/write. |
 | | | > |
 | | | > During an |
-| | | > [[open]{.underl |
-| | | ine}](#_bookmark120) |
+| | | > [open](#_bookmark120) |
 | | | > or |
-| | | > [[create]{.underl |
-| | | ine}](#_bookmark118) |
+| | | > [create](#_bookmark118) |
 | | | > event, this value |
 | | | > still contains the |
 | | | > previous Document |
@@ -888,8 +856,7 @@ including:
 | | | > function takes one |
 | | | > argument, an |
 | | | > [[Event |
-| | | > Object]{.underli |
-| | | ne}](#event-object), |
+| | | > Object](#event-object), |
 | | | > and returns a |
 | | | > result object |
 | | | > |
@@ -952,9 +919,9 @@ including:
 | | | ](#favorites-object) |
 | | | > contains two |
 | | | > arrays of |
-| | | > [[Thumbnail |
+| | | > [Thumbnail |
 | | | > O |
-| | | bject]{.underline}]( |
+| | | bject]( |
 | | | #thumbnail-object)s, |
 | | | > for the nodes |
 | | | > shown in the two |
@@ -978,10 +945,10 @@ including:
 | []{#\_bookmark30 | > Array of | > The collection of |
 | .an | > InspectorPanel | > script-defined |
 | chor}inspectorPanels | | > [[InspectorPan |
-| | | el]{.underline}](#in |
+| | | el](#in |
 | | | spectorpanel-object) |
-| | | > [[Objec |
-| | | t]{.underline}](#ins |
+| | | > [Objec |
+| | | t](#ins |
 | | | pectorpanel-object)s |
 | | | > that define |
 | | | > Inspector panels |
@@ -1165,8 +1132,7 @@ including:
 | | | > identifier and the |
 | | | > localized display name; |
 | | | > see |
-| | | > Document.[[workspace]{ |
-| | | .underline}](#_bookmark91). |
+| | | > Document.[workspace](#_bookmark91). |
 | | | > Read only. |
 +------------------+-------------------+-----------------------------+
 
@@ -1188,9 +1154,8 @@ including:
 | | > |
 | | > Returns true on success. |
 +==================================+==================================+
-| > _thumbnails_ | > An array of [[Thumbnail |
-| | > Object]{. |
-| | underline}](#thumbnail-object)s. |
+| > _thumbnails_ | > An array of [Thumbnail |
+| | > Object](#thumbnail-object)s. |
 +----------------------------------+----------------------------------+
 | addCollectionMember() | > Adds a member thumbnail, or |
 | app.addCollection (_collection, | > set of member thumbnails, to a |
@@ -1210,9 +1175,8 @@ including:
 | > _member_ | > A [[Thumbnail]{.underline} |
 | | > [Object] |
 | | {.underline}](#thumbnail-object) |
-| | > or array of [[Thumbnail |
-| | > Object]{ |
-| | .underline}](#thumbnail-object)s |
+| | > or array of [Thumbnail |
+| | > Object](#thumbnail-object)s |
 | | > to be added to the |
 +----------------------------------+----------------------------------+
 | | > collection. |
@@ -1361,8 +1325,7 @@ scope
 >
 > Returns true on success.
 >
-> _collection_ The [[Thumbnail]{.underline}
-> [Object]{.underline}](#thumbnail-object) for the collection node, as
+> _collection_ The [ThumbnailObject](#thumbnail-object) for the collection node, as
 > returned by
 
 app.[[createCollection()]{.underline}](#_bookmark40).
@@ -1384,12 +1347,10 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 >
 > execution at an appropriate time. Returns undefined.
 >
-> _operator_ The [[Operator]{.underline}
-> [Class]{.underline}](#operator-class) instance that encapsulates the
+> _operator_ The [OperatorClass](#operator-class) instance that encapsulates the
 > operation, returned by an
 
-[[ExtensionModel]{.underline}
-[Object]{.underline}](#extensionmodel-object) method.
+[ExtensionModelObject](#extensionmodel-object) method.
 
 > exportKeywordsToFile() app.exportKeywordsToFile (_keywordsFile_)
 >
@@ -1405,11 +1366,10 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 >
 > Retrieves the collection members for a collection node.
 >
-> Returns an array of [[Thumbnail
-> Object]{.underline}](#thumbnail-object)s for the collection members.
+> Returns an array of [Thumbnail
+> Object](#thumbnail-object)s for the collection members.
 >
-> _collection_ The [[Thumbnail]{.underline}
-> [Object]{.underline}](#thumbnail-object) for the collection node, as
+> _collection_ The [ThumbnailObject](#thumbnail-object) for the collection node, as
 > returned by
 
 app.[[createCollection()]{.underline}](#_bookmark40).
@@ -1425,8 +1385,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > Retrieves all collection nodes, as created with
 > [[createCollection()]{.underline}](#_bookmark40).
 >
-> Returns an array of [[Thumbnail
-> Object]{.underline}](#thumbnail-object)s for the collection nodes.
+> Returns an array of [Thumbnail
+> Object](#thumbnail-object)s for the collection nodes.
 >
 > Retrieves all smart collection nodes, as created with
 > createSmartCollection().
@@ -1521,9 +1481,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > _searchSpec_ | {.underline}](#thumbnail-object) |
 | | > for the target container node. |
 | | > |
-| | > A [[SearchSpecification |
-| | > Object]{.underlin |
-| | e}](#searchspecification-object) |
+| | > A [SearchSpecification |
+| | > Object](#searchspecification-object) |
 | | > used to generate this search |
 | | > result. |
 +----------------------------------+----------------------------------+
@@ -1561,18 +1520,17 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > Returns undefined. |
 +======================+======================+======================+
 | > _operator_ | > The | |
-| | > [[O | |
+| | > [O | |
 | | perator]{.underline} | |
-| | > [Class]{.underlin | |
-| | e}](#operator-class) | |
+| | > [Class](#operator-class) | |
 | | > instance that | |
 | | > encapsulates the | |
 | | > operation, | |
 | | > returned by an | |
-| | > [[Extensi | |
+| | > [Extensi | |
 | | onModel]{.underline} | |
 | | > [Obje | |
-| | ct]{.underline}](#ex | |
+| | ct](#ex | |
 | | tensionmodel-object) | |
 | | > method. | |
 +----------------------+----------------------+----------------------+
@@ -1683,16 +1641,15 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | {.underline}](#exten | |
 | | sionhandler-object). | |
 | | > | |
-| | > The [[Infoset | |
-| | > Object]{.underline | |
-| | }](#infoset-object). | |
+| | > The [Infoset | |
+| | > Object](#infoset-object). | |
 +----------------------+----------------------+----------------------+
 
 +----------------------------------+----------------------------------+
 | []{#\_bookmark50 | > Registers a script-defined |
 | .anchor}registerInspectorPanel() | > Inspector panel, adding it to |
-| | > app.[[inspectorPan |
-| app.registerInspectorPanel | els]{.underline}](#_bookmark30). |
+| | > app.[inspectorPan |
+| app.registerInspectorPanel | els](#_bookmark30). |
 | (_panel_) | > This panel appears in the |
 | | > Inspector palette unless the |
 | | > selected thumbnail explicitly |
@@ -1700,9 +1657,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > |
 | | > Returns undefined. |
 +==================================+==================================+
-| > _panel_ | > The [[InspectorPanel |
-| | > Object]{.unde |
-| | rline}](#inspectorpanel-object). |
+| > _panel_ | > The [InspectorPanel |
+| | > Object](#inspectorpanel-object). |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark51 | > Associates a URI prefix string |
 | .anchor}registerPrefix() | > with a node-handling |
@@ -1718,9 +1674,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > _handler_ | > |
 | | > The |
 | | > |
-| | [[ExtensionHandler]{.underline} |
-| | > [Object]{.underl |
-| | ine}](#extensionhandler-object). |
+| | [ExtensionHandler]{.underline} |
+| | > [Object](#extensionhandler-object). |
 +----------------------------------+----------------------------------+
 | removeCollectionMember() | > Removes one or more member |
 | app.removeCollectionMember | > thumbnails from a collection. |
@@ -1739,9 +1694,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > The [[Thumbnail]{.underline} |
 | | > [Object] |
 | | {.underline}](#thumbnail-object) |
-| | > or array of [[Thumbnail |
-| | > Object]{ |
-| | .underline}](#thumbnail-object)s |
+| | > or array of [Thumbnail |
+| | > Object](#thumbnail-object)s |
 | | > for the member or members to |
 | | > be removed. |
 +----------------------------------+----------------------------------+
@@ -1818,9 +1772,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > |
 | | > Returns undefined. |
 +----------------------------------+----------------------------------+
-| > _sources_ | > An array of [[Thumbnail |
-| | > Object]{ |
-| | .underline}](#thumbnail-object)s |
+| > _sources_ | > An array of [Thumbnail |
+| | > Object](#thumbnail-object)s |
 | | > or file path strings. |
 +----------------------------------+----------------------------------+
 | [[]{#\_bookmark53 | > Executes a script after a |
@@ -1892,9 +1845,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 +----------------------------------+----------------------------------+
 | > _handler_ | > The |
 | | > |
-| | [[ExtensionHandler]{.underline} |
-| | > [Object]{.underl |
-| | ine}](#extensionhandler-object). |
+| | [ExtensionHandler]{.underline} |
+| | > [Object](#extensionhandler-object). |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark55 | > Removes the association |
 | .anchor}unregisterInfoset() | > between an extension and an |
@@ -1909,13 +1861,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 +----------------------------------+----------------------------------+
 | > _handler_ The | |
 | > | |
-| [[ExtensionHandler]{.underline} | |
-| > [Object]{.underl | |
-| ine}](#extensionhandler-object). | |
+| [ExtensionHandler]{.underline} | |
+| > [Object](#extensionhandler-object). | |
 | > | |
-| > _infoset_ The [[Infoset | |
+| > _infoset_ The [Infoset | |
 | > Object | |
-| ]{.underline}](#infoset-object). | |
+| ](#infoset-object). | |
 +==================================+==================================+
 | []{#\_bookmark56 | > Removes a script-defined |
 | .a | > Inspector panel from the |
@@ -1925,9 +1876,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > |
 | | > Returns undefined. |
 +----------------------------------+----------------------------------+
-| > _panel_ The [[InspectorPanel | |
-| > Object]{.unde | |
-| rline}](#inspectorpanel-object). | |
+| > _panel_ The [InspectorPanel | |
+| > Object](#inspectorpanel-object). | |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark57 | > Removes a node URI prefix from |
 | .anchor}unregisterPrefix() | > the list of prefixes that the |
@@ -1940,9 +1890,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > | |
 | > _handler_ The | |
 | > | |
-| [[ExtensionHandler]{.underline} | |
-| > [Object]{.underl | |
-| ine}](#extensionhandler-object). | |
+| [ExtensionHandler]{.underline} | |
+| > [Object](#extensionhandler-object). | |
 +----------------------------------+----------------------------------+
 
 ## BitmapData Object
@@ -2170,9 +2119,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Returns an integer that |
 | | > represents the ARGB pixel |
 | | > value. This can be used to |
-| | > create a [[Color]{.underline} |
+| | > create a [Color]{.underline} |
 | | > [Obje |
-| | ct]{.underline}](#color-object). |
+| | ct](#color-object). |
 +----------------------------------+----------------------------------+
 | > _x, y_ The pixel coordinates | |
 | > relative to this bitmap's | |
@@ -2185,9 +2134,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Returns an integer that |
 | | > represents the ARGB pixel |
 | | > value. This can be used to |
-| | > create a [[Color]{.underline} |
+| | > create a [Color]{.underline} |
 | | > [Obje |
-| | ct]{.underline}](#color-object). |
+| | ct](#color-object). |
 +----------------------------------+----------------------------------+
 | > _x, y_ | > The pixel coordinates relative |
 | | > to this bitmap's origin, the |
@@ -2287,9 +2236,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > to this bitmap's origin, the |
 | | > top left. |
 | | > |
-| | > A [[Color]{.underline} |
+| | > A [Color]{.underline} |
 | | > [Obje |
-| | ct]{.underline}](#color-object), |
+| | ct](#color-object), |
 | | > or an integer that represents |
 | | > the RGB pixel value, or a |
 | | > predefined color name string. |
@@ -2306,9 +2255,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > relative to this bitmap's | |
 | > origin, the top left. | |
 | > | |
-| > _color_ A [[Color]{.underline} | |
+| > _color_ A [Color]{.underline} | |
 | > [Obje | |
-| ct]{.underline}](#color-object), | |
+| ct](#color-object), | |
 | > or an integer that represents | |
 | > the RGB pixel value, or a | |
 | > predefined color name string. | |
@@ -2374,9 +2323,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 +------------+-------------+-----------------------------------------+
 | > _osPath_ | > String | > The path or URL for the file or page. |
 +============+=============+=========================================+
-| > _thumb_ | > Thumbnail | > The [[Thumbnail |
+| > _thumb_ | > Thumbnail | > The [Thumbnail |
 | | | > |
-| | | Object]{.underline}](#thumbnail-object) |
+| | | Object](#thumbnail-object) |
 | | | > for the file or page. |
 +------------+-------------+-----------------------------------------+
 | > _file_ | > File | > The File object for the selected |
@@ -2404,8 +2353,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > Preferences dialog, and |
 | | | > any value set in |
 | | | > Prefere |
-| | | nces.[[extraMetadata]{.un |
-| | | derline}](#_bookmark219), |
+| | | nces.[extraMetadata](#_bookmark219), |
 | | | > but does not change the |
 | | | > preference values. |
 | | | > |
@@ -2492,8 +2440,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > showing the panels |
 | | | > listed in |
 | | | > app.[[insp |
-| | | ectorPanels]{.underl |
-| | | ine}](#_bookmark30). |
+| | | ectorPanels](#_bookmark30). |
 | | | > When false, the |
 | | | > Inspector is not |
 | | | > shown. Read/write. |
@@ -2521,8 +2468,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > selected stack. |
 | | | > See |
 | | | > Docume |
-| | | nt.[[stacks]{.underl |
-| | | ine}](#_bookmark89). |
+| | | nt.[stacks](#_bookmark89). |
 | | | > |
 | | | > Read only. |
 +----------------------+----------------------+----------------------+
@@ -2639,8 +2585,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > predefined |
 | | | > [ |
 | | | [NavBar]{.underline} |
-| | | > [Object]{.underlin |
-| | | e}](#navbar-object)s |
+| | | > [Object](#navbar-object)s |
 | | | > for the |
 | | | > configurable |
 | | | > navigation bars. |
@@ -2701,7 +2646,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | []{#\_bookmark83 | > Array of | > A collection of |
 | .anchor}palettes | > TabbedPalette | > [[TabbedPalette |
 | | | > Obj |
-| | | ect]{.underline}](#t |
+| | | ect](#t |
 | | | abbedpalette-object) |
 | | | > for all default |
 | | | > and script-defined |
@@ -2742,9 +2687,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | ationMode()]{.underl |
 | | | ine}](#_bookmark102) |
 | | | > and |
-| | | > [[pres |
-| | | entationPath]{.under |
-| | | line}](#_bookmark84) |
+| | | > [pres |
+| | | entationPath](#_bookmark84) |
 | | | > now support the |
 | | | > \"browser\" mode |
 | | | > only. |
@@ -2764,7 +2708,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > page, use a |
 | | | > [[TabbedPalette |
 | | | > Obje |
-| | | ct]{.underline}](#ta |
+| | | ct](#ta |
 | | | bbedpalette-object). |
 +----------------------+----------------------+----------------------+
 | []{#\_bookmark85 | > Number | > The number of |
@@ -2806,8 +2750,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > methods. A script |
 | | | > should wait until |
 | | | > the |
-| | | > [[loaded]{.underl |
-| | | ine}](#_bookmark119) |
+| | | > [loaded](#_bookmark119) |
 | | | > event has occurred |
 | | | > before making |
 | | | > calls to document |
@@ -2822,9 +2765,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > thumbnails, or |
 | | | > those for files of |
 | | | > a given type. Use |
-| | | > [[group |
-| | | edSelections]{.under |
-| | | line}](#_bookmark81) |
+| | | > [group |
+| | | edSelections](#_bookmark81) |
 | | | > to include |
 | | | > thumbnails that |
 | | | > are in selected |
@@ -2849,9 +2791,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > process(sel\[i\]); |
 | | | > |
 | | | > Also, use |
-| | | > [[sel |
-| | | ectionLength]{.under |
-| | | line}](#_bookmark85) |
+| | | > [sel |
+| | | ectionLength](#_bookmark85) |
 | | | > when possible, |
 | | | > rather than |
 | | | > |
@@ -2870,8 +2811,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > the Content pane. |
 | | | > This overrides the |
 | | | > |
-| | | [[ShowName]{.underl |
-| | | ine}](#_bookmark222) |
+| | | [[ShowName](#_bookmark222) |
 | | | > preference value. |
 | | | > Read/write. |
 +----------------------+----------------------+----------------------+
@@ -2883,7 +2823,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > References a |
 | | | > [[SortCriterion |
 | | | > O |
-| | | bject]{.underline}](# |
+| | | bject](# |
 | | | sortcriterion-object) |
 | | | > using an array |
 | | | > containing one |
@@ -2897,13 +2837,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | - The type value |
 | | | > corresponds to |
 | | | > the |
-| | | > [[type]{.under |
-| | | line}](#_bookmark437) |
+| | | > [type](#_bookmark437) |
 | | | > property of a |
-| | | > [[SortC |
+| | | > [SortC |
 | | | riterion]{.underline} |
 | | | > [Ob |
-| | | ject]{.underline}](#s |
+| | | ject](#s |
 | | | ortcriterion-object). |
 | | | > It is |
 | | | > read-only, and |
@@ -2922,12 +2861,11 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | - The name value |
 | | | > corresponds to |
 | | | > the |
-| | | > [[name]{.under |
-| | | line}](#_bookmark436) |
+| | | > [name](#_bookmark436) |
 | | | > property of a |
-| | | > [[SortCriterion |
+| | | > [SortCriterion |
 | | | > Ob |
-| | | ject]{.underline}](#s |
+| | | ject](#s |
 | | | ortcriterion-object), |
 | | | > and identifies |
 | | | > the object that |
@@ -2999,7 +2937,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > [[Th |
 | | | umbnail]{.underline} |
 | | | > [O |
-| | | bject]{.underline}]( |
+| | | bject]( |
 | | | #thumbnail-object)s. |
 | | | |
 | | | - prop |
@@ -3087,8 +3025,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > array is not |
 | | | > populated until |
 | | | > the |
-| | | > [[loaded]{.underl |
-| | | ine}](#_bookmark119) |
+| | | > [loaded](#_bookmark119) |
 | | | > event has occurred |
 | | | > for the document. |
 +----------------------+----------------------+----------------------+
@@ -3158,9 +3095,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > process(sel\[i\]); |
 | | | > |
 | | | > Also, use |
-| | | > [[sel |
-| | | ectionLength]{.under |
-| | | line}](#_bookmark85) |
+| | | > [sel |
+| | | ectionLength](#_bookmark85) |
 | | | > when possible, |
 | | | > rather than |
 | | | > |
@@ -3176,9 +3112,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | vis | > Number | > Read only. The |
 | ibleThumbnailsLength | | > number of |
 | | | > thumbnails in the |
-| | | > [[visib |
-| | | leThumbnails]{.under |
-| | | line}](#_bookmark90) |
+| | | > [visib |
+| | | leThumbnails](#_bookmark90) |
 | | | > array. |
 +----------------------+----------------------+----------------------+
 | visitUrl | > Function | > DEPRECATED. Do not |
@@ -3255,8 +3190,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > |
 | | | > Within the context of this function, the |
 | | | > implicit this variable references this |
-| | | > [[Document |
-| | | > Object]{.underline}](#document-object). For |
+| | | > [Document |
+| | | > Object](#document-object). For |
 | | | > example: |
 | | | > |
 | | | > var myFilter = function(url) { |
@@ -3358,19 +3293,18 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 +----------------------------------+----------------------------------+
 | > _menuID_ The unique identifier | |
 | > for the command to execute; | |
-| > see [[MenuElement | |
-| > Object]{.u | |
-| nderline}](#menuelement-object). | |
+| > see [MenuElement | |
+| > Object](#menuelement-object). | |
 | > Predefined identifiers for | |
 | > Adobe Bridge commands are | |
-| > listed in [['Adobe | |
+| > listed in ['Adobe | |
 | > | |
-| Bridge]{.underline}](#adobe-brid | |
+| Bridge](#adobe-brid | |
 | ge-menu-and-command-identifiers) | |
-| > [[menu and command | |
+| > [menu and command | |
 | > identifiers' on]{.underline} | |
 | > [page]{.underline} | |
-| > [59]{.underline}](#adobe-bridg | |
+| > [59](#adobe-bridg | |
 | e-menu-and-command-identifiers). | |
 | > If the ID is for a menu or | |
 | > submenu, the function does | |
@@ -3386,8 +3320,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | .anchor}deselect() | > a child of this document and |
 | | > is selected, removes it from |
 | _docObj_.deselect(_thumbnail_) | > the |
-| | > [[select |
-| | ions]{.underline}](#_bookmark86) |
+| | > [select |
+| | ions](#_bookmark86) |
 | | > array and deselects it in the |
 | | > browser window. |
 | | > |
@@ -3395,8 +3329,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > was deselected. |
 | | > |
 | | > A script should wait until the |
-| | > [[loa |
-| | ded]{.underline}](#_bookmark119) |
+| | > [loa |
+| | ded](#_bookmark119) |
 | | > event has occurred before |
 | | > making calls to document |
 | | > selection methods. |
@@ -3407,8 +3341,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > for the node to deselect. | |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark96 | > Removes all members from the |
-| .anchor}deselectAll() | > [[select |
-| | ions]{.underline}](#_bookmark86) |
+| .anchor}deselectAll() | > [select |
+| | ions](#_bookmark86) |
 | _docObj_.deselectAll () | > array and deselects all |
 | | > thumbnails in the browser |
 | | > window. |
@@ -3416,8 +3350,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Returns undefined. |
 | | > |
 | | > A script should wait until the |
-| | > [[loa |
-| | ded]{.underline}](#_bookmark119) |
+| | > [loa |
+| | ded](#_bookmark119) |
 | | > event has occurred before |
 | | > making calls to document |
 | | > selection methods. |
@@ -3436,8 +3370,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > |
 | | > **NOTE:** Do not call this |
 | | > method from a |
-| | > [[jsF |
-| | uncs]{.underline}](#_bookmark82) |
+| | > [jsF |
+| | uncs](#_bookmark82) |
 | | > callback function. This |
 | | > attempts to re-enter the |
 | | > JavaScript engine, which is |
@@ -3483,9 +3417,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > SnpRotateImage.jsx. |
 | | > |
 | | > Returns an Array of |
-| | > [[Thumbnail |
-| | > Object]{ |
-| | .underline}](#thumbnail-object). |
+| | > [Thumbnail |
+| | > Object](#thumbnail-object). |
 +----------------------------------+----------------------------------+
 | > _filter_ Optional. A String | |
 | > containing a comma-delimited | |
@@ -3542,11 +3475,11 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > **Workspace** \> **Reset**. |
 | | > |
 | | > This works only when |
-| | > [[browser |
-| | Mode]{.underline}](#_bookmark79) |
+| | > [browser |
+| | Mode](#_bookmark79) |
 | | > is full. If |
-| | > [[browser |
-| | Mode]{.underline}](#_bookmark79) |
+| | > [browser |
+| | Mode](#_bookmark79) |
 | | > is compact, it does nothing. |
 | | > |
 | | > Returns undefined. |
@@ -3581,8 +3514,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | .anchor}select() | > a child of this document and |
 | | > is not selected, adds it to |
 | _docObj_.select(_thumbnail_) | > the |
-| | > [[select |
-| | ions]{.underline}](#_bookmark86) |
+| | > [select |
+| | ions](#_bookmark86) |
 | | > array and selects it in the |
 | | > Content pane. This is the same |
 | | > as selecting the icon in the |
@@ -3593,8 +3526,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > was selected. |
 | | > |
 | | > A script should wait until the |
-| | > [[loa |
-| | ded]{.underline}](#_bookmark119) |
+| | > [loa |
+| | ded](#_bookmark119) |
 | | > event has occurred before |
 | | > making calls to document |
 | | > selection methods. |
@@ -3605,13 +3538,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > for the node to select. | |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark101 | > Adds all child |
-| .anchor}selectAll() | > [[Thumbnail]{.underline} |
-| | > [Object]{ |
-| _docObj_.selectAll () | .underline}](#thumbnail-object)s |
+| .anchor}selectAll() | > [Thumbnail]{.underline} |
+| | > [Object](#thumbnail-object)s |
 | | > of the current thumbnail |
 | | > (document.thumbnail) to the |
-| | > [[select |
-| | ions]{.underline}](#_bookmark86) |
+| | > [select |
+| | ions](#_bookmark86) |
 | | > array, and selects them in the |
 | | > Content pane. This is the same |
 | | > as typing CONTROL-a (in |
@@ -3621,8 +3553,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Returns undefined. |
 | | > |
 | | > A script should wait until the |
-| | > [[loa |
-| | ded]{.underline}](#_bookmark119) |
+| | > [loa |
+| | ded](#_bookmark119) |
 | | > event has occurred before |
 | | > making calls to document |
 | | > selection methods. |
@@ -3642,9 +3574,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > the presentationPath property |
 | | > to not work properly. To |
 | | > display an HTML page, use the |
-| | > [[TabbedPalette |
-| | > Object]{.und |
-| | erline}](#tabbedpalette-object). |
+| | > [TabbedPalette |
+| | > Object](#tabbedpalette-object). |
 | | > |
 | | > Returns undefined. |
 +----------------------------------+----------------------------------+
@@ -3685,11 +3616,11 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > palette does not appear. |
 | | > |
 | | > **NOTE:** This works only when |
-| | > [[browser |
-| | Mode]{.underline}](#_bookmark79) |
+| | > [browser |
+| | Mode](#_bookmark79) |
 | | > is full. If |
-| | > [[browser |
-| | Mode]{.underline}](#_bookmark79) |
+| | > [browser |
+| | Mode](#_bookmark79) |
 | | > is compact, it does nothing. |
 | | > |
 | | > Returns true on success. |
@@ -3716,8 +3647,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > Represents a user-interaction event, such as clicking a thumbnail.
 > Adobe Bridge creates an event object whenever one of the triggering
 > events occurs, and passes it to any event handlers that you have
-> registered with the [[App Object]{.underline}](#app-object)'s
-> [[eventHandlers]{.underline}](#_bookmark28) property. The only way to
+> registered with the [App Object](#app-object)'s
+> [eventHandlers](#_bookmark28) property. The only way to
 > access an event object is as the argument to such an event-handling
 > function. See the _Adobe Bridge JavaScript Guide_ for details of how
 > to define and register these functions.
@@ -3726,7 +3657,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > generate the event is called the _target object_ of that event.
 > Different target object types are associated with different types of
 > events, as listed in [[Event object
-> types]{.underline}](#event-object-types).
+> types](#event-object-types).
 >
 > Event defines no functions.
 
@@ -3734,36 +3665,36 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 +-----------+-------------+------------------------------------------+
 | appPath | > String | When the type is |
-| | | [[openWith]{.underline}](#_bookmark125), |
+| | | [openWith](#_bookmark125), |
 | | | the platform-specific path to the |
 | | | selected opening application. Otherwise |
 | | | undefined. Read only. |
 +===========+=============+==========================================+
-| document | > Document | When the target object is a [[Thumbnail |
-| | | Object]{.underline}](#thumbnail-object), |
+| document | > Document | When the target object is a [Thumbnail |
+| | | Object](#thumbnail-object), |
 | | | the |
-| | | [[ |
-| | | Document]{.underline}](#document-object) |
-| | | [[Object]{.underline}](#document-object) |
+| | | [ |
+| | | Document](#document-object) |
+| | | [Object](#document-object) |
 | | | for the browser window in which the |
 | | | event occurred. Otherwise undefined. |
 | | | Read only. |
 +-----------+-------------+------------------------------------------+
 | favorites | > Favorites | When location is favorites, the |
-| | | [[Favorites]{.underline} |
-| | | [Object]{.underline}](#favorites-object) |
+| | | [Favorites]{.underline} |
+| | | [Object](#favorites-object) |
 | | | for the pane in which the event |
 | | | occurred. Otherwise undefined. Read |
 | | | only. |
 +-----------+-------------+------------------------------------------+
-| isContext | > Boolean | When the target object is a [[Thumbnail |
-| | | Object]{.underline}](#thumbnail-object), |
+| isContext | > Boolean | When the target object is a [Thumbnail |
+| | | Object](#thumbnail-object), |
 | | | and the type is |
-| | | [[select |
-| | | ionsChanged]{.underline}](#_bookmark121) |
+| | | [select |
+| | | ionsChanged](#_bookmark121) |
 | | | or |
-| | | [[selectio |
-| | | nsChanging]{.underline}](#_bookmark122), |
+| | | [selectio |
+| | | nsChanging](#_bookmark122), |
 | | | this value is true if the event was |
 | | | generated by a right-click (the gesture |
 | | | that normally brings up a context menu). |
@@ -3776,26 +3707,26 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | of: |
 | | | |
 | | | > **app**---The target object is the |
-| | | > [[App |
-| | | > Object]{.underline}](#app-object) and |
+| | | > [App |
+| | | > Object](#app-object) and |
 | | | > the event was generated for an |
 | | | > interaction with the operating system. |
 | | | > **document**---The target object is a |
-| | | > [[Thumbnail |
+| | | > [Thumbnail |
 | | | > |
-| | | Object]{.underline}](#thumbnail-object) |
+| | | Object](#thumbnail-object) |
 | | | > and the event was generated for an |
 | | | > interaction in the Folders pane, or |
-| | | > the target object is a [[Document |
-| | | > Object]{.underline}](#document-object) |
+| | | > the target object is a [Document |
+| | | > Object](#document-object) |
 | | | > and the event was generated for an |
 | | | > interaction with the windowing |
 | | | > environment. |
 | | | > |
 | | | > **favorites**---The target object is a |
-| | | > [[Thumbnail]{.underline} |
+| | | > [Thumbnail]{.underline} |
 | | | > |
-| | | [Object]{.underline}](#thumbnail-object) |
+| | | [Object](#thumbnail-object) |
 | | | > and the event was generated for an |
 | | | > interaction in the Favorites palette. |
 | | | > |
@@ -3807,8 +3738,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > Preferences dialog. |
 | | | > |
 | | | > **web**---The target object is a |
-| | | > [[Document |
-| | | > Object]{.underline}](#document-object) |
+| | | > [Document |
+| | | > Object](#document-object) |
 | | | > and the event was generated for an |
 | | | > interaction with the Internet. In this |
 | | | > case, event.url contains the URL of |
@@ -3852,11 +3783,11 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | each type of target |
 | | | object; see |
 | | | [[ |
-| | | Event]{.underline}]( |
+| | | Event]( |
 | | | #event-object-types) |
-| | | [[object |
+| | | [object |
 | | | t |
-| | | ypes]{.underline}](# |
+| | | ypes](# |
 | | | event-object-types). |
 | | | Read only. |
 +----------------------+----------------------+----------------------+
@@ -3882,7 +3813,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 - The target, _eventObj_.object, is the [[App
 
-  > Object]{.underline}](#app-object).
+  > Object](#app-object).
 
 - The location, _eventObj_.location, is the string app.
 
@@ -3902,7 +3833,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Occurs when the user exits from Adobe Bridge by |
 | | > selecting the **File \> Exit** command, when the user |
 | | > closes the final open document, or when a script calls |
-| | > the [[App Object]{.underline}](#app-object)'s |
+| | > the [App Object](#app-object)'s |
 | | > [[quit()]{.underline}](#_bookmark45) function. |
 | | > |
 | | > The handler cannot override the default shutdown |
@@ -3921,9 +3852,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > When a document event occurs, the event object has the following
 > property values:
 
-- The target, _eventObj_.object, is a [[Document
+- The target, _eventObj_.object, is a [Document
 
-  > Object]{.underline}](#document-object).
+  > Object](#document-object).
 
 - The location, _eventObj_.location, can be app, web, or document,
 
@@ -3943,12 +3874,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > The new |
 | | > [[Document]{.underline} |
 | | > [Object |
-| | ]{.underline}](#document-object) |
+| | ](#document-object) |
 | | > is passed to the event |
 | | > handler, but |
 | | > |
-| | > app.[[docu |
-| | ment]{.underline}](#_bookmark27) |
+| | > app.[docu |
+| | ment](#_bookmark27) |
 | | > still contains the previous |
 | | > Document object. |
 +==================================+==================================+
@@ -3964,9 +3895,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > **Close Window** command in |
 | | > the UI, when a script closes a |
 | | > browser window using the |
-| | > [[Document]{.underline} |
-| | > [Object]{ |
-| | .underline}](#document-object)'s |
+| | > [Document]{.underline} |
+| | > [Object](#document-object)'s |
 | | > close () method, or when Adobe |
 | | > Bridge closes a browser window |
 | | > because the application is |
@@ -3999,12 +3929,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > The new |
 | | > [[Document]{.underline} |
 | | > [Object |
-| | ]{.underline}](#document-object) |
+| | ](#document-object) |
 | | > is passed to the event |
 | | > handler, but |
 | | > |
-| | > app.[[docu |
-| | ment]{.underline}](#_bookmark27) |
+| | > app.[docu |
+| | ment](#_bookmark27) |
 | | > still contains the previous |
 | | > Document object. |
 +----------------------------------+----------------------------------+
@@ -4018,7 +3948,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > UI, as a result of script or |
 | | > user action. The document |
 | | > [[select |
-| | ions]{.underline}](#_bookmark86) |
+| | ions](#_bookmark86) |
 | | > list reflects the |
 | | > post-selection state. |
 +----------------------------------+----------------------------------+
@@ -4028,7 +3958,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > UI, as a result of script or |
 | | > user action. The document |
 | | > [[select |
-| | ions]{.underline}](#_bookmark86) |
+| | ions](#_bookmark86) |
 | | > list reflects the |
 | | > pre-selection state. |
 +----------------------------------+----------------------------------+
@@ -4036,20 +3966,20 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 +--------------------+------------------------------------------------+
 | workspacesPreLoad | > Location is document. Generated just before |
 | | > workspaces are loaded from disk into a new |
-| | > [[Document |
-| | > Object]{.underline}](#document-object). If |
+| | > [Document |
+| | > Object](#document-object). If |
 | | > your script-created |
-| | > [[Tabb |
-| | edPalette]{.underline}](#tabbedpalette-object) |
+| | > [Tabb |
+| | edPalette](#tabbedpalette-object) |
 | | > |
-| | [[Object]{.underline}](#tabbedpalette-object) |
+| | [Object](#tabbedpalette-object) |
 | | > is intended to be part of a workspace, you |
 | | > should create it in handling this event. |
 +====================+================================================+
 | workspacesPostLoad | > Location is document. Generated just after |
 | | > workspaces have been loaded from disk into a |
-| | > new [[Document |
-| | > Object]{.underline}](#document-object). |
+| | > new [Document |
+| | > Object](#document-object). |
 +--------------------+------------------------------------------------+
 
 #### Thumbnail events
@@ -4057,9 +3987,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > When a thumbnail event occurs, the event object has the following
 > property values:
 
-- The target, _eventObj_.object, is a [[Thumbnail
+- The target, _eventObj_.object, is a [Thumbnail
 
-  > Object]{.underline}](#thumbnail-object).
+  > Object](#thumbnail-object).
 
 - The location, _eventObj_.location, is document for an interaction
 
@@ -4067,13 +3997,13 @@ app.[[createCollection()]{.underline}](#_bookmark40).
   > with the Favorites palette.
 
   - If location is favorites, the favorites property contains the
-    > [[Favorites Object]{.underline}](#favorites-object) and the
+    > [Favorites Object](#favorites-object) and the
     > section property reflects whether the target thumbnail is a
     > predefined or user-defined member of the favorites array.
 
-- The _eventObj_.document property contains the [[Document
+- The _eventObj_.document property contains the [Document
 
-  > Object]{.underline}](#document-object) for the browser window in
+  > Object](#document-object) for the browser window in
   > which the event occurred.
 
 - The type, _eventObj_.type, is one of these event types:
@@ -4106,9 +4036,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > with the **File \> Open** |
 | | > command, or by |
 | | > double-clicking, or when a |
-| | > script calls the [[Thumbnail |
-| | > Object]{. |
-| | underline}](#thumbnail-object)'s |
+| | > script calls the [Thumbnail |
+| | > Object](#thumbnail-object)'s |
 | | > open method. |
 | | > |
 | | > Also generated when a folder |
@@ -4117,8 +4046,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > folder in an Adobe Bridge |
 | | > browser window. If this opens |
 | | > a new browser window, |
-| | > app.[[docu |
-| | ment]{.underline}](#_bookmark27) |
+| | > app.[docu |
+| | ment](#_bookmark27) |
 | | > contains the Document object |
 | | > for the browser in which the |
 | | > thumbnail was clicked, and the |
@@ -4195,7 +4124,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 - The target, _eventObj_.object, is the [[PreferencesDialog
 
-  > Object]{.underline}](#preferencesdialog-object)
+  > Object](#preferencesdialog-object)
 
 - The location, _eventObj_.location, is the string prefs.
 
@@ -4222,7 +4151,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Also generated when the user disables a node in the |
 | | > Standard section of the Favorites palette. In this |
 | | > case, the event object's |
-| | > [[uri]{.underline}](#_bookmark110) property contains |
+| | > [uri](#_bookmark110) property contains |
 | | > the URI of the node. |
 +----------+----------------------------------------------------------+
 | enabled | > Generated when the user enables a startup script using |
@@ -4234,7 +4163,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | > Also generated when the user enables a node in the |
 | | > Standard section of the Favorites palette. In this |
 | | > case, the event object's |
-| | > [[uri]{.underline}](#_bookmark110) property contains |
+| | > [uri](#_bookmark110) property contains |
 | | > the URI of the node. |
 +----------+----------------------------------------------------------+
 | ok | > Generated when the user clicks **OK** in the |
@@ -4245,7 +4174,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 > Represents the navigation nodes that appear in the Favorites palette
 > in the Adobe Bridge browser. The Favorites object contains two arrays
-> of [[Thumbnail Object]{.underline}](#thumbnail-object)s; one for the
+> of [Thumbnail Object](#thumbnail-object)s; one for the
 > top, or _standard_ section, which contains a predefined set of nodes,
 > and one for the bottom, or _user_ section, where the user can choose
 > which nodes to display.
@@ -4256,8 +4185,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > subfolders. Subfolders in the Favorites palette can be, but are not
 > necessarily, children of the Thumbnail for the parent node.
 >
-> Access the Favorites object through the [[App
-> Object]{.underline}](#app-object)'s favorites, standardFavorites, or
+> Access the Favorites object through the [App
+> Object](#app-object)'s favorites, standardFavorites, or
 >
 > userFavorites properties:
 >
@@ -4268,12 +4197,10 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 +----------------------------+----------+----------------------------+
 | length | > Number | > The number of |
-| | | > [[Thumbnail]{.underline} |
-| | | > [Object]{.under |
-| | | line}](#thumbnail-object)s |
+| | | > [Thumbnail]{.underline} |
+| | | > [Object](#thumbnail-object)s |
 | | | > in the current |
-| | | > [[section]{. |
-| | | underline}](#_bookmark131) |
+| | | > [section](#_bookmark131) |
 | | | > of the Favorites |
 | | | > palette. |
 +============================+==========+============================+
@@ -4362,13 +4289,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | Favorites palette, returns false |
 | | and does nothing. |
 +----------------------------------+----------------------------------+
-| > _thumbnail_ | > The [[Thumbnail]{.underline} |
-| > | > [Object]{ |
-| > _workspace_ | .underline}](#thumbnail-object). |
+| > _thumbnail_ | > The [Thumbnail]{.underline} |
+| > | > [Object](#thumbnail-object). |
 | | > |
 | | > The workspace name. See |
-| | > Document.[[worksp |
-| | ace]{.underline}](#_bookmark91). |
+| | > Document.[worksp |
+| | ace](#_bookmark91). |
 +----------------------------------+----------------------------------+
 | clearAll() | Deletes all the nodes from the |
 | | current section of the favorites |
@@ -4489,22 +4415,21 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 ## IconListPanelette Object
 
-> An instantiable subclass of the [[Panelette]{.underline}
-> [Base]{.underline} [Class]{.underline}](#panelette-base-class),
+> An instantiable subclass of the [PaneletteBase]{.underline} [Class](#panelette-base-class),
 > representing a member sub-panel of a
-> [[InspectorPanel]{.underline}](#inspectorpanel-object) > [[Object]{.underline}](#inspectorpanel-object) that displays two
+> [InspectorPanel](#inspectorpanel-object) > [Object](#inspectorpanel-object) that displays two
 > columns. The left column contains an icon, and the right column
 > contains text.
 >
 > The text can be static, or can be obtained dynamically from the
-> associated thumbnail at display time. See [[Panelette markup
-> elements]{.underline}](#panelette-markup-elements).
+> associated thumbnail at display time. See [Panelette markup
+> elements](#panelette-markup-elements).
 
 ### IconListPanelette constructor
 
 > To create a new object, use the new operator. The _name_ and
 > _titleMarkup_ parameters set the corresponding properties inherited
-> from the [[Panelette Base Class]{.underline}](#panelette-base-class).
+> from the [Panelette Base Class](#panelette-base-class).
 >
 > This version can be used when all display data is known in advance:
 >
@@ -4513,7 +4438,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 +----------+----------------------------------------------------------+
 | > _rows_ | > A collection of two-member arrays describing the rows |
 | | > to display in the panelette. Sets the |
-| | > [[rows]{.underline}](#_bookmark138) property. |
+| | > [rows](#_bookmark138) property. |
 +----------+----------------------------------------------------------+
 
 > This version provides the ability to obtain data dynamically at
@@ -4523,18 +4448,18 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 +----------------+----------------------------------------------------+
 | > _rows_ | > The icons shown in the first column. An array of |
-| | > [[Thumbnail |
-| | > Object]{.underline}](#thumbnail-object)s or a |
+| | > [Thumbnail |
+| | > Object](#thumbnail-object)s or a |
 | | > string containing panelette markup that obtains |
 | | > a set of thumbnails at display time. |
 +================+====================================================+
 | > _columnText_ | > A corresponding array of strings, where each |
 | | > member is a line of text with which to label the |
 | | > corresponding thumbnail. The text strings can |
-| | > contain [[Panelette |
-| | > markup]{.underline}](#panelette-markup-elements) |
-| | > [[ |
-| | elements]{.underline}](#panelette-markup-elements) |
+| | > contain [Panelette |
+| | > markup](#panelette-markup-elements) |
+| | > [ |
+| | elements](#panelette-markup-elements) |
 | | > to access dynamic data. |
 +----------------+----------------------------------------------------+
 
@@ -4579,11 +4504,10 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > elements to |
 | | | > access dynamic |
 | | | > data. See |
-| | | > [[Pa |
+| | | > [Pa |
 | | | nelette]{.underline} |
 | | | > [markup |
-| | | > elements]{. |
-| | | underline}](#panelet |
+| | | > elements](#panelet |
 | | | te-markup-elements). |
 | | | |
 | | | > Read only. |
@@ -4597,8 +4521,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > Your script defines what kind of related information to display, and
 > how to display it. The panel serves as a frame and parent for
 > subpanels that actually display the information. Subpanels are
-> represented by members of the [[Panelette Base
-> Class]{.underline}](#panelette-base-class) contained in this parent
+> represented by members of the [Panelette Base
+> Class](#panelette-base-class) contained in this parent
 > panel.
 
 - Register a inspection panel that you create to make it available to
@@ -4608,8 +4532,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 
 - To turn the display of registered inspection panels on or off in a
   > particular browser window, set
-  > [[displayInspectorView]{.underline}](#_bookmark80) in the
-  > [[Document Object]{.underline}](#document-object).
+  > [displayInspectorView](#_bookmark80) in the
+  > [Document Object](#document-object).
 
 ### InspectorPanel constructor
 
@@ -4626,12 +4550,10 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | displayInInspector | > Boolean | > When true, this panel |
 | | | > is displayed when |
 | | | > Document. |
-| | | [[displayInspectorView]{. |
-| | | underline}](#_bookmark80) |
+| | | [displayInspectorView](#_bookmark80) |
 | | | > is true, if the |
-| | | > [[ |
-| | | hidePanelForThumbnail]{.u |
-| | | nderline}](#_bookmark146) |
+| | | > [ |
+| | | hidePanelForThumbnail](#_bookmark146) |
 | | | > callback returns true |
 | | | > or is not implemented. |
 | | | > |
@@ -4649,11 +4571,11 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > dynamically at display |
 | | | > time, using |
 | | | > [[P |
-| | | anelette]{.underline}](#p |
+| | | anelette](#p |
 | | | anelette-markup-elements) |
-| | | > [[markup |
+| | | > [markup |
 | | | > e |
-| | | lements]{.underline}](#pa |
+| | | lements](#pa |
 | | | nelette-markup-elements). |
 | | | > |
 | | | > Read only, supplied on |
@@ -4671,17 +4593,15 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > identifier of a |
 | | | > script-defined flyout |
 | | | > menu for this panel. |
-| | | > See [[MenuElement |
-| | | > Object]{.underlin |
-| | | e}](#menuelement-object). |
+| | | > See [MenuElement |
+| | | > Object](#menuelement-object). |
 | | | > Read only. |
 +---------------------------+------------+---------------------------+
 | []{#\_bookmark146 | > Function | > Optional. A |
 | .anc | | > script-defined function |
 | hor}hidePanelForThumbnail | | > that takes a |
 | | | > [[Thumbnail |
-| | | > Object]{.under |
-| | | line}](#thumbnail-object) |
+| | | > Object](#thumbnail-object) |
 | | | > as a parameter and |
 | | | > returns true if the |
 | | | > thumbnail allows this |
@@ -4722,14 +4642,13 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > Object] |
 | | | {.underline}](#iconl |
 | | | istpanelette-object) |
-| | | > [[TextPanelette |
+| | | > [TextPanelette |
 | | | > Obj |
-| | | ect]{.underline}](#t |
+| | | ect](#t |
 | | | extpanelette-object) |
 | | | > |
-| | | [[ThumbnailPanelette |
-| | | > Object]{ |
-| | | .underline}](#thumbn |
+| | | [ThumbnailPanelette |
+| | | > Object](#thumbn |
 | | | ailpanelette-object) |
 +----------------------+----------------------+----------------------+
 | sortPosition | > Number | > The preferred |
@@ -4750,8 +4669,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > for this panel. If |
 | | | > no |
 | | | > [[d |
-| | | isplayTitle]{.underl |
-| | | ine}](#_bookmark145) |
+| | | isplayTitle](#_bookmark145) |
 | | | > is specified, this |
 | | | > is shown in the |
 | | | > top header bar. |
@@ -4785,8 +4703,8 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | []{#\_bookmark150 | Registers a script-defined |
 | .anchor}registerPanelette() | panelette as a member of this |
 | _panelObj_.registerPanelette | panel, adding it to |
-| (_panelette_) | [[panelet |
-| | tes]{.underline}](#_bookmark147) |
+| (_panelette_) | [panelet |
+| | tes](#_bookmark147) |
 | | list. |
 | | |
 | | Returns true on success, false |
@@ -4798,15 +4716,12 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | > of the type-specific panelette | |
 | > subclasses: | |
 | > | |
-| > [[IconListPanelette | |
-| > Object]{.underl | |
-| ine}](#iconlistpanelette-object) | |
-| > [[TextPanelette | |
-| > Object]{.un | |
-| derline}](#textpanelette-object) | |
-| > [[ThumbnailPanelette | |
-| > Object]{.underli | |
-| ne}](#thumbnailpanelette-object) | |
+| > [IconListPanelette | |
+| > Object](#iconlistpanelette-object) | |
+| > [TextPanelette | |
+| > Object](#textpanelette-object) | |
+| > [ThumbnailPanelette | |
+| > Object](#thumbnailpanelette-object) | |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark151 | Removes a member panelette from |
 | .anchor}unregisterPanelette() | this panel. |
@@ -4828,10 +4743,9 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 > app.document.[[chooseMenuItem()]{.underline}](#_bookmark94).
 >
 > Existing menu elements that can be extended have predefined
-> identifiers, listed in [['Adobe Bridge
-> menu]{.underline}](#adobe-bridge-menu-and-command-identifiers) [[and
-> command identifiers' on]{.underline} [page]{.underline}
-> [59]{.underline}](#adobe-bridge-menu-and-command-identifiers). Not all
+> identifiers, listed in ['Adobe Bridge
+> menu](#adobe-bridge-menu-and-command-identifiers) [and
+> command identifiers' on59](#adobe-bridge-menu-and-command-identifiers). Not all
 > existing menu elements can be extended. You can only add a new menu or
 > command before or after an existing menu or command, which you must
 > specify using the predefined unique identifier.
@@ -5042,8 +4956,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > entire, large |
 | | | > selection. Use |
 | | | > Docu |
-| | | ment.[[selectionLength]{. |
-| | | underline}](#_bookmark85) |
+| | | ment.[selectionLength](#_bookmark85) |
 | | | > to check the size of |
 | | | > the selection before |
 | | | > accessing it. |
@@ -5052,8 +4965,7 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 | | | > incorrectly, you can |
 | | | > handle the incorrect |
 | | | > cases in the |
-| | | > [[onSelect]{.u |
-| | | nderline}](#_bookmark160) |
+| | | > [onSelect](#_bookmark160) |
 | | | > function, which is |
 | | | > called far less often. |
 +===========================+============+===========================+
@@ -5127,23 +5039,23 @@ app.[[createCollection()]{.underline}](#_bookmark40).
 >
 > The menu/command-identifier mapping is organized as follows:
 
-- [[Top-level]{.underline} [menu
+- [Top-levelmenu
 
-  > identifiers]{.underline}](#top-level-menu-identifiers): Top-level
+  > identifiers](#top-level-menu-identifiers): Top-level
   > menus in the menu bar, tool bar, context menus and flyout menus.
 
-- [[Menu bar submenu and command
+- [Menu bar submenu and command
 
-  > identifiers]{.underline}](#menu-bar-submenu-and-command-identifiers):
+  > identifiers](#menu-bar-submenu-and-command-identifiers):
   > Items that appear in menu-bar menus.
 
-- [[Toolbar menus]{.underline} [and
+- [Toolbar menusand
 
-  > commands]{.underline}](#toolbar-menus-and-commands): Items that
+  > commands](#toolbar-menus-and-commands): Items that
   > appear in menus that drop down from toolbar icons.
 
-- [[Context]{.underline} [and flyout]{.underline} [submenus and
-  > commands]{.underline}](#context-and-flyout-submenus-and-commands):
+- [Contextsubmenus and
+  > commands](#context-and-flyout-submenus-and-commands):
   > Items that appear in context and flyout menus.
 
 #### Top-level menu identifiers
@@ -6087,8 +5999,7 @@ Frame Rate \> \[_rates_\] (not available)
 ## Metadata Object
 
 > Allows you to access the Extensible Metadata Platform (XMP) metadata
-> associated with the file node of a [[Thumbnail]{.underline}
-> [Object]{.underline}](#thumbnail-object). This is embedded metadata
+> associated with the file node of a [ThumbnailObject](#thumbnail-object). This is embedded metadata
 > associated with the file, such a copyright owner, author, or camera
 > settings.
 >
@@ -6107,8 +6018,8 @@ Frame Rate \> \[_rates_\] (not available)
 > [[h](http://www.adobe.com/devnet/)ttp:[//w](http://www.adobe.com/devnet/)ww]{.underline}[[.adobe.com/devnet/]{.underline}.](http://www.adobe.com/devnet/)
 >
 > Access the Metadata object for a file-type thumbnail through the
-> [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object)'s
-> [[metadata]{.underline}](#_bookmark259) property:
+> [ThumbnailObject](#thumbnail-object)'s
+> [metadata](#_bookmark259) property:
 
 ###### Example code
 
@@ -6281,7 +6192,7 @@ Frame Rate \> \[_rates_\] (not available)
 > displayed at the top of the browser window (below the application
 > navigation bar), and one at the bottom (above the status bar). You do
 > not create new NavBar objects. Instead, you access the existing
-> objects through the [[Document Object]{.underline}](#document-object)'
+> objects through the [Document Object](#document-object)'
 > s properties:
 >
 > topbarF = app.document.navbars.filesystem.top btmbarF =
@@ -6310,10 +6221,10 @@ Frame Rate \> \[_rates_\] (not available)
 | | | > operations. The extension is responsible |
 | | | > for supplying and interpreting this value. |
 | | | > See |
-| | | > [[ExtensionHa |
-| | | ndler]{.underline}](#extensionhandler-object) |
-| | | > [[Ob |
-| | | ject]{.underline}](#extensionhandler-object). |
+| | | > [ExtensionHa |
+| | | ndler](#extensionhandler-object) |
+| | | > [Ob |
+| | | ject](#extensionhandler-object). |
 | | | > |
 | | | > Default values (used by the default |
 | | | > node-handler) are topFilesystemNavbar, |
@@ -6484,15 +6395,15 @@ Frame Rate \> \[_rates_\] (not available)
 ### Panelette Base Class
 
 > []{#\_bookmark208 .anchor}A base class for the subpanel types that can
-> be contained in the [[panelettes]{.underline}](#_bookmark147) property
-> of a [[InspectorPanel]{.underline}](#inspectorpanel-object) > [[Object]{.underline}](#inspectorpanel-object):
+> be contained in the [[panelettes](#_bookmark147) property
+> of a [InspectorPanel](#inspectorpanel-object) > [Object](#inspectorpanel-object):
 
-- [[IconListPanelette Object]{.underline}](#iconlistpanelette-object)
+- [IconListPanelette Object](#iconlistpanelette-object)
 
-- [[TextPanelette Object]{.underline}](#textpanelette-object)
+- [TextPanelette Object](#textpanelette-object)
 
-- [[ThumbnailPanelette
-  > Object]{.underline}](#thumbnailpanelette-object)
+- [ThumbnailPanelette
+  > Object](#thumbnailpanelette-object)
 
 > The base class is not instantiable. Use the new operator with the
 > subclasses to create subpanel objects.
@@ -6505,9 +6416,9 @@ Frame Rate \> \[_rates_\] (not available)
 +=============+========+=============================================+
 | titleMarkup | String | > Optional. Localizable text shown in the |
 | | | > subpanel header bar. Can include |
-| | | > [[Panelette markup |
+| | | > [Panelette markup |
 | | | > elements |
-| | | ]{.underline}](#panelette-markup-elements). |
+| | | ](#panelette-markup-elements). |
 | | | > If not supplied, the name string appears |
 | | | > as the header. Read/write. |
 +-------------+--------+---------------------------------------------+
@@ -6617,9 +6528,9 @@ Frame Rate \> \[_rates_\] (not available)
   > String, Number, or Boolean. Composite types (such as Rect and
   > Point) are retrieved as String objects.
 
-> Access the Preferences object through the [[App
-> Object]{.underline}](#app-object)'s
-> [[preferences]{.underline}](#_bookmark31) property: var prefs =
+> Access the Preferences object through the [App
+> Object](#app-object)'s
+> [preferences](#_bookmark31) property: var prefs =
 > app.preferences;
 
 ### Preferences properties
@@ -6695,8 +6606,8 @@ Frame Rate \> \[_rates_\] (not available)
 | | | > displayed beneath the icon in this view. |
 | | | > When false, they are not. Read/write. |
 | | | > (This is overridden by the document's |
-| | | > [[sh |
-| | | owThumbnailName]{.underline}](#_bookmark87) |
+| | | > [sh |
+| | | owThumbnailName](#_bookmark87) |
 | | | > value.) |
 +----------+-----------+---------------------------------------------+
 
@@ -6766,8 +6677,7 @@ Frame Rate \> \[_rates_\] (not available)
 | | | where each member |
 | | | corresponds to URI |
 | | | member of the |
-| | | [[Favorites]{.unde |
-| | | rline}](#_bookmark220) |
+| | | [[Favorites](#_bookmark220) |
 | | | array. |
 +------------------------+------------------+------------------------+
 | FileSize | Number | In the Thumbnails page |
@@ -6856,8 +6766,7 @@ Frame Rate \> \[_rates_\] (not available)
 | | | labeled thumbnail, and |
 | | | in a labeled |
 | | | thumbnail's |
-| | | [[label]{.unde |
-| | | rline}](#_bookmark257) |
+| | | [label](#_bookmark257) |
 | | | value. The thumbnail |
 | | | is displayed with a |
 | | | red highlight frame. |
@@ -6876,8 +6785,7 @@ Frame Rate \> \[_rates_\] (not available)
 | | | programmatically by |
 | | | setting the |
 | | | Th |
-| | | umbnail.[[label]{.unde |
-| | | rline}](#_bookmark257) |
+| | | umbnail.[label](#_bookmark257) |
 | | | value to any string. |
 | | | If that string is not |
 | | | one of the |
@@ -6917,8 +6825,7 @@ Frame Rate \> \[_rates_\] (not available)
 | | | recently-visited |
 | | | folders, displayed |
 | | | when the |
-| | | [[MRUCount]{.unde |
-| | | rline}](#_bookmark221) |
+| | | [[MRUCount](#_bookmark221) |
 | | | is greater than |
 | | | |
 | | | 0\. Read/write. |
@@ -7061,8 +6968,7 @@ Frame Rate \> \[_rates_\] (not available)
 | | | [[PreferencesDialog] |
 | | | {.underline}](#prefe |
 | | | rencesdialog-object) |
-| | | [[Object]{. |
-| | | underline}](#prefere |
+| | | [Object](#prefere |
 | | | ncesdialog-object)'s |
 | | | [ |
 | | | [addPanel()]{.underl |
@@ -7129,14 +7035,14 @@ Frame Rate \> \[_rates_\] (not available)
 > Provides access to the Adobe Bridge Preferences dialog, allowing you
 > to add a panel to the dialog with your own ScriptUI controls that
 > access and set any application preferences that you have defined by
-> adding properties to the [[Preferences
-> Object]{.underline}](#preferences-object).
+> adding properties to the [Preferences
+> Object](#preferences-object).
 >
 > You can only access this object as the target of an event. The object
-> is returned in the [[object]{.underline}](#_bookmark109) property of
-> an [[Event]{.underline} [Object]{.underline}](#event-object) that
-> results from an event in a Preferences dialog. See [[PreferencesDialog
-> events]{.underline}](#preferencesdialog-events).
+> is returned in the [object](#_bookmark109) property of
+> an [EventObject](#event-object) that
+> results from an event in a Preferences dialog. See [PreferencesDialog
+> events](#preferencesdialog-events).
 >
 > The Preferences dialog is modal, which means that no other Adobe
 > Bridge events can occur until the user dismisses it with the **OK** or
@@ -7304,7 +7210,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 >
 > You can add a palette to an existing browser window at any time (as
 > long as the identifier is unique), and you can use the
-> [[create]{.underline}](#_bookmark118) document event to add your
+> [create](#_bookmark118) document event to add your
 > palette to new browser windows on creation.
 >
 > []{#\_bookmark233 .anchor}The name of a script-defined palette is
@@ -7316,7 +7222,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 > You can show and hide individual palettes using this object's
 > properties. A list of all defined palettes for a browser, including
 > default palettes, is available in
-> app.document.[[palettes]{.underline}](#_bookmark83).
+> app.document.[[palettes](#_bookmark83).
 >
 > If a script-defined tabbed palette is visible when the user or a
 > script creates a workspace, the workspace references that palette by
@@ -7349,7 +7255,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | > _url_ | Optional. When _type_ is web, the web page URL |
 | | to display. Default is the empty string, in |
 | | which case the displayed palette is blank until |
-| | the [[url]{.underline}](#_bookmark238) property |
+| | the [url](#_bookmark238) property |
 | | is set. |
 +-------------------+-------------------------------------------------+
 | > _paletteColumn_ | Optional. The horizontal location of the |
@@ -7429,11 +7335,11 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > the palette's tab header. The string can |
 | | | > include values derived dynamically at |
 | | | > display time, using |
-| | | > [[Panele |
-| | | tte]{.underline}](#panelette-markup-elements) |
-| | | > [[markup |
+| | | > [Panele |
+| | | tte](#panelette-markup-elements) |
+| | | > [markup |
 | | | > elemen |
-| | | ts]{.underline}](#panelette-markup-elements). |
+| | | ts](#panelette-markup-elements). |
 +---------+----------+-----------------------------------------------+
 
 +---------------------------+-----------+---------------------------+
@@ -7515,16 +7421,15 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 ## TextPanelette Object
 
 > []{#\_bookmark243 .anchor}An instantiable subclass of the [[Panelette
-> Base Class]{.underline}](#panelette-base-class), representing a member
-> subpanel of an [[InspectorPanel]{.underline}
-> [Object]{.underline}](#inspectorpanel-object) that displays textual
+> Base Class](#panelette-base-class), representing a member
+> subpanel of an [InspectorPanelObject](#inspectorpanel-object) that displays textual
 > information about a set of thumbnails. It differs from the
-> [[ThumbnailPanelette Object]{.underline}](#thumbnailpanelette-object)
+> [ThumbnailPanelette Object](#thumbnailpanelette-object)
 > in that it does not display the thumbnail icon, only the related text.
 >
 > The text can be static, or can be obtained dynamically from the
-> associated thumbnail at display time. See [[Panelette markup
-> elements]{.underline}](#panelette-markup-elements).
+> associated thumbnail at display time. See [Panelette markup
+> elements](#panelette-markup-elements).
 
 ### TextPanelette constructor
 
@@ -7534,8 +7439,8 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 > _keyValuePairs_);
 >
 > Parameters set the corresponding properties. The name and titleMarkup
-> properties are inherited from the [[Panelette Base
-> Class]{.underline}](#panelette-base-class).
+> properties are inherited from the [Panelette Base
+> Class](#panelette-base-class).
 
 ### TextPanelette properties
 
@@ -7560,11 +7465,11 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > string literals |
 | | | > combined with |
 | | | > [[Panel |
-| | | ette]{.underline}](#pan |
+| | | ette](#pan |
 | | | elette-markup-elements) |
-| | | > [[markup |
+| | | > [markup |
 | | | > eleme |
-| | | nts]{.underline}](#pane |
+| | | nts](#pane |
 | | | lette-markup-elements), |
 | | | > which specify the |
 | | | > text to be displayed. |
@@ -7572,8 +7477,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | thumbnails | > Array of Thumbnail or | > An array of |
 | | > String | > [ |
 | | | [Thumbnail]{.underline} |
-| | | > [Object]{.underlin |
-| | | e}](#thumbnail-object)s |
+| | | > [Object](#thumbnail-object)s |
 | | | > or node URI strings |
 | | | > for which to display |
 | | | > descriptive text; or |
@@ -7595,7 +7499,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 - URLs
 
 - Navigation nodes of types defined by an [[ExtensionHandler
-  > Object]{.underline}](#extensionhandler-object).
+  > Object](#extensionhandler-object).
 
 > []{#\_bookmark249 .anchor}A thumbnail's applicable node handler
 > determines how nodes are displayed when that thumbnail is selected.
@@ -7605,7 +7509,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 > **CAUTION:** When a script accesses the properties of a Thumbnail
 > object, some properties of the object may not be immediately
 > available. To ensure the object contains current data, set
-> app.[[synchronousMode]{.underline}](#_bookmark32) to true before
+> app.[[synchronousMode](#_bookmark32) to true before
 > accessing properties.
 
 ### Thumbnail object constructor
@@ -7624,14 +7528,14 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | > folder that exists on the local file system. If the |
 | | > referenced file or folder does not exist, causes a |
 | | > run-time error. This object becomes the value of the |
-| | > new object's [[spec]{.underline}](#_bookmark261) |
+| | > new object's [spec](#_bookmark261) |
 | | > property. |
 | | |
 | | - A Thumbnail object. This creates a new Thumbnail |
-| | > object that references the same node. See [[Multiple |
-| | > references]{.underline} [to the same |
+| | > object that references the same node. See [Multiple |
+| | > referencesto the same |
 | | > |
-| | node]{.underline}](#multiple-references-to-the-same-node). |
+| | node](#multiple-references-to-the-same-node). |
 | | |
 | | - A string containing a fully qualified Bridge URI |
 | | > (uniform resource identifier). To be a fully |
@@ -7642,7 +7546,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | |
 | | A path to a local or remote file, folder, or page, which |
 | | becomes the value of the new object's |
-| | [[path]{.underline}](#_bookmark260) property. |
+| | [path](#_bookmark260) property. |
 +========+============================================================+
 | _name_ | Optional. A localizable string to use as the display name |
 | | for the thumbnail icon in the browser window. For |
@@ -7651,8 +7555,8 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | name to take effect. |
 | | |
 | | If not supplied, the display name defaults to the |
-| | [[path]{.underline}](#_bookmark260) or |
-| | [[spec]{.underline}](#_bookmark261) value. |
+| | [path](#_bookmark260) or |
+| | [spec](#_bookmark261) value. |
 | | |
 | | **CAUTION:** For a Thumbnail object associated with an |
 | | ExtendScript File or Folder object, using the name |
@@ -7747,17 +7651,14 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > Adobe Bridge instantiates |
 | | | > the |
 | | | > |
-| | | [[ExtensionModel]{.underlin |
-| | | e}](#extensionmodel-object) |
-| | | > [[Object]{.underlin |
-| | | e}](#extensionmodel-object) |
+| | | [ExtensionModel](#extensionmodel-object) |
+| | | > [Object](#extensionmodel-object) |
 | | | > when it creates the |
 | | | > Thumbnail object in order |
 | | | > to display the node. |
 +=================+====================+=============================+
 | aliasType | String | > If the value of |
-| | | > [[type]{ |
-| | | .underline}](#_bookmark263) |
+| | | > [type](#_bookmark263) |
 | | | > is alias, the kind of |
 | | | > target this thumbnail |
 | | | > represents, one of: |
@@ -7782,8 +7683,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > |
 | | | > **NOTE:** This array is |
 | | | > not populated until the |
-| | | > [[loaded]{ |
-| | | .underline}](#_bookmark119) |
+| | | > [loaded](#_bookmark119) |
 | | | > event has occurred for |
 | | | > the document. |
 | | | > |
@@ -7838,8 +7738,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > handler. Contains |
 | | | > a set of |
 | | | > |
-| | | [[Infoset]{.underlin |
-| | | e}](#infoset-object) |
+| | | [Infoset](#infoset-object) |
 | | | > [ |
 | | | [Object]{.underline} |
 | | | ](#infoset-object)s. |
@@ -7848,16 +7747,14 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > attributes through |
 | | | > the name of the |
 | | | > core |
-| | | > [[ |
+| | | > [ |
 | | | Infoset]{.underline} |
-| | | > [Object]{.underlin |
-| | | e}](#infoset-object) |
+| | | > [Object](#infoset-object) |
 | | | > and |
 | | | > |
-| | | [[InfosetMemberDesc |
+| | | [InfosetMemberDesc |
 | | | ription]{.underline} |
-| | | > [Object]{.underl |
-| | | ine}](#infosetmember |
+| | | > [Object](#infosetmember |
 | | | description-object). |
 | | | > For example, |
 | | | > myThumbSize = |
@@ -7973,8 +7870,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | []{#\_bookmark259 | Metadata | > The |
 | .anchor}metadata | | > |
 | | | [[Metadata]{.underline} |
-| | | > [Object]{.underl |
-| | | ine}](#metadata-object) |
+| | | > [Object](#metadata-object) |
 | | | > associated with this |
 | | | > thumbnail, if any. |
 | | | > Otherwise undefined. |
@@ -7988,12 +7884,10 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > the object contains |
 | | | > current data, set |
 | | | > app |
-| | | .[[synchronousMode]{.un |
-| | | derline}](#_bookmark32) |
+| | | .[synchronousMode](#_bookmark32) |
 | | | > to true, or use |
-| | | > Thumbnail.[[syn |
-| | | chronousMetadata]{.unde |
-| | | rline}](#_bookmark262). |
+| | | > Thumbnail.[syn |
+| | | chronousMetadata](#_bookmark262). |
 | | | > |
 | | | > If no metadata is |
 | | | > defined for a |
@@ -8017,10 +7911,10 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > string. Read only. |
 +-------------------------+----------------+-------------------------+
 | model | ExtensionModel | > The |
-| | | > [[Exte |
+| | | > [Exte |
 | | | nsionModel]{.underline} |
 | | | > |
-| | | [Object]{.underline}]( |
+| | | [Object]( |
 | | | #extensionmodel-object) |
 | | | > associated with this |
 | | | > node. Read-only. |
@@ -8053,10 +7947,10 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > first argument to the |
 | | | > [[Thumbnail |
 | | | > objec |
-| | | t]{.underline}](#thumbn |
+| | | t](#thumbn |
 | | | ail-object-constructor) |
-| | | > [[constructor |
-| | | ]{.underline}](#thumbna |
+| | | > [constructor |
+| | | ](#thumbna |
 | | | il-object-constructor). |
 | | | > Read only. |
 +-------------------------+----------------+-------------------------+
@@ -8105,11 +7999,11 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > created, using the |
 | | | > first argument to the |
 | | | > [[Thumbn |
-| | | ail]{.underline}](#thumb |
+| | | ail](#thumb |
 | | | nail-object-constructor) |
-| | | > [[object]{.underline} |
+| | | > [object]{.underline} |
 | | | > [construct |
-| | | or]{.underline}](#thumbn |
+| | | or](#thumbn |
 | | | ail-object-constructor). |
 | | | > If the thumbnail does |
 | | | > not reference a file |
@@ -8121,8 +8015,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | []{#\_bookmark262 | Metadata | > Waits for confirmation |
 | .an | | > of a valid value to |
 | chor}synchronousMetadata | | > return the [[Metadata |
-| | | > Object]{.under |
-| | | line}](#metadata-object) |
+| | | > Object](#metadata-object) |
 | | | > associated with this |
 | | | > thumbnail, if any. |
 | | | > Otherwise undefined. |
@@ -8130,13 +8023,11 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > |
 | | | > If |
 | | | > a |
-| | | pp.[[synchronousMode]{.u |
-| | | nderline}](#_bookmark32) |
+| | | pp.[synchronousMode](#_bookmark32) |
 | | | > is true, this is the |
 | | | > same as |
 | | | > Th |
-| | | umbnail.[[metadata]{.und |
-| | | erline}](#_bookmark259). |
+| | | umbnail.[metadata](#_bookmark259). |
 +--------------------------+--------------+--------------------------+
 | []{#\_bookmark263 | String | > The type of node this |
 | .anchor}type | | > thumbnail references. |
@@ -8165,7 +8056,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 
 > Additional functions can be defined for the Thumbnail object by a
 > node-handling extension; see
-> ExtensionHandler.[[methods]{.underline}](#_bookmark300).
+> ExtensionHandler.[methods](#_bookmark300).
 
 +----------------------------------+----------------------------------+
 | copyTo() | > Creates a new [[Thumbnail |
@@ -8185,8 +8076,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | > object, a | |
 | > [[Thumbnail] | |
 | {.underline}](#thumbnail-object) | |
-| > [[Object]{ | |
-| .underline}](#thumbnail-object), | |
+| > [Object](#thumbnail-object), | |
 | > or a Bridge URI string. | |
 +----------------------------------+----------------------------------+
 
@@ -8227,9 +8117,8 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 +==================================+==================================+
 | > _path_ The new parent node. A | |
 | > File or Folder object, a | |
-| > [[Thumbnail | |
-| > Object]{ | |
-| .underline}](#thumbnail-object), | |
+| > [Thumbnail | |
+| > Object](#thumbnail-object), | |
 | > or a Bridge URI string. | |
 +----------------------------------+----------------------------------+
 | open() | > Launches the file referenced |
@@ -8268,8 +8157,8 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | > path string to the | |
 | > application, as returned in | |
 | > appPath property of the | |
-| > [[openW | |
-| ith]{.underline}](#_bookmark125) | |
+| > [openW | |
+| ith](#_bookmark125) | |
 | > event object when a user makes | |
 | > a selection of thumbnails in | |
 | > the Content pane, then selects | |
@@ -8303,9 +8192,9 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | > last access. |
 +==================================+==================================+
 | > _infosetName_ Optional. An | |
-| > array of [[Infoset | |
+| > array of [Infoset | |
 | > Objec | |
-| t]{.underline}](#infoset-object) | |
+| t](#infoset-object) | |
 | > names, or the string all (the | |
 | > default), which refreshes all | |
 | > information sets associated | |
@@ -8329,9 +8218,9 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | > object. | |
 | > | |
 | > _message_---A string, the name | |
-| > of the [[Infoset | |
+| > of the [Infoset | |
 | > Objec | |
-| t]{.underline}](#infoset-object) | |
+| t](#infoset-object) | |
 | > whose update triggered the | |
 | > call. | |
 +----------------------------------+----------------------------------+
@@ -8404,13 +8293,13 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 
 ## ThumbnailPanelette Object
 
-> An instantiable subclass of the [[Panelette Base
-> Class]{.underline}](#panelette-base-class), representing a member
-> subpanel of a [[InspectorPanel]{.underline}](#inspectorpanel-object) > [[Object]{.underline}](#inspectorpanel-object) that displays
+> An instantiable subclass of the [Panelette Base
+> Class](#panelette-base-class), representing a member
+> subpanel of a [InspectorPanel](#inspectorpanel-object) > [Object](#inspectorpanel-object) that displays
 > resizeable thumbnail icons, with corresponding text labels for each
 > thumbnail. The text can be specified with literal strings, derived
 > from data in various ways, or calculated using JavaScript; see
-> [[Panelette markup elements]{.underline}](#panelette-markup-elements).
+> [Panelette markup elements](#panelette-markup-elements).
 >
 > The displayed thumbnails are mouse-sensitive. A single click makes a
 > thumbnail the inspection focus for the Inspector, and reveals or
@@ -8426,8 +8315,8 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 \*textPosition\*\*);
 
 > Parameters set the corresponding properties. The name and titleMarkup
-> properties are inherited from the [[Panelette Base
-> Class]{.underline}](#panelette-base-class).
+> properties are inherited from the [Panelette Base
+> Class](#panelette-base-class).
 
 ### ThumbnailPanelette properties
 
@@ -8459,7 +8348,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | [Panelette]{.underline} |
 | | | > [markup]{.underline} |
 | | | > [eleme |
-| | | nts]{.underline}](#pane |
+| | | nts](#pane |
 | | | lette-markup-elements), |
 | | | > which specify the |
 | | | > text to be displayed |
@@ -8483,9 +8372,8 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > the thumbnail icon. |
 +---------------+-------------------------+-------------------------+
 | thumbnails | > String or Array of | > An array of |
-| | > Thumbnail | > [[Thumbnail |
-| | | > Object]{.underlin |
-| | | e}](#thumbnail-object)s |
+| | > Thumbnail | > [Thumbnail |
+| | | > Object](#thumbnail-object)s |
 | | | > to be displayed in |
 | | | > this subpanel, or a |
 | | | > string containing |
@@ -8512,50 +8400,44 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 +----------------------------------+----------------------------------+
 | [[Badge | > Represents a status icon |
 | Obj | > associated with a node in the |
-| ect]{.underline}](#badge-object) | > Content pane. |
+| ect](#badge-object) | > Content pane. |
 +==================================+==================================+
 | [[CacheData | > Tracks the current cache |
 | Object] | > status of node data in an |
-| {.underline}](#cachedata-object) | > [[Infoset]{.underline} |
+| {.underline}](#cachedata-object) | > [Infoset]{.underline} |
 | | > [Object |
-| | ]{.underline}](#infoset-object). |
+| | ](#infoset-object). |
 +----------------------------------+----------------------------------+
-| [[CacheElement | > Encapsulates all node-handling |
-| Object]{.u | > data and the node handler for |
-| nderline}](#cacheelement-object) | > a [[Thumbnail]{.underline} |
-| | > [Object]{ |
-| | .underline}](#thumbnail-object). |
+| [CacheElement | > Encapsulates all node-handling |
+| Object](#cacheelement-object) | > a [Thumbnail]{.underline} |
+| | > [Object](#thumbnail-object). |
 +----------------------------------+----------------------------------+
-| [[ExtensionHandler]{.underline} | > Defines an extension to the |
-| [Object]{.under | > Adobe Bridge node-handling |
-| line}](#extensionhandler-object) | > model. |
+| [ExtensionHandler]{.underline} | > Defines an extension to the |
+| [Object](#extensionhandler-object) | > model. |
 +----------------------------------+----------------------------------+
-| [[ExtensionModel]{.underline} | > Provides a framework for |
-| [Object]{.und | > developer-implemented |
-| erline}](#extensionmodel-object) | > node-handling methods for a |
+| [ExtensionModel]{.underline} | > Provides a framework for |
+| [Object](#extensionmodel-object) | > node-handling methods for a |
 | | > specific node. |
 +----------------------------------+----------------------------------+
-| [[FilterDescription | > Encapsulates a filtering |
-| Object]{.underl | > criterion for handled nodes. |
-| ine}](#filterdescription-object) | |
+| [FilterDescription | > Encapsulates a filtering |
+| Object](#filterdescription-object) | |
 +----------------------------------+----------------------------------+
-| [[Infoset | > Encapsulates private node data |
+| [Infoset | > Encapsulates private node data |
 | Objec | > associated with a |
-| t]{.underline}](#infoset-object) | > node-handling extension, as |
+| t](#infoset-object) | > node-handling extension, as |
 | | > defined by an |
 | | > |
-| | [[ExtensionHandler]{.underline} |
-| | > [Object]{.underl |
-| | ine}](#extensionhandler-object). |
+| | [ExtensionHandler]{.underline} |
+| | > [Object](#extensionhandler-object). |
 | | > |
-| | > Adobe Bridge defines [[Core |
+| | > Adobe Bridge defines [Core |
 | | > infoset |
-| | s]{.underline}](#core-infosets), |
+| | s](#core-infosets), |
 | | > which script-defined handlers |
 | | > must support. |
 +----------------------------------+----------------------------------+
-| [[InfosetM | > Describes a data member of an |
-| emberDescription]{.underline}](# | > [[Infoset |
+| [InfosetM | > Describes a data member of an |
+| emberDescription](# | > [[Infoset |
 | infosetmemberdescription-object) | > Object |
 | [[Object]{.underline}](# | ]{.underline}](#infoset-object). |
 | infosetmemberdescription-object) | > Corresponds to a |
@@ -8565,46 +8447,41 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | {.underline}](#thumbnail-object) |
 | | > for a handled node. |
 +----------------------------------+----------------------------------+
-| [[ModalOperator]{.underline} | > An independent node-handling |
-| [Object]{.un | > operation with its own user |
-| derline}](#modaloperator-object) | > interface. |
+| [ModalOperator]{.underline} | > An independent node-handling |
+| [Object](#modaloperator-object) | > interface. |
 +----------------------------------+----------------------------------+
-| [[Operand | > Utility class for searches in |
+| [Operand | > Utility class for searches in |
 | Objec | > handled nodes. |
-| t]{.underline}](#operand-object) | |
+| t](#operand-object) | |
 +----------------------------------+----------------------------------+
-| [[Operator | > A base class for lengthy or |
+| [Operator | > A base class for lengthy or |
 | Clas | > complex node-handling |
-| s]{.underline}](#operator-class) | > operations. |
+| s](#operator-class) | > operations. |
 +----------------------------------+----------------------------------+
-| [[ProgressOperator | > A lengthy node-handling |
-| Object]{.under | > operation that can report its |
-| line}](#progressoperator-object) | > progress and be interrupted or |
+| [ProgressOperator | > A lengthy node-handling |
+| Object](#progressoperator-object) | > progress and be interrupted or |
 | | > canceled. |
 +----------------------------------+----------------------------------+
-| [[Rank | > Utility class for searches in |
+| [Rank | > Utility class for searches in |
 | Ob | > handled nodes. |
-| ject]{.underline}](#rank-object) | |
+| ject](#rank-object) | |
 +----------------------------------+----------------------------------+
-| [[Scope | > Utility class for searches in |
+| [Scope | > Utility class for searches in |
 | Obj | > handled nodes. |
-| ect]{.underline}](#scope-object) | |
+| ect](#scope-object) | |
 +----------------------------------+----------------------------------+
-| [[SearchCondition | > Defines a specific condition |
-| Object]{.unde | > that must be met for a handled |
-| rline}](#searchcondition-object) | > node to match a search. |
+| [SearchCondition | > Defines a specific condition |
+| Object](#searchcondition-object) | > node to match a search. |
 | | > Returned from a selection in |
 | | > the Find dialog. |
 +----------------------------------+----------------------------------+
-| [[SearchCriteria | > Defines one possible search |
-| Object]{.und | > criterion for a search among |
-| erline}](#searchcriteria-object) | > handled nodes. Passed to Adobe |
+| [SearchCriteria | > Defines one possible search |
+| Object](#searchcriteria-object) | > handled nodes. Passed to Adobe |
 | | > Bridge to populate the Find |
 | | > dialog. |
 +----------------------------------+----------------------------------+
-| [[SearchDefinition | > Defines a set of search |
-| Object]{.under | > criteria for a search among |
-| line}](#searchdefinition-object) | > handled nodes. Passed to Adobe |
+| [SearchDefinition | > Defines a set of search |
+| Object](#searchdefinition-object) | > handled nodes. Passed to Adobe |
 | | > Bridge to populate the Find |
 | | > dialog. |
 +----------------------------------+----------------------------------+
@@ -8612,18 +8489,15 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 **108**
 
 +----------------------------------+----------------------------------+
-| [[SearchDetails | > Utility class for searches in |
-| Object]{.un | > handled nodes. |
-| derline}](#searchdetails-object) | |
+| [SearchDetails | > Utility class for searches in |
+| Object](#searchdetails-object) | |
 +==================================+==================================+
-| [[ | > Defines a specific search |
+| [ | > Defines a specific search |
 | SearchSpecification]{.underline} | > among handled nodes. Returned |
-| [Object]{.underlin | > from a selection in the Find |
-| e}](#searchspecification-object) | > dialog. |
+| [Object](#searchspecification-object) | > dialog. |
 +----------------------------------+----------------------------------+
-| [[SortCriterion]{.underline} | > Defines a sorting criterion |
-| [Object]{.un | > property for handled node. |
-| derline}](#sortcriterion-object) | |
+| [SortCriterion]{.underline} | > Defines a sorting criterion |
+| [Object](#sortcriterion-object) | |
 +----------------------------------+----------------------------------+
 
 ## Badge Object
@@ -8631,16 +8505,16 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 > []{#\_bookmark278 .anchor}Represents a status icon that can be
 > displayed with a node in the Content pane. A node can be associated
 > with up to four badge icons, specified in the badges member of the
-> [[badges]{.underline}](#_bookmark352) core node-data set. See
-> [['Core]{.underline}](#core-infosets) [[infosets' on page
-> 132]{.underline}](#core-infosets).
+> [[badges](#_bookmark352) core node-data set. See
+> ['Core](#core-infosets) [infosets' on page
+> 132](#core-infosets).
 
 ### Badge properties
 
 +---------+--------------+-------------------------------------------+
-| badge | > BitmapData | > The [[BitmapData |
+| badge | > BitmapData | > The [BitmapData |
 | | | > |
-| | | Object]{.underline}](#bitmapdata-object) |
+| | | Object](#bitmapdata-object) |
 | | | > that defines the icon image. |
 +=========+==============+===========================================+
 | toolTip | > String | > A string that is shown when the mouse |
@@ -8652,12 +8526,11 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 ## CacheData Object
 
 > []{#\_bookmark282 .anchor}This object associates a cache status with
-> each [[Infoset Object]{.underline}](#infoset-object) in a
-> [[CacheElement Object]{.underline}](#cacheelement-object). The status
+> each [[Infoset Object](#infoset-object) in a
+> [CacheElement Object](#cacheelement-object). The status
 > determines whether the data needs to be refreshed.
 >
-> Your [[ExtensionModel]{.underline}
-> [Object]{.underline}](#extensionmodel-object) method for
+> Your [ExtensionModelObject](#extensionmodel-object) method for
 > [[refreshInfoset()]{.underline}](#_bookmark327) should update the
 > cache status for each data set it updates, including core data sets:
 >
@@ -8702,31 +8575,29 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 | | | > but before the data is confirmed as good) |
 | | | > |
 | | | > invalid (status is invalid if the |
-| | | > [[ExtensionModel |
-| | | > Object]{.underline}](#extensionmodel-object) |
+| | | > [ExtensionModel |
+| | | > Object](#extensionmodel-object) |
 | | | > no longer exists) |
 +--------+----------+------------------------------------------------+
 
 ## CacheElement Object
 
 > []{#\_bookmark286 .anchor}This object associates a
-> [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object) with
-> the [[ExtensionModel]{.underline}
-> [Object]{.underline}](#extensionmodel-object) that handles the node
+> [[Thumbnail]{.underline} [Object](#thumbnail-object) with
+> the [ExtensionModelObject](#extensionmodel-object) that handles the node
 > and that defines additional node data. The cache collects all
 > currently defined node data.
 >
-> This object actually contains the [[ExtensionModel
-> Object]{.underline}](#extensionmodel-object) that is created for the
-> thumbnail, as well as the associated [[Infoset
-> Object]{.underline}](#infoset-object)s. Each [[Infoset
-> Object]{.underline}](#infoset-object) in the cache is associated with
-> a [[CacheData Object]{.underline}](#cachedata-object) object that
+> This object actually contains the [ExtensionModel
+> Object](#extensionmodel-object) that is created for the
+> thumbnail, as well as the associated [Infoset
+> Object](#infoset-object)s. Each [Infoset
+> Object](#infoset-object) in the cache is associated with
+> a [CacheData Object](#cachedata-object) object that
 > contains its cache status.
 >
 > When Adobe Bridge needs to display a handled node, it instantiates
-> this object. It creates the [[ExtensionModel]{.underline}
-> [Object]{.underline}](#extensionmodel-object) using the handler's
+> this object. It creates the [ExtensionModelObject](#extensionmodel-object) using the handler's
 > makeModel() method, and stores it in the CacheElement. It then passes
 > the CacheElement object to the node handler's model method
 > registerInterest().
@@ -8760,7 +8631,7 @@ Spotlight (Mac)/ Desktop Search (Windows): Computer \"os_computer\"
 
 ### CacheElement properties
 
-_infosetNames_ Infoset Every node data set associated with this cache is accessible through a property with the same name as the [[Infoset Object]{.underline}](#infoset-object) name. Read only.
+_infosetNames_ Infoset Every node data set associated with this cache is accessible through a property with the same name as the [Infoset Object](#infoset-object) name. Read only.
 
 ---
 
@@ -8779,7 +8650,7 @@ path String The path of the asset associated with this object. Read only.
 > Register a script-defined extension handler with
 > app.[[registerExtension()]{.underline}](#_bookmark47). You can access
 > the global list of all registered extensions through
-> app.[[extensions]{.underline}](#_bookmark29).
+> app.[extensions](#_bookmark29).
 >
 > Your node-handling extension defines a node type. Your node types are
 > identified by a Bridge URI prefix. You must associates your handler
@@ -8788,23 +8659,20 @@ path String The path of the asset associated with this object. Read only.
 >
 > When it needs to display a node of a type that is managed by this
 > handler, Adobe Bridge uses the handler's makeModel() method to create
-> an instance of [[ExtensionModel
-> Object]{.underline}](#extensionmodel-object), and associates it with
-> the [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object)
-> that it creates for the node, through a [[CacheElement
-> Object]{.underline}](#cacheelement-object).
+> an instance of [ExtensionModel
+> Object](#extensionmodel-object), and associates it with
+> the [ThumbnailObject](#thumbnail-object)
+> that it creates for the node, through a [CacheElement
+> Object](#cacheelement-object).
 >
 > Your model implementation allows you to create and update a set of
-> script-defined properties in the [[Thumbnail]{.underline}
-> [Object]{.underline}](#thumbnail-object)s for your nodes. The
-> [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object) has
+> script-defined properties in the [ThumbnailObject](#thumbnail-object)s for your nodes. The
+> [ThumbnailObject](#thumbnail-object) has
 > a property with the same name as the ExtensionHandler that manages it,
 > which allows scripts to access the node data defined by the handler.
-> Data managed by each model is kept in [[Infoset]{.underline}
-> [Object]{.underline}](#infoset-object)s. Each [[Infoset]{.underline}
-> [Object]{.underline}](#infoset-object) member corresponds to one
+> Data managed by each model is kept in [InfosetObject](#infoset-object)s. Each [InfosetObject](#infoset-object) member corresponds to one
 > Thumbnail property. To access a script-defined property value in a
-> [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object), use
+> [ThumbnailObject](#thumbnail-object), use
 > this format:
 
 ###### Code examples
@@ -8812,16 +8680,16 @@ path String The path of the asset associated with this object. Read only.
 > Thumbnail.handlerName.infosetName.memberName
 >
 > []{#\_bookmark294 .anchor}Extensions must support [[Core]{.underline}
-> [infosets]{.underline}](#core-infosets) defined by Adobe Bridge, but
+> [infosets](#core-infosets) defined by Adobe Bridge, but
 > can also add new properties. In order to define you own thumbnail
 > properties for nodes of the type you define, define and register an
-> [[Infoset]{.underline}](#infoset-object) > [[Object]{.underline}](#infoset-object) using
+> [Infoset](#infoset-object) > [Object](#infoset-object) using
 > app.[[registerInfoset()]{.underline}](#_bookmark49).
 >
 > **NOTE:** This object is designed to extend the node-handling behavior
 > of Adobe Bridge itself, not the scripting functionality. The full
 > range of methods are not available to scripts from the user-level
-> [[Thumbnail]{.underline}](#thumbnail-object) > [[Object]{.underline}](#thumbnail-object).
+> [Thumbnail](#thumbnail-object) > [Object](#thumbnail-object).
 >
 > The sample code distributed with the Adobe Bridge SDK includes these
 > code examples that demonstrate how to define node-handling extensions:
@@ -8848,16 +8716,14 @@ path String The path of the asset associated with this object. Read only.
 | []{#\_bookmark299 | > Array of Infoset | > A collection of |
 | .anchor}infosets | | > [ |
 | | | [Infoset]{.underline} |
-| | | > [Object]{.underlin |
-| | | e}](#infoset-object)s |
+| | | > [Object](#infoset-object)s |
 | | | > defining node data |
 | | | > managed by this |
 | | | > handler, reflected |
 | | | > in handler-defined |
-| | | > [[T |
+| | | > [T |
 | | | humbnail]{.underline} |
-| | | > [Object]{.underline |
-| | | }](#thumbnail-object) |
+| | | > [Object](#thumbnail-object) |
 | | | > properties. |
 | | | > |
 | | | > Read only. Modify |
@@ -8929,13 +8795,13 @@ path String The path of the asset associated with this object. Read only.
 > described here. Handler methods can be immediate or long-running:
 >
 > []{#\_bookmark303 .anchor}[[Immediate handler
-> operations]{.underline}](#immediate-handler-operations) simply perform
+> operations](#immediate-handler-operations) simply perform
 > an operation and return when it is done. These functions must not take
 > a significant amount of time; if they are slow, they will negatively
 > affect Adobe Bridge browsing performance.
 >
-> [[Long-running handler
-> operations]{.underline}](#long-running-handler-operations) create and
+> [Long-running handler
+> operations](#long-running-handler-operations) create and
 > return Operator objects to perform time-intensive file-system
 > operations that block the main thread. Adobe Bridge view code or your
 > display code passes the object to
@@ -9006,9 +8872,8 @@ path String The path of the asset associated with this object. Read only.
 | > specification. | |
 | > | |
 | > _specification_ The | |
-| > [[SearchSpecification | |
-| > Object]{.underlin | |
-| e}](#searchspecification-object) | |
+| > [SearchSpecification | |
+| > Object](#searchspecification-object) | |
 | > that defines how to perform | |
 | > the search. | |
 | > | |
@@ -9016,9 +8881,8 @@ path String The path of the asset associated with this object. Read only.
 | > object from the user's | |
 | > choices, which can include | |
 | > choices added by your | |
-| > handler's [[SearchDefinition | |
-| > Object]{.underl | |
-| ine}](#searchdefinition-object). | |
+| > handler's [SearchDefinition | |
+| > Object](#searchdefinition-object). | |
 +----------------------------------+----------------------------------+
 
 +----------------------------------+----------------------------------+
@@ -9065,8 +8929,7 @@ path String The path of the asset associated with this object. Read only.
 +==================================+==================================+
 | > _masters_ Array of | |
 | > [[Thumbnail]{.underline} | |
-| > [Object]{ | |
-| .underline}](#thumbnail-object). | |
+| > [Object](#thumbnail-object). | |
 | > The set of nodes, children of | |
 | > a single parent node handled | |
 | > by this extension, for which | |
@@ -9088,9 +8951,8 @@ path String The path of the asset associated with this object. Read only.
 | | > handled node. |
 | | > |
 | | > Return the new |
-| | > [[ExtensionModel |
-| | > Object]{.unde |
-| | rline}](#extensionmodel-object). |
+| | > [ExtensionModel |
+| | > Object](#extensionmodel-object). |
 +----------------------------------+----------------------------------+
 | > _path_ A string containing the | |
 | > path for the node to be | |
@@ -9099,15 +8961,13 @@ path String The path of the asset associated with this object. Read only.
 
 #### Long-running handler operations
 
-> Implement these functions to create instances of the [[Operator
-> Class]{.underline}](#operator-class) which can perform the desired
+> Implement these functions to create instances of the [Operator
+> Class](#operator-class) which can perform the desired
 > operation, and if needed, provide Adobe Bridge with information about
 > the status and progress.
 >
-> Each function creates and returns a [[ModalOperator]{.underline}
-> [Object]{.underline}](#modaloperator-object) or
-> [[ProgressOperator]{.underline}
-> [Object]{.underline}](#progressoperator-object) which can perform the
+> Each function creates and returns a [ModalOperatorObject](#modaloperator-object) or
+> [ProgressOperatorObject](#progressoperator-object) which can perform the
 > operation in a separate thread, and, if needed, provide Adobe Bridge
 > with information about the status of the background operation. Adobe
 > Bridge calls app.[[enqueueOperation()]{.underline}](#_bookmark41) to
@@ -9121,12 +8981,10 @@ path String The path of the asset associated with this object. Read only.
 | (_sources_, _timeoutInMs_, | > for a set of placeholder |
 | | > nodes. |
 | > _showUi_, _message_, | > |
-| > _recursionOption_) | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| > _recursionOption_) | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +==================================+==================================+
 | > _sources_ An Array of | |
 | > [[Thumbnail | |
@@ -9165,12 +9023,10 @@ path String The path of the asset associated with this object. Read only.
 | | > that are handled by this |
 | > _showUi_, _message_) | > handler. |
 | | > |
-| | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _sources_ An Array of | |
 | > [[Thumbnail | |
@@ -9204,12 +9060,10 @@ path String The path of the asset associated with this object. Read only.
 | | > them to the system trash or |
 | | > recycle bin. |
 | | > |
-| | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _sources_ An Array of | |
 | > [[Thumbnail | |
@@ -9243,17 +9097,14 @@ path String The path of the asset associated with this object. Read only.
 | _showUi_, _message_) | > for all. This does not rotate |
 | | > the image bits. |
 | | > |
-| | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _targets_ An Array of | |
-| > [[Thumbnail | |
-| > Object]{ | |
-| .underline}](#thumbnail-object), | |
+| > [Thumbnail | |
+| > Object](#thumbnail-object), | |
 | > the set of target thumbnails. | |
 +----------------------------------+----------------------------------+
 
@@ -9288,25 +9139,22 @@ path String The path of the asset associated with this object. Read only.
 | (_targets_, _labels_, | > that sets the labels for a set |
 | _timeoutInMs_, _showUi_, | > of thumbnails. |
 | _message_) | > |
-| | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _targets_ An Array of | |
-| > [[Thumbnail | |
-| > Object]{ | |
-| .underline}](#thumbnail-object), | |
+| > [Thumbnail | |
+| > Object](#thumbnail-object), | |
 | > the set of target thumbnails. | |
 | > | |
 | > _labels_ An Array of Strings, | |
 | > the set of label values | |
 | > corresponding to the target | |
 | > thumbnails. See | |
-| > Thumbnail.[[lab | |
-| el]{.underline}](#_bookmark258). | |
+| > Thumbnail.[lab | |
+| el](#_bookmark258). | |
 | > | |
 | > _timeoutInMs_ Optional. A | |
 | > number of microseconds after | |
@@ -9330,17 +9178,14 @@ path String The path of the asset associated with this object. Read only.
 | (_targets_, _ratings_, | > that sets the ratings for a |
 | _timeoutInMs_, _showUi_, | > set of thumbnails. |
 | _message_) | > |
-| | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _targets_ An Array of | |
-| > [[Thumbnail | |
-| > Object]{ | |
-| .underline}](#thumbnail-object), | |
+| > [Thumbnail | |
+| > Object](#thumbnail-object), | |
 | > the set of target thumbnails. | |
 | > | |
 | > _ratings_ An Array of Numbers, | |
@@ -9370,12 +9215,10 @@ path String The path of the asset associated with this object. Read only.
 | | > that embeds XMP file metadata |
 | _obj_.setXmp (_targets_, | > packets in a set of files. |
 | _xmpPackets_, _timeoutInMs_, | > |
-| _showUi_, _message_) | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| _showUi_, _message_) | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _targets_ An Array of Strings, | |
 | > the set of file paths. | |
@@ -9402,12 +9245,11 @@ path String The path of the asset associated with this object. Read only.
 >
 > []{#\_bookmark313 .anchor}When Adobe Bridge needs to display a handled
 > node, it uses the [[makeModel()]{.underline}](#_bookmark306) method
-> defined in the [[ExtensionHandler]{.underline}
-> [Object]{.underline}](#extensionhandler-object) to instantiate this
-> object. It then creates a [[CacheElement
-> Object]{.underline}](#cacheelement-object) to contain the model object
-> and associate it with the new [[Thumbnail
-> Object]{.underline}](#thumbnail-object) that it creates for the node.
+> defined in the [ExtensionHandlerObject](#extensionhandler-object) to instantiate this
+> object. It then creates a [CacheElement
+> Object](#cacheelement-object) to contain the model object
+> and associate it with the new [Thumbnail
+> Object](#thumbnail-object) that it creates for the node.
 >
 > []{#\_bookmark314 .anchor}The ExtensionModel that your handler creates
 > implements the actual node-handling methods that perform operations on
@@ -9418,11 +9260,10 @@ path String The path of the asset associated with this object. Read only.
 >
 > The model can define private data needed for node handling, accessible
 > through additional properties for the [[Thumbnail]{.underline}
-> [Object]{.underline}](#thumbnail-object). Data managed by a model is
-> kept in [[Infoset Object]{.underline}](#infoset-object)s. Each data
+> [Object](#thumbnail-object). Data managed by a model is
+> kept in [Infoset Object](#infoset-object)s. Each data
 > member corresponds to one script-defined Thumbnail property. To access
-> a script-defined property value in a [[Thumbnail]{.underline}
-> [Object]{.underline}](#thumbnail-object), use this format:
+> a script-defined property value in a [ThumbnailObject](#thumbnail-object), use this format:
 >
 > Thumbnail.handlerName.infosetName.memberName
 
@@ -9434,7 +9275,7 @@ path String The path of the asset associated with this object. Read only.
 > _path_ String The absolute path or fully-qualified URL for the source
 > file or page to be displayed. Adobe Bridge passes the path to
 > [[makeModel()]{.underline}](#_bookmark306) when it is creating a new
-> [[Thumbnail]{.underline}](#thumbnail-object) > [[Object]{.underline}](#thumbnail-object) for a handled node.
+> [Thumbnail](#thumbnail-object) > [Object](#thumbnail-object) for a handled node.
 
 ### ExtensionModel properties
 
@@ -9445,17 +9286,15 @@ path String The path of the asset associated with this object. Read only.
 | | | > Typically, you use it to |
 | | | > store the parent |
 | | | > [[CacheElement |
-| | | > Object]{.underlin |
-| | | e}](#cacheelement-object), |
+| | | > Object](#cacheelement-object), |
 | | | > which is passed to your |
 | | | > model's |
 | | | > [[registerInterest()]{. |
 | | | underline}](#_bookmark328) |
 | | | > method. This in turn |
 | | | > provides access to each |
-| | | > [[Infoset]{.underline} |
-| | | > [Object]{.un |
-| | | derline}](#infoset-object) |
+| | | > [Infoset]{.underline} |
+| | | > [Object](#infoset-object) |
 | | | > that contains data |
 | | | > managed by this model. |
 | | | > |
@@ -9484,13 +9323,12 @@ path String The path of the asset associated with this object. Read only.
 > long-running:
 >
 > [[Immediate]{.underline} [model]{.underline}
-> [operations]{.underline}](#immediate-model-operations) simply perform
+> [operations](#immediate-model-operations) simply perform
 > an operation and return when it is done. These functions must not take
 > a significant amount of time; if they are slow, they will negatively
 > affect Adobe Bridge browsing performance.
 >
-> [[Long-running model]{.underline}
-> [operations]{.underline}](#long-running-model-operations) create and
+> [Long-running modeloperations](#long-running-model-operations) create and
 > return Operator objects to perform time-intensive file-system
 > operations that block the main thread. Adobe Bridge view code or your
 > display code passes the object to
@@ -9521,9 +9359,9 @@ path String The path of the asset associated with this object. Read only.
 | | > |
 | | > Return undefined. |
 +----------------------------------+----------------------------------+
-| > _infosetName_ | > The name of the [[Infoset |
+| > _infosetName_ | > The name of the [Infoset |
 | | > Object |
-| | ]{.underline}](#infoset-object). |
+| | ](#infoset-object). |
 +----------------------------------+----------------------------------+
 | createNewContainer() | > Create a new container node in |
 | | > this container node. If this |
@@ -9568,9 +9406,8 @@ path String The path of the asset associated with this object. Read only.
 | _obj_. getCacheStatus (_infoset, | > this node. See [[CacheElement |
 | cookie_) | > Object]{.u |
 | | nderline}](#cacheelement-object) |
-| | > and [[CacheData |
-| | > Object]{ |
-| | .underline}](#cachedata-object). |
+| | > and [CacheData |
+| | > Object](#cachedata-object). |
 | | > |
 | | > Return the cache status |
 | | > string. |
@@ -9578,9 +9415,9 @@ path String The path of the asset associated with this object. Read only.
 
 +----------------------------------+----------------------------------+
 | > _infosetName_ The name of the | |
-| > [[Infoset | |
+| > [Infoset | |
 | > Object | |
-| ]{.underline}](#infoset-object). | |
+| ](#infoset-object). | |
 | > | |
 | > _cookie_ A string buffer in | |
 | > which to return the cache | |
@@ -9602,9 +9439,8 @@ path String The path of the asset associated with this object. Read only.
 | | > container. |
 | | > |
 | | > Return an array of |
-| | > [[FilterDescription |
-| | > Object]{.underli |
-| | ne}](#filterdescription-object)s |
+| | > [FilterDescription |
+| | > Object](#filterdescription-object)s |
 | | > for the complete set of |
 | | > filters with which to populate |
 | | > the Filter palette. |
@@ -9628,9 +9464,8 @@ path String The path of the asset associated with this object. Read only.
 | | > |
 | | > Return the |
 | | > |
-| | [[SearchDefinition]{.underline} |
-| | > [Object]{.underl |
-| | ine}](#searchdefinition-object). |
+| | [SearchDefinition]{.underline} |
+| | > [Object](#searchdefinition-object). |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark324 | > Retrieve or recreate the |
 | .anchor}getSearchDetails() | > search specification and |
@@ -9643,9 +9478,8 @@ path String The path of the asset associated with this object. Read only.
 | | h()]{.underline}](#_bookmark305) |
 | | > method. |
 | | > |
-| | > Return a [[SearchDetails |
-| | > Object]{.und |
-| | erline}](#searchdetails-object). |
+| | > Return a [SearchDetails |
+| | > Object](#searchdetails-object). |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark325 | > Create the full set of sorting |
 | .anchor}getSortCriteria() | > criteria for member nodes of |
@@ -9653,15 +9487,14 @@ path String The path of the asset associated with this object. Read only.
 | _obj_.getSortCriteria () | > construct an entirely new list |
 | | > of criteria, or retrieve the |
 | | > default set from |
-| | > app.[[defaultSortCrit |
-| | eria]{.underline}](#_bookmark26) |
+| | > app.[defaultSortCrit |
+| | eria](#_bookmark26) |
 | | > and modify or append criteria, |
 | | > or return the set unchanged. |
 | | > |
 | | > Return an array of |
-| | > [[SortCriterion]{.underline} |
-| | > [Object]{.unde |
-| | rline}](#sortcriterion-object)s. |
+| | > [SortCriterion]{.underline} |
+| | > [Object](#sortcriterion-object)s. |
 +----------------------------------+----------------------------------+
 | []{#\_bookmark326 | > Retrieve the opaque XML code |
 | .anchor}getUserSortOrder() | > representing a user-defined |
@@ -9746,9 +9579,9 @@ path String The path of the asset associated with this object. Read only.
 | | > to reflect which optional |
 | | > model methods are |
 | | > supported by this handler. |
-| | > See [[Core |
+| | > See [Core |
 | | > infoset |
-| | s]{.underline}](#core-infosets). |
+| | s](#core-infosets). |
 | | |
 | | - If the node is a container, |
 | | > the operation must add its |
@@ -9760,16 +9593,15 @@ path String The path of the asset associated with this object. Read only.
 | | - The operation must set the |
 | | > cache status of the |
 | | > updated node-data set. See |
-| | > [[CacheData |
-| | > Object]{ |
-| | .underline}](#cachedata-object). |
+| | > [CacheData |
+| | > Object](#cachedata-object). |
 | | |
 | | > Return undefined. |
 +----------------------------------+----------------------------------+
 | > _infosetName_ The name of the | |
-| > [[Infoset | |
+| > [Infoset | |
 | > Object | |
-| ]{.underline}](#infoset-object). | |
+| ](#infoset-object). | |
 | > | |
 | > _priority_ Optional. The | |
 | > priority to assign this | |
@@ -9808,14 +9640,13 @@ path String The path of the asset associated with this object. Read only.
 | | > access the node data. |
 | | > Typically, you store it in |
 | | > this model's |
-| | > [[privateD |
-| | ata]{.underline}](#_bookmark317) |
+| | > [privateD |
+| | ata](#_bookmark317) |
 | | > property. |
 | | > |
 | | > Adobe Bridge instantiates the |
-| | > [[CacheElement]{.underline} |
-| | > [Object]{.u |
-| | nderline}](#cacheelement-object) |
+| | > [CacheElement]{.underline} |
+| | > [Object](#cacheelement-object) |
 | | > and passes it to this method |
 | | > whenever it displays a handled |
 | | > node. |
@@ -9823,9 +9654,8 @@ path String The path of the asset associated with this object. Read only.
 | | > Return undefined. |
 +==================================+==================================+
 | > _cacheElement_ The name of the | |
-| > [[CacheElement | |
-| > Object]{.un | |
-| derline}](#cacheelement-object). | |
+| > [CacheElement | |
+| > Object](#cacheelement-object). | |
 +----------------------------------+----------------------------------+
 | registerStructuralInterest() | > Notifies Adobe Bridge that the |
 | _obj_. | > cache should be updated when |
@@ -9835,9 +9665,8 @@ path String The path of the asset associated with this object. Read only.
 | | > Return undefined. |
 +----------------------------------+----------------------------------+
 | > _cacheElement_ The name of the | |
-| > [[CacheElement | |
-| > Object]{.un | |
-| derline}](#cacheelement-object). | |
+| > [CacheElement | |
+| > Object](#cacheelement-object). | |
 +----------------------------------+----------------------------------+
 | setName() | > Set the file name of this |
 | | > node. Change the base name and |
@@ -9941,9 +9770,8 @@ path String The path of the asset associated with this object. Read only.
 | | > Return undefined. |
 +----------------------------------+----------------------------------+
 | > _cacheElement_ The name of the | |
-| > [[CacheElement | |
-| > Object]{.un | |
-| derline}](#cacheelement-object). | |
+| > [CacheElement | |
+| > Object](#cacheelement-object). | |
 +----------------------------------+----------------------------------+
 | unregisterStructuralInterest() | > Removes the instruction to |
 | | > update the associated cache |
@@ -9995,15 +9823,13 @@ path String The path of the asset associated with this object. Read only.
 
 #### Long-running model operations
 
-> Implement these functions to create instances of the [[Operator
-> Class]{.underline}](#operator-class) which can perform the desired
+> Implement these functions to create instances of the [Operator
+> Class](#operator-class) which can perform the desired
 > operation, and if needed, provide Adobe Bridge with information about
 > the status and progress.
 >
-> Each function creates and returns a [[ModalOperator]{.underline}
-> [Object]{.underline}](#modaloperator-object) or
-> [[ProgressOperator]{.underline}
-> [Object]{.underline}](#progressoperator-object) which can perform the
+> Each function creates and returns a [ModalOperatorObject](#modaloperator-object) or
+> [ProgressOperatorObject](#progressoperator-object) which can perform the
 > operation in a separate thread, and, if needed, provide Adobe Bridge
 > with information about the status of the background operation. Adobe
 > Bridge calls app.[[enqueueOperation()]{.underline}](#_bookmark41) to
@@ -10022,12 +9848,10 @@ path String The path of the asset associated with this object. Read only.
 | | > container, the operator should |
 | | > do nothing. |
 +----------------------------------+----------------------------------+
-| > _newNames_) | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| > _newNames_) | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _sources_ An Array of | |
 | > [[Thumbnail | |
@@ -10060,12 +9884,10 @@ path String The path of the asset associated with this object. Read only.
 | eject() | > Create and return an operator |
 | | > that unmounts a path. |
 +----------------------------------+----------------------------------+
-| _obj_.eject | > Return a [[ModalOperator |
-| | > Object]{.un |
-| (_path_, _timeoutInMs_, | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| _obj_.eject | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | _showUi_, _message_) | |
 +----------------------------------+----------------------------------+
@@ -10097,12 +9919,10 @@ path String The path of the asset associated with this object. Read only.
 | | > container, the operator should |
 | | > do nothing. |
 +----------------------------------+----------------------------------+
-| > _newNames_) | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| > _newNames_) | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _sources_ An Array of | |
 | > [[Thumbnail | |
@@ -10143,12 +9963,10 @@ path String The path of the asset associated with this object. Read only.
 | | > does not support symbolic |
 | | > links (symlinks) in Mac OS. |
 +----------------------------------+----------------------------------+
-| | > Return a [[ModalOperator |
-| | > Object]{.un |
-| | derline}](#modaloperator-object) |
-| | > or [[ProgressOperator |
-| | > Object]{.underl |
-| | ine}](#progressoperator-object). |
+| | > Return a [ModalOperator |
+| | > Object](#modaloperator-object) |
+| | > or [ProgressOperator |
+| | > Object](#progressoperator-object). |
 +----------------------------------+----------------------------------+
 | > _sources_ An Array of | |
 | > [[Thumbnail | |
@@ -10184,8 +10002,7 @@ path String The path of the asset associated with this object. Read only.
 > needs to display that container's contents in the Content pane, or
 > display a list of children in a menu. A filter description identifies
 > a metadata property (from embedded XMP metadata) or a node property
-> (from a node-handler-defined [[Infoset]{.underline}
-> [Object]{.underline}](#infoset-object)) to display in the Filter
+> (from a node-handler-defined [InfosetObject](#infoset-object)) to display in the Filter
 > palette.
 >
 > The Filter palette displays each filter property, with a line under
@@ -10199,11 +10016,11 @@ path String The path of the asset associated with this object. Read only.
 >
 > The list of filter objects that Adobe Bridge uses by default to
 > populate the Filter palette is kept in
-> app.[[defaultFilterCriteria]{.underline}](#_bookmark25). When
+> app.[defaultFilterCriteria](#_bookmark25). When
 > displaying a handled container node, Adobe Bridge builds the list of
 > filters by calling the developer-defined
 > [[getFilterCriteria()]{.underline}](#_bookmark322) method of the
-> node's [[ExtensionModel Object]{.underline}](#extensionmodel-object).
+> node's [ExtensionModel Object](#extensionmodel-object).
 > Your implementation of this method can create these filter objects,
 > and use them to replace, modify, or add to the default list.
 
@@ -10257,14 +10074,13 @@ path String The path of the asset associated with this object. Read only.
 +===============+=========+==========================================+
 | infosetMember | String | > The name of the node property to use |
 | | | > as a filter, as defined in the |
-| | | > [[InfosetMemberDescription |
-| | | > Object]{.underl |
-| | | ine}](#infosetmemberdescription-object). |
+| | | > [InfosetMemberDescription |
+| | | > Object](#infosetmemberdescription-object). |
 | | | > |
 | | | > **NOTE:** The filter property must be |
 | | | > _either_ an XMP metadata property or |
-| | | > an [[Infoset |
-| | | > Object]{.underline}](#infoset-object) |
+| | | > an [Infoset |
+| | | > Object](#infoset-object) |
 | | | > node-data property; if both are |
 | | | > defined, the XMP property takes |
 | | | > precedence and the node-data property |
@@ -10295,28 +10111,27 @@ path String The path of the asset associated with this object. Read only.
 - For a script-defined node-handling extension, you can register an
 
   > Infoset object that defines a related set of script-defined
-  > [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object)
+  > [ThumbnailObject](#thumbnail-object)
   > properties for handled nodes.
 
 - Adobe Bridge-defined Infoset objects and their members are listed in
-  > [['Core infosets' on]{.underline} [page
-  > 132]{.underline}](#core-infosets).
+  > ['Core infosets' onpage
+  > 132](#core-infosets).
 
 > To declare the properties, create the Infoset object and associate it
-> with your [[ExtensionHandler
-> Object]{.underline}](#extensionhandler-object) using
+> with your [ExtensionHandler
+> Object](#extensionhandler-object) using
 > app.[[registerInfoset()]{.underline}](#_bookmark49). The Infoset
 > object is added to the list in the ExtensionHandler
-> [[infosets]{.underline}](#_bookmark299) property.
+> [infosets](#_bookmark299) property.
 >
 > An Infoset is a named set of data elements. Each member element has a
-> name and type, defined by a [[InfosetMemberDescription]{.underline}
-> [Object]{.underline}](#infosetmemberdescription-object). Each member
+> name and type, defined by a [InfosetMemberDescriptionObject](#infosetmemberdescription-object). Each member
 > name becomes a property of the containing Infoset, and you can access
 > the data value, of the corresponding type, through that property.
 >
 > To access a script-defined property value in a
-> [[Thumbnail]{.underline} [Object]{.underline}](#thumbnail-object), use
+> [ThumbnailObject](#thumbnail-object), use
 > this format:
 >
 > _ThumbnailObject.handlerName.infosetName.memberName_
@@ -10336,14 +10151,12 @@ path String The path of the asset associated with this object. Read only.
 ### Infoset properties
 
 +-------------+--------------------------+--------------------------+
-| cacheData | > CacheData | > The [[CacheData |
-| | | > Object]{.underl |
-| | | ine}](#cachedata-object) |
+| cacheData | > CacheData | > The [CacheData |
+| | | > Object](#cachedata-object) |
 | | | > containing cache |
 | | | > status for this set in |
-| | | > the [[CacheElement |
-| | | > Object]{.underline |
-| | | }](#cacheelement-object) |
+| | | > the [CacheElement |
+| | | > Object](#cacheelement-object) |
 | | | > that collects all node |
 | | | > data for this node. |
 | | | > |
@@ -10367,8 +10180,8 @@ path String The path of the asset associated with this object. Read only.
 | | | > Read/write. |
 +-------------+--------------------------+--------------------------+
 | extension | > String | > The name of the |
-| | | > [[ExtensionHandler |
-| | | > Object]{.underline}](# |
+| | | > [ExtensionHandler |
+| | | > Object](# |
 | | | extensionhandler-object) |
 | | | > that manages this |
 | | | > data. Available after |
@@ -10416,8 +10229,8 @@ path String The path of the asset associated with this object. Read only.
 +----------------------------------+----------------------------------+
 | []{#\_bookmark349 | > Adds a child node to the core |
 | .anchor}addChild() | > data set children. (See |
-| | > [[Co |
-| _obj_.addChild | re]{.underline}](#core-infosets) |
+| | > [Co |
+| _obj_.addChild | re](#core-infosets) |
 | | > [[infosets |
 | (_path, model, containerHint_) | ]{.underline}](#core-infosets).) |
 | | > Use this in the model's |
@@ -10446,9 +10259,8 @@ path String The path of the asset associated with this object. Read only.
 | > | > name) of the child node. |
 | > _containerHint_ | > |
 | | > Optional. An |
-| | > [[ExtensionModel]{.underline} |
-| | > [Object]{.und |
-| | erline}](#extensionmodel-object) |
+| | > [ExtensionModel]{.underline} |
+| | > [Object](#extensionmodel-object) |
 | | > that manages the new child. |
 | | > Can be undefined (the |
 | | > default). |
@@ -10613,9 +10425,9 @@ path String The path of the asset associated with this object. Read only.
 | | | > is enabled. If |
 | | | > users implement |
 | | | > their own |
-| | | > [[ExtensionModel |
+| | | > [ExtensionModel |
 | | | > Objec |
-| | | t]{.underline}](#ext |
+| | | t](#ext |
 | | | ensionmodel-object), |
 | | | > they should set |
 | | | > this property to |
@@ -10641,11 +10453,11 @@ path String The path of the asset associated with this object. Read only.
 | | | > refreshInfoset() |
 | | | > function of a |
 | | | > user-defined |
-| | | > [[ExtensionMod |
-| | | el]{.underline}](#ex |
+| | | > [ExtensionMod |
+| | | el](#ex |
 | | | tensionmodel-object) |
-| | | > [[Objec |
-| | | t]{.underline}](#ext |
+| | | > [Objec |
+| | | t](#ext |
 | | | ensionmodel-object). |
 +----------------------+----------------------+----------------------+
 | | > canSearch | > True if the node |
@@ -10888,8 +10700,7 @@ path String The path of the asset associated with this object. Read only.
 | | | > in pixels. |
 +-----------------------+--------------------+-----------------------+
 | []{#\_bookmark352 | > badges | > An array of [[Badge |
-| .anchor}badges | | > Object]{.underl |
-| | | ine}](#badge-object)s |
+| .anchor}badges | | > Object](#badge-object)s |
 | | | > representing the |
 | | | > node's status |
 | | | > icons. A node in |
@@ -10919,9 +10730,8 @@ path String The path of the asset associated with this object. Read only.
 | | | > or TIFF format) |
 +------------------+------------------------+------------------------+
 | children | > children | > An Array of |
-| | | > [[Thumbnail |
-| | | > Object]{.underline |
-| | | }](#thumbnail-object)s |
+| | | > [Thumbnail |
+| | | > Object](#thumbnail-object)s |
 | | | > representing the |
 | | | > child nodes of a |
 | | | > container node. |
@@ -10930,17 +10740,15 @@ path String The path of the asset associated with this object. Read only.
 | | | > update their child |
 | | | > node lists. |
 +------------------+------------------------+------------------------+
-| fullsize | > fullsize | > A [[BitmapData |
-| | | > Object]{.underline |
-| | | }](#bitmapdata-object) |
+| fullsize | > fullsize | > A [BitmapData |
+| | | > Object](#bitmapdata-object) |
 | | | > representing the |
 | | | > pixels for the |
 | | | > file\'s full-size |
 | | | > preview thumbnail. |
 +------------------+------------------------+------------------------+
-| icon | > bitmap | > A [[BitmapData |
-| | | > Object]{.underline |
-| | | }](#bitmapdata-object) |
+| icon | > bitmap | > A [BitmapData |
+| | | > Object](#bitmapdata-object) |
 | | | > representing the |
 | | | > pixels for the |
 | | | > node's icon. |
@@ -10959,9 +10767,8 @@ path String The path of the asset associated with this object. Read only.
 | | | > high-quality preview |
 | | | > image. |
 +------------------+------------------------+------------------------+
-| | > preview | > A [[BitmapData |
-| | | > Object]{.underline |
-| | | }](#bitmapdata-object) |
+| | > preview | > A [BitmapData |
+| | | > Object](#bitmapdata-object) |
 | | | > representing the |
 | | | > pixels for the |
 | | | > file\'s preview |
@@ -10972,9 +10779,8 @@ path String The path of the asset associated with this object. Read only.
 | | | > high-quality |
 | | | > thumbnail image. |
 +------------------+------------------------+------------------------+
-| | > thumbnail | > A [[BitmapData |
-| | | > Object]{.underline |
-| | | }](#bitmapdata-object) |
+| | > thumbnail | > A [BitmapData |
+| | | > Object](#bitmapdata-object) |
 | | | > representing the |
 | | | > pixels for the |
 | | | > file\'s thumbnail |
@@ -10984,13 +10790,12 @@ path String The path of the asset associated with this object. Read only.
 ## InfosetMemberDescription Object
 
 > Associates a data type with a single node-data value for Adobe Bridge
-> nodes. Each node-data value is a member of an [[Infoset
-> Object]{.underline}](#infoset-object) associated with an
-> [[ExtensionHandler]{.underline}
-> [Object]{.underline}](#extensionhandler-object).
+> nodes. Each node-data value is a member of an [Infoset
+> Object](#infoset-object) associated with an
+> [ExtensionHandlerObject](#extensionhandler-object).
 >
-> The name becomes a property of the parent [[Infoset
-> Object]{.underline}](#infoset-object), which provides access to a data
+> The name becomes a property of the parent [Infoset
+> Object](#infoset-object), which provides access to a data
 > value of this type. For example, to access a color value in myInfo in
 > thumbnail t1, where the myInfo set is managed by myExtension, use:
 >
@@ -11008,8 +10813,8 @@ path String The path of the asset associated with this object. Read only.
 
 +------+----------+--------------------------------------------------+
 | name | > String | > The name of this value, which becomes a |
-| | | > property of the parent [[Infoset |
-| | | > Object]{.underline}](#infoset-object). Must be |
+| | | > property of the parent [Infoset |
+| | | > Object](#infoset-object). Must be |
 | | | > a valid JavaScript identifier containing no |
 | | | > colons or special symbols. |
 | | | > |
@@ -11017,14 +10822,14 @@ path String The path of the asset associated with this object. Read only.
 +======+==========+==================================================+
 | type | > String | > The data type for values accessed through the |
 | | | > name property of the parent |
-| | | > [[Infoset]{.underline}](#infoset-object) |
-| | | > [[Object]{.underline}](#infoset-object). |
+| | | > [Infoset](#infoset-object) |
+| | | > [Object](#infoset-object). |
 | | | > Read/write. One of: |
 | | | > |
 | | | > Boolean String Integer Icon (32x32) |
 | | | > |
-| | | > BitmapData (a [[BitmapData |
-| | | > Object]{.underline}](#bitmapdata-object)) |
+| | | > BitmapData (a [BitmapData |
+| | | > Object](#bitmapdata-object)) |
 | | | > |
 | | | > SizeInBytes Date |
 | | | > |
@@ -11037,7 +10842,7 @@ path String The path of the asset associated with this object. Read only.
 > Encapsulates a synchronous operation. Performs a task that blocks the
 > main thread, and provides its own user interface.
 >
-> See [[Operator]{.underline} [Class]{.underline}](#operator-class) for
+> See [OperatorClass](#operator-class) for
 > basic properties and methods. For this object, the
 > [[start()]{.underline}](#_bookmark383) method yields the main thread
 > to the extension. The [[getType()]{.underline}](#_bookmark382) method
@@ -11051,20 +10856,20 @@ path String The path of the asset associated with this object. Read only.
 +-------------+-------------------------------------------------------+
 | > _type_ | > The operator type, "modal". |
 +=============+=======================================================+
-| > _sources_ | > An array of [[Thumbnail |
-| | > Object]{.underline}](#thumbnail-object)s that the |
+| > _sources_ | > An array of [Thumbnail |
+| | > Object](#thumbnail-object)s that the |
 | | > operation acts upon. |
 +-------------+-------------------------------------------------------+
-| > _target_ | > A target [[Thumbnail |
-| | > Object]{.underline}](#thumbnail-object) for the |
+| > _target_ | > A target [Thumbnail |
+| | > Object](#thumbnail-object) for the |
 | | > operation. |
 +-------------+-------------------------------------------------------+
 
 ## Operand Object
 
 > For use in node searches. An array of these objects is kept in the
-> [[operands]{.underline}](#_bookmark411) property of a
-> [[SearchCriteria]{.underline}](#searchcriteria-object) > [[Object]{.underline}](#searchcriteria-object). They are used to
+> [operands](#_bookmark411) property of a
+> [SearchCriteria](#searchcriteria-object) > [Object](#searchcriteria-object). They are used to
 > populate the right-side field in the line that corresponds to the
 > criterion in the Find dialog (values to be compared against). If there
 > is more than one, the field displays a drop-down list.
@@ -11083,10 +10888,10 @@ path String The path of the asset associated with this object. Read only.
 | valueName | > String | > The operand value; that is, a possible |
 | | | > value of the |
 | | | > [ |
-| | | [searchField]{.underline}](#_bookmark402) |
-| | | > property of the [[SearchCriteria |
+| | | [searchField](#_bookmark402) |
+| | | > property of the [SearchCriteria |
 | | | > Obje |
-| | | ct]{.underline}](#searchcriteria-object). |
+| | | ct](#searchcriteria-object). |
 | | | > Read-write. |
 +=============+==========+===========================================+
 | displayName | > String | > Optional. The localized display name |
@@ -11105,23 +10910,22 @@ path String The path of the asset associated with this object. Read only.
 > allows interaction through a Progress bar and other dialogs that Adobe
 > Bridge provides.
 >
-> You define certain methods for a node-handler's [[ExtensionHandler
-> Object]{.underline}](#extensionhandler-object) and [[ExtensionModel
-> Object]{.underline}](#extensionmodel-object) to create and return an
+> You define certain methods for a node-handler's [ExtensionHandler
+> Object](#extensionhandler-object) and [ExtensionModel
+> Object](#extensionmodel-object) to create and return an
 > Operator object, which actually implements the operation. The model
-> method returns immediately. See [[Long-running handler]{.underline}
-> [operations]{.underline}](#long-running-handler-operations) and
-> [[Long-running]{.underline} [model
-> operations]{.underline}](#long-running-model-operations).
+> method returns immediately. See [Long-running handleroperations](#long-running-handler-operations) and
+> [Long-runningmodel
+> operations](#long-running-model-operations).
 >
 > []{#\_bookmark368 .anchor}The Operator class is a base class for two
 > types of operator:
 
-- [[ModalOperator Object]{.underline}](#modaloperator-object): Blocks
+- [[ModalOperator Object](#modaloperator-object): Blocks
 
   > the main thread and must provide any desired user interface.
 
-- [[ProgressOperator Object]{.underline}](#progressoperator-object):
+- [ProgressOperator Object](#progressoperator-object):
   > Spawns a background task that can perform operations
   > incrementally, while occasionally notifying Adobe Bridge of
   > changes that require an update to the Adobe Bridge-supplied UI.
@@ -11230,8 +11034,7 @@ path String The path of the asset associated with this object. Read only.
 +-----------------------+-------------------+-----------------------+
 | errorTarget | > Thumbnail | > When |
 | | | > [[op |
-| | | erationStatus]{.under |
-| | | line}](#_bookmark373) |
+| | | erationStatus](#_bookmark373) |
 | | | > is inError, the |
 | | | > problematic |
 | | | > [[T |
@@ -11241,8 +11044,7 @@ path String The path of the asset associated with this object. Read only.
 | | | ](#thumbnail-object). |
 +-----------------------+-------------------+-----------------------+
 | newNames | > Array of String | > When |
-| | | > [[sources]{.under |
-| | | line}](#_bookmark375) |
+| | | > [sources](#_bookmark375) |
 | | | > has a value, an |
 | | | > array of the same |
 | | | > length containing |
@@ -11256,8 +11058,7 @@ path String The path of the asset associated with this object. Read only.
 | | | ](#thumbnail-object)s |
 | | | > after they are |
 | | | > transferred to the |
-| | | > [[target]{.underl |
-| | | ine}](#_bookmark376). |
+| | | > [target](#_bookmark376). |
 +-----------------------+-------------------+-----------------------+
 | []{#\_bookmark373 | > String | > The status of the |
 | .a | | > operation with |
@@ -11324,9 +11125,8 @@ path String The path of the asset associated with this object. Read only.
 | | | > |
 | | | conflict-resolution |
 | | | > method |
-| | | > ([[reso |
-| | | lveMethod]{.underlin |
-| | | e}](#_bookmark374)). |
+| | | > ([reso |
+| | | lveMethod](#_bookmark374)). |
 | | | > This is for the |
 | | | > developer's |
 | | | > information in a |
@@ -11504,11 +11304,11 @@ path String The path of the asset associated with this object. Read only.
 | resolveConflict() | > Implement a method that |
 | _obj_.resolveConflict (_method, | > resolves a file-system |
 | policy_) | > conflict, as identified by the |
-| | > [[conflictT |
-| | ype]{.underline}](#_bookmark371) |
+| | > [conflictT |
+| | ype](#_bookmark371) |
 | | > and |
-| | > [[conflictMess |
-| | age]{.underline}](#_bookmark372) |
+| | > [conflictMess |
+| | age](#_bookmark372) |
 | | > values. |
 | | > |
 | | > Adobe Bridge invokes this |
@@ -11613,7 +11413,7 @@ path String The path of the asset associated with this object. Read only.
 > Encapsulates an operation that performs a background task, while Adobe
 > Bridge displays a Progress bar. It can do so incrementally,
 > periodically notifying Adobe Bridge of the current status. See
-> [[Operator Class]{.underline}](#operator-class) for the inherited
+> [Operator Class](#operator-class) for the inherited
 > properties and methods.
 >
 > For this object, the [[getType()]{.underline}](#_bookmark382) method
@@ -11638,19 +11438,18 @@ path String The path of the asset associated with this object. Read only.
 +-------------+-------------------------------------------------------+
 | > _type_ | > The operator type, "progress". |
 +=============+=======================================================+
-| > _sources_ | > An array of [[Thumbnail |
-| | > Object]{.underline}](#thumbnail-object)s that the |
+| > _sources_ | > An array of [Thumbnail |
+| | > Object](#thumbnail-object)s that the |
 | | > operation acts upon. |
 +-------------+-------------------------------------------------------+
-| > _target_ | > A target [[Thumbnail |
-| | > Object]{.underline}](#thumbnail-object) for the |
+| > _target_ | > A target [Thumbnail |
+| | > Object](#thumbnail-object) for the |
 | | > operation. |
 +-------------+-------------------------------------------------------+
 
 ## Rank Object
 
-> For use in node searches. A [[SearchDefinition]{.underline}
-> [Object]{.underline}](#searchdefinition-object) can limit the number
+> For use in node searches. A [SearchDefinitionObject](#searchdefinition-object) can limit the number
 > of results to return, and, if results are limited, it can define a set
 > of possible properties to use in ranking results. Adobe Bridge sorts
 > result nodes by the value of the chosen rank property, and returns no
@@ -11662,15 +11461,14 @@ path String The path of the asset associated with this object. Read only.
 > encapsulated in a Rank object.
 >
 > An array of these objects kept in the
-> [[ranks]{.underline}](#_bookmark416) property of a
-> [[SearchDefinition]{.underline}
-> [Object]{.underline}](#searchdefinition-object). They are used to
+> [ranks](#_bookmark416) property of a
+> [SearchDefinitionObject](#searchdefinition-object). They are used to
 > populate the Rank field that corresponds to the definition in the Find
 > dialog. If there is more than one, the field displays a drop-down
 > list. The rank that the user selects becomes the
-> [[rankField]{.underline}](#_bookmark429) value in the
-> [[SearchSpecification
-> Object]{.underline}](#searchspecification-object).
+> [rankField](#_bookmark429) value in the
+> [SearchSpecification
+> Object](#searchspecification-object).
 
 ### Rank object constructor
 
@@ -11697,18 +11495,18 @@ path String The path of the asset associated with this object. Read only.
 > nodes. The modifier can expand or limit the scope of the search from
 > the original target node. The scope value and usage is defined
 > entirely by the [[getSearchDefinition()]{.underline}](#_bookmark323)
-> method of the node's [[ExtensionModel
-> Object]{.underline}](#extensionmodel-object).
+> method of the node's [ExtensionModel
+> Object](#extensionmodel-object).
 >
 > An array of these objects, kept in the
-> [[scopeSpecifiers]{.underline}](#_bookmark417) property of a
-> [[SearchDefinition Object]{.underline}](#searchdefinition-object), is
+> [scopeSpecifiers](#_bookmark417) property of a
+> [SearchDefinition Object](#searchdefinition-object), is
 > used to populate the Find dialog. The box displays a check box for
 > each possible scope extension or limitation. When the user selects a
 > scope, its name becomes a value of
-> [[scopeSpecifiers]{.underline}](#_bookmark430) in the resulting
-> [[SearchSpecification
-> Object]{.underline}](#searchspecification-object) object.
+> [scopeSpecifiers](#_bookmark430) in the resulting
+> [SearchSpecification
+> Object](#searchspecification-object) object.
 
 ### Scope object constructor
 
@@ -11732,26 +11530,26 @@ path String The path of the asset associated with this object. Read only.
 ## SearchCondition Object
 
 > Defines a specific condition that must be met for a node to match a
-> search. The Find dialog returns a [[SearchSpecification
-> Object]{.underline}](#searchspecification-object) for a specific
+> search. The Find dialog returns a [SearchSpecification
+> Object](#searchspecification-object) for a specific
 > search, which contains a list of these objects in the
-> [[conditionList]{.underline}](#_bookmark427) property; each object
+> [conditionList](#_bookmark427) property; each object
 > corresponds to the user's selection in one line of the Criteria box in
 > the dialog. The
-> SearchSpecification.[[conjunction]{.underline}](#_bookmark428)
+> SearchSpecification.[conjunction](#_bookmark428)
 > controls whether all or any of the conditions must be met.
 >
 > Your node handler can define possible search criteria for your nodes
-> by creating [[SearchCriteria
-> Object]{.underline}](#searchcriteria-object)s and passing them in the
-> [[SearchDefinition Object]{.underline}](#searchdefinition-object)
+> by creating [SearchCriteria
+> Object](#searchcriteria-object)s and passing them in the
+> [SearchDefinition Object](#searchdefinition-object)
 > created by the model's
 > [[getSearchDefinition()]{.underline}](#_bookmark323) method.
 >
 > []{#\_bookmark399 .anchor}Each condition specifies a property
 > associated with a node (the
-> [[searchField]{.underline}](#_bookmark402)), whose value is compared
-> to a selected [[operand]{.underline}](#_bookmark403) value, using a
+> [searchField](#_bookmark402)), whose value is compared
+> to a selected [operand](#_bookmark403) value, using a
 > selected operator such as "equals." Operators are predefined. Some
 > operators, such as "exists," do not require an operand.
 
@@ -11772,8 +11570,7 @@ path String The path of the asset associated with this object. Read only.
 | | | > typically a metadata |
 | | | > property or a member of |
 | | | > an [[Infoset |
-| | | > Object]{.un |
-| | | derline}](#infoset-object) |
+| | | > Object](#infoset-object) |
 | | | > associated with handled |
 | | | > nodes. |
 | | | > |
@@ -11815,10 +11612,9 @@ path String The path of the asset associated with this object. Read only.
 > search among handled nodes. Your node handler can define possible
 > search criteria for your nodes by creating these objects and passing
 > them to Adobe Bridge in a [[SearchDefinition]{.underline}
-> [Object]{.underline}](#searchdefinition-object), during the call to
+> [Object](#searchdefinition-object), during the call to
 > the [[getSearchDefinition()]{.underline}](#_bookmark323) method of the
-> node's [[ExtensionModel]{.underline}
-> [Object]{.underline}](#extensionmodel-object).
+> node's [ExtensionModelObject](#extensionmodel-object).
 >
 > Each object corresponds to one line in the Criteria box of the Find
 > dialog.
@@ -11842,9 +11638,8 @@ path String The path of the asset associated with this object. Read only.
 >
 > The user's choices in the dialog are returned to Adobe Bridge in a set
 > of a [[SearchCondition]{.underline}
-> [Object]{.underline}](#searchcondition-object)s contained in a
-> [[SearchSpecification]{.underline}
-> [Object]{.underline}](#searchspecification-object).
+> [Object](#searchcondition-object)s contained in a
+> [SearchSpecificationObject](#searchspecification-object).
 
 ### SearchCriteria object constructor
 
@@ -11861,8 +11656,7 @@ path String The path of the asset associated with this object. Read only.
 +-----------------------+--------------------+-----------------------+
 | []{#\_bookmark411 | > Array of Operand | Optional. One or more |
 | .anchor}operands | | [[Operand |
-| | | Object]{.underlin |
-| | | e}](#operand-object)s |
+| | | Object](#operand-object)s |
 | | | used to populate the |
 | | | drop-down list for |
 | | | the right-side field |
@@ -11920,9 +11714,8 @@ path String The path of the asset associated with this object. Read only.
 | | | search node, |
 | | | typically a metadata |
 | | | property or a member |
-| | | of an [[Infoset |
-| | | Object]{.underli |
-| | | ne}](#infoset-object) |
+| | | of an [Infoset |
+| | | Object](#infoset-object) |
 | | | associated with |
 | | | handled nodes. The |
 | | | value of the selected |
@@ -11961,8 +11754,8 @@ path String The path of the asset associated with this object. Read only.
 > a SearchDefinition object that can be used to populate Find dialog.
 >
 > When a user clicks Find in the Find dialog, Adobe Bridge uses the
-> dialog selections to create a [[SearchSpecification
-> Object]{.underline}](#searchspecification-object), which, together
+> dialog selections to create a [SearchSpecification
+> Object](#searchspecification-object), which, together
 > with a target node, specifies a search.
 
 ### SearchDefinition object constructor
@@ -11980,9 +11773,9 @@ new SearchDefinition (_criteriaList_, _defaultResultsLimit_,
 +----------------------+----------------------+----------------------+
 | criteriaList | > Array of | > A collection of |
 | | > SearchCriteria | > possible |
-| | | > [[SearchCriteria |
+| | | > [SearchCriteria |
 | | | > Objec |
-| | | t]{.underline}](#sea |
+| | | t](#sea |
 | | | rchcriteria-object)s |
 | | | > to use for this |
 | | | > search, used to |
@@ -12001,8 +11794,7 @@ new SearchDefinition (_criteriaList_, _defaultResultsLimit_,
 +----------------------+----------------------+----------------------+
 | []{#\_bookmark416 | > Array of Rank | > Optional, a set of |
 | .anchor}ranks | | > [[Rank |
-| | | > Object]{.underl |
-| | | ine}](#rank-object)s |
+| | | > Object](#rank-object)s |
 | | | > to use only if the |
 | | | > search can limit |
 | | | > results. |
@@ -12016,8 +11808,7 @@ new SearchDefinition (_criteriaList_, _defaultResultsLimit_,
 +----------------------+----------------------+----------------------+
 | []{#\_bookmark417 | > Array of Scope | > Optional, one or |
 | .an | | > more [[Scope |
-| chor}scopeSpecifiers | | > Object]{.underlin |
-| | | e}](#scope-object)s. |
+| chor}scopeSpecifiers | | > Object](#scope-object)s. |
 | | | > Your search can |
 | | | > use these to |
 | | | > extend or limit |
@@ -12056,9 +11847,9 @@ new SearchDefinition (_criteriaList_, _defaultResultsLimit_,
 +-----------------+-----------------------+------------------------+
 | searchCriteria | > SearchSpecification | > A |
 | | | > |
-| | | [[SearchSpecification |
+| | | [SearchSpecification |
 | | | > Objec |
-| | | t]{.underline}](#searc |
+| | | t](#searc |
 | | | hspecification-object) |
 | | | > that was used to |
 | | | > generate this search |
@@ -12105,7 +11896,7 @@ _maximumResults_,
 | []{#\_bookmark427 | > Array of | > A collection of |
 | . | > SearchCondition | > [[SearchCondition |
 | anchor}conditionList | | > Object |
-| | | ]{.underline}](#sear |
+| | | ](#sear |
 | | | chcondition-object)s |
 | | | > to use for this |
 | | | > search. Each |
@@ -12156,8 +11947,7 @@ _maximumResults_,
 +----------------------+----------------------+----------------------+
 | []{#\_bookmark429 | > String | > The name of a |
 | .anchor}rankField | | > [[Rank |
-| | | > Object]{.underl |
-| | | ine}](#rank-object), |
+| | | > Object](#rank-object), |
 | | | > as specified for a |
 | | | > [[SearchDefinition |
 | | | > Object] |
@@ -12190,9 +11980,9 @@ _maximumResults_,
 | nchor}scopeSpecifiers | | line}](#scope-object) |
 | | | > names, as specified |
 | | | > for a |
-| | | > [[SearchDefinition |
+| | | > [SearchDefinition |
 | | | > Objec |
-| | | t]{.underline}](#sear |
+| | | t](#sear |
 | | | chdefinition-object). |
 | | | > |
 | | | > Each scope modifier |
@@ -12216,21 +12006,20 @@ _maximumResults_,
 > nodes can be sorted. Sorting compares the values of a property
 > associated with the displayed nodes. This object identifies that
 > property, which can be in handler-defined node data (that is, defined
-> in an [[Infoset Object]{.underline}](#infoset-object)), or defined in
+> in an [Infoset Object](#infoset-object)), or defined in
 > embedded XMP metadata.
 >
 > When Adobe Bridge enters a container node, it calls the
 > [[getSortCriteria()]{.underline}](#_bookmark325) method of the node's
-> [[ExtensionModel]{.underline}
-> [Object]{.underline}](#extensionmodel-object), which returns a list of
+> [ExtensionModelObject](#extensionmodel-object), which returns a list of
 > these objects. The method can supply a completely new list, or can get
 > the default list from
-> app.[[defaultSortCriteria]{.underline}](#_bookmark26) and modify it,
+> app.[defaultSortCriteria](#_bookmark26) and modify it,
 > append to it, or return it unchanged.
 >
 > You can apply a sorting criterion to currently displayed nodes by
 > referencing a SortCriterion object from the
-> Document.[[sorts]{.underline}](#_bookmark88) property.
+> Document.[sorts](#_bookmark88) property.
 
 ### SortCriterion object constructor
 
@@ -12253,14 +12042,13 @@ _maximumResults_,
 | | | > displayed. Read-write. |
 +============================+==========+============================+
 | infosetMember | > String | > The name of an |
-| | | > [[Infoset]{.underline} |
-| | | > [Object]{.un |
-| | | derline}](#infoset-object) |
+| | | > [Infoset]{.underline} |
+| | | > [Object](#infoset-object) |
 | | | > and |
-| | | > [[InfosetMemb |
+| | | > [InfosetMemb |
 | | | erDescription]{.underline} |
 | | | > [Ob |
-| | | ject]{.underline}](#infose |
+| | | ject](#infose |
 | | | tmemberdescription-object) |
 | | | > by which to sort. |
 | | | > Read/write. For example, |
@@ -12309,24 +12097,21 @@ _maximumResults_,
 > with other computers or the Internet using standard protocols. The Web
 > Access library defines:
 
-- The [[FtpConnection object]{.underline}](#ftpconnection-object),
+- The [[FtpConnection object](#ftpconnection-object),
 
   > which supports FTP and SFTP communication protocols.
 
-- The [[HttpConnection]{.underline}
-  > [object]{.underline}](#httpconnection-object), which supports HTTP
+- The [HttpConnectionobject](#httpconnection-object), which supports HTTP
   > and HTTPS communication protocols.
 
 > Your script must load the platform-compiled Web Access library as an
-> ExternalObject in order to use these objects. See [['Loading the Web
-> Access library' on]{.underline} [page]{.underline}
-> [159]{.underline}](#loading-the-web-access-library).
+> ExternalObject in order to use these objects. See ['Loading the Web
+> Access library' on159](#loading-the-web-access-library).
 
 ## Loading the Web Access library
 
-> To use the [[FtpConnection object]{.underline}](#ftpconnection-object)
-> or [[HttpConnection]{.underline}
-> [object]{.underline}](#httpconnection-object), you must dynamically
+> To use the [FtpConnection object](#ftpconnection-object)
+> or [HttpConnectionobject](#httpconnection-object), you must dynamically
 > load the Web Access library into Adobe Bridge as an ExternalObject.
 > This library is compiled as a shared library; a DLL in Windows, a
 > bundle or framework in Mac OS.
@@ -12362,9 +12147,9 @@ _maximumResults_,
 > receive data from an FTP server, synchronously or asynchronously.
 >
 > To use the FtpConnection object, you must load the Web Access library
-> (webaccesslib) into JavaScript as an ExternalObject. See [["Loading
-> the Web Access library"]{.underline} [on page
-> 159]{.underline}](#loading-the-web-access-library).
+> (webaccesslib) into JavaScript as an ExternalObject. See ["Loading
+> the Web Access library"on page
+> 159](#loading-the-web-access-library).
 
 ### Using File objects with the FtpConnection object
 
@@ -12419,15 +12204,15 @@ _maximumResults_,
 ### Synchronous and asynchronous operation
 
 > []{#\_bookmark449 .anchor}Two properties of the FtpConnection,
-> [[sync]{.underline}](#_bookmark467) and
-> [[async]{.underline}](#_bookmark458), control whether
+> [[sync](#_bookmark467) and
+> [async](#_bookmark458), control whether
 > [[get()]{.underline}](#_bookmark472) and
 > [[put()]{.underline}](#_bookmark475) operations are performed
 > synchronously or asynchronously. The property values are tied
 > together, and are mutually exclusive. You can set either one, and the
 > other is automatically toggled to the opposite value.
 >
-> When the property [[sync]{.underline}](#_bookmark467) is set to true
+> When the property [sync](#_bookmark467) is set to true
 > (the default), the connection operation blocks the main thread. All
 > operations must be completed before your script continues.
 
@@ -12442,24 +12227,24 @@ _maximumResults_,
 >
 > ftp.close() ;
 >
-> When the property [[sync]{.underline}](#_bookmark467) is set to false
-> (or [[async]{.underline}](#_bookmark458) set to true), the connection
+> When the property [sync](#_bookmark467) is set to false
+> (or [async](#_bookmark458) set to true), the connection
 > operation occurs in a background thread while your script continues to
 > do other work. The background thread sets the property
-> [[isComplete]{.underline}](#_bookmark463) to true when the current
+> [isComplete](#_bookmark463) to true when the current
 > operation has finished. If the operation times out,
-> [[isComplete]{.underline}](#_bookmark463) is set to true and
-> [[error]{.underline}](#_bookmark460) is set to
+> [isComplete](#_bookmark463) is set to true and
+> [error](#_bookmark460) is set to
 > FtpConnection.errorTimeout.
 >
 > Only a single connection to the FTP server is allowed; you cannot
 > start two operations on the server at the same time. If you do attempt
-> to do so, [[error]{.underline}](#_bookmark460) is set to
+> to do so, [error](#_bookmark460) is set to
 > FtpConnection.errorCommandActive to indicate that the connection is
 > waiting to complete a previous operation.
 >
 > You can define a callback function in the
-> [[onCallback]{.underline}](#_bookmark464) property, that checks the
+> [onCallback](#_bookmark464) property, that checks the
 > completion status of an asynchronous call, and closes the file and
 > connection when it is done. Use the
 > [[pump()]{.underline}](#_bookmark474) function to call that function
@@ -12576,8 +12361,7 @@ protocol; for example:
 | | | rline}](#_bookmark473) |
 | | | > call. An array |
 | | | > corresponding to the |
-| | | > [[files]{.unde |
-| | | rline}](#_bookmark461) |
+| | | > [files](#_bookmark461) |
 | | | > array, where each |
 | | | > member is a |
 | | | > JavaScript Date |
@@ -12641,8 +12425,7 @@ protocol; for example:
 | | | > call. An array |
 | | | > corresponding to |
 | | | > the |
-| | | > [[files]{.under |
-| | | line}](#_bookmark461) |
+| | | > [files](#_bookmark461) |
 | | | > array, where each |
 | | | > member is a logical |
 | | | > OR of these |
@@ -12843,8 +12626,7 @@ protocol; for example:
 | | | > call. An array |
 | | | > corresponding to |
 | | | > the |
-| | | > [[files]{.under |
-| | | line}](#_bookmark461) |
+| | | > [files](#_bookmark461) |
 | | | > array, where each |
 | | | > member is a number |
 | | | > of bytes. Default |
@@ -12926,9 +12708,9 @@ protocol; for example:
 > _ftpObj_.cancel ();
 >
 > Cancels the current operation, if it is being performed
-> asynchronously. See [["Synchronous
-> and]{.underline}](#synchronous-and-asynchronous-operation) > [[asynchronous operation" on]{.underline} [page
-> 160]{.underline}](#synchronous-and-asynchronous-operation).
+> asynchronously. See ["Synchronous
+> andpage
+> 160](#synchronous-and-asynchronous-operation).
 >
 > Returns true on success.
 >
@@ -12951,7 +12733,7 @@ protocol; for example:
 > _remote_ String. The name of the remote file-system object.
 >
 > _flags_ Optional. The new permissions. A logical OR of the
-> [[flags]{.underline}](#_bookmark462) constants. Changes the
+> [flags](#_bookmark462) constants. Changes the
 > permissions and/or type of a file-system object on the FTP server.
 > Returns true on success.
 >
@@ -12976,7 +12758,7 @@ protocol; for example:
 > Returns an array of three JavaScript Date objects, for the creation,
 > modification, and most recent access dates of the given file. If a
 > date is unavailable, the corresponding array member is undefined. See
-> also [[dates]{.underline}](#_bookmark459).
+> also [dates](#_bookmark459).
 >
 > Returns false if all dates are unavailable; as when the file-system
 > object does not exist, is a directory, or is a link that cannot be
@@ -13026,10 +12808,10 @@ protocol; for example:
 > _ftpObj_.ls ();
 >
 > Retrieves information about the current directory, and returns it in
-> the [[files]{.underline}](#_bookmark461),
-> [[dates]{.underline}](#_bookmark459),
-> [[sizes]{.underline}](#_bookmark466), and
-> [[flags]{.underline}](#_bookmark462) properties of this object.
+> the [files](#_bookmark461),
+> [dates](#_bookmark459),
+> [sizes](#_bookmark466), and
+> [flags](#_bookmark462) properties of this object.
 >
 > Returns true on success, false on I/O errors.
 >
@@ -13058,7 +12840,7 @@ protocol; for example:
 > _ftpObj_.pump ();
 >
 > Executes the callback procedure defined in
-> [[onCallback]{.underline}](#_bookmark464) on all progress messages
+> [onCallback](#_bookmark464) on all progress messages
 > that have been received since the last call to this function.
 >
 > Use this function in the main thread to invoke the callback, in order
@@ -13100,7 +12882,7 @@ protocol; for example:
 >
 > Moves and changes the name of a file-system object on the FTP server.
 > The path can be absolute, or (in most cases) relative to the current
-> working directory; see [[renamestyle]{.underline}](#_bookmark465).
+> working directory; see [renamestyle](#_bookmark465).
 >
 > Returns true on success.
 >
@@ -13132,25 +12914,25 @@ protocol; for example:
 > HTTP request, and receive the response.
 >
 > To use the HttpConnection object, you must load the Web Access library
-> (webaccesslib) into JavaScript as an ExternalObject. See [["Loading
-> the Web Access library"]{.underline} [on page
-> 159]{.underline}](#loading-the-web-access-library).
+> (webaccesslib) into JavaScript as an ExternalObject. See ["Loading
+> the Web Access library"on page
+> 159](#loading-the-web-access-library).
 >
 > The HttpConnection object can open only one connection to the
 > internet. If you call [[execute()]{.underline}](#_bookmark512) before
 > the current operation is complete
-> ([[status]{.underline}](#_bookmark506) is
+> ([status](#_bookmark506) is
 > HttpConnection.statusCompleted), the current operation is terminated.
 
 ### Requests and responses
 
-> []{#\_bookmark480 .anchor}The [[method]{.underline}](#_bookmark499)
+> []{#\_bookmark480 .anchor}The [[method](#_bookmark499)
 > property of the HttpConnection object determines the type of
 > operation: GET, PUT, POST, HEAD, or DELETE. The GET operation is the
 > default.
 >
-> The [[request]{.underline}](#_bookmark504) and
-> [[response]{.underline}](#_bookmark502) properties can contain File
+> The [request](#_bookmark504) and
+> [response](#_bookmark502) properties can contain File
 > objects or strings.
 
 - []{#bookmark481 .anchor}Request and response files
@@ -13159,8 +12941,8 @@ protocol; for example:
 > you can specify another encoding in the File object; see the
 > _JavaScript Tools Guide_ for information on File- and Folder-supported
 > encoding names. (The HttpConnection properties
-> [[requestencoding]{.underline}](#_bookmark505) and
-> [[responseencoding]{.underline}](#_bookmark503) affect only string
+> [requestencoding](#_bookmark505) and
+> [responseencoding](#_bookmark503) affect only string
 > values, not files.)
 >
 > If the file is not open, it will be opened for reading (for a request)
@@ -13172,12 +12954,12 @@ protocol; for example:
 - Request and response strings
 
 > When the request is a string, it is converted to binary as specified
-> by the [[requestencoding]{.underline}](#_bookmark505) value. The
+> by the [requestencoding](#_bookmark505) value. The
 > default encoding is UTF-8.
 >
 > When the server response is anything other than a file, it is
 > converted to a string using the
-> [[responseencoding]{.underline}](#_bookmark503) value; the default is
+> [responseencoding](#_bookmark503) value; the default is
 > ASCII.
 
 ###### Getting a file
@@ -13216,18 +12998,18 @@ protocol; for example:
 ### Asynchronous operations
 
 > []{#\_bookmark484 .anchor}The HttpConnection object can operate
-> asynchronously; when you set [[async]{.underline}](#_bookmark496) to
-> true (or [[sync]{.underline}](#_bookmark507) to false) the operation
+> asynchronously; when you set [[async](#_bookmark496) to
+> true (or [sync](#_bookmark507) to false) the operation
 > is performed in the background, while your script continues to do
 > other work. However, the asynchronous behavior is not automatic. You
 > must execute the [[pump()]{.underline}](#_bookmark513) method
 > periodically to increment the progress of the operation, and
-> periodically test the [[status]{.underline}](#_bookmark506) and
-> [[lastread]{.underline}](#_bookmark498) properties. After the
-> [[status]{.underline}](#_bookmark506) is
+> periodically test the [status](#_bookmark506) and
+> [lastread](#_bookmark498) properties. After the
+> [status](#_bookmark506) is
 > HttpConnection.statusCompleted, you must continue to call
 > [[pump()]{.underline}](#_bookmark513) to transfer all bytes from the
-> server to your object, until [[lastread]{.underline}](#_bookmark498)
+> server to your object, until [lastread](#_bookmark498)
 > is negative.
 
 ###### Blocking (synchronous use)
@@ -13277,14 +13059,14 @@ protocol; for example:
 > and %40 for @.
 >
 > You can override the user name and password specified in the URL by
-> setting the [[username]{.underline}](#_bookmark508) and
-> [[password]{.underline}](#_bookmark501) on the HttpConnection object.
+> setting the [[username](#_bookmark508) and
+> [password](#_bookmark501) on the HttpConnection object.
 >
 > If the connection is challenged by the server and authentication is
 > required, the operation invokes your
-> [[onAuthentication]{.underline}](#_bookmark500) callback function. You
-> can use this set the [[username]{.underline}](#_bookmark508) and
-> [[password]{.underline}](#_bookmark501) properties; you cannot use it
+> [onAuthentication](#_bookmark500) callback function. You
+> can use this set the [username](#_bookmark508) and
+> [password](#_bookmark501) properties; you cannot use it
 > to change the URL.
 
 ###### Authentication callback
@@ -13482,8 +13264,8 @@ protocol; for example:
 >
 > fails using the username and password passed with the original URL.
 > Use this method to override the username and password by setting
-> this.[[username]{.underline}](#_bookmark508) and
-> this.[[password]{.underline}](#_bookmark501).
+> this.[[username](#_bookmark508) and
+> this.[password](#_bookmark501).
 >
 > The callback function takes these arguments:
 >
@@ -13742,7 +13524,7 @@ protocol; for example:
 > server, and receives the response.
 >
 > Returns true on success, false on errors. Check
-> [[fault]{.underline}](#_bookmark497) for the error c ode.
+> [fault](#_bookmark497) for the error c ode.
 >
 > []{#\_bookmark513 .anchor}pump()
 >
@@ -13753,7 +13535,7 @@ protocol; for example:
 > operation.
 >
 > Executes the callback procedure defined in
-> [[onCallback]{.underline}](#_bookmark464), passing no arguments.
+> [onCallback](#_bookmark464), passing no arguments.
 > Returns true on success, false on I/O errors.
 
 # Index
@@ -13762,13 +13544,11 @@ protocol; for example:
 
 > App object
 >
-> [about, 14](#_bookmark22) [functions, 17](#app-functions) [properties,
-> 14](#app-properties)
+> [about, 14](#_bookmark22) [functions, 17](#app-functions) [properties, 14](#app-properties)
 >
 > applications
 >
-> [Event object types, 49](#_bookmark115) [preferences,
-> 86,](#preferences-object) [91](#preferencesdialog-object)
+> [Event object types, 49](#_bookmark115) [preferences, 86,](#preferences-object) [91](#preferencesdialog-object)
 >
 > asynchronous operations [FTP, 160](#_bookmark449)
 >
@@ -13780,8 +13560,7 @@ protocol; for example:
 
 > background tasks [creating, 141](#_bookmark368)
 >
-> [monitoring progress, 147](#progressoperator-object) [badge icons,
-> 110](#_bookmark278)
+> [monitoring progress, 147](#progressoperator-object) [badge icons, 110](#_bookmark278)
 >
 > base classes
 >
@@ -13791,28 +13570,22 @@ protocol; for example:
 >
 > [binary files, transferring, 159](#_bookmark447) BitmapData object
 >
-> [about, 25](#_bookmark60) [constructors,
-> 25](#bitmapdata-object-constructors) [functions,
-> 27](#bitmapdata-functions) [properties, 26](#bitmapdata-properties)
+> [about, 25](#_bookmark60) [constructors, 25](#bitmapdata-object-constructors) [functions, 27](#bitmapdata-functions) [properties, 26](#bitmapdata-properties)
 >
 > [Bridge menu commands, 64](#bridge-menu-items-mac-os-only) browser
 > windows
 >
-> [adding tabbed palettes, 94](#tabbedpalette-object) [as document
-> object, 31](#document-object)
+> [adding tabbed palettes, 94](#tabbedpalette-object) [as document object, 31](#document-object)
 
 ##### C
 
 > cache
 >
-> [collecting node data, 112](#_bookmark286) [status,
-> 111](#_bookmark282)
+> [collecting node data, 112](#_bookmark286) [status, 111](#_bookmark282)
 >
-> [CacheData object, 111](#cachedata-object) [CacheElement object,
-> 112](#cacheelement-object) classes
+> [CacheData object, 111](#cachedata-object) [CacheElement object, 112](#cacheelement-object) classes
 >
-> [MenuElement, 60](#menuelement-object) [Operand, 140](#operand-object) > [Operator, 141](#operator-class) [Panelette,
-> 83](#panelette-base-class)
+> [MenuElement, 60](#menuelement-object) [Operand, 140](#operand-object) > [Operator, 141](#operator-class) [Panelette, 83](#panelette-base-class)
 >
 > [Color object, 30](#_bookmark68) colors
 >
@@ -13820,44 +13593,31 @@ protocol; for example:
 >
 > commands
 >
-> [adding to menus, 60](#menuelement-object) [Bridge menu,
-> 64](#bridge-menu-items-mac-os-only) [Content pane, 71,](#_bookmark184) > [72](#_bookmark188) [Edit menu, 65](#_bookmark173) [Favorites palette,
-> 71,](#thumbnail-context-menu-submenus) [72](#_bookmark185) [File menu,
-> 64](#_bookmark172)
+> [adding to menus, 60](#menuelement-object) [Bridge menu, 64](#bridge-menu-items-mac-os-only) [Content pane, 71,](#_bookmark184) > [72](#_bookmark188) [Edit menu, 65](#_bookmark173) [Favorites palette, 71,](#thumbnail-context-menu-submenus) [72](#_bookmark185) [File menu, 64](#_bookmark172)
 >
 > [Folders palette, 72](#_bookmark186) [Help menu, 69](#_bookmark179)
 >
-> [Keywords context menu, 75](#_bookmark189) [Label menu,
-> 67](#_bookmark176)
+> [Keywords context menu, 75](#_bookmark189) [Label menu, 67](#_bookmark176)
 >
-> [menu identifiers, 63](#adobe-bridge-menu-and-command-identifiers) > [Palette context menu, 78](#metadata-object) [Stacks menu,
-> 67](#_bookmark175) [submenu identifiers,
-> 64](#menu-bar-submenu-and-command-identifiers) [Tools menu,
-> 68](#_bookmark177)
+> [menu identifiers, 63](#adobe-bridge-menu-and-command-identifiers) > [Palette context menu, 78](#metadata-object) [Stacks menu, 67](#_bookmark175) [submenu identifiers, 64](#menu-bar-submenu-and-command-identifiers) [Tools menu, 68](#_bookmark177)
 >
 > [View menu, 66](#_bookmark174) [Window menu, 69](#_bookmark178)
 >
-> communication [authentication, 171](#_bookmark488) [external tools,
-> 159](#_bookmark440) [HTTP, 170](#_bookmark478)
+> communication [authentication, 171](#_bookmark488) [external tools, 159](#_bookmark440) [HTTP, 170](#_bookmark478)
 >
 > [comparison operator, 151](#bookmark407) Content pane
 >
 > [icons, 98](#_bookmark249)
 >
-> [menu commands, 71,](#_bookmark184) [72](#_bookmark188) [Context menu
-> identifiers, 63](#_bookmark166) [conventions, typographic,
-> 8](#typographical-conventions) core infosets
+> [menu commands, 71,](#_bookmark184) [72](#_bookmark188) [Context menu identifiers, 63](#_bookmark166) [conventions, typographic, 8](#typographical-conventions) core infosets
 >
-> [extension support, 113](#_bookmark294) [names and descriptions,
-> 132](#core-infosets)
+> [extension support, 113](#_bookmark294) [names and descriptions, 132](#core-infosets)
 
 ##### D
 
 > data
 >
-> [associating types with node-data values,
-> 138](#infosetmemberdescription-object) [defined for nodes,
-> 130](#infoset-object)
+> [associating types with node-data values, 138](#infosetmemberdescription-object) [defined for nodes, 130](#infoset-object)
 >
 > dialogs
 >
@@ -13872,13 +13632,11 @@ protocol; for example:
 
 **177**
 
-> [constructor, 31](#document-object-constructor) [functions,
-> 43](#document-functions) [properties, 31](#document-properties)
+> [constructor, 31](#document-object-constructor) [functions, 43](#document-functions) [properties, 31](#document-properties)
 >
 > [documents, reference materials, 8](#where-to-go-for-more-information) > [dynamic text values, 84](#bookmark211)
 >
-> [thumbnail objects, 98](#thumbnail-object-constructor) [File menu
-> commands, 64](#_bookmark172) File object
+> [thumbnail objects, 98](#thumbnail-object-constructor) [File menu commands, 64](#_bookmark172) File object
 >
 > [using with FtpConnection object, 159](#_bookmark447)
 >
@@ -13886,31 +13644,23 @@ protocol; for example:
 
 ##### E
 
-> [Edit menu commands, 65](#_bookmark173) [equality operator,
-> 99](#multiple-references-to-the-same-node) [equals operator,
-> 150](#_bookmark399) Event object
+> [Edit menu commands, 65](#_bookmark173) [equality operator, 99](#multiple-references-to-the-same-node) [equals operator, 150](#_bookmark399) Event object
 >
-> [about, 48](#event-object) [properties, 48](#event-properties) [types,
-> 49](#event-object-types)
+> [about, 48](#event-object) [properties, 48](#event-properties) [types, 49](#event-object-types)
 >
 > events
 >
 > [application, 49](#app-events) [document, 50](#document-events)
 >
-> [in Preferences dialog, 91](#preferencesdialog-object) > [PreferencesDialog, 52](#preferencesdialog-events) [target objects,
-> 48](#_bookmark106) [thumbnail, 51](#thumbnail-events)
+> [in Preferences dialog, 91](#preferencesdialog-object) > [PreferencesDialog, 52](#preferencesdialog-events) [target objects, 48](#_bookmark106) [thumbnail, 51](#thumbnail-events)
 >
 > [types, 49](#event-object-types)
 >
 > [user interactions, 48](#event-object) example code
 >
-> [asynchronous operation,
-> 161](#example-asynchronous-operation-non-blocking) [authentication
-> callback, 172](#authentication-callback) [blocking and not blocking,
-> 171](#blocking-synchronous-use) [HTTP requests, 170](#getting-a-file) > [metadata access, 78](#example-code)
+> [asynchronous operation, 161](#example-asynchronous-operation-non-blocking) [authentication callback, 172](#authentication-callback) [blocking and not blocking, 171](#blocking-synchronous-use) [HTTP requests, 170](#getting-a-file) > [metadata access, 78](#example-code)
 >
-> [node-handling extensions, 113](#code-examples) [SDK,
-> 120](#_bookmark314)
+> [node-handling extensions, 113](#code-examples) [SDK, 120](#_bookmark314)
 >
 > [synchronous operation, 160](#example-synchronous-operation-blocking) > [thumbnail creation, 98](#examples-of-thumbnail-creation)
 >
@@ -13919,76 +13669,56 @@ protocol; for example:
 > [ExtendScript objects and utilities, 10](#bookmark15) ExtensionHandler
 > object
 >
-> [about, 113](#extensionhandler-object) [constructor,
-> 113](#extensionhandler-object-constructor) [methods,
-> 114](#extensionhandler-methods) [properties,
-> 114](#extensionhandler-properties)
+> [about, 113](#extensionhandler-object) [constructor, 113](#extensionhandler-object-constructor) [methods, 114](#extensionhandler-methods) [properties, 114](#extensionhandler-properties)
 >
 > [ExtensionModel object, 120](#extensionmodel-object) extensions
 >
-> [implementing, 120](#_bookmark312) [node handling,
-> 141](#operator-class) [node model, 113](#extensionhandler-object)
+> [implementing, 120](#_bookmark312) [node handling, 141](#operator-class) [node model, 113](#extensionhandler-object)
 
 ##### F
 
 > [Favorites object, 54](#favorites-object) Favorites palette
 >
-> [navigation nodes, 54](#favorites-object) [thumbnail menu commands,
-> 72](#_bookmark186)
+> [navigation nodes, 54](#favorites-object) [thumbnail menu commands, 72](#_bookmark186)
 >
-> [metadata, 78](#metadata-object) [thumbnail objects,
-> 98](#thumbnail-object) [transferring binary, 159](#_bookmark447)
+> [metadata, 78](#metadata-object) [thumbnail objects, 98](#thumbnail-object) [transferring binary, 159](#_bookmark447)
 >
-> [FilterDescription object, 128](#filterdescription-object) [filters,
-> customizing, 128](#_bookmark337) Find dialog
+> [FilterDescription object, 128](#filterdescription-object) [filters, customizing, 128](#_bookmark337) Find dialog
 >
-> [operand objects, 140](#operand-object) [populating,
-> 153](#searchdefinition-object)
+> [operand objects, 140](#operand-object) [populating, 153](#searchdefinition-object)
 >
 > [Flyout menu identifiers, 64](#_bookmark167)
 >
-> [Folders pane thumbnail menu commands, 71,](#_bookmark183) > [72](#_bookmark187) [folders, thumbnail objects,
-> 98](#thumbnail-object)
+> [Folders pane thumbnail menu commands, 71,](#_bookmark183) > [72](#_bookmark187) [folders, thumbnail objects, 98](#thumbnail-object)
 >
 > [fonts used in this guide, 8](#typographical-conventions)
 >
 > [framework, node-handling extensions, 120](#_bookmark312)
 > FtpConnection object
 >
-> [about, 159](#_bookmark445) [constructor,
-> 161](#ftpconnection-object-constructor) [functions,
-> 166](#ftpconnection-object-functions) [properties,
-> 161](#ftpconnection-object-properties) [reference, 161](#_bookmark453)
+> [about, 159](#_bookmark445) [constructor, 161](#ftpconnection-object-constructor) [functions, 166](#ftpconnection-object-functions) [properties, 161](#ftpconnection-object-properties) [reference, 161](#_bookmark453)
 >
 > [synchronous and asynchronous operations, 160](#_bookmark449)
 >
-> [using File objects, 159](#_bookmark447) [functions, global,
-> 17](#app-functions)
+> [using File objects, 159](#_bookmark447) [functions, global, 17](#app-functions)
 
 ##### G
 
-> [global functions, 17](#app-functions) [global information,
-> 14](#_bookmark22)
+> [global functions, 17](#app-functions) [global information, 14](#_bookmark22)
 
 ##### H
 
 > handlers
 >
-> [immediate operations, 114](#_bookmark303) [long-running operations,
-> 116](#long-running-handler-operations) [method types,
-> 114](#_bookmark303)
+> [immediate operations, 114](#_bookmark303) [long-running operations, 116](#long-running-handler-operations) [method types, 114](#_bookmark303)
 >
 > [Help menu commands, 69](#_bookmark179) HttpConnection object
 >
 > [about, 170](#_bookmark478)
 >
-> [asynchronous operations, 171](#_bookmark484) [authentication,
-> 171](#_bookmark488) [constructor,
-> 172](#httpconnection-object-constructor)
+> [asynchronous operations, 171](#_bookmark484) [authentication, 171](#_bookmark488) [constructor, 172](#httpconnection-object-constructor)
 >
-> [functions, 176](#httpconnection-object-functions) [properties,
-> 172](#httpconnection-object-properties) [reference,
-> 172](#_bookmark491)
+> [functions, 176](#httpconnection-object-functions) [properties, 172](#httpconnection-object-properties) [reference, 172](#_bookmark491)
 >
 > [requests and responses, 170](#_bookmark480)
 
@@ -13996,36 +13726,25 @@ protocol; for example:
 
 > [IconListPanelette object, 57](#iconlistpanelette-object) identifiers
 >
-> [commands, 64](#menu-bar-submenu-and-command-identifiers) [menu,
-> 63](#adobe-bridge-menu-and-command-identifiers)
+> [commands, 64](#menu-bar-submenu-and-command-identifiers) [menu, 63](#adobe-bridge-menu-and-command-identifiers)
 >
-> [identity operator, 99](#multiple-references-to-the-same-node) [image
-> file metadata, 78](#metadata-object) [images, editing,
-> 25](#_bookmark60) immediate operations
+> [identity operator, 99](#multiple-references-to-the-same-node) [image file metadata, 78](#metadata-object) [images, editing, 25](#_bookmark60) immediate operations
 >
 > [handler, 114](#_bookmark303) [model, 121](#_bookmark319)
 >
 > Infoset object
 >
-> [about, 130](#infoset-object) [constructor,
-> 130](#infoset-object-constructor) [core infosets, 132](#core-infosets) > [functions, 131](#infoset-functions) [properties,
-> 130](#infoset-properties)
+> [about, 130](#infoset-object) [constructor, 130](#infoset-object-constructor) [core infosets, 132](#core-infosets) > [functions, 131](#infoset-functions) [properties, 130](#infoset-properties)
 >
-> [InfosetMemberDescription object,
-> 138](#infosetmemberdescription-object) InspectorPanel object
+> [InfosetMemberDescription object, 138](#infosetmemberdescription-object) InspectorPanel object
 >
-> [about, 58](#inspectorpanel-object) [constructor,
-> 58](#inspectorpanel-constructor) [functions,
-> 59](#inspectorpanel-functions) [properties,
-> 58](#inspectorpanel-properties)
+> [about, 58](#inspectorpanel-object) [constructor, 58](#inspectorpanel-constructor) [functions, 59](#inspectorpanel-functions) [properties, 58](#inspectorpanel-properties)
 
 ##### J
 
 > JavaScript
 >
-> [additional resources, 8](#where-to-go-for-more-information) [equality
-> operator, 99](#multiple-references-to-the-same-node) [inserting,
-> 84](#bookmark212)
+> [additional resources, 8](#where-to-go-for-more-information) [equality operator, 99](#multiple-references-to-the-same-node) [inserting, 84](#bookmark212)
 >
 > [standards information URL, 9](#_bookmark10)
 
@@ -14039,39 +13758,29 @@ protocol; for example:
 >
 > [Web Access, 159](#_bookmark441) long-running operations
 >
-> [handler, 116](#long-running-handler-operations) [model,
-> 126](#long-running-model-operations)
+> [handler, 116](#long-running-handler-operations) [model, 126](#long-running-model-operations)
 
 ##### M
 
 > Mac OS
 >
-> [compiled library files, 159](#bookmark443) [main thread, blocking,
-> 141](#_bookmark368) [menubar menu identifiers, 63](#_bookmark164)
+> [compiled library files, 159](#bookmark443) [main thread, blocking, 141](#_bookmark368) [menubar menu identifiers, 63](#_bookmark164)
 > MenuElement object
 >
-> [about, 60](#menuelement-object) [functions,
-> 60](#menuelement-class-functions) [properties,
-> 61](#menuelement-properties)
+> [about, 60](#menuelement-object) [functions, 60](#menuelement-class-functions) [properties, 61](#menuelement-properties)
 >
 > menus
 >
-> [commands,](#_bookmark170) _See_ commands [extending,
-> 60](#menuelement-object)
+> [commands,](#_bookmark170) _See_ commands [extending, 60](#menuelement-object)
 >
 > [identifiers, 63](#adobe-bridge-menu-and-command-identifiers) Metadata
 > object
 >
-> [about, 78](#metadata-object) [example code, 78](#example-code) > [functions, 80](#metadata-functions) [properties,
-> 79](#metadata-properties)
+> [about, 78](#metadata-object) [example code, 78](#example-code) > [functions, 80](#metadata-functions) [properties, 79](#metadata-properties)
 >
-> [metadata, organizing, 78](#_bookmark193) [modal operations,
-> 141](#operator-class) [ModalOperator object,
-> 139](#modaloperator-object) models
+> [metadata, organizing, 78](#_bookmark193) [modal operations, 141](#operator-class) [ModalOperator object, 139](#modaloperator-object) models
 >
-> [immediate operations, 121](#_bookmark319) [long-running operations,
-> 126](#long-running-model-operations) [operation types,
-> 121](#_bookmark319)
+> [immediate operations, 121](#_bookmark319) [long-running operations, 126](#long-running-model-operations) [operation types, 121](#_bookmark319)
 >
 > [modifiers, scope, 149](#scope-object)
 
@@ -14085,14 +13794,9 @@ protocol; for example:
 >
 > [about, 98](#thumbnail-object) [displaying, 120](#_bookmark313)
 >
-> [extending capability, 108](#_bookmark275) [extending model,
-> 113](#_bookmark292) [extension framework, 120](#_bookmark312) > [implementing extensions, 141](#operator-class) [multiple references,
-> 99](#multiple-references-to-the-same-node) [scope modifier,
-> 149](#scope-object)
+> [extending capability, 108](#_bookmark275) [extending model, 113](#_bookmark292) [extension framework, 120](#_bookmark312) > [implementing extensions, 141](#operator-class) [multiple references, 99](#multiple-references-to-the-same-node) [scope modifier, 149](#scope-object)
 >
-> [search criteria, 151](#_bookmark408) [searches,
-> 140,](#operand-object) [148](#rank-object) [sorting,
-> 157](#sortcriterion-object)
+> [search criteria, 151](#_bookmark408) [searches, 140,](#operand-object) [148](#rank-object) [sorting, 157](#sortcriterion-object)
 >
 > [target container, 155](#searchspecification-object)
 
@@ -14100,55 +13804,31 @@ protocol; for example:
 
 > objects
 >
-> [App, 14](#_bookmark22) [application, 14](#_bookmark22) [BitmapData,
-> 25](#_bookmark60) [CacheData, 111](#cachedata-object) [CacheElement,
-> 112](#cacheelement-object) [color, 30](#_bookmark68) [Document,
-> 31](#document-object)
+> [App, 14](#_bookmark22) [application, 14](#_bookmark22) [BitmapData, 25](#_bookmark60) [CacheData, 111](#cachedata-object) [CacheElement, 112](#cacheelement-object) [color, 30](#_bookmark68) [Document, 31](#document-object)
 >
-> [DOM summary, 10](#_bookmark16) [Event, 48](#event-object) > [ExtensionHandler, 113](#extensionhandler-object) [ExtensionModel,
-> 120](#extensionmodel-object) [Favorite, 54](#favorites-object) > [FilterDescription, 128](#filterdescription-object) [FtpConnection,
-> 159](#_bookmark445) [HttpConnection, 170](#_bookmark478) > [IconListPanelette, 57](#iconlistpanelette-object) [Infoset,
-> 130](#infoset-object)
+> [DOM summary, 10](#_bookmark16) [Event, 48](#event-object) > [ExtensionHandler, 113](#extensionhandler-object) [ExtensionModel, 120](#extensionmodel-object) [Favorite, 54](#favorites-object) > [FilterDescription, 128](#filterdescription-object) [FtpConnection, 159](#_bookmark445) [HttpConnection, 170](#_bookmark478) > [IconListPanelette, 57](#iconlistpanelette-object) [Infoset, 130](#infoset-object)
 >
-> [InfosetMemberDescription, 138](#infosetmemberdescription-object) > [InspectorPanel, 58](#inspectorpanel-object) [MenuElement,
-> 60](#menuelement-object)
+> [InfosetMemberDescription, 138](#infosetmemberdescription-object) > [InspectorPanel, 58](#inspectorpanel-object) [MenuElement, 60](#menuelement-object)
 >
-> [menus and commands, 60](#menuelement-object) [Metadata,
-> 78](#metadata-object) [ModalOperator, 139](#modaloperator-object) > [NavBar, 81](#navbar-object)
+> [menus and commands, 60](#menuelement-object) [Metadata, 78](#metadata-object) [ModalOperator, 139](#modaloperator-object) > [NavBar, 81](#navbar-object)
 >
 > [node handling, 108](#_bookmark275)
 >
-> [node handling summary, 108](#_bookmark276) [Operand,
-> 140](#operand-object)
+> [node handling summary, 108](#_bookmark276) [Operand, 140](#operand-object)
 >
-> [Operator, 141](#operator-class) [Preferences,
-> 86](#preferences-object) [PreferencesDialog,
-> 91](#preferencesdialog-object) [primary, 10](#_bookmark13) > [ProgressOperator, 147](#progressoperator-object) [Rank,
-> 148](#rank-object)
+> [Operator, 141](#operator-class) [Preferences, 86](#preferences-object) [PreferencesDialog, 91](#preferencesdialog-object) [primary, 10](#_bookmark13) > [ProgressOperator, 147](#progressoperator-object) [Rank, 148](#rank-object)
 >
-> [Scope, 149](#scope-object) [SearchCondition,
-> 150](#searchcondition-object) [SearchCriteria,
-> 151](#searchcriteria-object) [SearchDefinition,
-> 153](#searchdefinition-object) [SearchDetails,
-> 154](#searchdetails-object) [SearchSpecification,
-> 155](#searchspecification-object) [SortCriterion,
-> 157](#sortcriterion-object) [TabbedPalette, 94](#tabbedpalette-object) > [targets, 48](#_bookmark106) [TextPanelette,
-> 97](#textpanelette-object) [Thumbnail, 98](#thumbnail-object) > [ThumbnailPanelette, 107](#thumbnailpanelette-object)
+> [Scope, 149](#scope-object) [SearchCondition, 150](#searchcondition-object) [SearchCriteria, 151](#searchcriteria-object) [SearchDefinition, 153](#searchdefinition-object) [SearchDetails, 154](#searchdetails-object) [SearchSpecification, 155](#searchspecification-object) [SortCriterion, 157](#sortcriterion-object) [TabbedPalette, 94](#tabbedpalette-object) > [targets, 48](#_bookmark106) [TextPanelette, 97](#textpanelette-object) [Thumbnail, 98](#thumbnail-object) > [ThumbnailPanelette, 107](#thumbnailpanelette-object)
 >
 > [Operand object, 140](#operand-object) operands
 >
-> [node searches, 140](#operand-object) [search criteria,
-> 151](#bookmark407)
+> [node searches, 140](#operand-object) [search criteria, 151](#bookmark407)
 >
 > operations
 >
-> [immediate handler, 114](#_bookmark303) [immediate model,
-> 121](#_bookmark319) [long-running,
-> 116](#long-running-handler-operations)
+> [immediate handler, 114](#_bookmark303) [immediate model, 121](#_bookmark319) [long-running, 116](#long-running-handler-operations)
 >
-> [long-running model, 126](#long-running-model-operations) [modal, 141
-> monitoring, 141](#operator-class) [synchronous,
-> 139](#modaloperator-object)
+> [long-running model, 126](#long-running-model-operations) [modal, 141 monitoring, 141](#operator-class) [synchronous, 139](#modaloperator-object)
 >
 > [operations, synchronous and asynchronous, 160,](#_bookmark449) > [171](#_bookmark484)
 >
@@ -14158,10 +13838,7 @@ protocol; for example:
 >
 > [Operator object, 141](#operator-class) operators
 >
-> [comparison, 151](#bookmark407) [equality,
-> 99](#multiple-references-to-the-same-node) [equals,
-> 150](#_bookmark399) [exists, 150](#_bookmark399) [identity,
-> 99](#multiple-references-to-the-same-node) [types, 141](#_bookmark368)
+> [comparison, 151](#bookmark407) [equality, 99](#multiple-references-to-the-same-node) [equals, 150](#_bookmark399) [exists, 150](#_bookmark399) [identity, 99](#multiple-references-to-the-same-node) [types, 141](#_bookmark368)
 
 ##### P
 
@@ -14172,38 +13849,30 @@ protocol; for example:
 >
 > [IconListPanelette subclass, 57](#iconlistpanelette-object) panelettes
 >
-> [configuring, 83](#panelette-base-class) [text objects,
-> 97](#_bookmark243) [thumbnails, 107](#thumbnailpanelette-object)
+> [configuring, 83](#panelette-base-class) [text objects, 97](#_bookmark243) [thumbnails, 107](#thumbnailpanelette-object)
 >
 > [panels, thumbnail contextual information, 58](#inspectorpanel-object)
 > pixels
 >
-> [color characteristics, 30](#_bookmark68) [manipulating,
-> 25](#_bookmark60)
+> [color characteristics, 30](#_bookmark68) [manipulating, 25](#_bookmark60)
 >
 > preferences
 >
 > [accessing, 86](#preferences-object)
 >
-> [adding ScriptUI controls, 91](#preferencesdialog-object) [event
-> properties, 52](#preferencesdialog-events)
+> [adding ScriptUI controls, 91](#preferencesdialog-object) [event properties, 52](#preferencesdialog-events)
 >
-> Preferences object [about, 86](#preferences-object) [functions,
-> 90](#preferences-functions) [properties, 86](#preferences-properties)
+> Preferences object [about, 86](#preferences-object) [functions, 90](#preferences-functions) [properties, 86](#preferences-properties)
 >
-> PreferencesDialog [events, 52](#preferencesdialog-events) [object,
-> 91](#preferencesdialog-object)
+> PreferencesDialog [events, 52](#preferencesdialog-events) [object, 91](#preferencesdialog-object)
 >
 > [ProgressOperator object, 147](#progressoperator-object)
 
 ##### R
 
-> [Rank object, 148](#rank-object) [reference materials,
-> 8](#where-to-go-for-more-information) [requests, HTTP,
-> 170](#_bookmark478) responses
+> [Rank object, 148](#rank-object) [reference materials, 8](#where-to-go-for-more-information) [requests, HTTP, 170](#_bookmark478) responses
 >
-> [files vs. strings, 170](#bookmark481) [HTTP requests,
-> 170](#_bookmark478)
+> [files vs. strings, 170](#bookmark481) [HTTP requests, 170](#_bookmark478)
 
 ##### S
 
@@ -14211,26 +13880,17 @@ protocol; for example:
 >
 > [script-defined palettes, 94](#_bookmark233) ScriptUI
 >
-> [adding controls to dialogs, 91](#preferencesdialog-object) [objects,
-> 10](#bookmark14)
+> [adding controls to dialogs, 91](#preferencesdialog-object) [objects, 10](#bookmark14)
 >
-> [SearchCondition object, 150](#searchcondition-object) [SearchCriteria
-> object, 151](#searchcriteria-object) [SearchDefinition object,
-> 153](#searchdefinition-object) [SearchDetails object,
-> 154](#searchdetails-object) searches
+> [SearchCondition object, 150](#searchcondition-object) [SearchCriteria object, 151](#searchcriteria-object) [SearchDefinition object, 153](#searchdefinition-object) [SearchDetails object, 154](#searchdetails-object) searches
 >
-> [conditions, 149](#scope-object) [criteria,
-> 151](#searchcriteria-object) [defining criteria, 151](#_bookmark406) > [fields, 151](#bookmark407)
+> [conditions, 149](#scope-object) [criteria, 151](#searchcriteria-object) [defining criteria, 151](#_bookmark406) > [fields, 151](#bookmark407)
 >
-> [limiting results, 148](#rank-object) [populating Find dialog,
-> 140,](#operand-object) [153](#searchdefinition-object) [ranking
-> results, 148](#rank-object)
+> [limiting results, 148](#rank-object) [populating Find dialog, 140,](#operand-object) [153](#searchdefinition-object) [ranking results, 148](#rank-object)
 >
-> [result node information, 154](#searchdetails-object) [scope modifier,
-> 149](#scope-object)
+> [result node information, 154](#searchdetails-object) [scope modifier, 149](#scope-object)
 >
-> [target container nodes, 155](#searchspecification-object) > [SearchSpecification object, 155](#searchspecification-object) > [SortCriterion object, 157](#sortcriterion-object) [Stacks menu
-> commands, 67](#_bookmark175) status
+> [target container nodes, 155](#searchspecification-object) > [SearchSpecification object, 155](#searchspecification-object) > [SortCriterion object, 157](#sortcriterion-object) [Stacks menu commands, 67](#_bookmark175) status
 >
 > [background tasks, 147](#_bookmark387) [cache, 111](#_bookmark282)
 >
@@ -14239,9 +13899,7 @@ protocol; for example:
 >
 > [FTP, 160](#_bookmark449) [HTTP, 171](#not-blocking-asynchronous-call)
 >
-> [Toolbar menu identifiers, 63](#_bookmark165) [Tools menu commands,
-> 68](#_bookmark177) [typographic conventions,
-> 8](#typographical-conventions)
+> [Toolbar menu identifiers, 63](#_bookmark165) [Tools menu commands, 68](#_bookmark177) [typographic conventions, 8](#typographical-conventions)
 
 ##### U
 
@@ -14257,8 +13915,7 @@ protocol; for example:
 
 ##### W
 
-> [Web Access library, 159](#_bookmark441) [Window menu commands,
-> 69](#_bookmark178) Windows
+> [Web Access library, 159](#_bookmark441) [Window menu commands, 69](#_bookmark178) Windows
 >
 > [compiled library files, 159](#bookmark443)
 
@@ -14268,31 +13925,19 @@ protocol; for example:
 
 ##### T
 
-> TabbedPalette object [about, 94](#tabbedpalette-object) [constructor,
-> 94](#tabbedpalette-constructor) [methods,
-> 96](#tabbedpalette-object-methods) [properties,
-> 95](#tabbedpalette-properties)
+> TabbedPalette object [about, 94](#tabbedpalette-object) [constructor, 94](#tabbedpalette-constructor) [methods, 96](#tabbedpalette-object-methods) [properties, 95](#tabbedpalette-properties)
 >
-> [target container nodes, 155](#searchspecification-object) [target
-> objects, 48](#_bookmark106) [TextPanelette object,
-> 97](#textpanelette-object) [threads, blocking,
-> 139](#modaloperator-object)
+> [target container nodes, 155](#searchspecification-object) [target objects, 48](#_bookmark106) [TextPanelette object, 97](#textpanelette-object) [threads, blocking, 139](#modaloperator-object)
 >
-> [Thumbnail context menu commands,
-> 71,](#thumbnail-context-menu-submenus) [72](#_bookmark185) Thumbnail
+> [Thumbnail context menu commands, 71,](#thumbnail-context-menu-submenus) [72](#_bookmark185) Thumbnail
 > object
 >
-> [about, 98](#thumbnail-object) [constructor,
-> 98](#thumbnail-object-constructor) [functions,
-> 103](#thumbnail-functions) [multiple references,
-> 99](#multiple-references-to-the-same-node) [properties,
-> 100](#thumbnail-properties)
+> [about, 98](#thumbnail-object) [constructor, 98](#thumbnail-object-constructor) [functions, 103](#thumbnail-functions) [multiple references, 99](#multiple-references-to-the-same-node) [properties, 100](#thumbnail-properties)
 >
 > [ThumbnailPanelette object, 107](#thumbnailpanelette-object)
 > thumbnails
 >
-> [adding to Favorites, 54](#favorites-object) [events,
-> 51](#thumbnail-events)
+> [adding to Favorites, 54](#favorites-object) [events, 51](#thumbnail-events)
 >
 > [metadata, 78](#metadata-object)
 >

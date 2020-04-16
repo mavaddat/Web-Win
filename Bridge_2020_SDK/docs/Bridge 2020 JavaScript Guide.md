@@ -2,10 +2,9 @@
 
 ![](guide/media/image1.jpeg)
 
-![](guide/media/image3.jpeg){width="0.6218744531933509in"
-height="0.78125in"}
+![](guide/media/image3.jpeg)
 
->  2020 Adobe Systems Incorporated. All rights reserved.
+> &copy; 2020 Adobe Systems Incorporated. All rights reserved.
 >
 > Adobe® Creative Cloud: Adobe Bridge 2020 JavaScript Guide for Windows®
 > and Macintosh®.
@@ -93,22 +92,19 @@ height="0.78125in"}
 
 [Where to go for more information 7](#where-to-go-for-more-information)
 
-1.  [Scripting Adobe Bridge 9](#scripting-adobe-bridge)
+1. [Scripting Adobe Bridge 9](#scripting-adobe-bridge)
 
 [Scripting Overview 9](#scripting-overview)
 
 [Documentation and sample code 9](#documentation-and-sample-code)
 
-[Executing scripts for Adobe Bridge
-10](#executing-scripts-for-adobe-bridge)
+[Executing scripts for Adobe Bridge 10](#executing-scripts-for-adobe-bridge)
 
-[The Adobe Bridge Browser Window and Object Model
-11](#the-adobe-bridge-browser-window-and-object-model)
+[The Adobe Bridge Browser Window and Object Model 11](#the-adobe-bridge-browser-window-and-object-model)
 
 [The Adobe Bridge browser window 11](#the-adobe-bridge-browser-window)
 
-[Accessing the Adobe Bridge browser through scripts
-12](#accessing-the-adobe-bridge-browser-through-scripts)
+[Accessing the Adobe Bridge browser through scripts 12](#accessing-the-adobe-bridge-browser-through-scripts)
 
 [The Adobe Bridge Object Model 15](#the-adobe-bridge-object-model)
 
@@ -118,8 +114,7 @@ height="0.78125in"}
 >
 > [Thumbnails in documents 16](#thumbnails-in-documents)
 
-[Scripting Adobe Bridge interactions
-17](#scripting-adobe-bridge-interactions)
+[Scripting Adobe Bridge interactions 17](#scripting-adobe-bridge-interactions)
 
 > [Application preferences 17](#application-preferences)
 >
@@ -129,33 +124,27 @@ height="0.78125in"}
 
 > [Customizing the browser window 18](#customizing-the-browser-window)
 >
-> [Communicating with the user from a script
-> 19](#communicating-with-the-user-from-a-script)
+> [Communicating with the user from a script 19](#communicating-with-the-user-from-a-script)
 
 [Extending browser behavior 21](#extending-browser-behavior)
 
-2.  [Interacting with Adobe Bridge through Scripts
-    > 23](#interacting-with-adobe-bridge-through-scripts)
+2. [Interacting with Adobe Bridge through Scripts 23](#interacting-with-adobe-bridge-through-scripts)
 
-[Accessing Thumbnails with Scripts
-23](#accessing-thumbnails-with-scripts)
+[Accessing Thumbnails with Scripts 23](#accessing-thumbnails-with-scripts)
 
 [Thumbnails as node references 23](#thumbnails-as-node-references)
 
 > [Using and accessing thumbnails 24](#using-and-accessing-thumbnails)
 
-[Accessing many thumbnails correctly
-24](#accessing-many-thumbnails-correctly)
+[Accessing many thumbnails correctly 24](#accessing-many-thumbnails-correctly)
 
 > [Ensuring valid thumbnail data 25](#ensuring-valid-thumbnail-data)
 >
-> [Location of Camera settings for thumbnails
-> 25](#location-of-camera-settings-for-thumbnails)
+> [Location of Camera settings for thumbnails 25](#location-of-camera-settings-for-thumbnails)
 
 [Metadata for thumbnails 25](#metadata-for-thumbnails)
 
-[Embedding metadata in a script as XML
-26](#embedding-metadata-in-a-script-as-xml)
+[Embedding metadata in a script as XML 26](#embedding-metadata-in-a-script-as-xml)
 
 [Event Handling in Adobe Bridge 27](#event-handling-in-adobe-bridge)
 
@@ -163,14 +152,11 @@ height="0.78125in"}
 
 [Registering event handlers 28](#registering-event-handlers)
 
-[Communicating with Other Applications
-28](#communicating-with-other-applications)
+[Communicating with Other Applications 28](#communicating-with-other-applications)
 
-3.  [Creating a User Interface for a Script
-    > 30](#creating-a-user-interface-for-a-script)
+3.  [Creating a User Interface for a Script 30](#creating-a-user-interface-for-a-script)
 
-[User Interface Options for Scripts
-30](#user-interface-options-for-scripts)
+[User Interface Options for Scripts 30](#user-interface-options-for-scripts)
 
 [Navigation bars 30](#navigation-bars-1)
 
@@ -180,48 +166,37 @@ height="0.78125in"}
 
 [Tabbed palettes 31](#tabbed-palettes)
 
-[Displaying ScriptUI in Adobe Bridge
-32](#displaying-scriptui-in-adobe-bridge)
+[Displaying ScriptUI in Adobe Bridge 32](#displaying-scriptui-in-adobe-bridge)
 
 > [Displaying ScriptUI dialogs 32](#displaying-scriptui-dialogs)
 >
-> [Displaying ScriptUI elements in a navigation bar
-> 32](#displaying-scriptui-elements-in-a-navigation-bar)
+> [Displaying ScriptUI elements in a navigation bar 32](#displaying-scriptui-elements-in-a-navigation-bar)
 >
 > [Displaying ScriptUI elements in a custom palette 33](#bookmark132)
 
-4.  [Customizing the Adobe Bridge Browser Window
-    > 34](#customizing-the-adobe-bridge-browser-window)
+4.  [Customizing the Adobe Bridge Browser Window 34](#customizing-the-adobe-bridge-browser-window)
 
-[Creating a Customized Tabbed Palette
-34](#creating-a-customized-tabbed-palette)
+[Creating a Customized Tabbed Palette 34](#creating-a-customized-tabbed-palette)
 
 [Script-Defined Inspector Panels 35](#script-defined-inspector-panels)
 
-[Creating and displaying inspector panels
-36](#creating-and-displaying-inspector-panels)
+[Creating and displaying inspector panels 36](#creating-and-displaying-inspector-panels)
 
-> [Specifying string values in an inspector panel
-> 36](#specifying-string-values-in-an-inspector-panel)
+> [Specifying string values in an inspector panel 36](#specifying-string-values-in-an-inspector-panel)
 
-[Panelette markup elements for dynamic text
-37](#panelette-markup-elements-for-dynamic-text)
+[Panelette markup elements for dynamic text 37](#panelette-markup-elements-for-dynamic-text)
 
 [Markup examples 37](#markup-examples)
 
 > [Extending Adobe Bridge Menus 38](#extending-adobe-bridge-menus)
 
-5.  [Extending Adobe Bridge Node-Handling Behavior
-    > 39](#extending-adobe-bridge-node-handling-behavior)
+5.  [Extending Adobe Bridge Node-Handling Behavior 39](#extending-adobe-bridge-node-handling-behavior)
 
-[Creating Script-Defined Node-Handling Extensions
-39](#creating-script-defined-node-handling-extensions)
+[Creating Script-Defined Node-Handling Extensions 39](#creating-script-defined-node-handling-extensions)
 
-[Registering your node-handling extension
-40](#registering-your-node-handling-extension)
+[Registering your node-handling extension 40](#registering-your-node-handling-extension)
 
-> [Installing a node-handling extension
-> 40](#installing-a-node-handling-extension)
+> [Installing a node-handling extension 40](#installing-a-node-handling-extension)
 
 [Installation structure 41](#installation-structure)
 
@@ -229,8 +204,7 @@ height="0.78125in"}
 
 [Shared startup scripts 42](#shared-startup-scripts)
 
-> [Accessing the node-handling model and data
-> 42](#accessing-the-node-handling-model-and-data)
+> [Accessing the node-handling model and data 42](#accessing-the-node-handling-model-and-data)
 >
 > [Defining an ExtensionHandler 43](#defining-an-extensionhandler)
 >
@@ -250,37 +224,29 @@ height="0.78125in"}
 >
 > [Core node data 52](#core-node-data)
 >
-> [Defining Long-Running Operations
-> 52](#defining-long-running-operations)
+> [Defining Long-Running Operations 52](#defining-long-running-operations)
 >
 > [Implementing an operation 53](#implementing-an-operation)
 >
-> [Monitoring operation progress and status
-> 54](#monitoring-operation-progress-and-status)
+> [Monitoring operation progress and status 54](#monitoring-operation-progress-and-status)
 >
 > [Resolving conflicts 56](#resolving-conflicts)
 >
-> [Defining Node Searches and Filters
-> 57](#defining-node-searches-and-filters)
+> [Defining Node Searches and Filters 57](#defining-node-searches-and-filters)
 >
-> [Handling interactive node searches
-> 57](#handling-interactive-node-searches)
+> [Handling interactive node searches 57](#handling-interactive-node-searches)
 
-[Implementing getSearchDefinition()
-58](#implementing-getsearchdefinition)
+[Implementing getSearchDefinition() 58](#implementing-getsearchdefinition)
 
-[Implementing getBridgeUriForSearch()
-60](#implementing-getbridgeuriforsearch)
+[Implementing getBridgeUriForSearch() 60](#implementing-getbridgeuriforsearch)
 
 > [Adding filters 60](#adding-filters)
 
-[Implementing the getFilterCriteria() method
-61](#implementing-the-getfiltercriteria-method)
+[Implementing the getFilterCriteria() method 61](#implementing-the-getfiltercriteria-method)
 
-6.  [Porting Guide 62](#porting-guide)
+6. [Porting Guide 62](#porting-guide)
 
-[Changes and Deprecations from Adobe Bridge CS6
-62](#changes-and-deprecations-from-adobe-bridge-cs6)
+[Changes and Deprecations from Adobe Bridge CS6 62](#changes-and-deprecations-from-adobe-bridge-cs6)
 
 [Index 63](#index)
 
@@ -341,8 +307,7 @@ About This Book
     > documentation for that product.
 
 > If you have already been using the scripting interface to Bridge, see
-> [[Chapter 6, "Porting]{.underline}
-> [Guide]{.underline}](#porting-guide)" for information about changes in
+> [Chapter 6, "PortingGuide](#porting-guide)" for information about changes in
 > this release.
 
 **6**
@@ -351,39 +316,33 @@ About This Book
 
 > This book contains the following chapters:
 
--   [[Chapter 1, "Scripting Adobe
-    > Bridge]{.underline}](#scripting-adobe-bridge)," introduces some
+-   [Chapter 1, "Scripting Adobe Bridge](#scripting-adobe-bridge)," introduces some
     > important concepts in Adobe Bridge scripting and describes the
     > Bridge JavaScript document object model (DOM).
 
--   [[Chapter 2, "Interacting with Adobe Bridge through
-    > Scripts]{.underline}](#interacting-with-adobe-bridge-through-scripts),"
+-   [Chapter 2, "Interacting with Adobe Bridge through Scripts](#interacting-with-adobe-bridge-through-scripts),"
     > discusses the various ways of accessing Thumbnail objects,
     > describes how Bridge generates user-interaction events, and shows
     > how you can respond to these events by defining event handlers in
     > your scripts.
 
--   [[Chapter 3,]{.underline} ["Creating]{.underline} [a]{.underline}
-    > [User]{.underline} [Interface]{.underline} [for]{.underline} [a
-    > Script]{.underline}](#creating-a-user-interface-for-a-script),"
+-   [Chapter 3,User]{.underline} [Interface]{.underline} [for]{.underline} [a Script](#creating-a-user-interface-for-a-script),"
     > discusses the various options available to scripts for interaction
     > with Bridge users, such as dialog boxes and navigation bars, and
     > describes how to use these means to display a user interface
     > defined in ScriptUI.
 
--   [[Chapter 4, "Customizing the Adobe Bridge Browser]{.underline}
-    > [Window]{.underline}](#customizing-the-adobe-bridge-browser-window)"
+-   [Chapter 4, "Customizing the Adobe Bridge BrowserWindow](#customizing-the-adobe-bridge-browser-window)"
     > describes how to add a script-defined palette to Bridge, how to
     > build a customized object-inspector pane that displays information
     > related to the selected node in any way you choose, and how to
     > customize Bridge menus.
 
--   [[Chapter 5, "Extending Adobe Bridge Node-Handling
-    > Behavior]{.underline}](#extending-adobe-bridge-node-handling-behavior),"
+-   [Chapter 5, "Extending Adobe Bridge Node-Handling Behavior](#extending-adobe-bridge-node-handling-behavior),"
     > is intended for tool developers. It describes how to extend the
     > node-handling behavior of Bridge and define your own node types.
 
--   [[Chapter 6, "Porting Guide]{.underline}](#porting-guide),"
+-   [Chapter 6, "Porting Guide](#porting-guide),"
     > summarizes changes and additions to this release, to help you in
     > porting existing scripting applications.
 
@@ -455,7 +414,7 @@ About This Book
 
 -   []{#bookmark9 .anchor}The public JavaScript standards organization
     > web site:
-    > [[www.ecma-international.org]{.underline}](http://www.ecma-international.org/)
+    > [[www.ecma-international.org](http://www.ecma-international.org/)
 
 ```{=html}
 <!-- -->
@@ -478,8 +437,8 @@ Scripting Adobe Bridge
 > methods, see the *Adobe Bridge JavaScript Reference*.
 >
 > **NOTE:** If you have already been using the scripting interface to
-> Adobe Bridge, see [[Chapter 6, "Porting]{.underline}](#porting-guide)
-> [[Guide]{.underline}](#porting-guide)" for information about changes
+> Adobe Bridge, see [Chapter 6, "Porting](#porting-guide)
+> [Guide](#porting-guide)" for information about changes
 > in this release.
 
 Scripting Overview
@@ -522,7 +481,7 @@ Scripting Overview
 
 > []{#_bookmark15 .anchor}The Adobe Bridge Software Developer's Kit
 > (SDK), available from Adobe Developer Center,
-> [[http://www.adobe.com/devnet/]{.underline}](http://www.adobe.com/devnet/),
+> [http://www.adobe.com/devnet/](http://www.adobe.com/devnet/),
 > contains many code samples for Adobe Bridge and the JavaScript tools.
 > You can download and install the SDK in a folder with a name and
 > location of your choice, referred to here as *sdkInstall*. The SDK
@@ -565,8 +524,7 @@ Scripting Overview
 
 -   You can create a menu command that runs a script and add it to a
     > menu or submenu in the Adobe Bridge browser, using the MenuElement
-    > object. See [['Extending Adobe Bridge Menus' on page
-    > 38]{.underline}](#extending-adobe-bridge-menus).
+    > object. See ['Extending Adobe Bridge Menus' on page 38](#extending-adobe-bridge-menus).
 
 -   When the browser window displays a JSX file, you can double-click
     > that file thumbnail to run the script in its target application.
@@ -606,10 +564,8 @@ Scripting Overview
 > Bridge-enabled applications. As a third-party developer, you must be
 > very careful when installing anything in these locations. They should
 > be used only for extensions to the Adobe Bridge node-handling model
-> that support companion applications. For details, see [[Chapter 5,
-> "Extending]{.underline} [Adobe Bridge
-> Node-Handling]{.underline}](#extending-adobe-bridge-node-handling-behavior)
-> [[Behavior]{.underline}](#extending-adobe-bridge-node-handling-behavior).
+> that support companion applications. For details, see [[Chapter 5, "Extending]{.underline} [Adobe Bridge Node-Handling](#extending-adobe-bridge-node-handling-behavior)
+> [Behavior](#extending-adobe-bridge-node-handling-behavior).
 
 The Adobe Bridge Browser Window and Object Model
 ------------------------------------------------
@@ -621,8 +577,7 @@ The Adobe Bridge Browser Window and Object Model
 > \"document\" is defined as the browser window. This section shows how
 > each aspect of the API relates to the parts of the browser. A more
 > detailed description of the objects of the Adobe Bridge model follows
-> in [['The Adobe Bridge Object Model' on]{.underline}
-> [page]{.underline} [15]{.underline}](#the-adobe-bridge-object-model).
+> in ['The Adobe Bridge Object Model' onpage]{.underline} [15](#the-adobe-bridge-object-model).
 
 ### The Adobe Bridge browser window
 
@@ -705,7 +660,7 @@ The Adobe Bridge Browser Window and Object Model
 > through the Adobe Bridge object model.
 
 +----------------------+----------------------+----------------------+
-| **Window area**      | > **Purpose**        | > **Scripting        |
+| **Window area**     | > **Purpose**        | > **Scripting        |
 |                      |                      | > control**          |
 +======================+======================+======================+
 | Browser window       | > Displays files,    | > Represented by the |
@@ -1133,17 +1088,13 @@ The Adobe Bridge Object Model
 ```{=html}
 <!-- -->
 ```
--   You can add customized panes or palettes to the browser window which
+
+- You can add customized panes or palettes to the browser window which
     > can display thumbnails, or information directly or indirectly
-    > contained in selected thumbnails; see [['Customizing the
-    > user]{.underline} [interface' on]{.underline} [page
-    > 18]{.underline}](#customizing-the-user-interface).
+    > contained in selected thumbnails; see ['Customizing the user interface' on page 18{.underline}](#customizing-the-user-interface).
 
 > For additional information about how to work with Thumbnail objects,
-> see [['Accessing Thumbnails
-> with]{.underline}](#accessing-thumbnails-with-scripts) [[Scripts'
-> on]{.underline} [page
-> 23]{.underline}](#accessing-thumbnails-with-scripts).
+> see ['Accessing Thumbnails withpage 23](#accessing-thumbnails-with-scripts).
 
 ### Scripting Adobe Bridge interactions
 
@@ -1184,9 +1135,7 @@ The Adobe Bridge Object Model
 > an argument, and returns a value that tells Adobe Bridge whether to
 > continue with the default behavior or to ignore it.
 >
-> For more information, see [['Event Handling in Adobe Bridge'
-> on]{.underline} [page
-> 27]{.underline}](#event-handling-in-adobe-bridge).
+> For more information, see [['Event Handling in Adobe Bridge' on]{.underline} [page 27](#event-handling-in-adobe-bridge).
 
 ### Customizing the user interface
 
@@ -1222,21 +1171,19 @@ height="3.0723950131233595in"}
 > The displayed information in an Inspector can be related to the
 > selected node through embedded file metadata (in associated Metadata
 > objects) or through Adobe Bridge- or script-defined properties of the
-> Thumbnail object (see [[Chapter]{.underline} [5, "Extending Adobe
+> Thumbnail object (see [Chapter5, "Extending Adobe
 > Bridge Node-Handling
-> Behavior]{.underline}](#extending-adobe-bridge-node-handling-behavior)\").
+> Behavior](#extending-adobe-bridge-node-handling-behavior)\").
 >
-> For information on how to make these additions, see [[Chapter 4,
-> "Customizing]{.underline} [the Adobe Bridge
-> Browser]{.underline}](#customizing-the-adobe-bridge-browser-window)
-> [[Window]{.underline}](#customizing-the-adobe-bridge-browser-window).
+> For information on how to make these additions, see [Chapter 4, "Customizingthe Adobe Bridge Browser](#customizing-the-adobe-bridge-browser-window)
+> [Window](#customizing-the-adobe-bridge-browser-window).
 
 #### Communicating with the user from a script
 
 > []{#_bookmark66 .anchor}Your script can display information to or
 > collect information from the user by configuring the supplied
-> [[Navigation bars]{.underline}](#navigation-bars), or by creating and
-> displaying [[Dialogs]{.underline}](#dialogs).
+> [[Navigation bars](#navigation-bars), or by creating and
+> displaying [Dialogs](#dialogs).
 >
 > []{#_bookmark67 .anchor}ExtendScript provides a set of user-interface
 > objects in the ScriptUI module, which defines windows and
@@ -1248,14 +1195,12 @@ height="3.0723950131233595in"}
 >
 > When integrating your user interface with the browser, you can use
 > either ScriptUI controls for any window or pane, but cannot mix the
-> two. For a complete discussion, see [[Chapter 3, "Creating a
-> User]{.underline}](#creating-a-user-interface-for-a-script)
-> [[Interface for]{.underline} [a
-> Script]{.underline}](#creating-a-user-interface-for-a-script).\"
+> two. For a complete discussion, see [Chapter 3, "Creating a User](#creating-a-user-interface-for-a-script)
+> [Interface fora Script](#creating-a-user-interface-for-a-script).\"
 >
 > In addition to displaying a user interface for your script, you can
 > script user interactions by extending the Adobe Bridge
-> [[Menus]{.underline}](#menus).
+> [Menus](#menus).
 
 ###### Navigation bars
 
@@ -1277,8 +1222,7 @@ height="3.0723950131233595in"}
 
 > You can program the controls to display information to or collect
 > information from the user. For additional details, see
-> [['Navigation]{.underline} [bars' on page
-> 30]{.underline}](#navigation-bars-1).
+> [['Navigation]{.underline} [bars' on page 30](#navigation-bars-1).
 
 ###### Dialogs
 
@@ -1322,8 +1266,7 @@ height="3.0723950131233595in"}
 > identifiers of all menus and
 >
 > menu items that are accessible to scripts are listed with the
-> description of the MenuElement object in [['Extending Adobe Bridge
-> Menus' on page 38]{.underline}](#extending-adobe-bridge-menus).
+> description of the MenuElement object in ['Extending Adobe Bridge Menus' on page 38](#extending-adobe-bridge-menus).
 
 ### Extending browser behavior
 
@@ -1375,9 +1318,7 @@ SearchDefinition
 > dfoersyofuhrahnadnldedledtynpoedes, using the
 > toInFfaovsoeritteosbpjeacnte. lYou can access and display
 > []{#_bookmark77 .anchor}thdiispkilnaydeodf inoCdoendteantat ipn
-> anecustom Inspector panel; see [['Script-Defined Inspector Panels'
-> on]{.underline} [page
-> 35]{.underline}](#script-defined-inspector-panels).
+> anecustom Inspector panel; see [['Script-Defined Inspector Panels' on]{.underline} [page 35](#script-defined-inspector-panels).
 
 -   You can define node search and filter criteria that consider the
     > values of metadata and node data properties associated with your
@@ -1390,9 +1331,9 @@ SearchDefinition
     > file-system access, your model methods must define an Operator
     > object to execute and monitor the operation.
 
-> For a complete discussion, see [[Chapter 5, "Extending Adobe Bridge
+> For a complete discussion, see [Chapter 5, "Extending Adobe Bridge
 > Node-Handling
-> Behavior]{.underline}](#extending-adobe-bridge-node-handling-behavior).\"
+> Behavior](#extending-adobe-bridge-node-handling-behavior).\"
 >
 > The following figure show the result of running the basic
 > node-handling extension example provided with the Adobe Bridge SDK.
@@ -1408,24 +1349,18 @@ Interacting with Adobe Bridge through Scripts
 
 > The Thumbnail object is the basic JavaScript representation of the
 > entities that your Adobe Bridge browser displays; see
-> [['Accessing]{.underline} [Thumbnails]{.underline} [with Scripts'
-> on]{.underline} [page]{.underline}
-> [23]{.underline}](#accessing-thumbnails-with-scripts).
+> ['Accessing23](#accessing-thumbnails-with-scripts).
 >
 > []{#_bookmark80 .anchor}As a user interacts with the browser window,
 > Adobe Bridge generates *user-interaction events*. Your scripts can
 > detect and respond to these events in order to extend or override the
 > default behavior; see
-> [['Event]{.underline}](#event-handling-in-adobe-bridge) [[Handling in
-> Adobe Bridge' on]{.underline} [page]{.underline}
-> [27]{.underline}](#event-handling-in-adobe-bridge).
+> [['Event](#event-handling-in-adobe-bridge) [Handling in Adobe Bridge' on27](#event-handling-in-adobe-bridge).
 >
 > Your scripts can communicate with other Adobe JavaScript-enabled
 > applications, such as Photoshop, Illustrator, and InDesign. You can,
 > for example, send a file that a user selects in the Adobe Bridge
-> browser to be opened in Photoshop. See [['Communicating
-> with]{.underline} [Other Applications' on page
-> 28]{.underline}](#communicating-with-other-applications).
+> browser to be opened in Photoshop. See ['Communicating withOther Applications' on page 28](#communicating-with-other-applications).
 
 Accessing Thumbnails with Scripts
 ---------------------------------
@@ -1446,8 +1381,7 @@ Accessing Thumbnails with Scripts
 
 -   Any scripter can define an event handler that responds to these
     > standard thumbnail interaction events; see [['Event]{.underline}
-    > [Handling in]{.underline} [Adobe Bridge' on]{.underline} [page
-    > 27]{.underline}](#event-handling-in-adobe-bridge).
+    > [Handling in]{.underline} [Adobe Bridge' on]{.underline} [page 27](#event-handling-in-adobe-bridge).
 
 > []{#_bookmark86 .anchor}A Thumbnail object is identified by a unique
 > identifying string called a *Bridge URI*, which is available to
@@ -1459,8 +1393,7 @@ Accessing Thumbnails with Scripts
 
 -   A tool developer can extend the default node-handling behavior,
     > defining new node types and adding properties to the Thumbnail
-    > object; see [['Extending browser behavior' on page
-    > 21]{.underline}](#extending-browser-behavior).
+    > object; see [['Extending browser behavior' on page 21](#extending-browser-behavior).
 
 > Here are some examples of complete, or *canonical*, Bridge URIs,
 > including the prefix registered for the node handler:
@@ -1510,8 +1443,7 @@ Accessing Thumbnails with Scripts
 > **NOTE:** Be careful when accessing selected or visible thumbnails, as
 > it is possible for very large numbers of thumbnails to be selected or
 > visible, and accessing a large array very often can affect
-> performance; see [[Accessing many thumbnails
-> correctly]{.underline}](#accessing-many-thumbnails-correctly) below.
+> performance; see [Accessing many thumbnails correctly](#accessing-many-thumbnails-correctly) below.
 
 #### Accessing many thumbnails correctly
 
@@ -1597,7 +1529,7 @@ Accessing Thumbnails with Scripts
 > Adobe XMP format. It includes metadata defined in other formats, such
 > as EXIF, in namespaces for those formats. For more information on the
 > XMP metadata format, see the *XMP Specification*, available from
-> [[http://www.adobe.com/products/xmp/]{.underline}](http://www.adobe.com/products/xmp/).
+> [http://www.adobe.com/products/xmp/](http://www.adobe.com/products/xmp/).
 >
 > When a script needs to access the metadata through the Thumbnail
 > object, it is important to make sure that the returned object contains
@@ -1617,8 +1549,7 @@ Accessing Thumbnails with Scripts
 >
 > You can extend the Adobe Bridge browser to display context-specific
 > information indirectly associated with a selected thumbnail through
-> its metadata. See [['Customizing the browser]{.underline} [window' on
-> page 18]{.underline}](#customizing-the-browser-window).
+> its metadata. See [['Customizing the browser]{.underline} [window' on page 18](#customizing-the-browser-window).
 
 ###### Example code
 
@@ -1642,8 +1573,7 @@ Accessing Thumbnails with Scripts
 > description of the script. dc:source Where to get updates to the
 > script.
 >
-> [For details of the Dublin Core metadata specification, see
-> [http://dublincore.org/documents/dces/]{.underline}.](http://dublincore.org/documents/dces/)
+> [For details of the Dublin Core metadata specification, see [http://dublincore.org/documents/dces/]{.underline}.](http://dublincore.org/documents/dces/)
 >
 > Adobe Bridge uses the embedded metadata title and description (if it
 > is less than 50 characters) in the Startup Scripts page of the
@@ -1743,8 +1673,7 @@ Event Handling in Adobe Bridge
 -   For events generated by ScriptUI objects (such as controls in the
     > navigation bar), see the *JavaScript Tools Guide*.
 
--   For events generated by menu elements, see [['Extending Adobe Bridge
-    > Menus' on page 38]{.underline}](#extending-adobe-bridge-menus).
+-   For events generated by menu elements, see ['Extending Adobe Bridge Menus' on page 38](#extending-adobe-bridge-menus).
 
 ### Defining event handlers
 
@@ -1894,9 +1823,7 @@ Creating a User Interface for a Script
 
 -   You can define a response to a user's interaction with Adobe Bridge
     > objects, such as thumbnails, through the event-handling mechanism,
-    > as discussed in [[Chapter 2, "Interacting with Adobe
-    > Bridge]{.underline} [through
-    > Scripts]{.underline}](#interacting-with-adobe-bridge-through-scripts).
+    > as discussed in [[Chapter 2, "Interacting with Adobe Bridge]{.underline} [through Scripts](#interacting-with-adobe-bridge-through-scripts).
     > \"
 
 -   This chapter discusses the various ways you can build a user
@@ -1905,8 +1832,7 @@ Creating a User Interface for a Script
 
 -   For more extensive customization of the browser window (adding menus
     > and commands, tabbed palettes, and Inspector panels), see
-    > [[Chapter 4, "Customizing the Adobe Bridge Browser]{.underline}
-    > [Window]{.underline}](#customizing-the-adobe-bridge-browser-window).\"
+    > [Chapter 4, "Customizing the Adobe Bridge BrowserWindow](#customizing-the-adobe-bridge-browser-window).\"
 
 ###### Code examples for UI techniques
 
@@ -1936,11 +1862,9 @@ User Interface Options for Scripts
 > of these places using Script UI Elements.
 >
 > **ScriptUI Elements**: ScriptUI is a JavaScript module that defines
-> windows and user-interface controls. You can create ScriptUI [[Dialogs
-> boxes]{.underline}](#dialogs-boxes), or customized [[Tabbed
-> palettes]{.underline}](#tabbed-palettes), and populate them with
+> windows and user-interface controls. You can create ScriptUI [[Dialogs boxes](#dialogs-boxes), or customized [Tabbed palettes](#tabbed-palettes), and populate them with
 > ScriptUI controls; or you can add ScriptUI controls to the existing
-> [[Navigation bars]{.underline}](#navigation-bars-1). If you use
+> [Navigation bars](#navigation-bars-1). If you use
 > ScriptUI controls, you can take advantage of the ExtendScript
 > localization feature.
 >
@@ -1979,17 +1903,14 @@ User Interface Options for Scripts
 
 -   Set the NavBar.type to \"scriptUI\" to display ScriptUI controls.
     > See [['Displaying]{.underline} [ScriptUI]{.underline}
-    > [elements]{.underline} [in]{.underline} [a navigation bar' on page
-    > 32]{.underline}](#displaying-scriptui-elements-in-a-navigation-bar).
+    > [elements]{.underline} [in]{.underline} [a navigation bar' on page 32](#displaying-scriptui-elements-in-a-navigation-bar).
 
 ### Dialogs boxes
 
 > A dialog box, like a navigation bar, can display ScriptUI controls.
 
 -   Create a ScriptUI Window object to display ScriptUI controls. See
-    > [['Displaying]{.underline} [ScriptUI]{.underline} [dialogs'
-    > on]{.underline} [page
-    > 32]{.underline}](#displaying-scriptui-dialogs).
+    > ['Displayingpage 32](#displaying-scriptui-dialogs).
 
 ### Content pane
 
@@ -2023,9 +1944,9 @@ User Interface Options for Scripts
 > add() method to add UI elements.
 >
 > For complete information on custom palettes that your script defines
-> with the TabbedPalette object, see [[Chapter 4, "Customizing the Adobe
+> with the TabbedPalette object, see [Chapter 4, "Customizing the Adobe
 > Bridge Browser
-> Window]{.underline}](#customizing-the-adobe-bridge-browser-window).\"
+> Window](#customizing-the-adobe-bridge-browser-window).\"
 
 Displaying ScriptUI in Adobe Bridge
 -----------------------------------
@@ -2035,17 +1956,15 @@ Displaying ScriptUI in Adobe Bridge
 
 -   You can create an independent ScriptUI window, populate it with
     > ScriptUI controls, and invoke it from your script using the
-    > window's show function. See [['Displaying]{.underline} [ScriptUI
-    > dialogs' on page 32]{.underline}](#displaying-scriptui-dialogs)
+    > window's show function. See ['DisplayingScriptUI dialogs' on page 32](#displaying-scriptui-dialogs)
 
--   You can add ScriptUI controls to the existing [[Navigation
-    > bars]{.underline}](#navigation-bars-1), and display them by
+-   You can add ScriptUI controls to the existing [Navigation bars](#navigation-bars-1), and display them by
     > setting by setting the NavBar object's visible property to true.
 
 -   You can display ScriptUI controls in a script-defined tabbed
-    > palette; see [[Chapter 4, "Customizing the]{.underline} [Adobe
+    > palette; see [Chapter 4, "Customizing theAdobe
     > Bridge Browser
-    > Window]{.underline}](#customizing-the-adobe-bridge-browser-window).\"
+    > Window](#customizing-the-adobe-bridge-browser-window).\"
 
 ### Displaying ScriptUI dialogs
 
@@ -2122,9 +2041,7 @@ Displaying ScriptUI in Adobe Bridge
     > *JavaScript Tools Guide*.
 
 -   For further details on creating customized tabbed palettes, see
-    > [[Chapter 4, "Customizing the Adobe]{.underline} [Bridge
-    > Browser]{.underline}
-    > [Window]{.underline}](#customizing-the-adobe-bridge-browser-window).\"
+    > [Chapter 4, "Customizing the AdobeWindow](#customizing-the-adobe-bridge-browser-window).\"
 
 Customizing the Adobe Bridge Browser Window
 ===========================================
@@ -2134,27 +2051,24 @@ Customizing the Adobe Bridge Browser Window
 > positions. Your scripts can access the contents of these default panes
 > to some extent, as described in [['Accessing]{.underline} [the Adobe
 > Bridge browser through scripts' on page
-> 12]{.underline}](#accessing-the-adobe-bridge-browser-through-scripts).
+> 12](#accessing-the-adobe-bridge-browser-through-scripts).
 >
 > In addition to the default palettes, however, there are two completely
 > script-defined display areas that allow you much greater control:
 
 -   Use the TabbedPalette object to create entirely new palettes for
-    > display or user interface, defined by ScriptUI. See [['Creating a
+    > display or user interface, defined by ScriptUI. See ['Creating a
     > Customized Tabbed Palette' on page
-    > 34]{.underline}](#creating-a-customized-tabbed-palette).
+    > 34](#creating-a-customized-tabbed-palette).
 
 -   Use the InspectorPanel object to create object-inspector panels,
     > which provide additional information related to the currently
     > selected thumbnail in the Content pane. See
-    > [['Script-Defined]{.underline} [Inspector]{.underline} [Panels'
-    > on]{.underline} [page
-    > 35]{.underline}](#script-defined-inspector-panels).
+    > ['Script-Definedpage 35](#script-defined-inspector-panels).
 
 > You can also customize the browser by adding your own menus, submenus,
 > and commands to the default Adobe Bridge menu bar and menus. See
-> [['Extending Adobe Bridge Menus' on page
-> 38]{.underline}](#extending-adobe-bridge-menus).
+> ['Extending Adobe Bridge Menus' on page 38](#extending-adobe-bridge-menus).
 
 Creating a Customized Tabbed Palette
 ------------------------------------
@@ -2179,8 +2093,7 @@ Creating a Customized Tabbed Palette
 >
 > You can add a palette to any existing browser, or use the document
 > create event to add your palette to new browser windows; see
-> [['Event]{.underline} [Handling]{.underline} [in]{.underline} [Adobe
-> Bridge' on page 27]{.underline}](#event-handling-in-adobe-bridge).
+> ['EventAdobe Bridge' on page 27](#event-handling-in-adobe-bridge).
 >
 > []{#_bookmark139 .anchor}A script-defined palette is, by default,
 > added at the top of the leftmost column, and its name is automatically
@@ -2273,9 +2186,8 @@ Script-Defined Inspector Panels
 > otherwise calculated using JavaScript.
 >
 > Dynamic text is specified using special *panelette markup elements*,
-> indicated by double-brackets. See [['Specifying string values in
-> an]{.underline} [inspector panel' on]{.underline} [page]{.underline}
-> [36]{.underline}](#specifying-string-values-in-an-inspector-panel).
+> indicated by double-brackets. See [['Specifying string values in an]{.underline} [inspector panel' on]{.underline} [page]{.underline}
+> [36](#specifying-string-values-in-an-inspector-panel).
 
 ### Creating and displaying inspector panels
 
@@ -2503,8 +2415,7 @@ Extending Adobe Bridge Node-Handling Behavior
 >
 > The core node handler provides the default behavior, such as
 > displaying the contents of a folder, or displaying a web page (see
-> [['Thumbnails as]{.underline} [node references' on]{.underline}
-> [page]{.underline} [23]{.underline}](#thumbnails-as-node-references)).
+> ['Thumbnails aspage]{.underline} [23](#thumbnails-as-node-references)).
 > Other Adobe applications that are integrated with Adobe Bridge, such
 > as Adobe Drive and Stock Photos, define their own node handlers and
 > node types.
@@ -2516,16 +2427,16 @@ Extending Adobe Bridge Node-Handling Behavior
 
 -   [['Creating Script-Defined Node-Handling]{.underline} [Extensions'
     > on page
-    > 39]{.underline}](#creating-script-defined-node-handling-extensions)
+    > 39](#creating-script-defined-node-handling-extensions)
 
--   [['Defining Long-Running]{.underline} [Operations' on page
-    > 52]{.underline}](#defining-long-running-operations)
+-   ['Defining Long-RunningOperations' on page
+    > 52](#defining-long-running-operations)
 
--   [['Defining Node Data Sets' on page
-    > 50]{.underline}](#defining-node-data-sets)
+-   ['Defining Node Data Sets' on page
+    > 50](#defining-node-data-sets)
 
--   [['Defining Node Searches and Filters' on page
-    > 57]{.underline}](#defining-node-searches-and-filters)
+-   ['Defining Node Searches and Filters' on page
+    > 57](#defining-node-searches-and-filters)
 
 Creating Script-Defined Node-Handling Extensions
 ------------------------------------------------
@@ -2536,10 +2447,9 @@ Creating Script-Defined Node-Handling Extensions
 > of node, you create and register an ExtensionHandler object,
 > implementing all of the required callback methods; these include a
 > makeModel() method that creates the associated ExtensionModel object.
-> See [['Defining an]{.underline} [ExtensionHandler' on page
-> 43]{.underline}](#defining-an-extensionhandler) and
-> [['Defining]{.underline} [an ExtensionModel' on]{.underline}
-> [page]{.underline} [45]{.underline}](#defining-an-extensionmodel).
+> See ['Defining anExtensionHandler' on page
+> 43](#defining-an-extensionhandler) and
+> ['Definingpage]{.underline} [45](#defining-an-extensionmodel).
 >
 > []{#_bookmark170 .anchor}A *prefix* for the Adobe Bridge node URI
 > identifies node types and associates them with their handlers. For
@@ -2547,7 +2457,7 @@ Creating Script-Defined Node-Handling Extensions
 > \"vc:\". Your handler can register one or more prefixes for the node
 > types it handles; see [['Registering your]{.underline}
 > [node-handling]{.underline} [extension' on page
-> 40]{.underline}](#registering-your-node-handling-extension).
+> 40](#registering-your-node-handling-extension).
 >
 > []{#_bookmark171 .anchor}An extension defines one and only one
 > ExtensionHandler object. Adobe Bridge uses that object's makeModel()
@@ -2571,9 +2481,9 @@ Creating Script-Defined Node-Handling Extensions
 
 > Adobe Bridge uses the Operator object to initiate the action at an
 > appropriate point. See
-> [['Defining]{.underline}](#defining-long-running-operations)
-> [[Long-Running Operations' on page
-> 52]{.underline}](#defining-long-running-operations).
+> ['Defining](#defining-long-running-operations)
+> [Long-Running Operations' on page
+> 52](#defining-long-running-operations).
 
 -   []{#_bookmark172 .anchor}Node handlers can associate their nodes
     > with private data, represented by the Infoset object. Adobe Bridge
@@ -2583,12 +2493,12 @@ Creating Script-Defined Node-Handling Extensions
     > node. See [['Accessing]{.underline} [the
     > node-handling]{.underline} [model]{.underline} [and]{.underline}
     > [data' on page
-    > 42]{.underline}](#accessing-the-node-handling-model-and-data).
+    > 42](#accessing-the-node-handling-model-and-data).
 
 -   You can define your own searching and filtering criteria for your
-    > node types. See [['Defining Node]{.underline} [Searches and
+    > node types. See ['Defining NodeSearches and
     > Filters' on]{.underline} [page
-    > 57]{.underline}](#defining-node-searches-and-filters).
+    > 57](#defining-node-searches-and-filters).
 
 ### Registering your node-handling extension
 
@@ -2733,9 +2643,9 @@ Creating Script-Defined Node-Handling Extensions
 > automatically loaded and added to the Workspace menu. Workspaces are
 > defined as XML files the .workspace extension; for an example of the
 > syntax, save a workspace and examine the resulting file in the user
-> location (see [['The Adobe Bridge browser window'
-> on]{.underline}](#the-adobe-bridge-browser-window) [[page
-> 11]{.underline}](#the-adobe-bridge-browser-window)). For your
+> location (see ['The Adobe Bridge browser window'
+> on](#the-adobe-bridge-browser-window) [page
+> 11](#the-adobe-bridge-browser-window)). For your
 > workspace to be automatically loaded on startup, save it in these
 > locations:
 
@@ -2779,9 +2689,9 @@ Creating Script-Defined Node-Handling Extensions
 > When Adobe Bridge needs to create a thumbnail of a type that is
 > managed by your handler, it uses the handler\'s makeModel() method to
 > create an instance of your ExtensionModel that implements the set of
-> methods it will need to manage your node type (see [['Defining
-> an]{.underline} [ExtensionModel' on page
-> 45]{.underline}](#defining-an-extensionmodel)).
+> methods it will need to manage your node type (see ['Defining
+> anExtensionModel' on page
+> 45](#defining-an-extensionmodel)).
 >
 > Your model allows you to create and update a set of script-defined
 > properties in the Thumbnail objects for your nodes. Data managed by
@@ -2803,8 +2713,7 @@ Creating Script-Defined Node-Handling Extensions
 > Adobe Bridge defines a core set of data in predefined Infoset objects,
 > and a core set of node-handling methods. Your handler must support
 > core data and methods, but can add new data sets and methods. See
-> [['Defining]{.underline} [Node Data Sets' on]{.underline}
-> [page]{.underline} [50]{.underline}](#defining-node-data-sets).
+> ['Definingpage]{.underline} [50](#defining-node-data-sets).
 
 Defining an ExtensionHandler
 ----------------------------
@@ -2814,13 +2723,13 @@ Defining an ExtensionHandler
 > []{#_bookmark191 .anchor}be immediate or long-running:
 >
 > [[Immediate handler
-> operations]{.underline}](#immediate-handler-operations) simply perform
+> operations](#immediate-handler-operations) simply perform
 > an operation and return when it is done. These functions must not take
 > a significant amount of time; if they are slow, they will negatively
 > affect Adobe Bridge browsing performance.
 >
-> [[Long-running handler
-> operations]{.underline}](#long-running-handler-operations) create and
+> [Long-running handler
+> operations](#long-running-handler-operations) create and
 > return Operator objects to perform time-intensive file-system
 > operations that block the main thread. Adobe Bridge view code or your
 > display code passes the object to app.enqueueOperation() to initiate
@@ -2875,8 +2784,8 @@ Defining an ExtensionHandler
 |                                                 |                   |
 | Creates a model instance that implements this   |                   |
 | extension for a specific thumbnail. See         |                   |
-| [['Defining an ExtensionModel' on page          |                   |
-| 45]{.underline}](#defining-an-extensionmodel).  |                   |
+| ['Defining an ExtensionModel' on page          |                   |
+| 45](#defining-an-extensionmodel).  |                   |
 |                                                 |                   |
 | Called when Adobe Bridge needs to display a     |                   |
 | node managed by this handler.                   |                   |
@@ -2887,10 +2796,10 @@ Defining an ExtensionHandler
 > Implement these functions to create Operator objects which can perform
 > the desired operation, and if needed, provide Adobe Bridge with
 > information about the status and progress. See
-> [[Defining]{.underline}](#defining-long-running-operations)
+> [Defining](#defining-long-running-operations)
 >
-> [[Long-Running
-> Operations]{.underline}](#defining-long-running-operations).
+> [Long-Running
+> Operations](#defining-long-running-operations).
 
 +-------------------------------------------------+-------------------+
 | **Method**                                      | > **Return type** |
@@ -3012,7 +2921,7 @@ Defining an ExtensionModel
 
 > Your extension must inform Adobe Bridge of which of the optional
 > methods your handler supports by setting the corresponding values in
-> the [[Core node data]{.underline}](#core-node-data) sets item and
+> the [Core node data](#core-node-data) sets item and
 > itemContent. Your handler's refreshInfoset() method should do this.
 > For example, if you implement the createNewContainer() method, set the
 > corresponding capability value:
@@ -3030,12 +2939,12 @@ Defining an ExtensionModel
 >
 > Model methods can be immediate or long-running:
 
--   [[Immediate model
-    > operations]{.underline}](#immediate-model-operations) simply
+-   [Immediate model
+    > operations](#immediate-model-operations) simply
     > perform an operation and return when it is done.
 
 -   []{#_bookmark198 .anchor}[[Long-running]{.underline} [model
-    > operations]{.underline}](#long-running-model-operations) create
+    > operations](#long-running-model-operations) create
     > and return Operator objects to perform time-intensive file-system
     > operations that block the main thread. Adobe Bridge view code or
     > your display code passes the object to app.enqueueOperation() to
@@ -3088,9 +2997,9 @@ Defining an ExtensionModel
 | )                                             |                     |
 |                                               |                     |
 | Required. Reports the cache status of a node  |                     |
-| data set for this node. See [['Managing the   |                     |
+| data set for this node. See ['Managing the   |                     |
 | data cache' on page                           |                     |
-| 51]{.underline}](#managing-the-data-cache).   |                     |
+| 51](#managing-the-data-cache).   |                     |
 +-----------------------------------------------+---------------------+
 | **getDisplayName** (                          | > String            |
 |                                               |                     |
@@ -3212,21 +3121,21 @@ Defining an ExtensionModel
 |     > item and itemContent capability values to |                   |
 |     > reflect which optional model methods are  |                   |
 |     > supported by this handler. See            |                   |
-|     > [['Defining an ExtensionModel' on page    |                   |
+|     > ['Defining an ExtensionModel' on page    |                   |
 |                                                 |                   |
-| > 45]{.underline}](#defining-an-extensionmodel) |                   |
-|     > and [['Core]{.underline} [node data' on   |                   |
-|     > page 52]{.underline}](#core-node-data).   |                   |
+| > 45](#defining-an-extensionmodel) |                   |
+|     > and ['Corenode data' on   |                   |
+|     > page 52](#core-node-data).   |                   |
 |                                                 |                   |
 | -   If the node is a container, the operation   |                   |
 |     > must add its child nodes to the the core  |                   |
 |     > children data set.                        |                   |
 |                                                 |                   |
 | -   The operation must set the cache status.    |                   |
-|     > See [['Managing the data                  |                   |
-|     > cache']{.underline} [on page              |                   |
+|     > See ['Managing the data                  |                   |
+|     > cache'on page              |                   |
 |                                                 |                   |
-|   > 51]{.underline}](#managing-the-data-cache). |                   |
+|   > 51](#managing-the-data-cache). |                   |
 +-------------------------------------------------+-------------------+
 | **registerInterest** ( **cacheElement** :       | > undefined       |
 | CacheElement )                                  |                   |
@@ -3325,10 +3234,10 @@ Defining an ExtensionModel
 > Implement these methods to create Operator objects which can perform
 > the desired operation, and if needed, provide Adobe Bridge with
 > information about the status and progress. See
-> [['Defining]{.underline}](#defining-long-running-operations)
+> ['Defining](#defining-long-running-operations)
 >
-> [[Long-Running Operations' on page
-> 52]{.underline}](#defining-long-running-operations). All of these
+> [Long-Running Operations' on page
+> 52](#defining-long-running-operations). All of these
 > methods are optional.
 
 +-------------------------------------------------+-------------------+
@@ -3680,10 +3589,9 @@ Defining Long-Running Operations
 | Implements a conflict resolution |                                  |
 | selected by the user in the      |                                  |
 | Adobe Bridge conflict-resolution |                                  |
-| dialog. See [['Resolving         |                                  |
-| conflicts' on]{.underline} [page |                                  |
-| 56]{.un                          |                                  |
-| derline}](#resolving-conflicts). |                                  |
+| dialog. See ['Resolving         |                                  |
+| conflicts' onpage |                                  |
+| 56](#resolving-conflicts). |                                  |
 +----------------------------------+----------------------------------+
 | **start** ()                     | > undefined                      |
 |                                  |                                  |
@@ -3714,8 +3622,8 @@ Defining Long-Running Operations
 > about the change by checking properties and calling developer-defined
 > methods in the Operator object. It then updates the Progress dialog,
 > and, if necessary, invokes the conflict-resolution dialog; see
-> [['Resolving]{.underline} [conflicts' on page
-> 56]{.underline}](#resolving-conflicts).
+> ['Resolvingconflicts' on page
+> 56](#resolving-conflicts).
 >
 > Many of the Operator properties and methods, such as
 > getPercentageComplete(), report the current progress in various ways.
@@ -3872,14 +3780,13 @@ Defining Node Searches and Filters
 
 -   Your extension can define a set of search objects and methods that
     > the Find dialog can use to search among nodes that are handled by
-    > that extension. See [['Handling interactive node searches'
-    > on]{.underline}](#handling-interactive-node-searches)
+    > that extension. See ['Handling interactive node searches'
+    > on](#handling-interactive-node-searches)
 
-> [[page 57]{.underline}](#handling-interactive-node-searches).
+> [page 57](#handling-interactive-node-searches).
 
 -   You can customize the Filter palette by adding filters for your own
-    > node types. See [['Adding]{.underline} [filters' on]{.underline}
-    > [page 60]{.underline}](#adding-filters).
+    > node types. See ['Addingpage 60](#adding-filters).
 
 ### Handling interactive node searches
 
@@ -4103,15 +4010,12 @@ Index
 
 ##### B
 
-> [basic node model, 16](#basic-node-model) [bibliography,
-> 7](#where-to-go-for-more-information) [Bridge URI, 23](#_bookmark86)
+> [basic node model, 16](#basic-node-model) [bibliography, 7](#where-to-go-for-more-information) [Bridge URI, 23](#_bookmark86)
 > browser window
 >
 > [about, 9](#_bookmark13)
 >
-> [area descriptions, 12](#_bookmark27) [as document object,
-> 15](#_bookmark44) [components, 11](#_bookmark23) [customizing,
-> 18,](#bookmark64) [34](#creating-a-customized-tabbed-palette)
+> [area descriptions, 12](#_bookmark27) [as document object, 15](#_bookmark44) [components, 11](#_bookmark23) [customizing, 18,](#bookmark64) [34](#creating-a-customized-tabbed-palette)
 > [extending behavior, 21](#_bookmark75)
 >
 > [extending the Content pane, 35](#script-defined-inspector-panels)
@@ -4121,10 +4025,7 @@ Index
 
 > [cache management, 51](#managing-the-data-cache)
 >
-> [code examples,](#example-code) *See* example code [commands, adding
-> to menus, 38](#extending-adobe-bridge-menus) [communication framework,
-> interapplication, 28](#_bookmark110) [conflict resolution,
-> 56](#_bookmark221)
+> [code examples,](#example-code) *See* example code [commands, adding to menus, 38](#extending-adobe-bridge-menus) [communication framework, interapplication, 28](#_bookmark110) [conflict resolution, 56](#_bookmark221)
 
 Content pane
 
@@ -4133,8 +4034,7 @@ Content pane
 > [adding an inspector panel, 35](#script-defined-inspector-panels)
 > [determining display, 31](#content-pane)
 >
-> [context menus, 15](#_bookmark41) [conventions, typographic,
-> 7](#document-conventions) [core Infosets, 52](#core-node-data)
+> [context menus, 15](#_bookmark41) [conventions, typographic, 7](#document-conventions) [core Infosets, 52](#core-node-data)
 >
 > [CS3 features, 62](#_bookmark238)
 
@@ -4142,64 +4042,43 @@ Content pane
 
 > data
 >
-> [associating with nodes, 50](#_bookmark204) [cache status,
-> 51](#_bookmark209) [ensuring validity, 25](#_bookmark91) [managing
-> cache, 51](#managing-the-data-cache) [node handling data,
-> 42](#accessing-the-node-handling-model-and-data) [refreshed,
-> 51](#_bookmark209)
+> [associating with nodes, 50](#_bookmark204) [cache status, 51](#_bookmark209) [ensuring validity, 25](#_bookmark91) [managing cache, 51](#managing-the-data-cache) [node handling data, 42](#accessing-the-node-handling-model-and-data) [refreshed, 51](#_bookmark209)
 >
 > [date formats, 25](#_bookmark95) dialogs
 >
-> [displaying ScriptUI, 32](#displaying-scriptui-dialogs) [document
-> object model (DOM), 15](#_bookmark44) documents
+> [displaying ScriptUI, 32](#displaying-scriptui-dialogs) [document object model (DOM), 15](#_bookmark44) documents
 >
-> [about, 11,](#_bookmark20) [15](#_bookmark44) [reference materials,
-> 7,](#where-to-go-for-more-information) [9](#_bookmark15) [thumbnails,
-> 16](#thumbnails-in-documents)
+> [about, 11,](#_bookmark20) [15](#_bookmark44) [reference materials, 7,](#where-to-go-for-more-information) [9](#_bookmark15) [thumbnails, 16](#thumbnails-in-documents)
 >
-> [Dublin Core properties, 26](#_bookmark99) [dynamic text values,
-> inserting, 37](#bookmark154)
+> [Dublin Core properties, 26](#_bookmark99) [dynamic text values, inserting, 37](#bookmark154)
 
 ##### E
 
-> [embedded metadata, 25](#metadata-for-thumbnails) [error handling,
-> 56](#_bookmark221) event handling
+> [embedded metadata, 25](#metadata-for-thumbnails) [error handling, 56](#_bookmark221) event handling
 >
-> [Bridge events, 23](#_bookmark80) [defining handlers,
-> 27](#defining-event-handlers) [example code, 28](#example-code-1)
+> [Bridge events, 23](#_bookmark80) [defining handlers, 27](#defining-event-handlers) [example code, 28](#example-code-1)
 > [registering handlers, 28](#registering-event-handlers)
 >
 > [user-interaction events, 17,](#user-interaction-events)
 > [27](#_bookmark102) example code
 >
-> [event handling, 28](#example-code-1) [inspector panels,
-> 36](#code-examples-1)
+> [event handling, 28](#example-code-1) [inspector panels, 36](#code-examples-1)
 >
-> [interapplication communication, 29](#example-code-2) [locations,
-> 9](#_bookmark15)
+> [interapplication communication, 29](#example-code-2) [locations, 9](#_bookmark15)
 >
-> [markup elements, 37](#_bookmark158) [menu elements,
-> 38](#code-examples-2) [metadata access, 26](#example-code) [node
-> filters, 51](#code-example-1) [node searches, 58](#code-examples-3)
+> [markup elements, 37](#_bookmark158) [menu elements, 38](#code-examples-2) [metadata access, 26](#example-code) [node filters, 51](#code-example-1) [node searches, 58](#code-examples-3)
 >
-> [node-handling extensions, 40](#code-example) [tabbed palettes,
-> 35](#code-examples)
+> [node-handling extensions, 40](#code-example) [tabbed palettes, 35](#code-examples)
 >
 > [UI techniques, 30](#code-examples-for-ui-techniques) ExtendScript
 >
-> [communicating with users, 20](#_bookmark67) [executing scripts,
-> 10](#executing-scripts-for-adobe-bridge)
+> [communicating with users, 20](#_bookmark67) [executing scripts, 10](#executing-scripts-for-adobe-bridge)
 >
-> ExtensionHandler object [about,
-> 39](#creating-script-defined-node-handling-extensions) [defining,
-> 43](#_bookmark190)
+> ExtensionHandler object [about, 39](#creating-script-defined-node-handling-extensions) [defining, 43](#_bookmark190)
 >
-> ExtensionModel object [about,
-> 39](#creating-script-defined-node-handling-extensions)
+> ExtensionModel object [about, 39](#creating-script-defined-node-handling-extensions)
 >
-> [accessing through thumbnail,
-> 42](#accessing-the-node-handling-model-and-data) [defining,
-> 45](#_bookmark197)
+> [accessing through thumbnail, 42](#accessing-the-node-handling-model-and-data) [defining, 45](#_bookmark197)
 >
 > extensions
 >
@@ -4210,13 +4089,10 @@ Content pane
 **63**
 
 > [defining searches in, 57](#defining-node-searches-and-filters)
-> [installation structure, 41](#installation-structure) [installing,
-> 40](#_bookmark178)
+> [installation structure, 41](#installation-structure) [installing, 40](#_bookmark178)
 >
 > [node-handling, 21](#_bookmark76) [registering, 40](#_bookmark174)
-> [script-defined,
-> 39](#creating-script-defined-node-handling-extensions) [workspaces,
-> 42](#_bookmark182)
+> [script-defined, 39](#creating-script-defined-node-handling-extensions) [workspaces, 42](#_bookmark182)
 
 ##### F
 
@@ -4230,25 +4106,18 @@ Content pane
 >
 > filters
 >
-> [adding, 60](#adding-filters) [defining,
-> 57](#defining-node-searches-and-filters)
+> [adding, 60](#adding-filters) [defining, 57](#defining-node-searches-and-filters)
 >
 > [Find dialog, extending, 57](#defining-node-searches-and-filters)
 > [flyout menus, 15](#_bookmark41) Folders pane
 >
-> [about, 13,](#_bookmark30) [16](#_bookmark52) [illustration,
-> 12](#_bookmark24)
+> [about, 13,](#_bookmark30) [16](#_bookmark52) [illustration, 12](#_bookmark24)
 >
-> [fonts used in this guide, 7](#document-conventions) [formats for
-> metadata dates, 25](#_bookmark95)
+> [fonts used in this guide, 7](#document-conventions) [formats for metadata dates, 25](#_bookmark95)
 
 ##### G
 
-> [getBridgeUriForSearch() method,
-> 60](#implementing-getbridgeuriforsearch) [getFilterCriteria() method,
-> 61](#implementing-the-getfiltercriteria-method) [getSearchDefinition()
-> method, 58](#implementing-getsearchdefinition) [global information,
-> 16](#the-application-and-documents)
+> [getBridgeUriForSearch() method, 60](#implementing-getbridgeuriforsearch) [getFilterCriteria() method, 61](#implementing-the-getfiltercriteria-method) [getSearchDefinition() method, 58](#implementing-getsearchdefinition) [global information, 16](#the-application-and-documents)
 
 ##### H
 
@@ -4256,8 +4125,7 @@ Content pane
 >
 > [about, 39](#_bookmark166)
 >
-> [core data capabilities, 52](#core-node-data) [default behavior,
-> 23](#_bookmark86) [defining, 27](#defining-event-handlers)
+> [core data capabilities, 52](#core-node-data) [default behavior, 23](#_bookmark86) [defining, 27](#defining-event-handlers)
 >
 > [immediate vs. long-running operations, 43](#_bookmark190)
 > [registering, 28](#registering-event-handlers)
@@ -4268,18 +4136,14 @@ Content pane
 
 > immediate handler operations [about, 43](#_bookmark191)
 >
-> [method descriptions, 43](#immediate-handler-operations) [immediate
-> model operation methods, 46](#immediate-model-operations) Infoset
+> [method descriptions, 43](#immediate-handler-operations) [immediate model operation methods, 46](#immediate-model-operations) Infoset
 > object
 >
-> [accessing through thumbnail,
-> 42](#accessing-the-node-handling-model-and-data) [defining node data,
-> 50](#_bookmark204) [predefined sets, 52](#core-node-data)
+> [accessing through thumbnail, 42](#accessing-the-node-handling-model-and-data) [defining node data, 50](#_bookmark204) [predefined sets, 52](#core-node-data)
 >
 > inspector panels [about, 14](#_bookmark37)
 >
-> [creating and displaying, 36](#_bookmark148) [script-defined,
-> 35](#_bookmark145) [specifying string values, 36](#_bookmark151)
+> [creating and displaying, 36](#_bookmark148) [script-defined, 35](#_bookmark145) [specifying string values, 36](#_bookmark151)
 >
 > [InspectorPanel object, 35](#_bookmark145)
 >
@@ -4290,13 +4154,11 @@ Content pane
 > JavaScript
 >
 > [additional resources, 7](#where-to-go-for-more-information)
-> [panelette markup elements, 37](#bookmark155) [standards information
-> URL, 8](#bookmark9)
+> [panelette markup elements, 37](#bookmark155) [standards information URL, 8](#bookmark9)
 
 ##### K
 
-> Keywords pane [about, 14](#_bookmark35) [illustration,
-> 12](#_bookmark24)
+> Keywords pane [about, 14](#_bookmark35) [illustration, 12](#_bookmark24)
 
 ##### L
 
@@ -4313,23 +4175,17 @@ Content pane
 
 > Mac OS
 >
-> [extensions folder, 40](#_bookmark178) [startup folder,
-> 10,](#_bookmark18) [42](#_bookmark186) [user workspace folder,
-> 11](#_bookmark23) [workspace folder, 42](#_bookmark183)
+> [extensions folder, 40](#_bookmark178) [startup folder, 10,](#_bookmark18) [42](#_bookmark186) [user workspace folder, 11](#_bookmark23) [workspace folder, 42](#_bookmark183)
 >
-> [main window,](#_bookmark45) *See* browser window [markup elements,
-> panelettes, 37](#_bookmark153) menubar
+> [main window,](#_bookmark45) *See* browser window [markup elements, panelettes, 37](#_bookmark153) menubar
 >
-> [about, 15](#_bookmark40) [extending,
-> 38](#extending-adobe-bridge-menus)
+> [about, 15](#_bookmark40) [extending, 38](#extending-adobe-bridge-menus)
 >
 > menus
 >
 > [about, 20](#menus)
 >
-> [context and flyout, 15](#_bookmark41) [element objects,
-> 38](#extending-adobe-bridge-menus) [extending,
-> 38](#extending-adobe-bridge-menus)
+> [context and flyout, 15](#_bookmark41) [element objects, 38](#extending-adobe-bridge-menus) [extending, 38](#extending-adobe-bridge-menus)
 >
 > metadata
 >
@@ -4337,11 +4193,9 @@ Content pane
 >
 > [example code, 26](#example-code)
 >
-> [files associated with thumbnails, 25](#metadata-for-thumbnails) [node
-> handling, 21](#_bookmark77)
+> [files associated with thumbnails, 25](#metadata-for-thumbnails) [node handling, 21](#_bookmark77)
 >
-> [pane illustration, 12](#_bookmark24) [vs. node data,
-> 50](#_bookmark205)
+> [pane illustration, 12](#_bookmark24) [vs. node data, 50](#_bookmark205)
 >
 > modal dialogs [displaying, 32](#displaying-scriptui-dialogs)
 >
@@ -4349,52 +4203,39 @@ Content pane
 >
 > [displaying, 32](#displaying-scriptui-dialogs) models
 >
-> [extension, 45](#_bookmark197) [immediate operations,
-> 46](#immediate-model-operations) [managing data cache,
-> 51](#_bookmark210) [node handling,
-> 42](#accessing-the-node-handling-model-and-data)
+> [extension, 45](#_bookmark197) [immediate operations, 46](#immediate-model-operations) [managing data cache, 51](#_bookmark210) [node handling, 42](#accessing-the-node-handling-model-and-data)
 
 ##### N
 
-> navigation bars [about, 15](#_bookmark42) [configuring,
-> 20](#_bookmark69)
+> navigation bars [about, 15](#_bookmark42) [configuring, 20](#_bookmark69)
 >
-> [displaying ScriptUI,
-> 32](#displaying-scriptui-elements-in-a-navigation-bar) [showing and
-> hiding, 31](#_bookmark121)
+> [displaying ScriptUI, 32](#displaying-scriptui-elements-in-a-navigation-bar) [showing and hiding, 31](#_bookmark121)
 >
 > [navigation nodes, 23](#_bookmark83) node data
 >
 > [core, 52](#core-node-data) [defining, 40,](#_bookmark172)
 > [50](#_bookmark204)
 >
-> [managing cache, 51](#managing-the-data-cache) [sets,
-> 50](#_bookmark204)
+> [managing cache, 51](#managing-the-data-cache) [sets, 50](#_bookmark204)
 >
 > [vs. metadata, 50](#_bookmark205) node handling
 >
 > [about, 39](#_bookmark166)
 >
 > [accessing model and, 42](#accessing-the-node-handling-model-and-data)
-> [associating private data, 40](#_bookmark172) [core data values,
-> 52](#core-node-data)
+> [associating private data, 40](#_bookmark172) [core data values, 52](#core-node-data)
 >
-> [creating script-defined extensions,
-> 39](#creating-script-defined-node-handling-extensions) [extending
-> behavior, 39](#_bookmark167)
+> [creating script-defined extensions, 39](#creating-script-defined-node-handling-extensions) [extending behavior, 39](#_bookmark167)
 >
 > [extension models, 45](#_bookmark197) [extensions, 21](#_bookmark76)
 > [installing extensions, 40](#_bookmark178)
 >
 > [long-running operations, 52](#defining-long-running-operations)
-> [registering extensions, 40](#_bookmark174) [searches,
-> 57](#defining-node-searches-and-filters)
+> [registering extensions, 40](#_bookmark174) [searches, 57](#defining-node-searches-and-filters)
 >
 > nodes
 >
-> [inspection, 35](#script-defined-inspector-panels) [navigation,
-> 23](#_bookmark83) [object model, 16](#basic-node-model) [references,
-> 23](#_bookmark86) [thumbnails, 16](#thumbnails-in-documents)
+> [inspection, 35](#script-defined-inspector-panels) [navigation, 23](#_bookmark83) [object model, 16](#basic-node-model) [references, 23](#_bookmark86) [thumbnails, 16](#thumbnails-in-documents)
 
 ##### O
 
@@ -4407,17 +4248,14 @@ Content pane
 >
 > objects
 >
-> [extending default behavior, 28](#_bookmark105) [inspector,
-> 35](#_bookmark145)
+> [extending default behavior, 28](#_bookmark105) [inspector, 35](#_bookmark145)
 >
 > [menus and commands, 38](#extending-adobe-bridge-menus) operations
 >
 > [defining long-running, 52](#defining-long-running-operations)
-> [handler, 43](#_bookmark190) [implementing, 53](#_bookmark216) [model,
-> 46](#_bookmark198)
+> [handler, 43](#_bookmark190) [implementing, 53](#_bookmark216) [model, 46](#_bookmark198)
 >
-> [progress and status, 54](#_bookmark219) [resolving conflicts,
-> 56](#_bookmark221)
+> [progress and status, 54](#_bookmark219) [resolving conflicts, 56](#_bookmark221)
 >
 > [Operator object, 52](#defining-long-running-operations)
 
@@ -4427,13 +4265,11 @@ Content pane
 >
 > [custom tabbed, 14](#_bookmark36) [defining, 18](#bookmark64)
 > [listing, 34](#_bookmark140) [removing, 34](#_bookmark140)
-> [script-defined, 34](#_bookmark139) [tabbed,
-> 34](#creating-a-customized-tabbed-palette)
+> [script-defined, 34](#_bookmark139) [tabbed, 34](#creating-a-customized-tabbed-palette)
 >
 > panelettes
 >
-> [markup elements, 37](#_bookmark153) [string values,
-> 36](#_bookmark151) [types, 35](#_bookmark146)
+> [markup elements, 37](#_bookmark153) [string values, 36](#_bookmark151) [types, 35](#_bookmark146)
 >
 > [panels, panelette types, 35](#_bookmark146) panes
 >
@@ -4445,9 +4281,7 @@ Content pane
 > [node-handling operations, 52](#defining-long-running-operations)
 > thumbnail access, 24
 >
-> [plug-in extensions, creating, 39](#_bookmark165) [porting guide,
-> 62](#_bookmark238) [preferences, application,
-> 17](#application-preferences) prefixes
+> [plug-in extensions, creating, 39](#_bookmark165) [porting guide, 62](#_bookmark238) [preferences, application, 17](#application-preferences) prefixes
 >
 > [about, 39](#_bookmark170) [registering, 40](#_bookmark175)
 >
@@ -4456,42 +4290,32 @@ Content pane
 >
 > [about, 13](#_bookmark32) [illustration, 12](#_bookmark24)
 >
-> [ProgressOperator object methods, 53](#_bookmark217) [properties,
-> associating with nodes, 50](#_bookmark204)
+> [ProgressOperator object methods, 53](#_bookmark217) [properties, associating with nodes, 50](#_bookmark204)
 
 ##### R
 
 > reference materials
 >
-> [code examples and tools, 9](#_bookmark15) [more information,
-> 7](#where-to-go-for-more-information)
+> [code examples and tools, 9](#_bookmark15) [more information, 7](#where-to-go-for-more-information)
 >
-> [references, nodes, 23](#_bookmark86) [release notes,
-> 62](#_bookmark238)
+> [references, nodes, 23](#_bookmark86) [release notes, 62](#_bookmark238)
 
 ##### S
 
 > scripting
 >
 > [additional resources, 7](#where-to-go-for-more-information)
-> [interactions, 17](#scripting-adobe-bridge-interactions) [overview,
-> 9](#_bookmark13)
+> [interactions, 17](#scripting-adobe-bridge-interactions) [overview, 9](#_bookmark13)
 >
 > [user interaction, 30](#_bookmark114) scripts
 >
-> [access to Bridge window, 11](#_bookmark23) [accessing browser window,
-> 12](#_bookmark27) [accessing preferences,
-> 17](#application-preferences) [adding palettes,
-> 34](#creating-a-customized-tabbed-palette)
+> [access to Bridge window, 11](#_bookmark23) [accessing browser window, 12](#_bookmark27) [accessing preferences, 17](#application-preferences) [adding palettes, 34](#creating-a-customized-tabbed-palette)
 >
 > [adding user interfaces, 18](#customizing-the-user-interface)
-> [communicating with users, 19](#_bookmark66) [creating user
-> interfaces, 30](#_bookmark114) [embedding metadata, 26](#_bookmark99)
+> [communicating with users, 19](#_bookmark66) [creating user interfaces, 30](#_bookmark114) [embedding metadata, 26](#_bookmark99)
 > [executing, 10](#executing-scripts-for-adobe-bridge)
 >
-> [search mechanisms, 57](#defining-node-searches-and-filters) [shared
-> startup, 42](#_bookmark185) [startup,
-> 10](#executing-scripts-for-adobe-bridge)
+> [search mechanisms, 57](#defining-node-searches-and-filters) [shared startup, 42](#_bookmark185) [startup, 10](#executing-scripts-for-adobe-bridge)
 >
 > [user interface options, 30](#user-interface-options-for-scripts)
 > ScriptUI
@@ -4499,14 +4323,11 @@ Content pane
 > [dialogs, 32](#displaying-scriptui-dialogs)
 >
 > [displaying elements, 32](#displaying-scriptui-in-adobe-bridge)
-> [navigation bars,
-> 32](#displaying-scriptui-elements-in-a-navigation-bar) [tabbed
-> palettes, 33](#_bookmark133)
+> [navigation bars, 32](#displaying-scriptui-elements-in-a-navigation-bar) [tabbed palettes, 33](#_bookmark133)
 >
 > [user-interface controls, 30](#_bookmark118) searches
 >
-> [defining, 57](#defining-node-searches-and-filters) [interactive,
-> 57](#_bookmark225)
+> [defining, 57](#defining-node-searches-and-filters) [interactive, 57](#_bookmark225)
 >
 > [specifying parameters, 58](#implementing-getsearchdefinition)
 > [workflow, 58](#node-search-workflow)
@@ -4516,67 +4337,48 @@ Content pane
 >
 > status
 >
-> [in browser window, 14](#_bookmark39) [monitoring for operations,
-> 54](#_bookmark219)
+> [in browser window, 14](#_bookmark39) [monitoring for operations, 54](#_bookmark219)
 >
 > string values
 >
-> [panelette markup elements, 37](#_bookmark153) [specifying,
-> 36](#_bookmark151)
+> [panelette markup elements, 37](#_bookmark153) [specifying, 36](#_bookmark151)
 >
 > subpanels
 >
-> [markup elements, 37](#_bookmark153) [string values,
-> 36](#_bookmark151) [types, 35](#_bookmark146)
+> [markup elements, 37](#_bookmark153) [string values, 36](#_bookmark151) [types, 35](#_bookmark146)
 >
 > **T**
 >
-> tabbed palettes [about, 14](#_bookmark36) [creating,
-> 34](#creating-a-customized-tabbed-palette)
+> tabbed palettes [about, 14](#_bookmark36) [creating, 34](#creating-a-customized-tabbed-palette)
 >
-> [displaying ScriptUI, 33](#_bookmark133) [TabbedPalette object,
-> 34](#creating-a-customized-tabbed-palette) [tabs, adding to browser,
-> 34](#creating-a-customized-tabbed-palette) thumbnails
+> [displaying ScriptUI, 33](#_bookmark133) [TabbedPalette object, 34](#creating-a-customized-tabbed-palette) [tabs, adding to browser, 34](#creating-a-customized-tabbed-palette) thumbnails
 >
-> [about, 12](#_bookmark28) [accessing,
-> 24](#using-and-accessing-thumbnails) [basic behavior,
-> 23](#_bookmark83)
+> [about, 12](#_bookmark28) [accessing, 24](#using-and-accessing-thumbnails) [basic behavior, 23](#_bookmark83)
 >
-> [ensuring valid data, 25](#_bookmark91) [example code,
-> 26](#example-code)
+> [ensuring valid data, 25](#_bookmark91) [example code, 26](#example-code)
 >
-> [in documents, 16](#thumbnails-in-documents) [inspection,
-> 35](#script-defined-inspector-panels) [metadata,
-> 25](#metadata-for-thumbnails)
+> [in documents, 16](#thumbnails-in-documents) [inspection, 35](#script-defined-inspector-panels) [metadata, 25](#metadata-for-thumbnails)
 >
-> performance considerations, 24 [typographic conventions,
-> 7](#document-conventions)
+> performance considerations, 24 [typographic conventions, 7](#document-conventions)
 
 ##### U
 
 > user interfaces
 >
-> [creating for scripts, 30](#_bookmark114) [customizing,
-> 18](#customizing-the-user-interface) [script options,
-> 30](#user-interface-options-for-scripts) [ScriptUI elements,
-> 32](#displaying-scriptui-in-adobe-bridge)
+> [creating for scripts, 30](#_bookmark114) [customizing, 18](#customizing-the-user-interface) [script options, 30](#user-interface-options-for-scripts) [ScriptUI elements, 32](#displaying-scriptui-in-adobe-bridge)
 >
 > [user-interaction events, 17,](#user-interaction-events)
 > [27](#_bookmark102)
 
 ##### V
 
-> [version differences in CS3, 62](#_bookmark238) [view mode controls,
-> 14](#_bookmark38) [view, Inspector,
-> 35](#script-defined-inspector-panels)
+> [version differences in CS3, 62](#_bookmark238) [view mode controls, 14](#_bookmark38) [view, Inspector, 35](#script-defined-inspector-panels)
 
 ##### W
 
 > [window,](#_bookmark45) *See* browser window Windows
 >
-> [extensions folder, 40](#_bookmark178) [startup folder,
-> 10,](#_bookmark18) [42](#_bookmark186) [user workspace folder,
-> 11](#_bookmark23) [workspace folder, 42](#_bookmark183)
+> [extensions folder, 40](#_bookmark178) [startup folder, 10,](#_bookmark18) [42](#_bookmark186) [user workspace folder, 11](#_bookmark23) [workspace folder, 42](#_bookmark183)
 >
 > [workflow, node searches, 58](#node-search-workflow) workspaces
 >
@@ -4584,5 +4386,4 @@ Content pane
 
 ##### X
 
-> [XML, embedding metadata with, 26](#_bookmark99) [XMP metadata,
-> 25](#metadata-for-thumbnails)
+> [XML, embedding metadata with, 26](#_bookmark99) [XMP metadata, 25](#metadata-for-thumbnails)
