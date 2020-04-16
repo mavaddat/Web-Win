@@ -1,19 +1,19 @@
-WelcomeWelcome to the Adobe Bridge 2020 Software Development Kit
+# Welcome
+
+Welcome to the Adobe Bridge 2020 Software Development Kit
 _____________________________________________________________________________
 
-This file contains the latest information for the Adobe Bridge 2020 SDK. The 
+This readme contains the latest information for the Adobe Bridge 2020 SDK. The 
 information applies to Adobe Bridge 2020. It has the following sections:
 
-    1. Introduction
-    2. SDK content overview
-    3. Development environment
-    4. Running snippets
-    5. Known issues in the SDK
-    6. Adobe Solutions Network
+    [Introduction](#1-introduction)
+    [SDK content overview](#2-sdk-content-overview)
+    [Development environment](#3-development-environment)
+    [Running snippets](#4-running-snippets)
+    [Known issues in the SDK](#5-known-issues-in-the-sdk)
+    [Adobe Solutions Network](#6-adobe-solutions-network)
 
-**********************************************
-1. Introduction
-**********************************************
+## 1. Introduction
 
 The SDK provides information and examples for the Adobe Bridge 2020 scripting 
 and extensibility interface. The Bridge 2020 SDK can be downloaded from the
@@ -31,26 +31,24 @@ The Adobe Bridge JavaScript Reference and JavaScript Guide are provided as
 resources for development. These have been updated for the Bridge release.
 
 
-**********************************************
-2. SDK content overview
-**********************************************
+## 2. SDK content overview
 
 The SDK supplies these files:
 
-- <sdkInstall>/sdksamples/javascript: JavaScript code snippets and sample 
+- `<sdkInstall>/sdksamples/javascript`: JavaScript code snippets and sample 
   scripts which exercise the scripting interface of Adobe Bridge 2020. To 
   execute the snippets and samples, open them in the ExtendScript Toolkit and 
   run them against the target of Bridge 2020.
   
-- <sdkInstall>/sdksamples/cpp: Sample project files, source code and sample 
+- `<sdkInstall>/sdksamples/cpp`: Sample project files, source code and sample 
   scripts for building and loading an external object
   
-- <sdkInstall>/docs: Documentation resources such as the Adobe Bridge JavaScript 
+- `<sdkInstall>/docs`: Documentation resources such as the Adobe Bridge JavaScript 
   Guide (2020) and the Adobe Bridge JavaScript Reference (2020).
 
-**********************************************
-3. Development environment
-**********************************************
+
+## 3. Development environment
+
 
 To execute the sample JavaScript code provided, the ExtendScript Toolkit (ESTK) 
 development environment is required. The ESTK is an IDE with a source-level 
@@ -74,9 +72,9 @@ Some C++ samples demonstrate creating external objects that can be invoked from
 JavaScript. To compile them, you need to use the compiler tools for the 
 platform: Microsoft Visual Studio 2017 version 15.5.7 for Windows and XCode 9.3 for Mac OS.
 
-**********************************************
-4. Running snippets/ samples
-**********************************************
+
+## 4. Running snippets/ samples
+
 
  1. Start Adobe Bridge 2020.
  2. Start the ExtendScript Toolkit.
@@ -87,9 +85,9 @@ platform: Microsoft Visual Studio 2017 version 15.5.7 for Windows and XCode 9.3 
  6. Return to the ExtendScript Toolkit and run the snippet/sample using the
     Run button (rightward-pointing triangle) above the Editor window.
 
-**********************************************
-5. Known issues in the SDK
-**********************************************
+
+## 5. Known issues in the SDK
+
 
 The following are issues in this release:
 
@@ -109,9 +107,9 @@ The following are issues in this release:
   "SnpCreateHTMLDialog.jsx", "SnpPassObjectToHTML.jsx" and 
   "SnpShowHTMLInContent.jsx".
 
-*********************************************************
-6. Adobe Partner Connection
-*********************************************************
+
+## 6. Adobe Partner Connection
+
 
 To learn more about the Adobe Partner Connection Programs, go to:
 
@@ -153,15 +151,15 @@ Membership questions email: apacpartners@adobe.com
 
 In Japan, contact:
 
-Adobe Partner Connection
-Adobe Systems Co., Ltd.
-Sumitomo Fudousan
-Shinjuku Oak Tower
-6-8-1 Nishi-Shinjuku, Shinjuku-ku
-Tokyo, 163-6016 Japan
-Phone: +81-3-5740-2620
-Fax: +81-3-5740-2621
-Membership questions email: japanpartner@adobe.com
+> Adobe Partner Connection
+> Adobe Systems Co., Ltd.
+> Sumitomo Fudousan
+> Shinjuku Oak Tower
+> 6-8-1 Nishi-Shinjuku, Shinjuku-ku
+> Tokyo, 163-6016 Japan
+> Phone: +81-3-5740-2620
+> Fax: +81-3-5740-2621
+> Membership questions email: japanpartner@adobe.com
 
 _____________________________________________________________________________
 
