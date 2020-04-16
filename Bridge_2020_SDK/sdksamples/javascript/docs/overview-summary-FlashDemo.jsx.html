@@ -1,0 +1,795 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="FlashDemo.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>FlashDemo.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to communicate with a ScriptUI FlashPlayer in Adobe Bridge using ActionScript
+  <BR/><BR/><B>See:</B><UL>- <a href="SnpCreateFlashControl.html#">SnpCreateFlashControl</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="FlashDemo.html">FlashDemo</a></b></td>
+    <td>Shows how to communicate with a ScriptUI FlashPlayer in Adobe Bridge using ActionScript
+ 
+  <h4>Usage</h4>
+  
+  <ol>
+  <li> Read the section on <a href="#flashSec">Flash Player Security</a> below.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Shows how to communicate with a ScriptUI FlashPlayer in Adobe Bridge using ActionScript
+  <span class="attrib">@class</span> Shows how to communicate with a ScriptUI FlashPlayer in Adobe Bridge using ActionScript
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+  
+  &lt;ol&gt;
+  &lt;li&gt; Read the section on &lt;a href="#flashSec"&gt;Flash Player Security&lt;/a&gt; below.
+  &lt;li&gt; Run the sample in the ExtendScript Toolkit (see Readme.txt), with Bridge CS6 as the target.
+   &lt;li&gt;The Flash-movie palette appears in the default top left corner of Bridge.
+  &lt;li&gt; On the first page of the Flash movie, click buttons to receive data from Bridge, 
+  which is displayed in the Flash Player.
+  &lt;li&gt; Click Next Page to show the second page. Click buttons to call JavaScript functions from the ActionScript environment
+         and pass data as arguments to the functions.
+  &lt;li&gt; Click Next Page to show the third page. In the Bridge menu bar, choose items from the 'SDK FlashDemo' menu to invoke 
+       ActionScript functions that pass various data values to the Flash application, to be displayed in the Flash Player.
+  &lt;li&gt; Click Next Page to show the fourth page. Select a thumbnail in Bridge to send data about the Thumbnail state to the Flash 
+   	application, which displays it in the Flash Player.
+  &lt;li&gt; Use the moving arrows to navigate between slides in the Flash Player.
+  &lt;/ol&gt;
+   
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+&lt;p&gt;This sample shows how to use the ScriptUI FlashPlayer element to invoke JavaScript 
+  functions in ActionScript, and ActionsScript functions in JavaScript. It passes simple
+  data between the two scripting environments, and displays passed values.
+ 
+ &lt;ul&gt;
+  &lt;li&gt; Menu items invoke ActionScript functions that send data from the Flash environment,
+  	and display the received data in Bridge
+  &lt;li&gt; A Thumbnail event handler sends information about the selected Bridge Thumbnail
+       to ActionScript functions, which display the data in the Flash Player.
+  &lt;/ul&gt;
+
+&lt;p&gt;The Flash application to be used with this sample must be located in the resources 
+  folder and have the same name as this sample. The application is a Flash presentation 
+  that has 4 slides.  Each slide has a layer named 'Actions' which contains an 
+  ActionScript script. The ActionScript scripts show how to import the ExternalInterface class, 
+  and how to register and call external functions, which are defined in this script.
+  The ActionScript source code is provided as a comment block in the
+  FlashDemo.JSX file. The compiled code for the scripts is in .\resources\FlashDemo.fla
+  
+&lt;a name="flashSec"&gt;&lt;h4&gt;Flash Player Security&lt;/h4&gt;&lt;/a&gt;
+
+   Adobe Bridge supports the Flash Player client-runtime security model. This affects which SWF files 
+   can be loaded into Bridge and run successfully. You must set the correct security permission
+   to allow the operation that the SWF file performs.
+   
+   There are 3 basic levels of security for local SWF files:  
+   &lt;ul&gt;
+	&lt;li&gt; Access the local file system only (default):  
+	A local SWF file can read from the local file system and 
+  	universal naming convention (UNC) network paths, but cannot communicate with the Internet.   
+  
+	&lt;li&gt; Access the network only:  
+	A local SWF file can access the network, but not the local file system where it is installed.
+  
+	&lt;li&gt; Access to the local file system and the network: 
+	A local SWF file can read from the local file system  where it is installed,
+ 	read and write to and from servers, and can cross-script other SWF files on
+  	either the network or the local file system. These files are trusted.
+  &lt;/ul&gt;
+   
+   To create a SWF file that can 'access the local file system only' or 'access the network only',
+   edit the FLA file and do the following:
+
+  &lt;li&gt; In Adobe Flash, select File &gt; Publish Settings
+  &lt;li&gt; In the dialog, select the Flash tab
+  &lt;li&gt; Set the option for 'Local playback security' to either  'access network only' or 'access local files only'
+&lt;p&gt;  
+  For more information on local file security  see:
+&lt;p&gt;
+&lt;a href="http://livedocs.adobe.com/flex/3/html/05B_Security_03.html"&gt;http://livedocs.adobe.com/flex/3/html/05B_Security_03.html&lt;/a&gt;&lt;br /&gt;
+
+&lt;p&gt;To allow a local file to be trusted,(that is, allow a SWF file to access both network and local files 
+  as well as allow cross scripting), you can either create a trust file, or use the Settings Manager. 
+  This sample and the accompanying SWF file have been created with the default permissions; therefore 
+  to run the sample correctly, you must use one of these techniques, as described in the following sections.
+  
+  &lt;h4&gt;Create a Trust File &lt;/h4&gt;
+  
+  You can create a trust file in either the Global Flash Player Trust directory or in the User Flash Player Trust directory.  
+  A Trust file is a simple text file with a .cfg file extension, that contains the location to a local SWF file. 
+  For example, to run this sample as a trusted file on Windows, create a text file that contains the path and file name
+  (replacing SDKINSTALL with your local SDK installation location):
+  
+&lt;pre&gt;	SDKINSTALL\sdksamples\javascript\resources\FlashDemo.swf&lt;/pre&gt;
+  
+&lt;p&gt;Save this text file with the extension .cfg in a folder named 'FlashPlayerTrust' (which you may need to
+create), in one of the following locations, depending on the platform and users for which the SWF should be trusted. 
+  
+&lt;p&gt;Global Flash Player Trust Directory
+&lt;ul&gt;
+	&lt;li&gt;In Windows: system\Macromed\Flash\FlashPlayerTrust
+	&lt;ul&gt;
+		&lt;li&gt;for example:&lt;pre&gt;C:\windows\system32\Macromed\Flash\FlashPlayerTrust&lt;/pre&gt;
+	&lt;/ul&gt;
+	&lt;li&gt;In Mac OS: app support/Macromedia/FlashPlayerTrust
+	&lt;ul&gt;
+		&lt;li&gt;for example:&lt;pre&gt;/Library/Application Support/Macromedia/FlashPlayerTrust&lt;/pre&gt;
+	&lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;User Flash Player Trust Directory
+&lt;ul&gt;
+	&lt;li&gt;In Windows: app data\Macromedia\Flash Player\#Security\FlashPlayerTrust
+	&lt;ul&gt;
+		&lt;li&gt;for example:&lt;pre&gt;C:\Documents and Settings\your-user-name\Application Data\Macromedia\Flash Player\#Security\FlashPlayerTrust&lt;/pre&gt; 
+	&lt;/ul&gt;
+	&lt;li&gt;In Mac OS: app data/Macromedia/Flash Player/#Security/FlashPlayerTrust
+	&lt;ul&gt;
+		&lt;li&gt;for example:&lt;pre&gt;/Users/your-user-name/Library/Preferences/Macromedia/Flash Player/#Security/FlashPlayerTrust&lt;/pre&gt;
+	&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt; 
+
+  &lt;h4&gt;Use the Settings Manager &lt;/h4&gt;
+
+   The Settings Manager allows you to make changes to various global settings, including whether to allow a SWF file
+   to be trusted.  When Bridge loads a non-trusted file that attempts a trusted action, the Flash 
+   Player presents a dialog giving the user the choice to navigate to the Settings Manager. 
+&lt;ul&gt;
+  &lt;li&gt;  When you run this sample (if you have not created a trust file for it) Bridge displays a security dialog
+   warning about the SWF file. Click 'Settings...' in this dialog. &lt;br&gt; 
+   The Adobe Flash Player Settings Manager opens in a web browser. 
+   (You may need to install the Adobe Flash Plugin before you see this page correctly.)
+  
+  &lt;li&gt; On the Global Security Settings tab (the default tab), click 'Edit Locations' and choose 'Add Location' from
+  	the drop down list. &lt;br&gt; A dialog appears showing the path of the SWF that Bridge is trying to load.
+
+  &lt;li&gt; Click 'Browse for files', navigate to the location of the SWF file (SDKINSTALL/javascript/resources/FlashDemo.swf)
+  	and click OK (There is no confirm dialog).
+
+  &lt;li&gt; Close the web browser and restart Bridge.
+ &lt;/ul&gt;
+
+   Bridge can now play the Flash movie and data can be passed between the two scripting environments.
+
+  &lt;p&gt;For more  information on the Settings Manager and Trust files see:
+  
+  &lt;p&gt;
+   &lt;a href="http://livedocs.adobe.com/flex/3/html/05B_Security_03.html"&gt;http://livedocs.adobe.com/flex/3/html/05B_Security_03.html&lt;/a&gt;&lt;br /&gt;
+
+	<span class="attrib">@see</span> SnpCreateFlashControl
+
+  <span class="attrib">@constructor</span> Constructor.
+ */</span>
+<span class="reserved">function</span> FlashDemo()
+{
+
+	<span class="comment">// Tells us where this script is running from</span>
+	<span class="reserved">var</span> scriptsFile = new File($.fileName);
+
+	<span class="comment">/**
+	 The Flash movie to load into Bridge
+	 <span class="attrib">@type</span> File
+	*/</span>
+	<span class="reserved">this</span>.flashFile = new File(scriptsFile.parent.fsName + <span class="literal">"/resources/FlashDemo.swf"</span>);
+
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tNeed to be running in context of Bridge\n"</span>;
+
+}
+
+<span class="comment">/**
+ Functional part of this Snippet.
+
+ Creates a TabbedPalette of type "script", and adds a FlashPlayer control, 
+ along with other text controls and buttons. Loads a Flash movie into the player, 
+ whose scripts define ActionScript functions that can be called from the 
+ player control. The movie starts playing automatically.
+
+ Adds a new menu to Bridge, with menu items that invoke the various
+ ActionScript functions. The functions pass data from the Flash scripting
+ environment to the Bridge scripting environment.
+
+ Defines an event handler for Bridge Thumbnails that sends data about the
+ Thumbnail state to the Flash scripting environment.
+
+ <span class="attrib">@return</span> True if the snippet ran as expected, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+FlashDemo.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() 
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		<span class="reserved">return</span> false;
+	}
+
+	<span class="comment">// Create a tabbed palette</span>
+	<span class="reserved">var</span> flashPalette = new TabbedPalette(app.document, <span class="literal">"SDK FlashDemo: Flash Palette"</span>, <span class="literal">"sdkTPFlashDemo"</span>, <span class="literal">"script"</span>);
+
+	<span class="comment">// Set the player bounds to match the palette</span>
+	<span class="reserved">var</span> cBounds = flashPalette.content.bounds;
+	<span class="comment">// add the Flash Player control to the palette.</span>
+	<span class="reserved">var</span> flashPlayer = flashPalette.content.add(<span class="literal">"flashplayer"</span>, cBounds);	
+	<span class="comment">//var flashPlayer = flashPalette.content.add("flashplayer");</span>
+	flashPlayer.preferredSize = [300, 300];
+	
+	<span class="comment">// Force the layout manager to recalculate the layout</span>
+	flashPalette.content.layout.layout(true);
+
+	<span class="comment">// Load the Flash file</span>
+	flashPlayer.loadMovie(<span class="reserved">this</span>.flashFile);
+	
+	<span class="comment">// Resize the Flash Player when the palette is resized.</span>
+	flashPalette.content.onResize = <span class="reserved">function</span>()
+	{
+		flashPlayer.bounds = flashPalette.content.bounds;
+		flashPalette.content.layout.layout(true);
+	}
+
+	
+	flashPlayer.passArray = <span class="reserved">function</span>(a)
+	{
+		alert(a);	
+	}
+
+	flashPlayer.passNumber = <span class="reserved">function</span>(n)
+	{
+		alert(n);	
+	}
+
+	flashPlayer.passString = <span class="reserved">function</span>(s)
+	{
+		alert(s);	
+	}
+
+	flashPlayer.passObject = <span class="reserved">function</span>(o)
+	{
+		alert(o.toSource());
+		<span class="reserved">return</span> o;
+	}
+	
+    <span class="comment">// Called from ActionScript to return an array.</span>
+    flashPlayer.getJavaScriptArray = <span class="reserved">function</span>()
+    {
+	    <span class="reserved">return</span> new Array(<span class="literal">"Item 1"</span>, <span class="literal">"Item 2"</span>);
+    }
+    
+    <span class="comment">// Called from ActionScript to return a number.</span>
+    flashPlayer.getJavaScriptNumber = <span class="reserved">function</span>()
+    {
+	    <span class="reserved">return</span> 12345;
+    }
+
+     <span class="comment">// Called from ActionScript to return a string.</span>
+    flashPlayer.getJavaScriptString = <span class="reserved">function</span>()
+    {
+	    <span class="reserved">return</span> <span class="literal">"From Bridge JavaScript (ES)"</span>;
+    }
+
+    <span class="comment">// Called from ActionScript to return an object</span>
+    flashPlayer.getJavaScriptObject = <span class="reserved">function</span>()
+    {
+	    <span class="reserved">var</span> obj = {};
+	    obj.prop1 = <span class="literal">"JS Custom Object"</span>;
+	    obj.prop2 = new Array(<span class="literal">"A"</span>, <span class="literal">"B"</span>, <span class="literal">"C"</span>);
+	    obj.prop3 = 123;
+
+	    <span class="reserved">return</span> obj;
+    }
+    
+	<span class="comment">// Add the menu items</span>
+	<span class="reserved">var</span> menu = new MenuElement(<span class="literal">"menu"</span>, <span class="literal">"SDK FlashDemo"</span>, <span class="literal">"after Help"</span>, <span class="literal">"FlashDemoMenu"</span>);
+	<span class="reserved">var</span> m1 = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK FlashDemo: Get Action Script Array"</span>, <span class="literal">"at the end of FlashDemoMenu"</span>, <span class="literal">"FlashDemoArrayMenu"</span>);
+	<span class="reserved">var</span> m2 = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK FlashDemo: Get Action Script Number"</span>, <span class="literal">"at the end of FlashDemoMenu"</span>, <span class="literal">"FlashDemoNumberMenu"</span>);
+	<span class="reserved">var</span> m3 = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK FlashDemo: Get Action Script String"</span>, <span class="literal">"at the end of FlashDemoMenu"</span>, <span class="literal">"FlashDemoStringMenu"</span>);
+	<span class="reserved">var</span> m4 =  new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK FlashDemo: Get Action Script Object"</span>, <span class="literal">"at the end of FlashDemoMenu"</span>, <span class="literal">"FlashDemoObjectMenu"</span>);
+
+	<span class="comment">// Add the menu event handlers</span>
+	<span class="comment">// Each menu item invokes an ActionScript function that returns a value of a </span>
+	<span class="comment">// specific data type, then displays the value in an alert box.</span>
+
+	m1.onSelect = <span class="reserved">function</span>(m)
+	{
+		result = flashPlayer.invokePlayerFunction(<span class="literal">"getActionScriptArray"</span>);
+		$.writeln(<span class="literal">"FlashDemo: "</span> + result);
+	}
+
+	m2.onSelect = <span class="reserved">function</span>(m)
+	{
+		result = flashPlayer.invokePlayerFunction(<span class="literal">"getActionScriptNumber"</span>);
+		$.writeln(<span class="literal">"FlashDemo: "</span> + result);
+	}
+
+	m3.onSelect = <span class="reserved">function</span>(m)
+	{
+		result = flashPlayer.invokePlayerFunction(<span class="literal">"getActionScriptString"</span>);
+		$.writeln(<span class="literal">"FlashDemo: "</span> + result);
+	}
+	
+	m4.onSelect = <span class="reserved">function</span>(m)
+	{
+		result = flashPlayer.invokePlayerFunction(<span class="literal">"getActionScriptObject"</span>);
+		$.writeln(<span class="literal">"FlashDemo:\r\n"</span> +result.prop1 + <span class="literal">"\r\n"</span> + result.prop2 + <span class="literal">"\r\n"</span> + result.prop3);
+	}
+
+	<span class="comment">// Create the event handler for thumbnail selection</span>
+	<span class="comment">// The handler passes thumbnail state information to ActionScript functions, which</span>
+	<span class="comment">// display that information in the Flash Player</span>
+	onThumbSelect = <span class="reserved">function</span>(event)
+	{
+		<span class="reserved">if</span>(event.object instanceof Document)
+		{
+			<span class="reserved">if</span>(event.type == <span class="literal">"selectionsChanged"</span>)
+			{
+				<span class="reserved">var</span> thumb = app.document.selections[0];
+				<span class="reserved">if</span>(thumb instanceof Thumbnail)
+				{
+					flashPlayer.invokePlayerFunction(<span class="literal">"populateFilename"</span>, thumb.name);
+					flashPlayer.invokePlayerFunction(<span class="literal">"populateDateCreated"</span>, thumb.creationDate.toLocaleString());
+					flashPlayer.invokePlayerFunction(<span class="literal">"populateDateModified"</span>, thumb.lastModifiedDate.toLocaleString());
+					flashPlayer.invokePlayerFunction(<span class="literal">"populateMime"</span>, thumb.mimeType);
+				}
+			}
+		}
+		<span class="comment">// continue will all other handlers</span>
+		<span class="reserved">return</span> {handled: false};
+	}
+
+	<span class="comment">// Add the Thumbnail event handler.</span>
+	app.eventHandlers.push({handler: onThumbSelect});
+
+	<span class="reserved">return</span> true;
+}
+
+
+<span class="comment">/**
+ Determines whether snippet can be run given current context.  The snippet 
+ fails if these preconditions are not met:
+ &lt;ul&gt;
+ &lt;li&gt; Bridge must be running
+ &lt;li&gt; The Flash file must be available
+ &lt;/ul&gt;
+ <span class="attrib">@return</span> True if this snippet can run, false  otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+FlashDemo.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>() {
+
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span> &amp;&amp; <span class="reserved">this</span>.flashFile.exists) 
+	{ 
+		<span class="reserved">return</span> true;
+	}
+	$.writeln(<span class="literal">"ERROR:: Cannot run FlashDemo"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+*/</span>
+<span class="reserved">if</span>(typeof(FlashDemo_unitTest) == <span class="literal">"undefined"</span>) {
+	new FlashDemo().run();
+}
+
+<span class="comment">// ////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// //  ActionScript sample code.</span>
+<span class="comment">// //  Found in ./resources/FlashDemo.fla</span>
+<span class="comment">// //  The Flash file has 3 slides, each with a layer names 'Actions' where the ActionScript is</span>
+<span class="comment">// //  located.</span>
+<span class="comment">// //</span>
+<span class="comment">// // Slide 1</span>
+<span class="comment">// //</span>
+<span class="comment">// // Needed to allow for communication between ActionScript and JavaScript</span>
+<span class="comment">// import flash.external.ExternalInterface;</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  All of the following functions call JavaScript defined methods</span>
+<span class="comment">//  and will receive a particular data type</span>
+<span class="comment">// */</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Get Array' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// getArray_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var res = ExternalInterface.call("getJavaScriptArray");</span>
+<span class="comment">// 	arrayText.text = res;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Get Number' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// getNumbers_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var res = ExternalInterface.call("getJavaScriptNumber");</span>
+<span class="comment">// 	numbersText.text = res;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Get String' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// getString_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var res = ExternalInterface.call("getJavaScriptString");</span>
+<span class="comment">// 	stringText.text = res;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Get Object' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// getObject_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var res = ExternalInterface.call("getJavaScriptObject");</span>
+<span class="comment">// 	objectText.text = "{" + res.prop1 + "}, {";</span>
+<span class="comment">// 	objectText.text += res.prop2 + "},\n";</span>
+<span class="comment">// 	objectText.text += "{" + res.prop3 + "}";</span>
+<span class="comment">// }</span>
+
+<span class="comment">// ////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// //	Slide 2</span>
+<span class="comment">// //</span>
+<span class="comment">// // Needed to allow for communication between ActionScript and JavaScript</span>
+<span class="comment">// import flash.external.ExternalInterface;</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  All of the following functions call JavaScript defined methods</span>
+<span class="comment">//  which are properties of the Flashplayer element.  These functions </span>
+<span class="comment">//  demonstrate passing arguments to the JavaScript functions.</span>
+<span class="comment">// */</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Send Array' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// passArray_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var arr = new Array("val1", "val2");</span>
+<span class="comment">// 	ExternalInterface.call("passArray", arr);</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	pArrayText.text = arr.toString();</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Send Number' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// passNumber_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var num = 12345;</span>
+<span class="comment">// 	ExternalInterface.call("passNumber", num);</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	pNumberText.text = num;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Send String' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// passString_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var str = "HelloBridge";</span>
+<span class="comment">// 	ExternalInterface.call("passString", str);</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	pStringText.text = str;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Send Object' button is pressed.</span>
+<span class="comment">// */</span>
+<span class="comment">// passObject_btn.onRelease = function()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var obj = {};</span>
+<span class="comment">// 	obj.prop1 = "MyString";</span>
+<span class="comment">// 	obj.prop2 = ["val1", "val2"];</span>
+<span class="comment">// 	obj.prop3 = 98765;</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	var res = ExternalInterface.call("passObject", obj);	</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	pObjectText.text = "{" + obj.prop1 + "}, ";</span>
+<span class="comment">// 	pObjectText.text += "{" + obj.prop2 + "},\n";</span>
+<span class="comment">// 	pObjectText.text += "{" + obj.prop3 + "}";</span>
+<span class="comment">// }</span>
+
+<span class="comment">// //////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// //		Slide 3</span>
+<span class="comment">// //</span>
+
+<span class="comment">// // Needed to allow for communication between ActionScript and JavaScript</span>
+<span class="comment">// import flash.external.ExternalInterface;</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Callback functions for JavaScript.  Registering the callback functions with</span>
+<span class="comment">//  the ExternalInterface allows JavaScript to call into ActionScript for these functions</span>
+<span class="comment">// */</span>
+<span class="comment">// ExternalInterface.addCallback("getActionScriptArray", this, getActionScriptArray);</span>
+<span class="comment">// ExternalInterface.addCallback("getActionScriptNumber", this, getActionScriptNumber);</span>
+<span class="comment">// ExternalInterface.addCallback("getActionScriptString", this, getActionScriptString);</span>
+<span class="comment">// ExternalInterface.addCallback("getActionScriptObject", this, getActionScriptObject);</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  All of these functions are called from JavaScript when certain menu items</span>
+<span class="comment">//  are selected from the Bridge UI</span>
+<span class="comment">// */</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Flash Example &gt; Get ActionScript Array' menu item is selected</span>
+<span class="comment">//  */</span>
+<span class="comment">// function getActionScriptArray()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var arr = new Array("Item 1", "Item 2", "Item 3");</span>
+<span class="comment">// 	arrayText.text = arr.toString();</span>
+<span class="comment">// 	return arr;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Flash Example &gt; Get ActionScript Number' menu item is selected</span>
+<span class="comment">//  */</span>
+<span class="comment">// function getActionScriptNumber()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	numbersText.text = 98765;</span>
+<span class="comment">// 	return 98765;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Flash Example &gt; Get ActionScript String' menu item is selected</span>
+<span class="comment">//  */</span>
+<span class="comment">// function getActionScriptString()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var aStr = "A String from ActionScript";</span>
+<span class="comment">// 	stringText.text = aStr;</span>
+<span class="comment">// 	return aStr;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Called when the 'Flash Example &gt; Get ActionScript Object' menu item is selected</span>
+<span class="comment">//  */</span>
+<span class="comment">// function getActionScriptObject()</span>
+<span class="comment">// {</span>
+<span class="comment">// 	var obj = {};</span>
+<span class="comment">// 	obj.prop1 = "AS Custom Object";</span>
+<span class="comment">// 	obj.prop2 = new Array("X", "Y", "Z");</span>
+<span class="comment">// 	obj.prop3 = 987;</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	objectText.text = "{" + obj.prop1 + "}, ";</span>
+<span class="comment">// 	objectText.text += "{" + obj.prop2 + "},\n";</span>
+<span class="comment">// 	objectText.text += "{" + obj.prop3 + "}";</span>
+<span class="comment">// 	</span>
+<span class="comment">// 	return obj;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// //////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// //		Slide 4</span>
+<span class="comment">// //</span>
+<span class="comment">// //</span>
+<span class="comment">// // Needed to allow for communication between ActionScript and JavaScript</span>
+<span class="comment">// import flash.external.ExternalInterface;</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Callback functions for JavaScript.  Registering the callback functions with</span>
+<span class="comment">//  the ExternalInterface allows JavaScript to call into ActionScript for these functions</span>
+<span class="comment">// */</span>
+<span class="comment">// ExternalInterface.addCallback("populateFilename", this, populateFilename);</span>
+<span class="comment">// ExternalInterface.addCallback("populateFilesize", this, populateFilesize);</span>
+<span class="comment">// ExternalInterface.addCallback("populateDateCreated", this, populateDateCreated);</span>
+<span class="comment">// ExternalInterface.addCallback("populateDateModified", this, populateDateModified);</span>
+<span class="comment">// ExternalInterface.addCallback("populateMime", this, populateMime);</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  The following functions populate the Flash elements with information about</span>
+<span class="comment">//  the currently selected thumbnail in Bridge.  When the selected thumbnail in Bridge </span>
+<span class="comment">//  is changed and event handler (defined in the jsx script file accompanying this sample)</span>
+<span class="comment">//  will call these methods.</span>
+<span class="comment">// */</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Displays the file name</span>
+<span class="comment">// */</span>
+<span class="comment">// function populateFilename(fName)</span>
+<span class="comment">// {</span>
+<span class="comment">// 	fileName_txt.text = fName;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Displays the file size</span>
+<span class="comment">// */</span>
+<span class="comment">// function populateFilesize(size)</span>
+<span class="comment">// {</span>
+<span class="comment">// 	fileSize_txt.text = size;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Displays the date of creation</span>
+<span class="comment">// */</span>
+<span class="comment">// function populateDateCreated(date)</span>
+<span class="comment">// {</span>
+<span class="comment">// 	dateCreated_txt.text = date;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Displays the last modified date</span>
+<span class="comment">// */</span>
+<span class="comment">// function populateDateModified(date)</span>
+<span class="comment">// {</span>
+<span class="comment">// 	dateMod_txt.text = date;</span>
+<span class="comment">// }</span>
+
+<span class="comment">// /**</span>
+<span class="comment">//  Displays the mime type of the file</span>
+<span class="comment">// */</span>
+<span class="comment">// function populateMime(m)</span>
+<span class="comment">// {</span>
+<span class="comment">// 	mime_txt.text = m;</span>
+<span class="comment">// }</span>
+<span class="comment">// ////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ////////////////////////////////////////////////////////////////////////////</span></pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

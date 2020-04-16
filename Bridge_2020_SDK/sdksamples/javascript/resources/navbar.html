@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>SnpAddHTMLNavBar: Bridge UI/HTML Integration</title>
+<script type="text/javascript">
+function myFunction(x)
+{
+
+	window.outform.thumbfname.value = x;
+
+}
+
+function loaded()
+{
+	var t = call('htmlLoaded', true);
+}
+</script>
+
+</head>
+<body onLoad="loaded()">
+<h3>SnpAddHTMLNavBar: Bridge UI/HTML Integration</h3>
+<form name="outform">
+<input type="text" name="thumbfname" size="65" value="Thumbnail"></input>
+</form>
+
+</body>
+</html>

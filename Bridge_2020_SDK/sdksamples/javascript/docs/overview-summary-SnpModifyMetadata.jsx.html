@@ -1,0 +1,431 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpModifyMetadata.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpModifyMetadata.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to acquire and update metadata for a selected thumbnail using XMP external object.
+  <BR/><BR/><B>See:</B><UL>- <a href="SnpInspectMetadata.html#">SnpInspectMetadata</a><BR/>- <a href="SnpModifyMetadata.html#">SnpModifyMetadata</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpModifyMetadata.html">SnpModifyMetadata</a></b></td>
+    <td>Shows how to acquire and update metadata for a selected thumbnail using XMP external object.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+ <span class="attrib">@fileoverview</span> Shows how to acquire and update metadata for a selected thumbnail using XMP external object.
+  <span class="attrib">@class</span> Shows how to acquire and update metadata for a selected thumbnail using XMP external object.
+ 
+ &lt;h4&gt;Usage&lt;/h4&gt;
+ 	   
+   &lt;ol&gt;
+     &lt;li&gt; In Bridge, select a single thumbnail that has XMP-based metadata, such as a Adobe Photoshop CS6 (PSD), Adobe PDF or Adobe InDesign CS6 (INDD) file.
+     &lt;li&gt; Run the snippet in the ExtendScript Toolkit (see Readme.txt)
+	  &lt;li&gt; Inspect the Metadata panel and the File Properties section; note how  the Application has been modified by this snippet.
+	&lt;li&gt; Inspect the metadata panel and the IPTC Core section; note how the Title has been modified by this snippet.
+		&lt;li&gt; Select File &gt; File Info... &gt; Advanced
+		&lt;li&gt; Expand the node http://ns.adobe.bridge.sdk/ and inspect the newly added metadata.
+		&lt;li&gt; Inspect the JavaScript console to view information about all modifications made by this snippet to the XMP metadata.
+  &lt;/ol&gt;
+	 
+ &lt;h4&gt;Description&lt;/h4&gt;
+
+&lt;p&gt;Shows how to acquire XMP metadata for a selected thumbnail and modify the existing data.
+Several properties are updated using the XMPMeta object, as well as some custom properties
+being added, including arrays, qualifiers and structures.  This snippet also demonstrates how to
+delete a property, delete all properties from a namespace and delete all properties from the 
+XMPMeta object.
+	
+&lt;p&gt;The selected thumbnail's metadata is collected and serialised to give the XMP packet which 
+is used to construct a new instance of an XMPMeta object.  The XMPMeta object is used to 
+modify existing metadata as well as add custom data.  After all modifications are made
+the XMP packet is serialized and written back to the selected thumbnail's metadata property.
+			
+&lt;p&gt;To add the custom data a new namespace (http://ns.adobe.bridge.sdk/) and prefix (nssdk) is 
+registered, the namespace and prefix have no relevance outwith the scope of this snippet.  To view 
+the newly added custom data then use the select File &gt; File Info... &gt; Advanced and expand the 
+'http://ns.adobe.bridge.sdk/'  element.
+
+&lt;p&gt;Note:  The selected file will have its metadata over written.
+  
+ &lt;p&gt;See the JavaScript Tools Guide for more details.&lt;br /&gt;
+
+ <span class="attrib">@see</span> SnpInspectMetadata
+ <span class="attrib">@see</span> SnpModifyMetadata
+
+ 
+  <span class="attrib">@constructor</span> Constructor
+ */</span>
+<span class="reserved">function</span> SnpModifyMetadata() 
+{
+
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"Needs to run in Bridge, \nwith a selection of a file, \nideally with some metadata"</span>;	
+}
+
+<span class="comment">/**
+ Functional part of this snippet.  Get the selected Thumbnail and creates an XMPFile object which
+ is used to get access to the XMP data.
+ 
+ <span class="attrib">@return</span> True if the snippet ran as expected, false otherwise
+ <span class="attrib">@type</span> boolean
+*/</span>
+SnpModifyMetadata.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() 
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		<span class="reserved">return</span> false;
+	}
+
+	<span class="comment">// Load the XMP Script library</span>
+	<span class="reserved">if</span>( xmpLib == undefined ) 
+	{
+		<span class="reserved">if</span>( Folder.fs == <span class="literal">"Windows"</span> )
+		{
+			<span class="reserved">var</span> pathToLib = Folder.startup.fsName + <span class="literal">"/AdobeXMPScript.dll"</span>;
+		} 
+		<span class="reserved">else</span> 
+		{
+			<span class="reserved">var</span> pathToLib = Folder.startup.fsName + <span class="literal">"/AdobeXMPScript.framework"</span>;
+		}
+	
+		<span class="reserved">var</span> libfile = new File( pathToLib );
+		<span class="reserved">var</span> xmpLib = new ExternalObject(<span class="literal">"lib:"</span> + pathToLib );
+	}
+
+	$.writeln(<span class="literal">"About to run SnpModifyXML"</span>);
+	
+	<span class="comment">// Get the selected file</span>
+	<span class="reserved">var</span> thumb = app.document.selections[0];
+	
+	<span class="reserved">if</span>(thumb.hasMetadata)
+	{
+		<span class="comment">// Get the metadata object - wait for  valid values</span>
+		<span class="reserved">var</span> md = thumb.synchronousMetadata;
+		
+		<span class="comment">// Get the XMP packet as a string and create the XMPMeta object</span>
+		<span class="reserved">var</span> xmp = new XMPMeta(md.serialize());
+		
+		$.writeln(<span class="literal">"SnpModifyXML: About to modify XMP data for "</span> + thumb.name);
+
+		$.writeln(<span class="literal">"XMP packet before modifications:"</span>);
+		$.writeln(<span class="literal">"-------------------------------------------------"</span>);
+		$.writeln(xmp.dumpObject());
+		
+		<span class="comment">// Change the creator tool</span>
+		xmp.setProperty(XMPConst.NS_XMP, <span class="literal">"CreatorTool"</span>, <span class="literal">"Changed by SnpModifyMetadata"</span>);
+		
+		<span class="comment">// Change the date modified</span>
+		<span class="reserved">var</span> d = new XMPDateTime(new Date());
+		<span class="comment">//d.convertToLocalTime();</span>
+		xmp.setProperty(XMPConst.NS_XMP, <span class="literal">"ModifyDate"</span>, d, XMPConst.XMPDATE);
+
+		<span class="comment">// Create some custom data.  Register a new namespace and prefix</span>
+		<span class="reserved">var</span> sdkNamespace = <span class="literal">"http://ns.adobe.bridgesdk/"</span>;
+		<span class="reserved">var</span> sdkPrefix = <span class="literal">"nssdk:"</span>;
+		XMPMeta.registerNamespace(sdkNamespace, sdkPrefix);
+		
+		<span class="comment">// Create a second namespace and prefix</span>
+		<span class="reserved">var</span> sdkNamespace2 = <span class="literal">"http://ns.adobe.bridgesdk/two/"</span>;
+		<span class="reserved">var</span> sdkPrefix2 = <span class="literal">"nssdk2:"</span>;
+		XMPMeta.registerNamespace(sdkNamespace2, sdkPrefix2);
+		
+		<span class="comment">// Add a some properties and qualifiers</span>
+		xmp.setProperty(sdkNamespace, <span class="literal">"SDKProp1"</span>, <span class="literal">"A String"</span>);
+		xmp.setQualifier(sdkNamespace, <span class="literal">"SDKProp1"</span>, XMPConst.TYPE_TEXT, <span class="literal">"SDKqual1"</span>, <span class="literal">"String One"</span>);
+		xmp.setQualifier(sdkNamespace, <span class="literal">"SDKProp1"</span>, XMPConst.TYPE_TEXT, <span class="literal">"SDKqual2"</span>, <span class="literal">"String Two"</span>);
+		
+		xmp.setProperty(sdkNamespace, <span class="literal">"SDKProp2"</span>, <span class="literal">"A Number"</span>);
+		xmp.setQualifier(sdkNamespace, <span class="literal">"SDKProp2"</span>, sdkNamespace2, <span class="literal">"SDKqual1"</span>, 12345, 0);
+		xmp.setQualifier(sdkNamespace, <span class="literal">"SDKProp2"</span>, sdkNamespace2, <span class="literal">"SDKqual2"</span>, 67890, 0);
+		
+		<span class="comment">// Delete the array if it exists</span>
+		xmp.deleteProperty(sdkNamespace, <span class="literal">"SDKArray"</span>);
+		
+		<span class="comment">// Add an array</span>
+		xmp.appendArrayItem(sdkNamespace, <span class="literal">"SDKArray"</span>, <span class="literal">"First Element"</span>, 0, XMPConst.ARRAY_IS_UNORDERED);
+		xmp.appendArrayItem(sdkNamespace, <span class="literal">"SDKArray"</span>, <span class="literal">"Second Element"</span>, 0, XMPConst.ARRAY_IS_UNORDERED);
+		xmp.appendArrayItem(sdkNamespace, <span class="literal">"SDKArray"</span>, <span class="literal">"Third Element"</span>, 0, XMPConst.ARRAY_IS_UNORDERED);
+		
+		<span class="comment">// Insert an item into an array</span>
+		xmp.insertArrayItem(sdkNamespace, <span class="literal">"SDKArray"</span>, 2, <span class="literal">"Inserted after First Element"</span>);
+		
+		<span class="comment">// Delete the dc:title property</span>
+		xmp.deleteProperty(XMPConst.NS_DC, <span class="literal">"title"</span>);
+		
+		<span class="comment">// Populate the dc:title alt lang array, if the correct options are supplied the array </span>
+		<span class="comment">// will be created even if it doesn' exist</span>
+		xmp.appendArrayItem(XMPConst.NS_DC, <span class="literal">"title"</span>, <span class="literal">"XMP is kewl!"</span>, 0, XMPConst.ALIAS_TO_ALT_TEXT);
+		xmp.setQualifier(XMPConst.NS_DC, <span class="literal">"title[1]"</span>, <span class="literal">"http://www.w3.org/XML/1998/namespace"</span>, <span class="literal">"lang"</span>, <span class="literal">"x-default"</span>);
+
+		<span class="comment">// Set some properties and qualifiers</span>
+		xmp.setProperty(XMPConst.NS_DC, <span class="literal">"title[2]"</span>, <span class="literal">"XMP est frais!"</span>);
+		xmp.setQualifier(XMPConst.NS_DC, <span class="literal">"title[2]"</span>, <span class="literal">"http://www.w3.org/XML/1998/namespace"</span>, <span class="literal">"lang"</span>, <span class="literal">"fr-fr"</span>);
+		
+		xmp.appendArrayItem(XMPConst.NS_DC, <span class="literal">"title"</span>, <span class="literal">"XMP è freddo!"</span>, 0, XMPConst.ALIAS_TO_ALT_TEXT);		
+		<span class="reserved">var</span> lastIndex = xmp.countArrayItems(XMPConst.NS_DC, <span class="literal">"title"</span>);
+		xmp.setProperty(XMPConst.NS_DC, <span class="literal">"title["</span> + lastIndex +<span class="literal">"]/@xml:lang"</span>, <span class="literal">"it-it"</span>);
+		
+		<span class="comment">// Or you could just use this</span>
+		xmp.setLocalizedText(XMPConst.NS_DC, <span class="literal">"title"</span>, <span class="literal">"en"</span>, <span class="literal">"en-us"</span>, <span class="literal">"XMP is cool!"</span>);
+		
+		<span class="comment">// Create a structure and add some fields</span>
+		xmp.setProperty(<span class="literal">"http://ns.adobe.com/xap/1.0/t/pg/"</span>, <span class="literal">"MaxPageSize"</span>, <span class="literal">""</span>, XMPConst.PROP_IS_STRUCT);
+		xmp.setStructField(<span class="literal">"http://ns.adobe.com/xap/1.0/t/pg/"</span>, <span class="literal">"MaxPageSize"</span>, XMPConst.TYPE_DIMENSIONS, <span class="literal">"w"</span>, 8.5);
+		xmp.setStructField(<span class="literal">"http://ns.adobe.com/xap/1.0/t/pg/"</span>, <span class="literal">"MaxPageSize"</span>, XMPConst.TYPE_DIMENSIONS, <span class="literal">"h"</span>, 12);
+		xmp.setStructField(<span class="literal">"http://ns.adobe.com/xap/1.0/t/pg/"</span>, <span class="literal">"MaxPageSize"</span>, XMPConst.TYPE_DIMENSIONS, <span class="literal">"unit"</span>, <span class="literal">"inches"</span>);
+		
+		<span class="comment">// Create a custom structure and add some fields</span>
+		xmp.setProperty(XMPConst.NS_DC, <span class="literal">"sdknames"</span>, <span class="literal">""</span>, XMPConst.PROP_IS_STRUCT);
+		xmp.setStructField(XMPConst.NS_DC, <span class="literal">"sdknames"</span>, sdkNamespace2, <span class="literal">"sdkfld1"</span>, <span class="literal">"Tom"</span>);
+		xmp.setStructField(XMPConst.NS_DC, <span class="literal">"sdknames"</span>, sdkNamespace2, <span class="literal">"sdkfld2"</span>, <span class="literal">"Dick"</span>);
+		xmp.setStructField(XMPConst.NS_DC, <span class="literal">"sdknames"</span>, sdkNamespace2, <span class="literal">"sdkfld3"</span>, <span class="literal">"Harry"</span>);
+						
+		$.writeln(<span class="literal">"XMP packet after modifications:"</span>);
+		$.writeln(<span class="literal">"-------------------------------------------------"</span>);
+		$.writeln(xmp.dumpObject());
+		
+		<span class="comment">// NOTE: removal of properties is commented out, because otherwise</span>
+		<span class="comment">// you won't see any of the modifications we applied above. But</span>
+		<span class="comment">// the code is left here for your reference</span>
+		<span class="comment">//</span>
+		<span class="comment">// How you would delete a single property</span>
+		<span class="comment">//xmp.deleteProperty(XMPConst.NS_XMP, "CreatorTool");</span>
+		
+		<span class="comment">// Delete all properties for a namespace</span>
+		<span class="comment">//XMPUtils.removeProperties(xmp, sdkNamespace, "", XMPConst.REMOVE_ALL_PROPERTIES);</span>
+		
+		<span class="comment">//$.writeln("XMP packet after removing properties:");</span>
+		<span class="comment">//$.writeln("-------------------------------------------------");</span>
+		<span class="comment">//$.writeln(xmp.dumpObject());</span>
+		
+		<span class="comment">// How you might delete all properties</span>
+		<span class="comment">//XMPUtils.removeProperties(xmp, "", "", XMPConst.REMOVE_ALL_PROPERTIES);</span>
+		
+		<span class="comment">//$.writeln("XMP packet after removing ALL properties:");</span>
+		<span class="comment">//$.writeln("-------------------------------------------------");</span>
+		<span class="comment">//$.writeln(xmp.dumpObject());</span>
+		
+		<span class="comment">// Write the packet back to the selected file</span>
+		<span class="reserved">var</span> updatedPacket = xmp.serialize(XMPConst.SERIALIZE_OMIT_PACKET_WRAPPER | XMPConst.SERIALIZE_USE_COMPACT_FORMAT);
+
+		<span class="comment">// Uncomment to see the XMP packet in XML form</span>
+		<span class="comment">// $.writeln(updatedPacket);</span>
+		thumb.metadata = new Metadata(updatedPacket);
+	
+	}
+	<span class="reserved">else</span>
+	{
+		$.writeln(<span class="literal">"The selected thumbnail has no metadata."</span>);
+	}
+
+	$.writeln(<span class="literal">"Ran SnpModifyMetadata"</span>);
+	
+	<span class="reserved">return</span> true;
+}
+
+<span class="comment">/**
+  Determines whether snippet can be run given current context.  The snippet 
+  fails if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Must be running in Bridge
+  &lt;li&gt; A selection must be made in the Content pane of Bridge 
+  &lt;/ul&gt;
+
+  <span class="attrib">@return</span> True is this snippet can run, false otherwise
+  <span class="attrib">@type</span> boolean
+*/</span>
+SnpModifyMetadata.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+ {
+	<span class="comment">// Must be running in Bridge &amp; have a selection</span>
+	<span class="reserved">if</span>( (BridgeTalk.appName == <span class="literal">"bridge"</span>) &amp;&amp; (app.document.selectionLength == 1)) {
+		<span class="reserved">return</span> true;
+	}
+
+	<span class="comment">// Fail if these preconditions are not met.  </span>
+	<span class="comment">// Bridge must be running,</span>
+	<span class="comment">// There must be a selection.</span>
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpModifyMetadata"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpModifyMetadata_unitTest ) == <span class="literal">"undefined"</span>) {
+	new SnpModifyMetadata().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

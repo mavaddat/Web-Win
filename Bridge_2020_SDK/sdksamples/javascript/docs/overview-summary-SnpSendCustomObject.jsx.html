@@ -1,0 +1,336 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpSendCustomObject.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpSendCustomObject.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to pass a custom JavaScript object from Adobe Bridge CS6 to another
+  	application (Adobe Photoshop CS6) in a BridgeTalk message, and pass it back in a response.
+  <BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpSendCustomObject.html">SnpSendCustomObject</a></b></td>
+    <td>Shows how to pass a custom JavaScript object from Adobe Bridge CS6 to another
+  	application (Adobe Photoshop CS6) in a BridgeTalk message, and pass it back in a response.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Shows how to pass a custom JavaScript object from Adobe Bridge CS6 to another
+  	application (Adobe Photoshop CS6) in a BridgeTalk message, and pass it back in a response.
+  <span class="attrib">@class</span> Shows how to pass a custom JavaScript object from Adobe Bridge CS6 to another
+  	application (Adobe Photoshop CS6) in a BridgeTalk message, and pass it back in a response.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+  &lt;ol&gt;
+  &lt;li&gt; Make sure Adobe Bridge CS6 and Adobe Photoshop CS6 are running
+  &lt;li&gt; Run the snippet in the ExtendScript Toolkit (ESTK), 
+       with Bridge as the target (see Readme.txt)
+  &lt;li&gt; Inspect the JavaScript Console in the ESTK for information on the sequence of messages and
+  objects passed.
+   &lt;li&gt;Note; there is no other visible output besides the trace to the JavaScript Console of the ESTK.
+  &lt;/ol&gt;
+ 
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+    &lt;p&gt;Bridge sends a BridgeTalk message to Photoshop, passing a
+    JavaScript object. Photoshop reconstructs and modifies the object,
+    then serializes the object and returns it as the result of the initial message.
+    
+    &lt;p&gt;In processing the result, Bridge evaluates the serialized object in order
+    to reconstruct it.&lt;br /&gt;
+ 
+  <span class="attrib">@constructor</span> Constructor 
+ */</span>
+<span class="reserved">function</span> SnpSendCustomObject() {
+
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tExecute against Bridge main engine.\nAdobe Bridge CS6 and Adobe Photoshop CS6 must be running."</span>;
+	$.level = 1; <span class="comment">// Debugging level</span>
+}
+
+<span class="comment">/**
+ Functional part of this snippet.  
+ 
+ Constructs a BridgeTalk message, which contains both the script to 
+ run in Photoshop, and the onResult callback for processing the response,
+ then sends the message to Photoshop.
+
+ &lt;p&gt;The script contains a serialized JavaScript object, reconstructs and
+ modifies it on the target side, then reserializes and sends it back
+ as the result.
+
+ &lt;p&gt;The sender reconstructs the serialized object it receives as the result
+ of the message.
+
+ <span class="attrib">@return</span> True if the snippet ran as expected, false if Photoshop or
+  	Bridge is not running, or if an error occurred sending the message.
+ <span class="attrib">@type</span> Boolean
+*/</span>
+SnpSendCustomObject.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() {
+	
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun()) {
+		retval = false;	
+		<span class="reserved">return</span> retval;
+	}
+
+	<span class="comment">// Create the message object</span>
+	<span class="reserved">var</span> bt = new BridgeTalk();
+	<span class="comment">// The message target is Photoshop</span>
+	bt.target = <span class="literal">"photoshop"</span>;
+	
+	<span class="comment">// Create a custom JavaScript object with some properties</span>
+	<span class="reserved">var</span> CustomObject = {};
+	CustomObject.name = <span class="literal">"A String"</span>;
+	CustomObject.createdDate = new Date().toString();
+	
+	$.writeln(<span class="literal">"SnpSendCustomObject: Bridge - Custom object details:"</span>);
+	$.writeln(<span class="literal">"SnpSendCustomObject: "</span> + CustomObject.toSource());
+	
+	<span class="comment">// Construct a string containing the body of the message,</span>
+	<span class="comment">// a script to be evaluated by Photoshop.</span>
+	<span class="comment">// The script contains the custom object, and causes Photoshop </span>
+	<span class="comment">// to modify its properties and send it back as the result</span>
+	scp = <span class="literal">""</span>;
+	<span class="comment">// serialize the object for sending</span>
+	scp += <span class="literal">"var cm = eval("</span> + CustomObject.toSource() + <span class="literal">");"</span>;
+	scp += <span class="literal">"$.writeln('SnpSendCustomObject: Photoshop - Modifying object details...');"</span>;
+	<span class="comment">// modify the properties</span>
+	scp += <span class="literal">"cm.name = cm.name + '_PS';"</span>;
+	scp += <span class="literal">"cm.modifiedDate = new Date().toString();"</span>;
+	<span class="comment">// serialize the modified object for return.</span>
+	<span class="comment">// This is the last line of the script, so the serialized string </span>
+	<span class="comment">// is the result this evaluation, and is returned to Bridge</span>
+	scp += <span class="literal">"cm.toSource();"</span>;  
+			
+	<span class="comment">// The string containing the script is the body of the message.</span>
+	bt.body = scp;
+	
+	<span class="comment">// Bridge handles the result of the message</span>
+	bt.onResult = <span class="reserved">function</span>(resObj)
+	{
+		<span class="comment">// Reconstruct the serialized object</span>
+		<span class="reserved">var</span> returnedObject = eval(resObj.body);
+		
+		<span class="comment">// Access the custom object's properties</span>
+		$.writeln(<span class="literal">"SnpSendCustomObject: Bridge - Custom object details after changes:"</span>);
+		$.writeln(returnedObject.toSource());
+	}
+	
+	<span class="comment">// Bridge handles any errors  that occur when sending the initial message</span>
+	bt.onError = <span class="reserved">function</span>(errObj)
+	{
+		$.writeln(<span class="literal">"SnpSendCustomObject: "</span> + errObj.body);
+		retval = false;
+	}
+	
+	<span class="comment">// Send the initial message from Bridge to Photoshop</span>
+	bt.send();
+		
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+ Determines whether snippet can run given current context. The snippet 
+ fails if these preconditions are not met:
+ &lt;ul&gt;
+ &lt;li&gt; Must run in Bridge
+ &lt;li&gt; Photoshop must be running
+ &lt;/ul&gt;
+
+ <span class="attrib">@return</span> True if this snippet can run, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+SnpSendCustomObject.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>() {
+	
+	<span class="comment">// Must run in Bridge</span>
+	<span class="comment">// Photoshop must be running</span>
+	<span class="reserved">if</span>((BridgeTalk.appName == <span class="literal">"bridge"</span>) &amp;&amp; BridgeTalk.isRunning(<span class="literal">"photoshop"</span>)) {
+		<span class="reserved">return</span> true;
+	}
+	
+	<span class="comment">// Fail if these preconditions are not met.  </span>
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpSendCustomObject"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpSendCustomObject_unitTest)  == <span class="literal">"undefined"</span>) {
+    new SnpSendCustomObject().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

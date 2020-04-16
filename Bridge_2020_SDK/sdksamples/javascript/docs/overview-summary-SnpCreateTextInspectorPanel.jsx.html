@@ -1,0 +1,326 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpCreateTextInspectorPanel.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpCreateTextInspectorPanel.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to create and display an object-inspector panel  using the InpsectorPanel object, 
+         with a text-type subpanel, a TextPanelette object.
+  <BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpCreateTextInspectorPanel.html">SnpCreateTextInspectorPanel</a></b></td>
+    <td>Shows how to create and display an object-inspector panel  using the InpsectorPanel object, 
+         with a text-type subpanel, a TextPanelette object.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+ <span class="attrib">@fileoverview</span> Shows how to create and display an object-inspector panel  using the InpsectorPanel object, 
+         with a text-type subpanel, a TextPanelette object.
+  <span class="attrib">@class</span> Shows how to create and display an object-inspector panel  using the InpsectorPanel object, 
+         with a text-type subpanel, a TextPanelette object.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+
+     &lt;ol&gt;
+     &lt;li&gt;Run the snippet in the ExtendScript Toolkit (see Readme.txt)
+  	&lt;li&gt; Select file or folder thumbnails in the Bridge Content pane
+  	&lt;li&gt;Make sure you have the Inspector Panel open (Window &gt; Inspector Panel)
+  	&lt;li&gt;You should see information about the selected thumbnails in the Inspector Panel.
+	&lt;/ol&gt;
+ 
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+   &lt;p&gt;Shows how to create an object-inspector panel using the InpsectorPanel object, 
+   with a text-type subpanel defined by a TextPanelette object.
+
+   &lt;p&gt;The text subpanel demonstrates different ways of adding text:
+   static text, and dynamic text specified with panelette markup.
+   
+    &lt;p&gt;After it is registered, the panel appears in all menus that list available palettes.
+	It is displayed in its default position at the top left of the browser, when 
+	the Inspector is checked in the Window menu. Drag it to another location or change
+	the relative sizes of palette columns to see how the text is displayed.
+
+  &lt;p&gt;The key-value pairs used to populate the TextPanelette use both 
+  string literals and panelette markup to specify dynamic values.&lt;br /&gt;
+
+   <span class="attrib">@constructor</span> Constructor.   
+ */</span>
+<span class="reserved">function</span> SnpCreateTextInspectorPanel()
+{
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tExecute against Bridge main engine.\nBridge must be running."</span>;
+	$.level = 1; <span class="comment">// Debugging level</span>
+	<span class="reserved">this</span>.panelRef = null;
+}
+
+<span class="comment">// Used to generate the dynamic text for the text panelette</span>
+<span class="comment">/**
+  Used to generate dynamic text for the subpanel.
+  The generated text lists the currently selected thumbnails.
+*/</span>
+SnpCreateTextInspectorPanel.getDetails = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> startTime = new Date();
+	<span class="reserved">var</span> retval = <span class="literal">"SnpCreateTextInspectorPanel: "</span> + startTime + <span class="literal">"\n"</span>;
+	retval += <span class="literal">"Selected objects: \n"</span>;
+	<span class="reserved">for</span>(<span class="reserved">var</span> i=0; i &lt; app.document.selections.length; i++) {
+		<span class="comment">// Support multiple selections, iterate the entire selection.</span>
+		<span class="reserved">var</span> myObj = app.document.selections[i];
+		retval += <span class="literal">" - "</span> + myObj.name + <span class="literal">"\n"</span>;
+	}
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+ Functional part of this snippet.
+
+ Creates InpsectorPanel and TextPanelette with various text values. Registers the
+ panelette with the panel, and registers the panel with the application.
+
+	<span class="attrib">@return</span> True if the snippet ran as expected, false otherwise.  
+	<span class="attrib">@type</span> Boolean
+*/</span>
+SnpCreateTextInspectorPanel.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		retval = false;	
+		<span class="reserved">return</span> retval;
+	}
+
+	<span class="comment">// Create the object-inspector panel</span>
+	<span class="reserved">var</span> pp = new InspectorPanel(<span class="literal">"Created By SnpCreateTextInspectorPanel"</span>);
+	<span class="reserved">this</span>.panelRef = pp;
+    
+	<span class="comment">// Define a key-value pair array for the subpanel's text contents</span>
+	<span class="comment">//   -- The first three members specify values derived from core node data</span>
+	<span class="comment">//   -- The fourth member specifies static text.</span>
+	<span class="reserved">var</span> kvp = [
+                [<span class="literal">"Filename: "</span>,<span class="literal">"[[core.immediate.name]]"</span>],
+                [<span class="literal">"Filesize: "</span>,<span class="literal">"[[core.immediate.size]]"</span>], 
+                [<span class="literal">"Last Modified: "</span>,<span class="literal">"[[core.immediate.modificationDate]]"</span>],	
+                [<span class="literal">"Misc: "</span>,<span class="literal">"Some Static Text"</span>], [<span class="literal">" "</span>,<span class="literal">" "</span>] <span class="comment">// just some white space</span>
+		   ];
+
+	<span class="comment">// Create the subpanel, whose focus is the currently selected thumbnail,</span>
+	<span class="comment">// indicated with the special markup [[this]].</span>
+	<span class="reserved">var</span> tp = new TextPanelette(<span class="literal">"SnpCreateTextInspectorPanel Text Panelette"</span>, <span class="literal">"Information about thumbnails"</span>, <span class="literal">"[[this]]"</span>, kvp);
+
+	<span class="comment">// Register the subpanel with the panel.</span>
+	pp.registerPanelette(tp);
+
+	<span class="comment">// Register the panel with the application.</span>
+	app.registerInspectorPanel(pp);
+
+	<span class="comment">// Show the inspector panel</span>
+	app.document.displayInspectorView = true;
+
+	<span class="reserved">return</span> retval;
+
+}
+
+<span class="comment">/**
+  Determines whether snippet can be run given current context.  The snippet 
+  fails if these preconditions are not met:
+	 &lt;ul&gt;
+ 	 &lt;li&gt; Must run in Bridge
+	 &lt;/ul&gt;
+ 	<span class="attrib">@return</span> True if this snippet can run, false otherwise
+	<span class="attrib">@type</span> boolean
+*/</span>
+SnpCreateTextInspectorPanel.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+{	
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>)
+	{
+		<span class="reserved">return</span> true;		
+	}
+	
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpCreateTextInspectorPanel"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+	
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpCreateTextInspectorPanel_unitTest)  == <span class="literal">"undefined"</span>) {
+    new SnpCreateTextInspectorPanel().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

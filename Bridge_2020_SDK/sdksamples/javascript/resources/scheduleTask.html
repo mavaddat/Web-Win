@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Bridge UI/HTML Intergration</title>
+</head>
+
+<script>
+
+function updateFields(x, y)
+{
+	window.fieldone.value = x;
+	window.thearea.value = y;
+}
+
+function addToField(x)
+{
+	var newVal = window.thearea.value + "\n" + x;
+	window.thearea.value = newVal;
+
+}
+
+</script>
+
+<body>
+
+<h1>Bridge - Scheduling Tasks</h1>
+
+<br />
+
+Title: <br />
+<input type="text" title="Field One" name="fieldone" size="67" />
+<br /><br />
+Area:  <br />
+<textarea id="thetextarea" name="thearea" rows="20" cols="50"></textarea>
+
+
+
+</BODY>
+</HTML>

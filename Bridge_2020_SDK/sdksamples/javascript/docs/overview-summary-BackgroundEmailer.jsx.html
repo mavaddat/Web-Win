@@ -1,0 +1,898 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="BackgroundEmailer.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>BackgroundEmailer.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Sample using the Socket object to send email with attachments as a background (scheduled) task.
+  <BR/><BR/><B>See:</B><UL>- <a href="BasicEmailer.html#">BasicEmailer</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="BackgroundEmailer.html">BackgroundEmailer</a></b></td>
+    <td>Sample using the Socket object to send email with attachments as a background (scheduled) task.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview">﻿<span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  
+  <span class="attrib">@fileoverview</span> Sample using the Socket object to send email with attachments as a background (scheduled) task.
+  <span class="attrib">@class</span> Sample using the Socket object to send email with attachments as a background (scheduled) task.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+   &lt;b&gt;You must&lt;/b&gt; edit the mailserver settings within this code; the code as shipped does not provide any default
+  values for these settings and if you do not edit these settings in the code (see "NOTE" below),
+  then the code will not run correctly. 
+
+  &lt;ol&gt;
+   &lt;li&gt; Customize the email settings in the code to match your mail system and user accounts; look for NOTE below.
+   &lt;li&gt; Execute the snippet in the ExtendScript Toolkit, with Bridge as the target (see Readme.txt)
+   &lt;li&gt;You should find this creates a context-sensitive menu item on selected file thumbnails.
+   &lt;li&gt; In the Content pane of Bridge, select one or more thumbnails for the files to send.
+   &lt;li&gt; Right click in Windows or Ctrl-click in Mac OS to invoke the context menu
+   &lt;li&gt; Choose the menu item "SDK BackgroundEmailer: Send by Email"
+   &lt;li&gt; Inspect the JavaScript console for confirmation of the email being sent.
+   &lt;li&gt; Check your email client for the arrival of an email with attached files
+   &lt;/ol&gt;
+
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+&lt;p&gt;This example uses the Socket object to send an email with multiple attachments, uing a scheduled task
+to perform encoding and send the data in the background.
+  It sends just one email message at a time. Attachments are sent as binary data. 
+  
+&lt;p&gt;This example schedules a task to encode the  data into Base64 encoding and
+  write to the SMTP server as a background task, which does not block the 
+  Bridge main thread. The Bridge browser functions normally  while the email 
+  and files are being sent. Static properties provide operation status updates within 
+  the scheduleTask() call. 
+  
+&lt;p&gt;When the send() method is called, the mail headers are written to the socket and a task named sendData() is scheduled to 
+  run and to repeat every 10 milliseconds. Whilst the task is in operation, a file to be attached is read as a binary 
+  string, encoded and written to the socket in chunks at a time.  When the last chunk of the last file has been transmitted, 
+  the task is cancelled and the socket is closed.
+ 
+&lt;p&gt;You should be aware that this sample is a demonstration of technique; it may not run as expected with 
+  	all mail servers, and it is not intended as a robust mail client.
+  
+&lt;p&gt;For a blocking example, which might be suitable when sending smaller files as attachments, see BasicEmailer.jsx.&lt;br /&gt;
+  
+  <span class="attrib">@see</span> BasicEmailer
+ 
+  <span class="attrib">@constructor</span>
+  Constructor.
+ */</span>
+<span class="reserved">function</span> BackgroundEmailer() 
+{
+	$.level = 1;
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tEnsure Bridge is running and that it is your target and that you have supplied your own mail server details\n"</span>;
+
+
+<span class="comment">//---------- These are all static properties below -------------------------------------------------------------------</span>
+ 
+   <span class="comment">/** 
+	 The host address for the mail server, for example mail.adomainname.com - 
+	 NOTE: You must customize this with your own mailserver. 
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.mailServerName = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	 The username, not necessarily the senders email, to authorize with, for example 
+	 testemail<span class="attrib">@adomainname</span>.com - NOTE: You must customize this with your own 
+	 username for your (POP3) mail server.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.username = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	 The password for the username - NOTE: You must customize this with your own 
+	 password for your (POP3) mail server.
+	 <span class="attrib">@type</span> Socket
+	*/</span>
+	BackgroundEmailer.password = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	 The subject of the email.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.subject = <span class="literal">"SDK BackgroundEmailer Subject"</span>;
+
+	<span class="comment">/**  
+	 The senders email address, for example testemail<span class="attrib">@adomainname</span>.com - 
+	 NOTE: You must customize this with your own emal address.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.sender = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	The address the email will be sent to, the receiver of the email - 
+	 NOTE: You must customize this with your own target recipient.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.recipient = <span class="literal">""</span>;
+
+    <span class="comment">/** 
+	 The port number for the POP server, for example port 110 - 
+	 NOTE: You may want to customize this for your system.
+	 <span class="attrib">@type</span> int
+	*/</span>
+	BackgroundEmailer.POP = 110;
+
+	<span class="comment">/**  
+	 The port number for the SMTP server, for example port 25 - 
+	 NOTE: You may want to customize this for your system.
+	 <span class="attrib">@type</span> int
+	*/</span>
+	BackgroundEmailer.SMTP = 25;
+
+	<span class="comment">/**
+	 The ID of the scheduled task that will encode and transmit data, 
+	 needed to cancel the task after it has finished. 
+	 <span class="attrib">@type</span> Number
+	*/</span>
+	BackgroundEmailer.encodeTaskID = 0;
+
+	<span class="comment">/**
+	 The binary contents of a file to be attached to the email.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.contents = <span class="literal">""</span>;
+
+	<span class="comment">/**
+	 Flag that indicates when an attachment has been transmitted.
+	 <span class="attrib">@type</span> Boolean
+	*/</span>
+	BackgroundEmailer.finishedAttachment = false;
+
+    <span class="comment">/** 
+	  Flag that indicates when we are at the start of the process of
+        attaching a new file.
+        <span class="attrib">@type</span> Boolean
+    */</span>
+    BackgroundEmailer.startAttach  = true;
+ 
+	<span class="comment">/**
+	 The 64 characters used to encode the files to Base64.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.b64Chars = <span class="literal">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="</span>;
+
+	<span class="comment">/**
+	 The selected thumbnails for the files to be attached.
+	 <span class="attrib">@type</span> Array of Thumbnail
+	*/</span>
+	BackgroundEmailer.Thumbnails = new Array();
+	
+	<span class="comment">/**
+	 The Socket object that this object uses to write to the wire.
+	  <span class="attrib">@type</span> Socket
+	*/</span>
+	BackgroundEmailer.socket = new Socket();
+	
+	<span class="comment">/**
+        Use binary encoding for file-write operations.
+	  <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.socket.encoding = <span class="literal">"binary"</span>;
+
+	<span class="comment">/**
+      Flag that indicates whether or not an email operation is underway
+	  <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.isRunning = false;
+	
+	<span class="comment">/**
+	 The boundary marker for attachments.
+	  <span class="attrib">@type</span> String
+	*/</span>
+	BackgroundEmailer.boundary = <span class="literal">"****=_NextPartMyBody_0000 "</span> + new Date().getSeconds();
+
+}
+
+<span class="comment">/**
+  Constructs a simple message for the body of the email showing which files are attached
+*/</span>
+BackgroundEmailer.buildMessageBody = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> localMessage = <span class="literal">"BackgroundEmailer sent the following attachments:\r\n"</span>;
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0; i &lt; BackgroundEmailer.Thumbnails.length; i++)
+	{
+		localMessage += <span class="literal">"\r\n\tName: "</span> +  BackgroundEmailer.Thumbnails[i].name;
+	}	
+	BackgroundEmailer.message  = localMessage;
+}
+
+<span class="comment">/**
+ Attempts to open a socket and connect to a given host and port.
+ <span class="attrib">@param</span> host The server host name string.
+ <span class="attrib">@param</span> port The port number, an integer.
+ <span class="attrib">@return</span> True if the socket opened successfully, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+BackgroundEmailer.connect = <span class="reserved">function</span>(host, port)
+{
+	<span class="reserved">var</span> result = true;
+	<span class="comment">// If we can, open the port</span>
+	<span class="reserved">if</span>(!BackgroundEmailer.socket.open(host + <span class="literal">":"</span> + port))
+	{
+		$.writeln(<span class="literal">"BackgroundEmailer.connect(): Error: Could not open socket"</span>);
+		result = false;	
+	}
+	
+	<span class="reserved">return</span> result;
+}
+
+<span class="comment">/**
+  Authorizes a username against POP3.
+*/</span>
+BackgroundEmailer.authorise = <span class="reserved">function</span>()
+{
+	<span class="comment">// use pop3 to authorize with</span>
+	<span class="reserved">var</span> startDate = new Date();
+	$.writeln(<span class="literal">"IN BackgroundEmailer.authorise() = "</span> + startDate);
+	try 
+	{
+		$.writeln(<span class="literal">"BackgroundEmailer.authorise(): Authorizing..."</span> + BackgroundEmailer.socket.read());
+		
+		<span class="comment">// issue POP3 commands</span>
+		BackgroundEmailer.doCommand(<span class="literal">"USER "</span> + BackgroundEmailer.username, <span class="literal">"pop"</span>)
+		BackgroundEmailer.doCommand(<span class="literal">"PASS "</span> + BackgroundEmailer.password, <span class="literal">"pop"</span>);
+		BackgroundEmailer.doCommand (<span class="literal">"QUIT"</span>, <span class="literal">"pop"</span>);
+	}
+	catch(error) 
+	{ 
+		$.writeln(<span class="literal">"BackgroundEmailer.authorise() Error:"</span> + error);
+		result = false;
+	}
+	<span class="reserved">var</span> endDate = new Date();
+	$.writeln(<span class="literal">"OUT BackgroundEmailer.authorise() = "</span> + endDate);
+	
+}
+
+<span class="comment">/**
+ Executes an SMTP or a POP command.  Separates writing data to the socket and sending commands.
+ <span class="attrib">@param</span> cmd The command to be written to the socket
+ <span class="attrib">@param</span> type One of 'pop' or 'smtp'
+ <span class="attrib">@return</span> True if the command was executed correctly
+ <span class="attrib">@type</span> Boolean
+*/</span>
+BackgroundEmailer.doCommand = <span class="reserved">function</span>(cmd, type)
+{
+
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">var</span> reply = <span class="literal">""</span>;
+	<span class="reserved">var</span> replyCode = <span class="literal">""</span>;
+	
+	BackgroundEmailer.socket.write(cmd + <span class="literal">"\r\n"</span>);
+	
+	$.sleep(300);   
+	
+	<span class="reserved">if</span>(type == <span class="literal">"pop"</span>)
+	{
+		<span class="comment">// do POP commands</span>
+		reply = BackgroundEmailer.socket.read();
+		replyCode = reply.substring(0, 1);
+		<span class="reserved">if</span>(replyCode == <span class="literal">"-"</span>)
+		{
+			retval = false;
+			$.writeln(<span class="literal">"BackgroundEmailer.doCommand(): Error with POP command:"</span>);
+			$.writeln(<span class="literal">"\t"</span> + reply);
+			BackgroundEmailer.close();
+		}
+	}
+	<span class="reserved">else</span> <span class="reserved">if</span>(type == <span class="literal">"smtp"</span>)
+	{
+		<span class="comment">// do SMTP commands</span>
+		<span class="reserved">if</span>(!BackgroundEmailer.socket.read())
+		{
+			retval = false;
+			$.writeln(<span class="literal">"BackgroundEmailer.doCommand(): Error sending mail:"</span>);
+			$.writeln(<span class="literal">"\t"</span> + reply);
+			BackgroundEmailer.close();
+		}
+	}
+	<span class="reserved">else</span>
+	{
+		$.writeln(<span class="literal">"BackgroundEmailer.doCommand(): Unknown command type. Closing the socket."</span>);
+		BackgroundEmailer.close();
+	}
+
+	<span class="reserved">if</span>(!retval)
+	{
+		app.cancelTask(BackgroundEmailer.encodeTaskID);
+		BackgroundEmailer.isRunning = false;
+		
+		throw <span class="literal">"Command error for: "</span> + type + <span class="literal">" - "</span> + cmd;
+	}
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+ Close the socket that was used to transmit data
+*/</span>
+BackgroundEmailer.close = <span class="reserved">function</span>()
+{ 
+	try
+	{
+		BackgroundEmailer.socket.close();
+	}
+	catch(error)
+	{ 
+	    $.writeln(<span class="literal">"BackgroundEmailer.close(): Error closing socket: "</span> + error); 
+	}
+}
+
+
+<span class="comment">/**
+ Sends the email and attachments by connecting to the server and authorizing via POP.
+ Restablishes the connection and sends the necessary commands to the SMTP server.  
+
+ &lt;p&gt;Writes the mail headers to the socket, then schedules a task that will cause
+ the data to be written in chunks to the socket. If there are any attachments 
+ to be sent, the task encodes them into Base64 and writes them to the socket.
+*/</span>
+BackgroundEmailer.send = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> startDate = new Date();
+	$.writeln(<span class="literal">"IN BackgroundEmailer.send() = "</span> + startDate);
+
+	<span class="comment">// Check something is selected</span>
+	<span class="reserved">if</span>(BackgroundEmailer.Thumbnails.length != 0)
+	{
+
+		BackgroundEmailer.isRunning = true;
+		
+		<span class="reserved">if</span>(!BackgroundEmailer.connect(BackgroundEmailer.mailServerName , BackgroundEmailer.POP))
+		{
+			BackgroundEmailer.isRunning = false;
+			<span class="reserved">var</span> endPremDate = new Date();
+	        $.writeln(<span class="literal">"OUT (Premature exit:  failed to connect) BackgroundEmailer.send() = "</span> + endPremDate); 
+			<span class="reserved">return</span>;
+		}
+
+		BackgroundEmailer.authorise();
+		BackgroundEmailer.close();
+		<span class="reserved">if</span>(BackgroundEmailer.connect(BackgroundEmailer.mailServerName , BackgroundEmailer.SMTP))
+		{
+			<span class="comment">// Display who we are connected to</span>
+			<span class="reserved">var</span> welcome = BackgroundEmailer.socket.read();
+			$.writeln(<span class="literal">"BackgroundEmailer.send(): Sending message via: "</span> + welcome.substring(4));
+				
+			<span class="comment">// issue EHLO and other commands</span>
+			BackgroundEmailer.doCommand (<span class="literal">"EHLO "</span> + BackgroundEmailer.sender, <span class="literal">"smtp"</span>);
+			BackgroundEmailer.doCommand (<span class="literal">"MAIL FROM: "</span> + BackgroundEmailer.sender, <span class="literal">"smtp"</span>);
+			BackgroundEmailer.doCommand (<span class="literal">"RCPT TO: "</span> + BackgroundEmailer.recipient, <span class="literal">"smtp"</span>);
+			BackgroundEmailer.doCommand (<span class="literal">"DATA"</span>, <span class="literal">"smtp"</span>);
+
+			<span class="comment">// Send the optional headers</span>
+			BackgroundEmailer.socket.write (<span class="literal">'From: "BackgroundEmailer" &lt;'</span> + BackgroundEmailer.sender + <span class="literal">'&gt;\r\n'</span>);
+			BackgroundEmailer.socket.write (<span class="literal">"To: "</span> + BackgroundEmailer.recipient + <span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write (<span class="literal">"Subject: "</span> + BackgroundEmailer.subject + <span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write (<span class="literal">"Date: "</span> + new Date().toString() +  <span class="literal">"\r\n"</span>);
+
+			<span class="comment">// Set the content type and the boundary</span>
+			BackgroundEmailer.socket.write(<span class="literal">"MIME-Version: 1.0\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"Content-Type: multipart/mixed;\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">'\tboundary="'</span> + BackgroundEmailer.boundary + <span class="literal">'"\r\n'</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"X-Mailer: Bridge Email Sample\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"This is a multi-part mesage in MIME format.\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"--"</span> + BackgroundEmailer.boundary + <span class="literal">"\r\n"</span>);
+			
+			<span class="comment">// Send the message that is part of our email</span>
+			BackgroundEmailer.socket.write(<span class="literal">"Content-Type: text/plain;\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"Content-Transfer-Encoding: 7bit\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write(BackgroundEmailer.message + <span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"\r\n"</span>);
+			BackgroundEmailer.socket.write(<span class="literal">"--"</span> + BackgroundEmailer.boundary + <span class="literal">"\r\n"</span>);
+
+			BackgroundEmailer.startAttach = true;
+			<span class="comment">// Schedule a task that will encode all attachments and write the data.</span>
+			<span class="comment">// This allows the Bridge UI to remain responsive</span>
+			BackgroundEmailer.encodeTaskID = app.scheduleTask(<span class="literal">'BackgroundEmailer.sendData()'</span>, 10, true);
+		}
+	}
+	
+	<span class="reserved">var</span> endDate = new Date();
+	$.writeln(<span class="literal">"OUT BackgroundEmailer.send() = "</span> + endDate);
+
+
+}
+<span class="comment">/**
+ This is the task to send the attachment data, 
+ which is scheduled to run by the BackgroundEmailer.send() method.
+ <span class="attrib">@return</span> True if the scheduling is to continue
+ <span class="attrib">@type</span> Boolean
+*/</span> 
+BackgroundEmailer.sendData = <span class="reserved">function</span>()
+{
+
+	app.document.status = <span class="literal">"BackgroundEmailer.sendData is sending files..."</span>;
+
+	<span class="comment">// Do we need to read the attachment data and write the headers</span>
+	<span class="reserved">if</span>(BackgroundEmailer.startAttach)
+	{
+
+		<span class="comment">// Get the next file to attach</span>
+		BackgroundEmailer.thumb = BackgroundEmailer.Thumbnails.pop();
+
+		<span class="reserved">var</span> theFile = BackgroundEmailer.thumb.spec;
+				
+		<span class="comment">// set the encoding to ensure we get characters we can convert correctly.</span>
+		theFile.encoding = <span class="literal">"binary"</span>;
+
+		<span class="comment">// Open the file, read it and save the contents, close the file</span>
+		theFile.open(<span class="literal">'r'</span>);
+		BackgroundEmailer.contents = theFile.read();
+		theFile.close();
+
+		<span class="comment">// Write some headers</span>
+		BackgroundEmailer.socket.write(<span class="literal">"Content-type: "</span> + BackgroundEmailer.thumb.mimeType + <span class="literal">";\r\n"</span>);
+		BackgroundEmailer.socket.write(<span class="literal">'\tname="'</span> + BackgroundEmailer.thumb.name + <span class="literal">'"\r\n'</span>);
+		BackgroundEmailer.socket.write(<span class="literal">"Content-Transfer-Encoding: base64\r\n"</span>);
+		BackgroundEmailer.socket.write(<span class="literal">"Content-Disposition: attachment;\r\n"</span>);
+		BackgroundEmailer.socket.write(<span class="literal">'\tfilename="'</span> + BackgroundEmailer.thumb.name + <span class="literal">'"\r\n'</span>);
+		BackgroundEmailer.socket.write(<span class="literal">"\r\n"</span>);
+
+		<span class="comment">// Sending of the attachment has started to so we don't want to read the file</span>
+		<span class="comment">// or write the headers again</span>
+		BackgroundEmailer.startAttach = false;
+
+	}
+
+	<span class="comment">// Encode the binary data, in chunks at a time</span>
+	BackgroundEmailer.encodeString(BackgroundEmailer.nextChunk());
+
+	<span class="comment">// If an attachment is finished</span>
+	<span class="reserved">if</span>(BackgroundEmailer.finishedAttachment)
+	{
+		<span class="comment">// Do we have more to send</span>
+		<span class="reserved">if</span>(BackgroundEmailer.Thumbnails.length != 0)
+		{
+			<span class="comment">// Get ready to send another attachment</span>
+			BackgroundEmailer.startAttach = true;
+			BackgroundEmailer.finishedAttachment = false
+			<span class="comment">// Write the boundary marker for the end of the attachment we just finished</span>
+			BackgroundEmailer.socket.write(<span class="literal">"--"</span> + BackgroundEmailer.boundary + <span class="literal">"\r\n"</span>);
+			<span class="reserved">return</span> true;
+		}
+		<span class="reserved">else</span>
+		{
+			<span class="comment">// Schedule a task to finish off the email</span>
+			app.scheduleTask(<span class="literal">'BackgroundEmailer.finishEmail()'</span>, 10, false);
+			<span class="comment">// Cancel the task that is encoding/sending the data</span>
+			app.cancelTask(BackgroundEmailer.encodeTaskID);
+			$.writeln(<span class="literal">"BackgroundEmailer.sendData(): just scheduled finishEmail"</span>);
+			<span class="reserved">return</span>;  
+		}
+
+	}
+	<span class="reserved">return</span> true;
+}
+
+
+<span class="comment">/**
+  Get the next chunk of data from the binary contents of the 
+  current file that is to be attached to the email
+
+  <span class="attrib">@return</span> The encoded string containing the data.
+  <span class="attrib">@type</span> String
+*/</span>
+BackgroundEmailer.nextChunk = <span class="reserved">function</span>()
+{
+
+	<span class="reserved">var</span> retval = <span class="literal">""</span>;
+	<span class="reserved">var</span> dataLength = BackgroundEmailer.contents.length;
+
+	<span class="comment">//Get the first 5760 chars</span>
+	retval = BackgroundEmailer.contents.substring(0, 5760);
+
+	<span class="reserved">if</span>(dataLength &lt; 5760)
+	{
+		<span class="comment">// This will be the last chunk of data for the current  attachment </span>
+		<span class="comment">// so flag it as finished</span>
+		BackgroundEmailer.finishedAttachment = true;
+	}
+	<span class="reserved">else</span>
+	{
+		<span class="comment">// The binary contents minus the first 5760 characters</span>
+		BackgroundEmailer.contents = BackgroundEmailer.contents.substring(5760);
+	}
+
+	<span class="reserved">return</span> retval;
+
+}
+
+<span class="comment">/**
+ Accepts a string representing a binary file and encodes the string to base64.
+ "Base64 Content-Transfer-Encoding" as per RFC 1521 (http://www.ietf.org/rfc/rfc1521.txt)
+ <span class="attrib">@param</span> binaryString The string to encode
+ <span class="attrib">@type</span> String
+ <span class="attrib">@return</span> The base64-encoded string.
+*/</span>
+BackgroundEmailer.encodeString = <span class="reserved">function</span>(binaryString)
+{
+
+	<span class="reserved">var</span> encoded = <span class="literal">""</span>;
+	<span class="reserved">var</span> c1, c2, c3;
+	<span class="reserved">var</span> b1, b2, b3, b4;
+	<span class="reserved">var</span> i = 0;
+	
+	<span class="reserved">while</span>(i &lt; binaryString.length)
+	{
+		<span class="comment">// get 3 chars starting at the begining of the binary string</span>
+		c1 = binaryString.charCodeAt(i++);
+		c2 = binaryString.charCodeAt(i++);
+		c3 = binaryString.charCodeAt(i++);
+
+		<span class="comment">//  Create 4 sets of 6 bits from the 3 ascii bytes</span>
+		b1 = c1 &gt;&gt; 2;
+		b2 = ((c1 &amp; 3) &lt;&lt; 4) | (c2 &gt;&gt; 4);
+		b3 = ((c2 &amp; 15) &lt;&lt; 2) | (c3 &gt;&gt; 6);
+		b4 = c3 &amp; 63;
+
+		<span class="comment">// Check that chrs 2 and 3 are correct, if not replace with special padding char</span>
+		<span class="reserved">if</span> (isNaN(c2))
+		{
+			b3 = b4 = 64;
+		} 
+		<span class="reserved">else</span> <span class="reserved">if</span> (isNaN(c3))
+		{
+			b4 = 64;
+		}
+
+		<span class="comment">// added encoded chars to the return string</span>
+		encoded = encoded + BackgroundEmailer.b64Chars.charAt(b1) + BackgroundEmailer.b64Chars.charAt(b2) + 
+			BackgroundEmailer.b64Chars.charAt(b3) + BackgroundEmailer.b64Chars.charAt(b4);
+	}
+
+	<span class="comment">// write the data to the socket in 75 chars lines</span>
+	<span class="reserved">while</span>(encoded.length &gt; 0)
+	{
+		<span class="comment">// 72 goes in 5760 very nicely</span>
+		BackgroundEmailer.socket.write(encoded.substring(0,72) + <span class="literal">"\r\n"</span>);
+		<span class="comment">// remove the first 72 chars</span>
+		encoded = encoded.substring(72);
+	}
+
+}
+
+<span class="comment">/**
+  Ends the transmission; writes the last part of the boundary, sends the
+  necessary SMTP commands and closes the socket.
+*/</span>
+BackgroundEmailer.finishEmail = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> startDate = new Date();
+	$.writeln(<span class="literal">"IN BackgroundEmailer.finishEmail() = "</span> + startDate);
+	<span class="comment">// write empty line and boundary</span>
+	BackgroundEmailer.socket.write(<span class="literal">"\r\n"</span>);
+	BackgroundEmailer.socket.write(<span class="literal">"--"</span> + BackgroundEmailer.boundary + <span class="literal">"--\r\n"</span>);
+
+	<span class="comment">// end the message</span>
+	retval = BackgroundEmailer.doCommand(<span class="literal">"."</span>, <span class="literal">"smtp"</span>);
+		
+	<span class="comment">// quit and close</span>
+	BackgroundEmailer.doCommand(<span class="literal">"QUIT"</span>, <span class="literal">"smtp"</span>);
+	BackgroundEmailer.close();
+	BackgroundEmailer.isRunning = false;
+
+	app.document.status = <span class="literal">"BackgroundEmail has finished emailing files."</span>;
+	<span class="reserved">var</span> endDate = new Date();
+	$.writeln(<span class="literal">"OUT BackgroundEmailer.finishEmail() = "</span> + endDate);
+}
+
+
+
+<span class="comment">/**
+ Functional part of this snippet.
+
+ Runs this sample, calling the helper functions defined below.
+ Creates the Socket object and applies mail settings, such as hostname, 
+ password, and so on. You must customize the code so that the mail 
+ settings correspond to your mail system and user accounts; otherwise, 
+ the sample fails and no emails are sent.
+
+ <span class="attrib">@return</span> True if the sample ran as expected, false otherwise
+ <span class="attrib">@type</span> Boolean
+**/</span>
+BackgroundEmailer.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() 
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun()) 
+	{
+		<span class="reserved">return</span> false;
+	}
+	
+	try
+	{
+		<span class="comment">// Instantiate this run method only once and catch error on trying to repeat</span>
+		<span class="comment">// when trying to create a menu item that already exists via MenuElement.create</span>
+		<span class="reserved">var</span> emailMenuItem = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK BackgroundEmailer: Send by Email"</span>, 
+	                                        <span class="literal">"at the end of Thumbnail"</span>, <span class="literal">"BackgroundEmailMenu"</span>);
+		$.writeln(<span class="literal">"BackgroundEmailer.run(): created menu item, select file(s) and see its context-sensitive menu item"</span>);
+		
+		<span class="comment">// ---------------- Handler to define behavior of menu item when it is executed ------------------------</span>
+		emailMenuItem.onSelect = <span class="reserved">function</span>(m)
+		{
+			<span class="comment">// Check the status of the background operation</span>
+			<span class="reserved">if</span>(BackgroundEmailer.isRunning)
+			{
+				$.writeln(<span class="literal">"BackgroundEmailer.run() : onSelect(): Error! Email already in progress"</span>);
+			}
+			<span class="reserved">else</span>
+			{
+				<span class="comment">// Obtain selected files to send</span>
+				<span class="reserved">var</span> cachedSelections = app.document.selections;
+				BackgroundEmailer.Thumbnails = new Array();
+				<span class="reserved">for</span>(<span class="reserved">var</span> i = 0; i &lt; cachedSelections.length; i++)
+				{
+					<span class="reserved">var</span> nextThumbnail  = cachedSelections[i];
+					<span class="reserved">if</span>(!nextThumbnail.container)
+					{
+						$.writeln(<span class="literal">"BackgroundEmailer.run() : onSelect(): Adding "</span> + nextThumbnail.uri);
+						BackgroundEmailer.Thumbnails.push(nextThumbnail);
+						
+					}
+				}
+				
+				<span class="comment">// Check to see if we have any files from the selection (it might've been enabled on a </span>
+				<span class="comment">// folder </span>
+				<span class="reserved">if</span>(BackgroundEmailer.Thumbnails.length &gt; 0) 
+				{
+					<span class="comment">// Create a message body and prepare to send</span>
+					BackgroundEmailer.buildMessageBody();
+					BackgroundEmailer.send();
+				} 
+				<span class="reserved">else</span> 
+				{
+					$.writeln(<span class="literal">"BackgroundEmailer.run() : onSelect(): Error! Need some selected file(s) to send"</span>);
+				}
+			}		
+		}
+
+		<span class="comment">// ---------------- Handler for menu item state being checked, should be very lightweight function ------------------------</span>
+		emailMenuItem.onDisplay = <span class="reserved">function</span>(m)
+		{
+			<span class="reserved">var</span> selLength = app.document.selectionLength;
+    		<span class="reserved">if</span>(selLength &gt; 0)
+			{
+				<span class="reserved">this</span>.enabled = true;
+			}
+			<span class="reserved">else</span>
+			{
+				<span class="reserved">this</span>.enabled = false;
+			}
+		}
+
+	}
+	<span class="comment">// If we hit this handler, usually it's because you have tried multiple instantiations.</span>
+	catch(error) 
+	{ 
+		$.writeln(<span class="literal">"BackgroundEmailer.run() Error:"</span> + error);
+		$.writeln(<span class="literal">"\tNote that you only need run this snippet once, then use its menu item"</span>);
+		$.writeln(<span class="literal">"\tto send files"</span>);
+		<span class="reserved">return</span> false;
+	}
+
+	<span class="reserved">return</span> true;
+}
+
+
+
+<span class="comment">/**
+ Determines whether snippet can be run given current context.  The snippet 
+ fails if these preconditions are not met:
+ &lt;ul&gt;
+ &lt;li&gt; Bridge must be running
+ &lt;/ul&gt;
+ 	<span class="attrib">@return</span> True if this snippet can run, false otherwise
+ 	<span class="attrib">@type</span> Boolean
+*/</span>
+BackgroundEmailer.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>() 
+{
+	
+	<span class="reserved">var</span> retval = false;
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) 
+	{
+		<span class="comment">// Check none of our config params are empty</span>
+		retval = ! ( (BackgroundEmailer.username == <span class="literal">""</span>)  ||  (BackgroundEmailer.password == <span class="literal">""</span>) 
+						|| (BackgroundEmailer.sender == <span class="literal">""</span>) || (BackgroundEmailer.recipient == <span class="literal">""</span>) || (BackgroundEmailer.subject == <span class="literal">""</span>) 
+						||(BackgroundEmailer.SMTP == 0) || (BackgroundEmailer.POP == 0) 
+						|| (BackgroundEmailer.mailServerName == <span class="literal">""</span>) );
+
+		<span class="reserved">if</span>(!retval)
+		{
+			$.writeln(<span class="literal">"ERROR::  - Cannot run BackgroundEmailer"</span>);
+			$.writeln(<span class="literal">"\tCheck mail server configuration settings."</span>);
+			$.writeln(<span class="literal">"\tYou must customize these with your own mail server settings."</span>);
+	}
+
+		<span class="reserved">return</span> true;
+	}
+	$.writeln(<span class="literal">"ERROR:: Cannot run BackgroundEmailer"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+  "main program": construct an anonymous instance and run it
+*/</span>
+<span class="reserved">if</span>(typeof(BackgroundEmailer_unitTest) == <span class="literal">"undefined"</span>) {
+	new BackgroundEmailer().run();
+}
+
+
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

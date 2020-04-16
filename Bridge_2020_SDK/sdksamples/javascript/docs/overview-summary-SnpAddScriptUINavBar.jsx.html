@@ -1,0 +1,344 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpAddScriptUINavBar.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpAddScriptUINavBar.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to display ScriptUI components in the bottom navigation bar.
+  <BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpAddScriptUINavBar.html">SnpAddScriptUINavBar</a></b></td>
+    <td>Shows how to display ScriptUI components in the bottom navigation bar.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span>  Shows how to display ScriptUI components in the bottom navigation bar.
+  <span class="attrib">@class</span> Shows how to display ScriptUI components in the bottom navigation bar.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+  
+  &lt;ol&gt;
+  &lt;li&gt;Run the snippet in the ExtendScript Toolkit (see Readme.txt)	
+  &lt;li&gt;You should find this creates a bottom NavBar below the Bridge Content pane.
+   &lt;li&gt; Select a thumbnail in the Bridge Content pane.
+   &lt;/ol&gt;
+ 
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+  &lt;p&gt;Defines ScriptUI user-interface components, and displays them  
+  in the bottom navigation bar. Displays the bar for existing
+  browser windows, and defines an event handler to add it to 
+  new browser windows on creation.
+
+  &lt;ul&gt;
+   &lt;li&gt; An edit box shows the path to the currently selected file or folder,
+        and a Bridge event handler updates it when the Content page selection
+        changes.
+   &lt;li&gt; If you enter a new path and click Browse, the button's event handler
+        updates the Content pane, navigating to that location. 
+  &lt;/ul&gt;
+    
+  <span class="attrib">@constructor</span> Constructor.
+ */</span>
+<span class="reserved">function</span> SnpAddScriptUINavBar()
+{
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tAdobe Bridge must be running.\n\tExecute against Bridge CS6 target.\n"</span>;
+	$.level = 1; <span class="comment">// Debugging level</span>
+}
+
+<span class="comment">/**
+ Functional part of this snippet. 
+ 
+ Defines ScriptUI user-interface components and displays them in the bottom navigation bar.
+
+	<span class="attrib">@return</span>  True if the snippet ran as expected, false otherwise.  
+	<span class="attrib">@type</span> boolean
+*/</span>
+SnpAddScriptUINavBar.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())	
+	{
+		retval = false;	
+		<span class="reserved">return</span> retval;
+	}
+
+	<span class="comment">// Set up the navigation bar</span>
+	<span class="reserved">function</span> buildNavbar(doc)
+	{
+		<span class="comment">// retrieve the predefined NavBar object</span>
+		<span class="comment">// the type defaults to "scriptui"</span>
+		<span class="reserved">var</span> bottombar = doc.navbars.filesystem.bottom;
+		
+		<span class="comment">// display it</span>
+		bottombar.visible = true;
+		<span class="comment">// set the height</span>
+		bottombar.height = 50;
+		<span class="comment">// add a ScriptUI display frame</span>
+		bottombar.pathPanel = bottombar.add( <span class="literal">"panel"</span>, [5,5, 480,35], undefined);  <span class="comment">// bounds = [left, top, right, bottom]</span>
+		<span class="comment">// add UI components to the frame</span>
+		bottombar.pathPanel.browseField = bottombar.pathPanel.add( <span class="literal">"edittext"</span>,[3, 3, 395, 22],<span class="literal">""</span>);
+		bottombar.pathPanel.browseBtn = bottombar.pathPanel.add( <span class="literal">"button"</span>,[400, 3, 465, 22],<span class="literal">"Browse"</span>);
+		bottombar.pathPanel.browseField.text = doc.thumbnail.path;
+	
+		<span class="comment">// add the button's event handler, which navigates to the entered path</span>
+		bottombar.pathPanel.browseBtn.onClick = <span class="reserved">function</span>()
+		{
+			app.document.thumbnail = new Thumbnail(new File(bottombar.pathPanel.browseField.text));
+		}
+
+	}
+
+	<span class="comment">// Display the bottom NavBar in each existing browser</span>
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; app.documents.length;i++)
+	{
+		buildNavbar(app.documents[i]);
+	}
+
+	<span class="comment">// Define Bridge event handlers </span>
+	onMyChangeEvent = <span class="reserved">function</span>( event )
+	{
+		<span class="reserved">if</span>(event.object instanceof Document)
+		{
+			<span class="comment">// When thumbnail selection changes in the Content pane, update the NavBar</span>
+			<span class="comment">// to show the current selection or the name of the folder being viewed</span>
+			<span class="reserved">if</span>(event.type == <span class="literal">"selectionsChanged"</span>)
+			{
+				<span class="reserved">if</span>(event.object.navbars.filesystem.bottom != null &amp;&amp; event.object.navbars.filesystem.bottom.pathPanel != null )
+				{
+
+					<span class="comment">// get Thumbnail object for current selection </span>
+					<span class="reserved">var</span> thumb = (event.object.selections[0] != undefined) ? event.object.selections[0]  :  event.object.thumbnail;
+					
+					<span class="comment">// update the UI component in the NavBar to show the path</span>
+					event.object.navbars.filesystem.bottom.pathPanel.browseField.text = thumb.path;
+				}
+				<span class="reserved">else</span>
+				{
+					<span class="reserved">if</span>(event.object instanceof Document)
+					{
+						<span class="comment">// display the configured NavBar if it is not already visible</span>
+						buildNavbar(event.object);
+					}
+				}
+			}
+			
+		}
+		<span class="reserved">return</span> {handled: false}; <span class="comment">// continue with other handlers</span>
+	}
+
+	<span class="comment">// Register event handler</span>
+	app.eventHandlers.push( { handler: onMyChangeEvent} );
+	
+	<span class="reserved">return</span> retval;
+
+}
+
+<span class="comment">/**
+  Determines whether snippet can be run given current context.  The snippet 
+  fails if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Must be running in Bridge
+  &lt;/ul&gt;
+
+  <span class="attrib">@return</span> True is this snippet can run, false otherwise
+  <span class="attrib">@type</span> boolean
+*/</span>
+SnpAddScriptUINavBar.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+{	
+
+	<span class="comment">// Must run Bridge </span>
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) 
+	{
+		<span class="reserved">return</span> true;
+	}
+	
+	<span class="comment">// Fail if these preconditions are not met. </span>
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpAddScriptUINavBar"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+	
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpAddScriptUINavBar_unitTest) == <span class="literal">"undefined"</span>) {
+    new SnpAddScriptUINavBar().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

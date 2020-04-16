@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>SnpCreateHTMLDialog</title>
+<script type="text/javascript">
+
+function doCallBack()
+{
+	var t = call('showValues', window.textOne.value);
+	window.mresult.value = t;
+}
+</script>
+
+</head>
+<body onLoad="doCallBack();">
+<h2>SnpCreateHTMLDialog</h2>
+<p>
+Value sent to Bridge:
+</p>
+<input type="text" name="textOne" value="HelloWorld" size="80" readonly="true" disabled="true">
+<p>
+Value returned by Bridge:
+</p>
+ <input type=text title="mresult" name="mresult" size="80">
+<p>
+  <input type="button" name="done" value="Close dialog" onClick="var d = call('closeDialog');">
+</p>
+
+</body>
+</html>

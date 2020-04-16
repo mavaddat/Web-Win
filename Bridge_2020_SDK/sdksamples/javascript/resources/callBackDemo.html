@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Script-Type" content="text/javascript" />
+<TITLE>Bridge UI/HTML Integration</TITLE>
+</HEAD>
+<BODY>
+
+For File: <INPUT type="file" name="fname" size="65" />
+<br /><br />
+
+Get Metadata key:
+<select name="mdkey">
+	<option value="name">Name
+	<option value="created">Created
+	<option value="parent">In Folder
+</select>
+
+<INPUT type="button" title="Get Data" name="go" value="Get Data"
+	onclick="var t = call('passData',window.fname.value, window.mdkey.value);
+		window.mresult.value = t;" >
+		
+<br /><br />
+
+Result: <input type="text" title="mresult" name="mresult" size="80">
+<br /><br />
+
+</BODY>
+</HTML>

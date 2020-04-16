@@ -1,0 +1,720 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SDKNode.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SDKNode.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Supporting class; backing node for extension handling samples.
+  <BR/><BR/><B>See:</B><UL>- <a href="SDKSystem.html#">SDKSystem</a><BR/>- <a href="BasicExtensionHandler.html#">BasicExtensionHandler</a><BR/>- <a href="CustomInfosetExtensionHandler.html#">CustomInfosetExtensionHandler</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SDKNode.html">SDKNode</a></b></td>
+    <td>Supporting class; backing node for extension handling samples.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview">﻿<span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED </span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Supporting class; backing node for extension handling samples.
+  <span class="attrib">@class</span> Supporting class; backing node for extension handling samples.
+
+ &lt;h4&gt;Description&lt;/h4&gt;
+  
+&lt;p&gt;Implements the methods needed to support node handling via the ExtensionModel and ExtensionHandler. 
+  This class encapsulates a node of the type handled by the sample node-handling extension.&lt;br /&gt;
+
+  <span class="attrib">@see</span> SDKSystem
+  <span class="attrib">@see</span> BasicExtensionHandler
+  <span class="attrib">@see</span> CustomInfosetExtensionHandler
+ 
+  <span class="attrib">@param</span> name The name of the node
+  <span class="attrib">@param</span> iscontainer True if this node will be a container node, false otherwise
+  <span class="attrib">@constructor</span> Constructor.
+ */</span>
+<span class="reserved">function</span> SDKNode(name, iscontainer)
+{
+
+	<span class="comment">/**
+	  The children of this node, if any, in an array.
+	  <span class="attrib">@type</span> SDKNode
+	*/</span>
+	<span class="reserved">this</span>.children = new Array();
+	
+	<span class="comment">/**
+	  The children of this node, if any, in an associative array.
+	  <span class="attrib">@type</span> SDKNode
+	*/</span>
+	<span class="reserved">this</span>.childrenNames = {};
+	
+	<span class="comment">/**
+	  The name of this node.
+	  <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.name = name;
+	
+	<span class="comment">/**
+	  The path of this node.
+	  <span class="attrib">@type</span> String.
+	*/</span>
+	<span class="reserved">this</span>.path = <span class="literal">"/"</span> + name;
+	
+	<span class="comment">/**
+	  The parent of this node. if any.
+	  <span class="attrib">@type</span> SDKNode
+	*/</span>
+	<span class="reserved">this</span>.parent = undefined;
+
+	<span class="comment">/**
+	  Whether this node is a container.
+       	  <span class="attrib">@type</span> Boolean
+   	 */</span>
+	<span class="reserved">this</span>.container = iscontainer;
+
+	<span class="comment">/**
+	  The path for the custom icon.
+      	  <span class="attrib">@type</span> Boolean
+   	 */</span>
+	<span class="reserved">this</span>.iconPath = new File($.fileName).parent.fsName + <span class="literal">"/resources"</span>;
+	
+	<span class="comment">/**
+		The XMP for this node
+		<span class="attrib">@type</span> Metadata
+	*/</span>
+	<span class="reserved">this</span>.metadata = undefined;
+
+	<span class="reserved">this</span>.setCustomInfosetData();
+
+}
+
+<span class="comment">/**
+  Adds a child node to this node.
+  <span class="attrib">@param</span> node SDKNode. The node to add.
+  <span class="attrib">@return</span> True if the node was added successfully, false otherwise
+  <span class="attrib">@type</span> Boolean
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.addNode = <span class="reserved">function</span>(node)
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.getChildNode(node.getName()))
+	{
+		<span class="reserved">if</span>(<span class="reserved">this</span>.name.substr(0,10) != <span class="literal">"SearchNode"</span>)
+		{
+			node.parent = <span class="reserved">this</span>;
+		}
+		<span class="reserved">this</span>.childrenNames[node.name] = node;
+		<span class="reserved">this</span>.children.push(node);
+		<span class="reserved">return</span> true;
+	}
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+  Return the first child of this node.
+  <span class="attrib">@type</span> SDKNode
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getFirstChildNode = <span class="reserved">function</span>() { <span class="reserved">return</span> <span class="reserved">this</span>.children[0]; }
+
+<span class="comment">/**
+  Searches for a specific child node among the immediate children of this node.
+  <span class="attrib">@param</span> name The name of the node to find.
+  <span class="attrib">@type</span> SDKNode
+  <span class="attrib">@return</span> The child node, or null if not found.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getChildNode = <span class="reserved">function</span>(name)
+{ 
+	SDKNode.counter++;
+	<span class="reserved">return</span> <span class="reserved">this</span>.childrenNames[name];
+}
+
+<span class="comment">/**
+  Searches for a specific child node in any part of the tree below this node.
+  <span class="attrib">@param</span> name The name of the node to find.
+  <span class="attrib">@type</span> SDKNode
+  <span class="attrib">@return</span> The descendant node, or null if not found.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.findChildNode = <span class="reserved">function</span>(name)
+{
+	<span class="reserved">var</span> found = <span class="reserved">this</span>.getChildNode(name);
+	<span class="reserved">if</span>(found instanceof SDKNode)
+	{
+		<span class="reserved">return</span> found;
+	}
+	<span class="reserved">else</span>
+	{
+		<span class="reserved">for</span>(index in <span class="reserved">this</span>.children)
+		{
+			found = <span class="reserved">this</span>.children[index].findChildNode(name);
+			<span class="reserved">if</span>(found instanceof SDKNode)
+			{
+				<span class="reserved">return</span> found;
+			}
+		}
+	}
+	
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+  Searches for a specific child node in any part of the tree below this node.
+  <span class="attrib">@param</span> path The name of the node to find, including the prefix
+  <span class="attrib">@type</span> SDKNode
+  <span class="attrib">@return</span> The descendant node, or null if not found.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.findChildNodeFromPath = <span class="reserved">function</span>(uri)
+{
+	<span class="reserved">var</span> pathParts = uri.split(<span class="literal">"/"</span>);
+	<span class="reserved">var</span> currentNode = <span class="reserved">this</span>;
+	
+	<span class="reserved">var</span> searching = true;
+	<span class="reserved">var</span> pos = 1;
+	<span class="reserved">while</span>(searching)
+	{
+		<span class="reserved">if</span>(typeof pathParts[pos+2] != <span class="literal">"undefined"</span>)
+		{
+			pos++;
+			currentNode = currentNode.getChildNode(pathParts[pos]);
+		}
+		<span class="reserved">else</span>
+		{
+			currentNode = currentNode.getChildNode(pathParts[pos+1]);
+			searching = false;
+		}
+	}
+		
+	<span class="reserved">if</span>(currentNode instanceof Object &amp;&amp; currentNode != false)
+	{
+		<span class="reserved">return</span> currentNode;
+	}
+	<span class="reserved">else</span>
+	{
+		<span class="reserved">return</span> false;
+	}
+}
+
+<span class="comment">/**
+  Retrieves all the children of this node
+  <span class="attrib">@type</span> Array
+  <span class="attrib">@return</span> An array of SDKNode objects
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getChildren = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.children; }
+
+<span class="comment">/**
+  Retrieves all the children of this node in an associative array
+  <span class="attrib">@type</span> Array
+  <span class="attrib">@return</span> An array of SDKNode objects
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getChildrenNames = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.childrenNames; }
+
+<span class="comment">/**
+  Retrieves the full path of this node.
+  <span class="attrib">@type</span> String
+  <span class="attrib">@return</span> The full, absolute path string.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getPath = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> path = <span class="reserved">this</span>.path;
+	<span class="reserved">var</span> parent = <span class="reserved">this</span>.parent;
+	
+	<span class="reserved">while</span>(parent) 
+	{
+		<span class="reserved">var</span> fullPath = parent.path + path;
+		parent = parent.getParent();
+		path = fullPath;
+	}
+	
+	<span class="reserved">return</span> path;
+}
+
+<span class="comment">// For debugging only</span>
+SDKNode.<span class="reserved">prototype</span>.listChildren = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> kids = <span class="reserved">this</span>.getChildren();
+
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; kids.length;i++)
+	{
+		$.writeln(kids[i].getPath());
+		kids[i].listChildren();
+	}
+}
+	
+<span class="comment">/**
+  Reports whether this node has any children
+  <span class="attrib">@type</span> Boolean
+  <span class="attrib">@return</span> True if this node has children.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.hasChildren = <span class="reserved">function</span>() { <span class="reserved">return</span> <span class="reserved">this</span>.children.length &gt; 0; }
+
+<span class="comment">/**
+  Retrieves the parent of this node;
+  <span class="attrib">@type</span> SDKNode
+  <span class="attrib">@return</span> The parent node of this node.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getParent = <span class="reserved">function</span>() { <span class="reserved">return</span> <span class="reserved">this</span>.parent; }
+
+<span class="comment">/**
+	Removes a child node from this  node
+	<span class="attrib">@param</span> node The SDKNode child to remove
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.removeNode = <span class="reserved">function</span>(node)
+{
+	<span class="reserved">var</span> name = node.getName();
+	delete <span class="reserved">this</span>.childrenNames[name];
+	
+	<span class="reserved">var</span> tmp = new Array();
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; <span class="reserved">this</span>.children.length;i++)
+	{
+		<span class="reserved">if</span>(<span class="reserved">this</span>.children[i].name != name)
+		{
+			tmp.push(<span class="reserved">this</span>.children[i]);			
+		}		
+	}
+
+	<span class="reserved">this</span>.children = tmp;
+}
+
+SDKNode.<span class="reserved">prototype</span>.updateNode = <span class="reserved">function</span>(node, oldName)
+{
+	delete <span class="reserved">this</span>.childrenNames[oldName];
+	<span class="reserved">this</span>.childrenNames[node.getName()] = node;	
+	
+}
+
+SDKNode.<span class="reserved">prototype</span>.cloneNode = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> c = new Object();
+	<span class="reserved">for</span>( <span class="reserved">var</span> i in <span class="reserved">this</span>)
+	{
+		c[i] = <span class="reserved">this</span>[i]
+	}
+	
+	c.parent = undefined;
+	
+	<span class="reserved">return</span> c;
+}
+
+<span class="comment">// INFOSET SUPPORT //////////////////////////////////////////</span>
+
+<span class="comment">/**
+  Changes the name of this node
+  <span class="attrib">@param</span> String. The new name of this node.
+  <span class="attrib">@type</span> void
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setName = <span class="reserved">function</span>(name)
+{
+	<span class="reserved">var</span> oldName = <span class="reserved">this</span>.name;
+	<span class="comment">//this.parent.removeNode(this);</span>
+	<span class="reserved">this</span>.name = name;
+	<span class="reserved">this</span>.path = <span class="literal">"/"</span> + name;
+	<span class="reserved">if</span>(<span class="reserved">this</span>.parent != undefined)
+	{
+		<span class="reserved">this</span>.parent.updateNode(<span class="reserved">this</span>, oldName);
+	}
+}
+
+<span class="comment">// IMMEDIATE</span>
+
+<span class="comment">/**
+  Reports whether this node is a container.
+  <span class="attrib">@type</span> Boolean
+  <span class="attrib">@return</span> True if this node is a container.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.isContainer = <span class="reserved">function</span>() { <span class="reserved">return</span> <span class="reserved">this</span>.container; }
+
+
+<span class="comment">/**
+  Retrieves the name of this node.
+  <span class="attrib">@type</span> String
+  <span class="attrib">@return</span> Returns the name of this node.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getName = <span class="reserved">function</span>() { <span class="reserved">return</span> <span class="reserved">this</span>.name; }
+
+<span class="comment">/**
+	Returns the file url for this node.  For the extension handler samples this is 
+	a fixed file.
+	<span class="attrib">@type</span> String
+	<span class="attrib">@return</span> Returns the file url for this node.
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getFileUrl = <span class="reserved">function</span>()
+{	
+	<span class="reserved">return</span> <span class="literal">"file:///"</span> + <span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFileIcon512.png"</span>;
+}
+
+<span class="comment">// ICON</span>
+<span class="comment">/**
+  Creates an icon for this node.
+  <span class="attrib">@type</span> BitmapData
+  <span class="attrib">@return</span> Returns the icon for this node
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getIcon = <span class="reserved">function</span>()
+{
+
+	<span class="reserved">if</span>(<span class="reserved">this</span>.isContainer())
+	{
+		<span class="reserved">return</span> new BitmapData(<span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFolderIcon32.png"</span>);
+	}
+	<span class="reserved">else</span>
+	{
+		<span class="reserved">return</span> new BitmapData(<span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFileIcon32.png"</span>);
+	}	
+}
+
+<span class="comment">// THUMBNAIL</span>
+<span class="comment">/**
+  Creates a thumbnail image for this node.
+  <span class="attrib">@type</span> BitmapData
+  <span class="attrib">@return</span> Returns the thumbnail image for this node
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getThumb = <span class="reserved">function</span>()
+{
+
+	<span class="reserved">if</span>(<span class="reserved">this</span>.isContainer())
+	{
+		<span class="reserved">return</span> new BitmapData(<span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFolderIcon128.png"</span>);
+	}
+	<span class="reserved">else</span>
+	{
+		<span class="reserved">return</span> new BitmapData(<span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFileIcon128.png"</span>);
+	}	
+}
+
+<span class="comment">// PREVIEW</span>
+<span class="comment">/**
+  Creates a preview image for this node.
+  <span class="attrib">@type</span> BitmapData
+  <span class="attrib">@return</span> Returns the preview image for this node
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getPreview = <span class="reserved">function</span>()
+{
+	<span class="reserved">if</span>(<span class="reserved">this</span>.isContainer())
+	{
+		<span class="reserved">return</span> new BitmapData(<span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFolderIcon512.png"</span>);
+	}
+	<span class="reserved">else</span>
+	{
+		<span class="reserved">return</span> new BitmapData(<span class="reserved">this</span>.iconPath + <span class="literal">"/BEHFileIcon512.png"</span>);
+	}
+}
+
+<span class="comment">// Metadata</span>
+SDKNode.<span class="reserved">prototype</span>.getMetadata = <span class="reserved">function</span>()
+{
+	<span class="reserved">if</span>(<span class="reserved">this</span>.metadata == undefined)
+	{
+		<span class="reserved">var</span> xmpMeta = new XMPMeta( ); 
+		<span class="reserved">var</span> d = new Date()
+		d.setFullYear(2007,0,1);
+		d.setHours(1, 0, 0, 0);
+		<span class="reserved">var</span> xmptoday = new XMPDateTime(d);
+		xmptoday.convertToLocalTime();
+		
+		xmpMeta.setProperty( XMPConst.NS_EXIF, <span class="literal">"DateTime"</span>, xmptoday);
+		xmpMeta.setProperty( XMPConst.NS_EXIF, <span class="literal">"DateTimeOriginal"</span>, xmptoday);
+				
+		xmpMeta.setProperty(XMPConst.NS_XMP, <span class="literal">"CreatorTool"</span>, <span class="literal">"Bridge SDK"</span>);
+		xmpMeta.setProperty(XMPConst.NS_XMP, <span class="literal">"CreateDate"</span>, xmptoday);
+		xmpMeta.setProperty(XMPConst.NS_XMP, <span class="literal">"MetadataDate"</span>, xmptoday);
+		
+		xmpMeta.setProperty(XMPConst.NS_DC, <span class="literal">"creator"</span>, <span class="literal">"Created by the Bridge SDK"</span>);
+		xmpMeta.setProperty(XMPConst.NS_DC, <span class="literal">"title"</span>, <span class="reserved">this</span>.name);
+		xmpMeta.setProperty(XMPConst.NS_DC, <span class="literal">"description"</span>, <span class="literal">"A Bridge SDK node"</span>);
+		
+		XMPMeta.registerNamespace(<span class="literal">"http://ns.adobe.bridge.sdk/a/"</span>, <span class="literal">"extHanA"</span>);
+		
+		xmpMeta.setProperty(<span class="literal">"http://ns.adobe.bridge.sdk/a/"</span>, <span class="literal">"Description"</span>, <span class="literal">"Some custom metadata added to a script defined node"</span>);
+		xmpMeta.setProperty(<span class="literal">"http://ns.adobe.bridge.sdk/a/"</span>, <span class="literal">"ID"</span>, Math.floor(Math.random()*30));
+			
+		<span class="reserved">var</span> newXmp = xmpMeta.serialize(XMPConst.SERIALIZE_OMIT_PACKET_WRAPPER | XMPConst.SERIALIZE_USE_COMPACT_FORMAT ); 
+		<span class="reserved">this</span>.metadata = new Metadata( newXmp );
+	}
+	
+	<span class="reserved">return</span> <span class="reserved">this</span>.metadata;
+}
+
+<span class="comment">// Quick</span>
+
+SDKNode.<span class="reserved">prototype</span>.setLabelRating = <span class="reserved">function</span>(type, val)
+{
+	md = <span class="reserved">this</span>.getMetadata();
+	md.namespace = <span class="literal">"http://ns.adobe.com/xap/1.0/"</span>;
+	
+	<span class="reserved">if</span>(type == <span class="literal">"Rating"</span>)
+	{
+		md.Rating = val;
+	}
+	<span class="reserved">else</span>
+	{
+		md.Label = val;
+	}
+}
+
+SDKNode.<span class="reserved">prototype</span>.getLabelRating = <span class="reserved">function</span>(type)
+{
+	<span class="reserved">var</span> retval = 0;
+	md = <span class="reserved">this</span>.getMetadata();
+	md.namespace = <span class="literal">"http://ns.adobe.com/xap/1.0/"</span>;
+	
+	<span class="reserved">if</span>(type == <span class="literal">"Rating"</span>)
+	{
+		retval = md.Rating;
+	}
+	<span class="reserved">else</span>
+	{
+		retval = md.Label;
+	}
+
+	<span class="reserved">return</span> retval;
+}
+	
+
+SDKNode.<span class="reserved">prototype</span>.setMetadata = <span class="reserved">function</span>(md)
+{
+	<span class="reserved">this</span>.metadata = md;
+}
+<span class="comment">/////////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// CUSTOM INFOSET </span>
+
+<span class="comment">// Support methods for the Custom Infoset</span>
+
+<span class="comment">/**
+  Called at node creation time to set values for the specified fields
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setCustomInfosetData = <span class="reserved">function</span>()
+{
+	<span class="reserved">this</span>.customString = <span class="literal">"A Simple String for node: "</span> + <span class="reserved">this</span>.name;
+	
+	<span class="reserved">this</span>.customNumber = (<span class="reserved">this</span>.container) ? 1234 : 9876;
+	<span class="reserved">this</span>.customDate = new Date().toString();
+	<span class="reserved">this</span>.customArray = [<span class="literal">"Array"</span>, <span class="literal">"Of"</span>, <span class="literal">"Strings"</span>];
+	<span class="reserved">this</span>.customBool = true;
+}
+
+<span class="comment">/**
+	Retrieves this node's data for the custom Infoset member1 value
+	<span class="attrib">@type</span> String
+	<span class="attrib">@return</span> The value for member1 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getCustomString = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.customString; }
+
+<span class="comment">/**
+	Retrieves this node's data for the custom Infoset member2  value;
+	<span class="attrib">@type</span> Number
+	<span class="attrib">@return</span> The value for member2 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getCustomNumber = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.customNumber; }
+
+<span class="comment">/**
+	Retrieves this node's data for the custom Infoset member3  value;
+	<span class="attrib">@type</span> Date
+	<span class="attrib">@return</span> The value for member3 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getCustomDate = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.customDate; }
+
+<span class="comment">/** 
+	Retrieves this node's data for the custom Infoset member4  value;
+	<span class="attrib">@type</span> Array
+	<span class="attrib">@return</span> The value for member4 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getCustomArray = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.customArray; }
+
+<span class="comment">/**
+	Retrieves this node's data for the custom Infoset member5  value;
+	<span class="attrib">@type</span> Boolean
+	<span class="attrib">@return</span> The value for member5 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.getCustomBool = <span class="reserved">function</span>(){ <span class="reserved">return</span> <span class="reserved">this</span>.customBool; }
+
+<span class="comment">/**
+	Sets this node's data for the custom Infoset member1 value;
+	<span class="attrib">@param</span> s The new value for member1 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setCustomString = <span class="reserved">function</span>(s){ <span class="reserved">this</span>.customString = s; }
+
+<span class="comment">/**
+  Retrieves this node's data for the custom Infoset member2  value;
+	<span class="attrib">@param</span> n The new value for member2 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setCustomNumber = <span class="reserved">function</span>(n){ <span class="reserved">this</span>.customNumber = n; }
+
+<span class="comment">/**
+  Retrieves this node's data for the custom Infoset member3  value;
+	<span class="attrib">@param</span> d The new value for member3 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setCustomDate = <span class="reserved">function</span>(d){ <span class="reserved">this</span>.customDate = d; }
+
+<span class="comment">/**
+  Retrieves this node's data for the custom Infoset member4  value;
+	<span class="attrib">@param</span> a The new value for member4 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setCustomArray = <span class="reserved">function</span>(a){ <span class="reserved">this</span>.customArray = a; }
+
+<span class="comment">/**
+  Retrieves this node's data for the custom Infoset member5  value;
+	<span class="attrib">@param</span> b The new value for member5 of the custom Infoset
+*/</span>
+SDKNode.<span class="reserved">prototype</span>.setCustomBool = <span class="reserved">function</span>(b){ <span class="reserved">this</span>.customBool = b; }
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

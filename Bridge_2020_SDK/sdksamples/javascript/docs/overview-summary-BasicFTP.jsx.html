@@ -1,0 +1,496 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="BasicFTP.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>BasicFTP.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to upload and download files to and from an FTP server.
+  <BR/><BR/><B>See:</B><UL>- <a href="AsynchronousFTP.html#">AsynchronousFTP</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="BasicFTP.html">BasicFTP</a></b></td>
+    <td>Shows how to upload and download files to and from an FTP server.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Shows how to upload and download files to and from an FTP server.
+  <span class="attrib">@class</span> Shows how to upload and download files to and from an FTP server.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+  &lt;b&gt;You must&lt;/b&gt; edit the FTP settings within this code; the code as shipped does not provide any default
+  values for these settings and if you do not edit the FTP settings in the code (see "FTP server configuration" below),
+  then the code will not run correctly. For the sample to execute correctly, you need access to an FTP server.
+  
+  &lt;ol&gt;
+   &lt;li&gt; Customize the FTP settings in the code to match your FTP server configuration.
+   &lt;li&gt; Run the snippet in the ExtendScript Toolkit, with Adobe Bridge CS6 as the target (see Readme.txt)
+   &lt;li&gt; In Adobe Bridge, navigate to a folder that has some files to upload
+   &lt;li&gt; Right-click the thumbnail for a file you wish to upload and choose "SDK Basic FTP: Upload file(s)"
+   &lt;li&gt; Right-click the thumbnail for the file you uploaded and choose "SDK Basic FTP: Download files" 
+        to download the same file.
+   &lt;/ol&gt;
+ 
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+  &lt;p&gt;This code shows how to connect to an FTP server using the FTP object, then use the object
+  to upload files to the FTP server from Bridge, and download files from the server to Bridge.
+  This sample uses a synchronous connection, which blocks the main thread, so it is best to
+  choose small files to transfer. For a demonstration of an asynchronous connection, see
+  AsynchronousFTP.jsx
+
+  &lt;p&gt;You must customize the specific values for the FTP server, passwords, directories and files 
+  to match your FTP settings and file system. You must upload at least one file before attempting
+  to download a file.&lt;br /&gt;
+  
+  <span class="attrib">@see</span> AsynchronousFTP
+
+  <span class="attrib">@constructor</span> Constructor.
+ */</span>
+<span class="reserved">function</span> BasicFTP()
+{
+
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tExecute against Bridge main engine.\nBridge must be running and config settings must be correct."</span>;
+	$.level = 1; <span class="comment">// Debugging level</span>
+	
+	<span class="comment">///////////////////////////////////////////////////////////////////</span>
+	<span class="comment">// FTP server configuration.</span>
+	<span class="comment">// You must change these settings to match your FTP configuration.</span>
+	<span class="comment">///////////////////////////////////////////////////////////////////</span>
+	
+	<span class="comment">/**
+	 The FTP server address to which you want to upload, 
+	  which you must change to an FTP server to which you have access. This is set to be empty
+	  for the sample and you have to populate this with your own FTP server details for this
+	  sample to be functional.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.ftpAddress = <span class="literal">""</span>;
+	
+	<span class="comment">/**
+	 The ftp username used to connect to the FTP server.  This must be populated for the sample
+      to function correctly
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.ftpUsername = <span class="literal">""</span>;
+	
+	<span class="comment">/**
+	 The ftp password.  his must be populated for the sample
+      to function correctly
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.ftpPassword = <span class="literal">""</span>;
+	
+	<span class="comment">/**
+	 The directory where uploaded files are stored on the FTP server.
+	 <span class="attrib">@type</span> String
+	*/</span> 
+	<span class="reserved">this</span>.ftpDir = <span class="literal">""</span>;
+	
+}
+
+<span class="comment">/**
+  Functional part of this snippet, creates the FTP object, and connects to the FTP server.
+  
+ &lt;p&gt; Adds "upload" and "download" items to the context menu for the Bridge Content pane. 
+ &lt;ul&gt;
+   &lt;li&gt; Choosing the "upload" item uploads the files for the currently selected Thumbnail or Thumbnails,
+        to a folder that it creates on the server named "uploadedFromBridge". Uploaded files are 
+        given the prefix 'uploaded_'. Selected folder thumbnails are ignored.
+   &lt;li&gt; Choosing the "download" item downloads the files in the remote "uploadedFromBridge" folder, 
+        to the local folder that is currently selected in Bridge.
+ &lt;/ul&gt;
+
+  <span class="attrib">@return</span> True if the snippet ran as expected, false if the connection to the server fails,
+  	or if an upload or download operation fails.
+  <span class="attrib">@type</span> Boolean
+*/</span>
+BasicFTP.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() 
+{
+
+	<span class="reserved">var</span> retval = true;
+	
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		<span class="reserved">return</span> false;
+	}
+		
+	$.writeln(<span class="literal">"BasicFTP: Loading webaccess library..."</span>);
+
+	<span class="comment">// Load the Web-access library</span>
+	<span class="reserved">if</span>( webaccesslib == undefined ) {
+		<span class="reserved">if</span>( Folder.fs == <span class="literal">"Windows"</span> ) {
+			<span class="reserved">var</span> pathToLib = Folder.startup.fsName + <span class="literal">"/webaccesslib.dll"</span>;
+		} <span class="reserved">else</span> {
+			<span class="reserved">var</span> pathToLib = Folder.startup.fsName + <span class="literal">"/webaccesslib.bundle"</span>;
+			<span class="comment">// verify that the path is valid</span>
+		}
+		<span class="reserved">var</span> libfile = new File( pathToLib );
+		<span class="reserved">var</span> webaccesslib = new ExternalObject(<span class="literal">"lib:"</span> + pathToLib );
+	}
+	
+	<span class="comment">// So we can keep track of this object</span>
+	<span class="reserved">var</span> that = <span class="reserved">this</span>;
+
+	<span class="comment">// When the context menu is selected</span>
+	<span class="reserved">function</span> uploadFiles()
+	{
+
+		<span class="comment">// Create ftp object and assign username/password</span>
+		<span class="reserved">var</span> url = <span class="literal">"ftp://"</span> + that.ftpAddress;
+		<span class="reserved">var</span> ftpCon = new FtpConnection(url);
+		
+		ftpCon.username = that.ftpUsername;
+		ftpCon.password = that.ftpPassword;
+		
+		<span class="comment">//////////////////////</span>
+		<span class="comment">// PUT some files</span>
+		
+		$.writeln(<span class="literal">"BasicFTP: Connecting to "</span> + url);	
+		<span class="comment">// connect to the server</span>
+		ftpCon.open(url);
+		<span class="reserved">if</span>(ftpCon.isOpen)
+		{
+			$.writeln(<span class="literal">"Connected"</span>);
+			<span class="reserved">var</span> sels = app.document.selections;
+			
+			<span class="comment">// Move to the directory  (if needed)</span>
+			<span class="comment">//ftpCon.cd = "bridge" </span>
+
+			<span class="comment">// Create the destination directory on the server</span>
+			<span class="comment">//ftpCon.mkdir(that.ftpDir);</span>
+			
+			<span class="comment">// Move to the new directory</span>
+			ftpCon.cd = that.ftpDir;
+			
+			$.writeln(<span class="literal">"BasicFTP: Uploading files..."</span>);
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; sels.length;i++)
+			{
+				<span class="reserved">if</span>(sels[i].spec instanceof File)
+				{
+					$.writeln(<span class="literal">"BasicFTP: Uploading file client_"</span> + sels[i].name);
+					ftpCon.put(sels[i].spec, (<span class="literal">"uploaded_"</span> + sels[i].name));
+				}
+			}	
+		}
+		<span class="reserved">else</span>
+		{
+			$.writeln(<span class="literal">"BasicFTP: Put files failed: Connection not open"</span>);
+			retval = false;
+		}
+			
+		<span class="comment">// close the connection</span>
+		ftpCon.close();
+		$.writeln(<span class="literal">"BasicFTP: Connection closed"</span>);
+
+	} <span class="comment">// end uploadFiles()</span>
+
+	<span class="comment">// Download files from FTP server</span>
+	<span class="reserved">function</span> downloadFiles()
+	{
+		<span class="comment">// Create ftp object and assign username/password</span>
+		<span class="reserved">var</span> url = <span class="literal">"ftp://"</span> + that.ftpAddress;
+		<span class="reserved">var</span> ftpCon = new FtpConnection(url);
+		
+		ftpCon.username = that.ftpUsername;
+		ftpCon.password = that.ftpPassword;
+		
+		<span class="comment">//////////////////////</span>
+		<span class="comment">// GET some files</span>
+		
+		$.writeln(<span class="literal">"BasicFTP: Connecting to "</span> + url);	
+		<span class="comment">// connect to the server</span>
+		ftpCon.open(url);
+		<span class="reserved">if</span>(ftpCon.isOpen)
+		{
+		
+			<span class="comment">// Move to the this directory  if needed</span>
+			<span class="comment">// NOTE - you may not need to move to this directory</span>
+			<span class="comment">//ftpCon.cd = "bridge" </span>
+
+			<span class="comment">// Move to the new directory</span>
+			ftpCon.cd = that.ftpDir;
+
+			<span class="comment">// Get a directory listing</span>
+			ftpCon.ls();
+		
+			<span class="comment">// Get a list of files from the server</span>
+			<span class="comment">// Read the files poperty immediately after the ls() call</span>
+			<span class="reserved">var</span> theFiles = ftpCon.files;
+
+			<span class="reserved">var</span> parent = app.document.thumbnail.spec.fsName;
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; theFiles.length;i++)
+			{
+
+				<span class="comment">// Check that it is a file we are going to download</span>
+				<span class="reserved">if</span>(!ftpCon.isDir(theFiles[i]))
+				{
+					<span class="reserved">var</span> path = parent + <span class="literal">"/"</span> + theFiles[i].replace(<span class="literal">"uploaded_"</span>, <span class="literal">"downloaded_"</span>);
+					<span class="reserved">var</span> localFile = new File(path);
+					$.writeln(<span class="literal">"BasicFTP: Downloading "</span> + theFiles[i] + <span class="literal">" to "</span> + localFile.name);
+					ftpCon.get(theFiles[i], localFile);
+				}				
+			}
+
+		}
+		<span class="reserved">else</span>
+		{
+			$.writeln(<span class="literal">"BasicFTP: Get files failed: Connection not open"</span>);
+			retval = false;
+		}
+			
+		<span class="comment">// close the connection</span>
+		ftpCon.close();
+		$.writeln(<span class="literal">"BasicFTP: Connection closed"</span>);
+
+	} <span class="comment">// end downloadFiles</span>
+
+
+	<span class="reserved">var</span> ftpUMenu = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK Basic FTP: Upload file(s)"</span>, <span class="literal">"at the end of Thumbnail"</span>, <span class="literal">"BasicFTP_uploadloadMenu"</span>);
+	<span class="reserved">var</span> ftpDMenu = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK Basic FTP: Download files"</span>, <span class="literal">"at the end of Thumbnail"</span>, <span class="literal">"BasicFTP_downloadMenu"</span>);
+
+	ftpDMenu.onSelect = <span class="reserved">function</span>()
+	{
+		downloadFiles();
+	}
+
+	ftpUMenu.onSelect = <span class="reserved">function</span>()
+	{
+		uploadFiles();
+	}
+
+	<span class="comment">// How to display the context menu, depending on what is selected</span>
+	ftpUMenu.onDisplay = <span class="reserved">function</span>(m)
+	{
+		<span class="reserved">var</span> selLength = app.document.selectionLength;
+		<span class="comment">// </span>
+		<span class="reserved">var</span> selSnapshot = app.document.selections;
+		<span class="reserved">var</span> hasFiles = false;
+		<span class="reserved">for</span>(<span class="reserved">var</span> i=0; i &lt; selLength; i++)
+		{
+			<span class="reserved">var</span> th = selSnapshot[i];
+			<span class="reserved">if</span>(!th.container) {
+				hasFiles = true;
+				break;
+			}
+		}
+		<span class="reserved">this</span>.enabled = hasFiles;
+	}
+	
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+  Determines whether snippet can be run given current context.  The snippet will
+  fail if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Bridge must be running
+  &lt;li&gt; Config settings must be changed to match your systems
+  &lt;/ul&gt;
+  <span class="attrib">@return</span> True is this snippet can run, false otherwise
+  <span class="attrib">@type</span> Boolean
+*/</span>
+BasicFTP.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+{
+
+	<span class="reserved">var</span> ret = false;
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) 
+	{ 
+
+		<span class="reserved">if</span>(<span class="reserved">this</span>.ftpAddress == <span class="literal">""</span> || <span class="reserved">this</span>.ftpUsername == <span class="literal">""</span> 
+			|| <span class="reserved">this</span>.ftpPassword == <span class="literal">""</span> || <span class="reserved">this</span>.ftpDir == <span class="literal">""</span>)
+		{
+			$.writeln(<span class="literal">"BasicFTP: ERROR - Cannot run AsynchronousFTP"</span>);
+			$.writeln(<span class="literal">"BasicFTP: Check configuration settings"</span>);
+		}
+		<span class="reserved">else</span>
+		{
+			ret = true;
+		}
+			
+		<span class="reserved">return</span> ret;
+	}
+	
+	$.writeln(<span class="literal">"BasicFTP: ERROR - Cannot run AsynchronousFTP"</span>);
+	$.writeln(<span class="literal">"BasicFTP: "</span> + <span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> ret;
+}
+
+<span class="comment">/**
+  "main program": construct an anonymous instance and run it
+*/</span>
+<span class="reserved">if</span>(typeof(BasicFTP_unitTest) == <span class="literal">"undefined"</span>) {
+	new BasicFTP().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

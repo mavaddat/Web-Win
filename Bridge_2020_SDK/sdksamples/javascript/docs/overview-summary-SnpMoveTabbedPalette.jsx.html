@@ -1,0 +1,383 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpMoveTabbedPalette.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpMoveTabbedPalette.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to place a TabbedPalette in Bridge in a custom location via scripting.
+ <BR/><BR/><B>See:</B><UL>- <a href="SnpCreateTabbedPaletteScriptUI.html#">SnpCreateTabbedPaletteScriptUI</a><BR/>- <a href="SnpCreateWebTabbedPalette.html#">SnpCreateWebTabbedPalette</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpMoveTabbedPalette.html">SnpMoveTabbedPalette</a></b></td>
+    <td>Shows how to place a TabbedPalette in Bridge in a custom location via scripting.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+ <span class="attrib">@fileoverview</span> Shows how to place a TabbedPalette in Bridge in a custom location via scripting.
+ <span class="attrib">@class</span> Shows how to place a TabbedPalette in Bridge in a custom location via scripting.
+ 
+ &lt;h4&gt;Usage&lt;/h4&gt;
+ &lt;ol&gt;
+    &lt;li&gt;Run the snippet in the ExtendScript Toolkit (see Readme.txt)
+	 &lt;li&gt;Click on the buttons to move the palette around
+ &lt;/ol&gt;
+ 
+ &lt;h4&gt;Description&lt;/h4&gt;
+ 
+ &lt;p&gt;Adds a script-defined tabbed palette to the Bridge browser window which can be moved to a
+ new location within Bridge using the TabbedPalette.setLocation() method.
+
+ &lt;p&gt;The palette is of the "script" type, and contains ScriptUI components.  The ScriptUI buttons are
+ used to move the palette around or dismiss the palette altogether.
+
+ &lt;p&gt;The current workspace is reset to the defaul and the new palette appears in the default 
+ upper-left position in the browser.  Removing the pallete will restore the workspace back 
+ to its original state.&lt;br /&gt;
+  
+	<span class="attrib">@see</span> SnpCreateTabbedPaletteScriptUI
+	<span class="attrib">@see</span> SnpCreateWebTabbedPalette
+
+ <span class="attrib">@constructor</span> Constructor.
+ */</span> 
+<span class="reserved">function</span> SnpMoveTabbedPalette()
+{
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tExecute against Bridge main engine.\nBridge must be running"</span>;
+	$.level = 1; <span class="comment">// Debugging level</span>
+	<span class="reserved">this</span>.paletteRefs = null;
+	
+}
+
+<span class="comment">/**
+ Functional part of this snippet.  
+ 
+ Creates the TabbedPalette object, defining the content with 
+ ScriptUI components, and adds the palette to the current Bridge browser window.
+	<span class="attrib">@return</span> True if the snippet ran as expected, false otherwise.  
+	<span class="attrib">@type</span> Boolean
+*/</span>
+SnpMoveTabbedPalette.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		retval = false;	
+		<span class="reserved">return</span> retval;
+	}
+
+	<span class="comment">//TODO - get current workspace, reset to default, then put workspace back when done.</span>
+	<span class="reserved">var</span> lastWorkspace = app.document.workspace;
+	app.document.resetToDefaultWorkspace();
+
+	<span class="comment">// Create the TabbedPalette object, of type "script"</span>
+	<span class="reserved">var</span> scriptPalette = new TabbedPalette( app.document, <span class="literal">"SnpMoveTabbedPalette"</span>, <span class="literal">"SnpMovePaletteTab"</span>, <span class="literal">"script"</span>, <span class="literal">"left"</span>, <span class="literal">"top"</span>);
+	
+	<span class="comment">// resize the elements if the palette is resized</span>
+	scriptPalette.content.onResize = <span class="reserved">function</span>()
+	{
+		<span class="reserved">var</span> b = <span class="reserved">this</span>.bounds;
+		pnl.bounds = b;
+		<span class="reserved">this</span>.layout.resize(true);
+		scriptPalette.content.layout.layout(true);
+	}
+	
+	<span class="reserved">var</span> pnl = scriptPalette.content.add(<span class="literal">"panel"</span>, undefined , <span class="literal">""</span>);
+	pnl.alignChildren = [<span class="literal">"center"</span>, <span class="literal">"fill"</span>];
+
+	<span class="reserved">var</span> mainBtnGp = pnl.add(<span class="literal">"group"</span>);
+	mainBtnGp.orientation = <span class="literal">"column"</span>;
+	
+	<span class="reserved">var</span> titleGp = mainBtnGp.add(<span class="literal">"group"</span>);
+	titleGp.alignment = [<span class="literal">"fill"</span>, <span class="literal">"fill"</span>];
+	<span class="reserved">var</span> title = titleGp.add(<span class="literal">"statictext"</span>, undefined, <span class="literal">"SnpMoveTabbedPalette"</span>);
+	
+	<span class="comment">// Change the font of the title</span>
+	<span class="reserved">var</span> g = title.graphics;
+	g.font = ScriptUI.newFont (<span class="literal">"Arial"</span>, 20);
+	
+	<span class="reserved">var</span> gp1 = mainBtnGp.add(<span class="literal">"group"</span>);
+	gp1.orientation = <span class="literal">"row"</span>;
+	ulBtn = gp1.add(<span class="literal">"button"</span>, undefined, <span class="literal">"Upper Left"</span>);
+	urBtn = gp1.add(<span class="literal">"button"</span>, undefined, <span class="literal">"Upper Right"</span>);
+	
+	gp2 = mainBtnGp.add(<span class="literal">"group"</span>);
+	cBtn = gp2.add(<span class="literal">"button"</span>, undefined, <span class="literal">"Center"</span>);
+	
+	gp3 = mainBtnGp.add(<span class="literal">"group"</span>);
+	llBtn = gp3.add(<span class="literal">"button"</span>, undefined, <span class="literal">"Lower Left"</span>);
+	lrBtn = gp3.add(<span class="literal">"button"</span>, undefined, <span class="literal">"Lower Right"</span>);
+	
+	removeBtn = mainBtnGp.add(<span class="literal">"button"</span>, undefined, <span class="literal">"Remove Palette"</span>);
+	removeBtn.alignment = [<span class="literal">"fill"</span>, <span class="literal">"fill"</span>];
+	
+	<span class="comment">// recalculate container size</span>
+	scriptPalette.content.layout.layout(true);
+	versionCheck();
+	
+	<span class="comment">// Handlers for the buttons</span>
+	
+	<span class="comment">// Remove the palette and restore the workspace</span>
+	removeBtn.onClick = <span class="reserved">function</span>()
+	{
+		scriptPalette.remove();
+		app.document.setWorkspace(lastWorkspace.id);
+	}	
+	
+	<span class="comment">// Place the palette in the top left corner of bridge (defaul)</span>
+	ulBtn.onClick = <span class="reserved">function</span>()
+	{
+		scriptPalette.setLocation(<span class="literal">"left"</span>, <span class="literal">"top"</span>);
+	}
+
+	<span class="comment">// Place the palette in the top right</span>
+	urBtn.onClick = <span class="reserved">function</span>()
+	{
+		scriptPalette.setLocation(<span class="literal">"right"</span>, <span class="literal">"top"</span>);
+	}
+
+	<span class="comment">// Place the palette in the center</span>
+	cBtn.onClick = <span class="reserved">function</span>()
+	{
+		scriptPalette.setLocation(<span class="literal">"center"</span>, <span class="literal">"middle"</span>);
+	}
+
+	<span class="comment">// Place the palette in the bottom left</span>
+	llBtn.onClick = <span class="reserved">function</span>()
+	{
+		scriptPalette.setLocation(<span class="literal">"left"</span>, <span class="literal">"bottom"</span>);
+	}
+
+	<span class="comment">// Place the palette in the bottom right</span>
+	lrBtn.onClick = <span class="reserved">function</span>()
+	{
+		scriptPalette.setLocation(<span class="literal">"right"</span>, <span class="literal">"bottom"</span>);
+	}
+
+	<span class="reserved">function</span> versionCheck()
+	{
+		<span class="reserved">var</span> v = app.version.split(<span class="literal">"."</span>);
+        <span class="reserved">if</span> (v[0] &lt; 2 || (v[0] == 2 &amp;&amp; v[1] &lt; 1))
+		{
+			ulBtn.enabled = false;
+			urBtn.enabled = false;
+			llBtn.enabled = false;
+			lrBtn.enabled = false;
+			cBtn.enabled = false;
+			<span class="reserved">var</span> errTxt = mainBtnGp.add(<span class="literal">"statictext"</span>, undefined, <span class="literal">"Bridge 2.1 or above is required to move TabbedPalettes"</span>);
+			<span class="reserved">var</span> gfx = errTxt.graphics;
+			gfx.font = ScriptUI.newFont (<span class="literal">"Arial"</span>, ScriptUI.FontStyle.ITALIC, 10);
+			scriptPalette.content.layout.layout(true);
+		}
+	}
+
+	<span class="reserved">return</span> retval;
+
+}
+
+<span class="comment">/**
+  Determines whether snippet can be run given current context.  The snippet 
+  fails if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Must be running in Bridge
+  &lt;/ul&gt;
+ 
+  <span class="attrib">@return</span> True is this snippet can run, false otherwise
+  <span class="attrib">@type</span> boolean
+*/</span>
+SnpMoveTabbedPalette.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+{	
+	<span class="comment">// Must run in Bridge</span>
+
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) 
+	{
+		<span class="reserved">return</span> true;		
+	}
+	
+	<span class="comment">// Fail if these preconditions are not met.  </span>
+	<span class="comment">// Bridge must be running,</span>
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpMoveTabbedPalette"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+	
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpMoveTabbedPalette_unitTest) == <span class="literal">"undefined"</span>) {
+    new SnpMoveTabbedPalette().run();
+}
+
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

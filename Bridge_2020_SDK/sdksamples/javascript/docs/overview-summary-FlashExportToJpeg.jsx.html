@@ -1,0 +1,660 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="FlashExportToJpeg.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>FlashExportToJpeg.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Sample that shows a Flash Palette in Bridge that exports the current items selected in Bridge to JPEG files.  It also adds two menu items to the Window Menu; ShowExportToJPEG and HideExportToJPEG
+  <BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">///////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Sample that shows a Flash Palette in Bridge that exports the current items selected in Bridge to JPEG files.  It also adds two menu items to the Window Menu; ShowExportToJPEG and HideExportToJPEG
+  <span class="attrib">@class</span> Sample that shows a Flash Palette in Bridge that exports the current items selected in Bridge to JPEG files.  It also adds two menu items to the Window Menu; ShowExportToJPEG and HideExportToJPEG
+ 
+**/</span>
+#target bridge
+
+<span class="reserved">if</span>( app.name == <span class="literal">"bridge"</span>) {
+
+	<span class="reserved">var</span> ExportToJpeg = {};
+
+	<span class="comment">/**
+	 This function will return an array that matches the Metadata template names
+	  <span class="attrib">@type</span> Array
+	*/</span>
+	ExportToJpeg.getMetadataTemplatesArray = <span class="reserved">function</span>() {
+		<span class="reserved">var</span> templates = new Array();
+		<span class="reserved">var</span> pathToTemplates = Folder.userData + <span class="literal">"/Adobe/XMP/Metadata Templates"</span>;
+		<span class="reserved">var</span> templatesFolder = new Folder( pathToTemplates );
+		<span class="reserved">if</span>( templatesFolder.exists ) {
+			<span class="reserved">var</span> xmpFiles = templatesFolder.getFiles(<span class="literal">"*.xmp"</span>);
+			<span class="reserved">for</span>( <span class="reserved">var</span> x = 0; x &lt; xmpFiles.length; ++x ) {
+				<span class="comment">// the name will be URL encoded and have an extension.</span>
+				<span class="comment">// Decode the name and remove the extension.</span>
+				<span class="reserved">var</span> fileName = File.decode(xmpFiles[x].name) ;
+				<span class="reserved">if</span>( fileName.length &gt; 4 ) {
+					fileName = fileName.substring( 0, fileName.length - 4 );
+				}
+				templates.push(fileName);
+			}
+		}
+		<span class="reserved">return</span> templates;
+	}
+	<span class="comment">/*
+		This function is responsible for creating the file name and has
+		some special characters that represent the following:
+		&lt;ul&gt;
+			&lt;li&gt;%N		The name of the original file, w/o Extension&lt;/li&gt;
+			&lt;li&gt;%E		The orignal file's extension&lt;/li&gt;
+		&lt;/ul&gt;
+		<span class="attrib">@type</span> File
+	*/</span>
+	ExportToJpeg.generateJpegFileWithUniqueName = <span class="reserved">function</span>( origFileName, namePattern, parentPath ) {
+		<span class="reserved">var</span> origName = origFileName;
+		<span class="reserved">var</span> origExtension = undefined;
+		<span class="reserved">var</span> baseName = origName;
+
+		<span class="reserved">if</span>( ! namePattern || namePattern.length &lt; 1 ) {
+			namePattern = <span class="literal">"%N"</span>;
+		}
+		<span class="reserved">var</span> lastDot = origName.lastIndexOf (<span class="literal">"."</span>);
+		<span class="reserved">if</span>( lastDot &gt; 0 ) {
+			origExtension = origName.substr (lastDot);
+			baseName = origName.substr (0, lastDot);
+		}
+	
+		<span class="reserved">var</span> newName = namePattern;
+		<span class="reserved">while</span>( newName.indexOf (<span class="literal">"%N"</span>) &gt; -1 ) {
+			newName = newName.replace (<span class="literal">"%N"</span>, baseName)
+		}
+		<span class="reserved">if</span>( origExtension ) {
+			<span class="reserved">while</span>( newName.indexOf (<span class="literal">"%E"</span>) &gt; -1 ) {
+				newName = newName.replace (<span class="literal">"%E"</span>, baseName)
+			}
+		}
+
+		<span class="comment">// now add the .jpg extension</span>
+		<span class="reserved">var</span> exportedJpeg = undefined;
+		<span class="reserved">var</span> matching_files = -1;
+		do {
+			++matching_files;
+			<span class="reserved">if</span>( matching_files == 0 ) {
+				exportedJpeg = new File( parentPath + <span class="literal">"/"</span> + newName + <span class="literal">".jpg"</span> );
+			} <span class="reserved">else</span> {
+				exportedJpeg = new File( parentPath + <span class="literal">"/"</span> + newName + <span class="literal">"_"</span> + matching_files + <span class="literal">".jpg"</span> );
+			}
+		} <span class="reserved">while</span> ( exportedJpeg.exists ); <span class="comment">// generate a unique file name</span>
+		<span class="reserved">return</span> exportedJpeg;
+	}
+
+	<span class="comment">// The name of an AppleScript file in the same directory as this JavaScript -- may be used on Mac for extra automation</span>
+	<span class="reserved">var</span> Embed_sRGBProfileAppleScript = new File ( new File( $.fileName).parent.fsName + <span class="literal">"/resources/Embed_sRGBProfile.scpt"</span> );
+
+	<span class="comment">/**
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	Exports the current document's selection to JPEG files.
+	The options arg is a JavaScript object with the following properties.
+
+	bitmapSource 		Either "thumbnail", "preview" or "fullsize"
+								Determines which the BitmapData is exported to JPEG,
+
+	maxBitmapSize		A number. The exported bitmap will be resized to be no longer
+								than this on its longest side--if necessary.
+
+	rotateBitmap			A boolean. If true and the source file has the tiff:Orientation
+								property the bitmap will be rotated before it is exported.
+					
+	inheritMetadata		A boolean. If true, metadata properties in the original will be copied
+								to the JPEG after export. Some metadata, such as camera raw settings
+								will not be copied.
+					
+	templateOption		Either "append" or "replace" -- controls how the metadata template (if any)
+								is applied to the JPEG after it is exported.
+					
+	template				The name of a metadata template to apply to the JPEG after export,
+								or undefined if no template is to be applied.
+					
+	jpegQuality				A number, from 1 to 100, passed to the BitmapData.exportTo() function
+								to control the quality of the JPEG exported; 100 is highest quality.
+					
+	addKeywords			A boolean. If true, keywords in the option parameter "keywords"
+								will be added to the exported JPEG.
+
+	keywords				An Array of keywords. If addKeywrds is true
+								these keywords will be added to the file.
+					
+	fileNamePattern		A string passed to the generateJpegFileWithUniqueName() function
+								to produce a file name for the exported JPEG.
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/</span>
+	ExportToJpeg.exportToJpeg = <span class="reserved">function</span>( doc, options, flashPlayer ) {
+
+		<span class="reserved">var</span> parentPath = doc.thumbnail.spec.fsName;
+		<span class="comment">// Workaround for the Desktop node's Thumbnail.spec not returning a real Folder</span>
+		<span class="reserved">if</span>( doc.thumbnail.path == <span class="literal">"bridge:special:desktop"</span>) { 
+			parentPath = <span class="literal">"~/Desktop"</span>; 
+		}
+		
+		<span class="reserved">if</span>( ! ExternalObject.AdobeXMPScript ) {
+			ExternalObject.AdobeXMPScript = new ExternalObject(<span class="literal">"lib:AdobeXMPScript"</span>);
+		}
+				
+		app.synchronousMode = true;
+		<span class="reserved">var</span> thumbs =  doc.selections;
+
+		<span class="comment">// Iterate through all the selected Thumbnails</span>
+		<span class="reserved">for</span>( <span class="reserved">var</span> s = 0; s &lt; thumbs.length; ++s ) {
+			<span class="reserved">var</span> thumb = thumbs[s];
+			
+			<span class="reserved">if</span>( flashPlayer ) {
+				<span class="comment">// provide feedback to the user about the process by updating the flash panel.</span>
+				<span class="reserved">var</span> pctComplete = flashPlayer.invokePlayerFunction(<span class="literal">"setExportProgress"</span>, s, thumbs.length, thumb.name );
+			}
+		
+			<span class="reserved">if</span>( thumb.container ) {
+				continue;
+			}
+			
+			try {
+				<span class="reserved">var</span> bitmap;
+			
+				<span class="reserved">if</span>( options.bitmapSource == <span class="literal">"thumbnail"</span> ) {
+					thumb.refresh(<span class="literal">"thumbnail"</span>);
+					bitmap = thumb.core.thumbnail.thumbnail;
+				} <span class="reserved">else</span> <span class="reserved">if</span> (options.bitmapSource == <span class="literal">"preview"</span> ) {
+					thumb.refresh(<span class="literal">"preview"</span>);
+					bitmap = thumb.core.preview.preview;
+				} <span class="reserved">else</span> {
+					<span class="reserved">var</span> bitmap = new BitmapData( thumb.spec );
+				}
+				<span class="reserved">if</span>( bitmap ) {
+					<span class="reserved">var</span> resizedBitmap;
+					<span class="reserved">var</span> resized = false;
+					<span class="reserved">var</span> rotated = false;
+				
+					<span class="comment">// BitmapData.resize() returns undefined if the bitmap is already that size or smaller.</span>
+					<span class="reserved">if</span>( options.maxBitmapSize &gt; 0 ) {
+						resizedBitmap = bitmap.resize( options.maxBitmapSize );
+					}
+					<span class="reserved">if</span>( resizedBitmap != undefined ) {
+						bitmap = resizedBitmap;
+						resized = true;
+					}
+
+					<span class="reserved">var</span> md = thumb.synchronousMetadata;
+					<span class="reserved">var</span> source = new XMPMeta( md.serialize() );
+		
+					<span class="reserved">if</span>( options.rotateBitmap ) {
+						<span class="reserved">var</span> orientation = source.getProperty( XMPConst.NS_TIFF, <span class="literal">"Orientation"</span>);
+						<span class="reserved">var</span> rotation = 0;
+						<span class="reserved">var</span> orientationVal = parseInt( orientation );
+						<span class="reserved">if</span>( orientationVal ) {
+							<span class="reserved">if</span>( orientationVal == 8 ) {
+								bitmap = bitmap.rotate( - 90 );
+								rotated = true;
+							} <span class="reserved">else</span> <span class="reserved">if</span>( orientationVal == 6 ) {
+								bitmap = bitmap.rotate(90);
+								rotated = true;
+							} <span class="reserved">else</span> <span class="reserved">if</span>( orientationVal == 3 ) {
+								bitmap = bitmap.rotate( 180 );
+								rotated = true;
+							}
+						}
+					}
+					<span class="reserved">var</span> exportedJpeg = ExportToJpeg.generateJpegFileWithUniqueName( thumb.name, options.fileNamePattern, parentPath );
+					bitmap.exportTo( exportedJpeg );
+				
+					<span class="reserved">var</span> dest = new XMPMeta();
+					<span class="comment">// copy metadata from the original to the exported JPEG, except for those properties that we don't think is necessary or required to copy</span>
+					<span class="reserved">if</span>( options.inheritMetadata )  {
+						copyDerrivedProperties( source, dest );
+					}
+				
+					<span class="comment">// Set some basic properties in the exported JEPGs metaddata</span>
+					dest.setProperty( XMPConst.NS_TIFF, <span class="literal">"ImageWidth"</span>, bitmap.width.toString() );
+					dest.setProperty( XMPConst.NS_TIFF, <span class="literal">"ImageHeight"</span>, bitmap.height.toString());
+					dest.setProperty( XMPConst.NS_EXIF, <span class="literal">"PixelXDimension"</span>, bitmap.width.toString() );
+					dest.setProperty( XMPConst.NS_EXIF, <span class="literal">"PixelYDimension"</span>, bitmap.height.toString());
+				
+					<span class="comment">/**
+					It may or may not be a good idea to set the following Photoshop namespace properties.
+					If the file is edited by older or non-Adobe software that change the color mode or color profile,
+					the sofware will probably not update these properties, and this metadata will become out of date.
+					*/</span>
+					<span class="comment">//dest.setProperty( XMPConst.NS_PHOTOSHOP, "ICCProfile", "sRGB IEC61966-2.1");</span>
+					dest.setProperty( XMPConst.NS_PHOTOSHOP, <span class="literal">"ColorMode"</span>, <span class="literal">"3"</span>);
+				
+					<span class="reserved">if</span>( rotated &amp;&amp; options.inheritMetadata) {
+						dest.setProperty( XMPConst.NS_TIFF, <span class="literal">"Orientation"</span>, <span class="literal">"1"</span>);
+					}
+
+					<span class="comment">// This is a derived document -- set the appropriate MediaManagement properties</span>
+					<span class="reserved">var</span> sourceInstanceId;
+					<span class="reserved">if</span>( source.doesPropertyExist(<span class="literal">"http://ns.adobe.com/xap/1.0/mm/"</span>, <span class="literal">"InstanceID"</span> ) ){
+						sourceInstanceId = source.getProperty( <span class="literal">"http://ns.adobe.com/xap/1.0/mm/"</span>, <span class="literal">"InstanceID"</span> );
+					}
+
+					<span class="reserved">var</span> sourceDocumentId;
+					<span class="reserved">if</span>( source.doesPropertyExist(<span class="literal">"http://ns.adobe.com/xap/1.0/mm/"</span>, <span class="literal">"DocumentID"</span> ) ){
+						sourceDocumentId = source.getProperty( <span class="literal">"http://ns.adobe.com/xap/1.0/mm/"</span>, <span class="literal">"DocumentID"</span> );
+					}
+
+					<span class="reserved">if</span>( sourceInstanceId || sourceDocumentId ) {
+						<span class="reserved">if</span>( sourceDocumentId ) {
+							dest.setStructField( <span class="literal">"http://ns.adobe.com/xap/1.0/mm/"</span>, 
+							<span class="literal">"DerivedFrom"</span>, 
+							<span class="literal">"http://ns.adobe.com/xap/1.0/sType/ResourceRef#"</span>,
+							<span class="literal">"documentID"</span>,sourceDocumentId );
+						}
+						<span class="reserved">if</span>( sourceInstanceId ) {
+							dest.setStructField( <span class="literal">"http://ns.adobe.com/xap/1.0/mm/"</span>, 
+							<span class="literal">"DerivedFrom"</span>, 
+							<span class="literal">"http://ns.adobe.com/xap/1.0/sType/ResourceRef#"</span>,
+							<span class="literal">"instanceID"</span>,sourceInstanceId );
+						}
+					}
+					dest.setProperty( XMPConst.NS_XMP, <span class="literal">"CreatorTool"</span>, <span class="literal">"Adobe Bridge CS6 "</span> + app.version );
+					<span class="comment">// Set the MetadataDate and ModifyDate to today</span>
+					<span class="reserved">var</span> xmpnow = new XMPDateTime( new Date() );
+					dest.setProperty( XMPConst.NS_XMP, <span class="literal">"MetadataDate"</span>, xmpnow, 0, <span class="literal">"XMPDATE"</span>);
+					dest.setProperty( XMPConst.NS_XMP, <span class="literal">"ModifyDate"</span>, xmpnow, 0, <span class="literal">"XMPDATE"</span>);
+					<span class="reserved">if</span>( ! options.inheritMetadata ) {
+						<span class="comment">// if we inherited a creation date from the source file, don't update it with today's date</span>
+						dest.setProperty( XMPConst.NS_XMP, <span class="literal">"CreateDate"</span>, xmpnow, 0, <span class="literal">"XMPDATE"</span>);
+					}
+					<span class="comment">// We are exporting a JPEG, set the format metadata</span>
+					dest.setProperty( XMPConst.NS_DC, <span class="literal">"format"</span>, <span class="literal">"image/jpeg"</span> );
+					<span class="reserved">if</span>( options.addKeywords ) {
+						<span class="reserved">for</span>( <span class="reserved">var</span> k = 0; k &lt; options.keywords.length; ++k ) {
+							<span class="reserved">var</span> keyword = options.keywords[k];
+							dest.appendArrayItem( <span class="literal">"http://purl.org/dc/elements/1.1/"</span>, <span class="literal">"subject"</span>,keyword, 0, XMPConst.PROP_IS_ARRAY);
+						}
+					}
+					<span class="reserved">var</span> xmpjpeg = new XMPFile( exportedJpeg.fsName, XMPConst.FILE_JPEG, XMPConst.OPEN_FOR_UPDATE );
+					xmpjpeg.putXMP( dest );
+					xmpjpeg.closeFile();
+					
+					<span class="reserved">if</span>( Folder.fs == <span class="literal">"Macintosh"</span> &amp;&amp; Embed_sRGBProfileAppleScript.exists ) {
+						<span class="comment">// Build a system call to run the AppleScript to embedd the sRGB profile</span>
+						<span class="comment">// Be sure to quote the file paths incase they contain spaces</span>
+						<span class="reserved">var</span> systemCommand = <span class="literal">"osascript \"</span><span class="literal">" + Embed_sRGBProfileAppleScript.fsName + "</span>\<span class="literal">" \"</span><span class="literal">" + exportedJpeg.fsName + "</span>\<span class="literal">""</span>;
+						<span class="comment">// Run the AppleScript</span>
+						app.system (systemCommand);
+					}
+					<span class="comment">// Make a Thumbnail object and get metadata synchronously. If the UI has already generated a thumbnail and metadata</span>
+					<span class="comment">// for the exported file in the background, this will force the latest metadata to appear in the UI.</span>
+					<span class="reserved">var</span> exportedThumb = new Thumbnail( exportedJpeg );
+					<span class="reserved">var</span> exportedMeta = exportedThumb.synchronousMetadata;				
+					<span class="reserved">if</span>( options.template ) {
+						exportedMeta.applyMetadataTemplate( options.template, options.templateOption );
+					}
+										
+				}<span class="comment">// bitmap != undefined</span>
+			} catch( err ) {
+					alert(<span class="literal">"Error Exporting "</span> + thumb.name + <span class="literal">" to JPEG."</span> + err );
+			}
+		} <span class="comment">// selection iteration</span>
+		<span class="reserved">if</span>( ExternalObject.AdobeXMPScript ) {
+				ExternalObject.AdobeXMPScript.unload();
+				ExternalObject.AdobeXMPScript = undefined;
+		}
+		app.synchronousMode = false;
+		<span class="reserved">if</span>( flashPlayer ) {
+			<span class="reserved">var</span> pctComplete = flashPlayer.invokePlayerFunction(<span class="literal">"setExportProgress"</span>, 100, 100, <span class="literal">"Done"</span> );
+		}
+	}
+
+	<span class="comment">/**
+		/////////////////////////////////////////////////////////////////////////////////////
+		FUNCTIONS FOR MANIPULATING METADATA
+		/////////////////////////////////////////////////////////////////////////////////////
+	*/</span>
+	<span class="reserved">var</span> contains = <span class="reserved">function</span>( arr, member ) {
+		<span class="reserved">var</span> r = false;
+		<span class="reserved">for</span>( <span class="reserved">var</span> i = 0; i &lt; arr.length &amp;! r; ++i  ) {
+			r = arr[i] == member;
+		}
+		<span class="reserved">return</span> r;
+	}
+
+	<span class="comment">/**
+		Copies all the properties in a namespace from one XMPMeta object to another.
+		Properties with names in the array omitProps are not copied.
+	*/</span>
+	<span class="reserved">var</span> copyWholeSchema = <span class="reserved">function</span>( source, dest, namespace, omitProps ) {
+		<span class="reserved">var</span> propIter = source.iterator(XMPConst.ITERATOR_JUST_CHILDREN | XMPConst.ITERATOR_JUST_LEAF_NAME, namespace, <span class="literal">""</span> );
+		<span class="reserved">var</span> prop = propIter.next();
+		<span class="reserved">var</span> prefix = XMPMeta.getNamespacePrefix( namespace );
+		<span class="reserved">while</span>(prop) {		
+			<span class="reserved">var</span> name = prop.path.substring( prefix.length );
+			<span class="reserved">var</span> copy = omitProps == undefined;
+			<span class="reserved">if</span>( ! copy ) {
+				copy = !(contains( omitProps, name));
+			}
+			<span class="reserved">if</span>( copy ) {
+				XMPUtils.duplicateSubtree( source, dest, namespace, prop.path,namespace, prop.path, 0 );
+			}
+			prop = propIter.next();
+		}
+	}
+	<span class="comment">/** 
+		Copies the properties whose names occur in the props array in the namespace
+		from one XMPMeta object to another.
+	*/</span>
+	<span class="reserved">var</span> copyPartOfSchema = <span class="reserved">function</span>( source, dest, namespace, props ) {
+		<span class="reserved">var</span> propIter = source.iterator(XMPConst.ITERATOR_JUST_CHILDREN | XMPConst.ITERATOR_JUST_LEAF_NAME, namespace, <span class="literal">""</span> );
+		<span class="reserved">var</span> prop = propIter.next();
+		<span class="reserved">var</span> prefix = XMPMeta.getNamespacePrefix( namespace );
+		<span class="reserved">while</span>(prop) {
+			<span class="reserved">var</span> name = prop.path.substring( prefix.length );
+			<span class="reserved">var</span> copy = contains( props, name);
+			<span class="reserved">if</span>( copy ) {
+				XMPUtils.duplicateSubtree( source, dest, namespace, prop.path,namespace, prop.path, 0 );
+			}
+			prop = propIter.next();
+		}
+	}
+	<span class="comment">/**
+	Copies selected properties from one XMPMeta object to another.
+	Avoids copying properties that it is usually not appropritate to copy
+	to a file that is exported from an original.
+	*/</span>
+	<span class="reserved">var</span> copyDerrivedProperties = <span class="reserved">function</span>( source, dest ) {
+		<span class="reserved">var</span> schemaIter = source.iterator(XMPConst.ITERATOR_JUST_CHILDREN, <span class="literal">""</span>, <span class="literal">""</span> );
+		<span class="reserved">var</span> schema = schemaIter.next();
+		<span class="reserved">while</span>(schema ) {
+			<span class="comment">// go through all the namespaces and add special handing for known ones</span>
+			<span class="reserved">if</span> (schema.namespace == XMPConst.NS_XMP) {
+				copyWholeSchema( source, dest, schema.namespace, [<span class="literal">"MetadataDate"</span>,<span class="literal">"ModifyDate"</span>] );
+			} <span class="reserved">else</span> <span class="reserved">if</span> (schema.namespace == XMPConst.NS_XMP_MM) {
+				<span class="comment">// skip</span>
+			} <span class="reserved">else</span> <span class="reserved">if</span> (schema.namespace == XMPConst.NS_CAMERA_RAW) {
+				<span class="comment">// skip</span>
+			} <span class="reserved">else</span> <span class="reserved">if</span> (schema.namespace == XMPConst.NS_PHOTOSHOP) {
+				<span class="comment">// omit this potentially bogus metadata</span>
+				copyWholeSchema( source, dest, schema.namespace, [<span class="literal">"ColorMode"</span>,<span class="literal">"ICCProfile"</span>] );
+			} <span class="reserved">else</span> <span class="reserved">if</span> (schema.namespace == XMPConst.NS_TIFF) {
+				<span class="comment">// only copy shooting metadata, not technical metadata about the file</span>
+				copyPartOfSchema( source, dest, schema.namespace, [<span class="literal">"Orientation"</span>,<span class="literal">"Make"</span>,<span class="literal">"Model"</span>] );
+			} <span class="reserved">else</span> <span class="reserved">if</span> (schema.namespace == XMPConst.NS_EXIF) {
+				<span class="comment">// omit technical metadata about the file</span>
+				copyWholeSchema( source, dest, schema.namespace, [<span class="literal">"PixelXDimension"</span>,<span class="literal">"PixelYDimension"</span>] );
+			} <span class="reserved">else</span> { <span class="comment">// default is to copy them all</span>
+				copyWholeSchema( source, dest, schema.namespace );
+			}
+			schema = schemaIter.next();
+		}
+	};
+
+	<span class="comment">/*
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////
+		FUNCTIONS AND VARIABLES PROVIDING THE FLASH UI
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////
+	*/</span>
+
+	<span class="comment">// This script assumes that the .swf file is in the same folder as the .jsx</span>
+	<span class="reserved">var</span> uiMovie= new File(new File($.fileName).parent.fsName +<span class="literal">"/resources/BridgeExportToJPEG.swf"</span>);
+
+	<span class="comment">/**
+			This function creates the TabbedPalette containing a Flash Player for the file BridgeExportToJPEG.swf
+	*/</span>
+	<span class="reserved">var</span> showExportToJpegTab = <span class="reserved">function</span>(doc) {
+		<span class="reserved">var</span> flashTab = new TabbedPalette( doc, <span class="literal">"Export To JPEG"</span>, <span class="literal">"ExportToJPEGTab"</span>, <span class="literal">"script"</span> );
+		<span class="reserved">var</span> res = <span class="literal">"group {													\
+									fp: FlashPlayer {										\
+										preferredSize: [300, 550],							\
+										alignment: ['fill', 'fill']							\
+									},														\
+						}"</span>;
+		flashTab.content.add( res );
+		flashTab.content.alignChildren = [<span class="literal">'fill'</span>, <span class="literal">'fill'</span> ];
+		flashTab.content.layout.layout( true );
+		flashTab.content.children[0].fp.loadMovie (uiMovie);
+		flashTab.content.children[0].fp.show();
+		flashTab.content.children[0].fp.playMovie();
+		flashTab.content.onResizing = <span class="reserved">function</span>()
+		{
+			<span class="reserved">this</span>.layout.resize();
+		}
+		<span class="reserved">var</span>  flashPlayer = flashTab.content.children[0].fp;
+	
+		flashPlayer.documentId = doc.id;
+		flashPlayer.jobOptions = {};
+	
+		flashPlayer.exportToJpeg = <span class="reserved">function</span>( options ) {
+			<span class="reserved">this</span>.jobOptions = options;
+			<span class="reserved">var</span> jobTask = <span class="literal">"runJpegExportJob("</span> + <span class="reserved">this</span>.documentId + <span class="literal">");"</span>;
+			app.scheduleTask (jobTask, 100, false);
+		};
+		<span class="reserved">var</span> templates = ExportToJpeg.getMetadataTemplatesArray();
+		flashPlayer.invokePlayerFunction(<span class="literal">"updateTemplatesList"</span>, templates );		
+	};
+	<span class="comment">/**
+		Used by the getExportToJpegFlashPlayer to check
+		if the flash player is already loaded in Bridge
+	*/</span>
+	<span class="reserved">var</span> findTabbedPalette = <span class="reserved">function</span>( doc, paletteId ) {
+		<span class="reserved">var</span> palettes = doc.palettes;
+		<span class="reserved">for</span>( <span class="reserved">var</span> t = 0; t &lt; palettes.length; ++t ) {
+			<span class="reserved">var</span> next = palettes[t];
+			<span class="reserved">if</span>( next.id == paletteId ) {
+				<span class="reserved">return</span> next;
+			}
+		}
+		<span class="reserved">return</span> undefined;
+	}
+
+	<span class="comment">/** Starts the Export Process */</span>
+	<span class="reserved">var</span> runJpegExportJob = <span class="reserved">function</span>( documentId ) {
+		<span class="reserved">var</span> doc = undefined;
+		<span class="reserved">var</span> allDocs = app.documents;
+		<span class="reserved">for</span>( <span class="reserved">var</span> d = 0; d &lt; allDocs.length; ++d ) {
+				<span class="reserved">var</span> nextDoc = allDocs[d];
+				<span class="reserved">if</span>( nextDoc.id == documentId ) {
+						doc = nextDoc;
+						break;
+				}
+		}
+		<span class="reserved">if</span>( doc ) {
+			<span class="reserved">var</span> flashPlayer = getExportToJpegFlashPlayer( doc );
+			<span class="reserved">var</span> options = flashPlayer.jobOptions;
+			ExportToJpeg.exportToJpeg( doc, options, flashPlayer );
+		} <span class="reserved">else</span> {
+				throw(<span class="literal">"runJpegExportJob() could not find a Bridge Document with ID "</span> + documentId );
+		}
+	}
+	<span class="comment">/**  
+		This function checks the current environment in Bridge to see if the Menu Items
+		ShowExportToJPEG and HideExportToJPEG appears in the Application.
+		It will return a FlashPlayer if the Tabs are shown in the UI
+	*/</span>
+	<span class="reserved">var</span> getExportToJpegFlashPlayer = <span class="reserved">function</span>( doc ) {
+			<span class="reserved">var</span> tab = findTabbedPalette( doc, <span class="literal">"ExportToJPEGTab"</span> );
+			<span class="reserved">if</span>( tab ) {
+				<span class="reserved">var</span> flashPlayer = tab.content.children[0].fp;
+				<span class="reserved">return</span> flashPlayer;
+			}
+			<span class="reserved">return</span> undefined;
+		}
+		<span class="comment">/**  Checks if the SgowExportToJPEG menu item already exists in Bridge */</span>
+		<span class="reserved">if</span>( ! MenuElement.find (<span class="literal">"ShowExportToJPEG"</span>) ) {
+			<span class="reserved">var</span> showExportToJpeg = new MenuElement( <span class="literal">"command"</span>, <span class="literal">"Show Export to JPEG"</span>, <span class="literal">"-at the end of Window"</span>, <span class="literal">"ShowExportToJPEG"</span> );
+			showExportToJpeg.onSelect = <span class="reserved">function</span>() {
+				<span class="reserved">var</span> existingTab = findTabbedPalette( app.document, <span class="literal">"ExportToJPEGTab"</span>);
+				<span class="reserved">if</span>( existingTab ) {
+					existingTab.show();
+				} <span class="reserved">else</span> {
+					showExportToJpegTab(app.document);
+				}
+			}
+		}
+		<span class="comment">/** This checks to see if the Menu item HideExportToJPEG already exists in Bridge */</span>
+		<span class="reserved">if</span>( ! MenuElement.find (<span class="literal">"HideExportToJPEG"</span>) ) {
+			<span class="reserved">var</span> hideExportToJpeg = new MenuElement( <span class="literal">"command"</span>, <span class="literal">"Hide Export to JPEG"</span>, <span class="literal">"at the end of Window"</span>, <span class="literal">"HideExportToJPEG"</span> );
+			hideExportToJpeg.onSelect = <span class="reserved">function</span>() {
+				<span class="reserved">var</span> existingTab = findTabbedPalette( app.document, <span class="literal">"ExportToJPEGTab"</span>);
+				<span class="reserved">if</span>( existingTab ) {
+					<span class="reserved">var</span>  flashPlayer = existingTab.content.children[0].fp;
+					existingTab.content.children[0].remove(flashPlayer);
+					existingTab.content.children[0].fp = null;
+					existingTab.remove();
+				}
+		}
+	}
+} </pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="BasicEmailer.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>BasicEmailer.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to use the Socket object to send emails with attachments from Bridge.
+  <BR/><BR/><B>See:</B><UL>- <a href="BackgroundEmailer.html#">BackgroundEmailer</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="BasicEmailer.html">BasicEmailer</a></b></td>
+    <td>Shows how to use the Socket object to send emails with attachments from Bridge.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  
+  <span class="attrib">@fileoverview</span> Shows how to use the Socket object to send emails with attachments from Bridge.
+  <span class="attrib">@class</span> Shows how to use the Socket object to send emails with attachments from Bridge.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+     &lt;b&gt;You must&lt;/b&gt; edit the mailserver settings within this code; the code as shipped does not provide any default
+  values for these settings and if you do not edit these settings in the code (see "NOTE" below),
+  then the code will not run correctly. 
+  
+   &lt;ol&gt;
+   &lt;li&gt; Customize the email settings in the code to match your mail system and user accounts; look for NOTE below.
+   &lt;li&gt; Run the snippet in the ExtendScript Toolkit, with Adobe Bridge CS6 as the target (see Readme.txt).
+   &lt;li&gt;You should find this creates a context-sensitive menu item on file thumbnails.
+   &lt;li&gt; In Bridge, select one or more thumbnails for the files to send. Ideally, choose small files.
+   &lt;li&gt; Right click in Windows or Ctrl-click in Mac OS to invoke the context menu.
+   &lt;li&gt; Select the menu item "SDK BasicEmailer: Send by Email"
+   &lt;li&gt; Inspect the JavaScript console for confirmation of the email being sent.
+   &lt;li&gt; Check your email client for the arrival of an email with attached files.
+   &lt;/ol&gt;
+
+  &lt;h4&gt;Description&lt;/h4&gt;
+
+&lt;p&gt;This example uses the Socket object to send an email with multiple attachments,
+  by writing to an SMTP server. Attachments are sent as binary data, encoded 
+  into Base64 encoding. 
+  
+&lt;p&gt;This sample sends a single email message at a time, and blocks the main thread in Bridge
+  until the message has been sent. You should select small files (under 100Kb) to send. 
+  For a non-blocking example, suitable for sending larger files, see BackgroundEmailer.jsx
+
+&lt;p&gt;Note that this sample is a demonstration of a technique; it may not run as expected with 
+  	all mail servers, and is not intended to be a robust mail client.&lt;br /&gt;
+
+ <span class="attrib">@see</span> BackgroundEmailer
+ 
+  <span class="attrib">@constructor</span> Constructor.
+ */</span>
+<span class="reserved">function</span> BasicEmailer()
+{
+
+	<span class="comment">/**
+	 The context in which this sample can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tEnsure that Bridge is running and set as the target and that you have supplied your own mail server details.\n"</span>;
+
+	<span class="comment">/** 
+	  The host address for the mail server, for example mail.adomainname.com - 
+	  NOTE: You must customize this with your own host address value.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.mailServerName = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	 The username, not necessarily the email address,  to authorize with, for example 
+	 testemail<span class="attrib">@adomainname</span>.com - NOTE: You must customize this with your own username value.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.username = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	 The password for the username - NOTE: You must customize this with your own password value.
+	 <span class="attrib">@type</span> Socket
+	*/</span>
+	<span class="reserved">this</span>.password = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+      The senders email address, for example testemail<span class="attrib">@adomainname</span>.com 
+	  - NOTE: You must customize this with your own email address.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.sender = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+       The address the email will be sent to, the receiver of the email - 
+	   NOTE: You must customize this with your own recipient address.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.recipient = <span class="literal">""</span>;
+
+	<span class="comment">/** 
+	 The subject of the email
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.subject = <span class="literal">"Email from Bridge via BasicEmailer.jsx"</span>;
+	
+	<span class="comment">/** 
+       The port number for the SMTP server, for example port 25 - 
+	   NOTE: You may need to customize this with your own port number.
+	 <span class="attrib">@type</span> int
+	*/</span>
+	<span class="reserved">this</span>.SMTP =  25;
+	
+	<span class="comment">/** 
+       The port number for the POP server, for example port 110 - 
+	   NOTE: You may need to customize this with your own port number.
+	 <span class="attrib">@type</span> int
+	*/</span>
+	<span class="reserved">this</span>.POP = 110;
+
+	<span class="comment">/**
+	 The socket object which this object uses to write to the wire
+	 <span class="attrib">@type</span> Socket
+	*/</span>
+	<span class="reserved">this</span>.socket = new Socket();
+	
+	<span class="comment">/**
+	 The body text of the message
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.message = <span class="literal">"Hello World"</span>;
+	
+	<span class="comment">/**
+	The boundary for attachments
+	<span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.boundary = <span class="literal">"****=_NextPartMyBody_0000 "</span> + new Date().getSeconds();
+
+	<span class="comment">// set the encoding for the socket</span>
+	<span class="reserved">this</span>.socket.encoding = <span class="literal">"binary"</span>;
+	
+}
+
+<span class="comment">/**
+  Constructs a simple message for the body of the email showing which files are attached.
+
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.buildMessage = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> sl = app.document.selections;
+	<span class="reserved">var</span> message = <span class="literal">"BasicEmailer sent the following attachments:\r\n"</span>;
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; sl.length;i++)
+	{
+		<span class="reserved">if</span>(!sl[i].container)
+		{
+			message += <span class="literal">"\r\n\tName: "</span> +  sl[i].name;
+		}
+	}
+		
+	<span class="reserved">this</span>.message = message;
+}
+
+<span class="comment">/**
+ Attempts to open a socket and connect to a host and port.
+ <span class="attrib">@param</span> host The host name string of the server to connect to
+ <span class="attrib">@param</span> port The port number to connect on, an integer
+ <span class="attrib">@return</span> True if the socket opened successfully, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.connect = <span class="reserved">function</span>(host, port)
+{
+	<span class="reserved">var</span> result = true;
+	
+	<span class="comment">// open the port</span>
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.socket.open(host + <span class="literal">":"</span> + port))
+	{
+		$.writeln(<span class="literal">"BasicEmailer: Error - Could not open socket"</span>);
+		result = false;	
+	}
+	
+	<span class="reserved">return</span> result;
+}
+
+<span class="comment">/**
+ Authorizes a username against POP3
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.authorise = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> startDate = new Date();
+	$.writeln(<span class="literal">"IN BasicEmailer.authorise() = "</span> + startDate);
+
+	<span class="comment">// use pop3 to authorize with</span>
+	try 
+	{
+		$.writeln(<span class="literal">"BasicEmailer: Authorizing..."</span> + <span class="reserved">this</span>.socket.read());
+		
+		<span class="comment">// issue POP3 commands</span>
+		<span class="reserved">this</span>.doCommand(<span class="literal">"USER "</span> + <span class="reserved">this</span>.username, <span class="literal">"pop"</span>)
+		<span class="reserved">this</span>.doCommand(<span class="literal">"PASS "</span> + <span class="reserved">this</span>.password, <span class="literal">"pop"</span>);
+		<span class="reserved">this</span>.doCommand (<span class="literal">"QUIT"</span>, <span class="literal">"pop"</span>);
+	}
+	catch(error) 
+	{ 
+		$.writeln(<span class="literal">"BasicEmailer: Error - "</span> + error);
+		result = false;
+	}
+	
+	<span class="reserved">var</span> endDate = new Date();
+	$.writeln(<span class="literal">"OUT BasicEmailer.authorise() = "</span> + endDate);
+
+}
+
+<span class="comment">/**
+  Carries out either an SMTP or a POP command.  Separates writing data 
+  to the socket and sending commands.
+  <span class="attrib">@param</span> cmd The command to be written to the socket
+  <span class="attrib">@param</span> type One of 'pop' or 'smtp' 
+  <span class="attrib">@return</span> True if the command was executed correctly
+  <span class="attrib">@type</span> Boolean
+ */</span>
+BasicEmailer.<span class="reserved">prototype</span>.doCommand = <span class="reserved">function</span>(cmd, type)
+{
+
+	<span class="reserved">var</span> cmndOK = true;
+	<span class="reserved">var</span> reply = <span class="literal">""</span>;
+	<span class="reserved">var</span> replyCode = <span class="literal">""</span>;
+	
+	<span class="reserved">this</span>.socket.write(cmd + <span class="literal">"\r\n"</span>);
+
+	$.sleep(300);    
+	
+	<span class="reserved">if</span>(type == <span class="literal">"pop"</span>)
+	{
+		<span class="comment">// do POP commands</span>
+		reply = <span class="reserved">this</span>.socket.read();
+		replyCode = reply.substring(0, 1);
+
+		<span class="reserved">if</span>(replyCode == <span class="literal">"-"</span>)
+		{
+			cmndOK = false;
+			$.writeln(<span class="literal">"BasicEmailer: Error with POP command:"</span>);
+			$.writeln(<span class="literal">"\t"</span> + reply);
+			<span class="reserved">this</span>.close();
+		}
+	}
+	<span class="reserved">else</span> <span class="reserved">if</span>(type == <span class="literal">"smtp"</span>)
+	{
+		<span class="comment">// do SMTP commands</span>
+		<span class="reserved">if</span>(!<span class="reserved">this</span>.socket.read())
+		{
+			cmndOK = false;
+			$.writeln(<span class="literal">"BasicEmailer: Error sending mail:"</span>);
+			$.writeln(<span class="literal">"\t"</span> + reply);
+			<span class="reserved">this</span>.close();
+		}
+	}
+	<span class="reserved">else</span>
+	{
+		$.writeln(<span class="literal">"BasicEmailer: Unknown command type. Closing the socket."</span>);
+		<span class="reserved">this</span>.close();
+	}
+
+	<span class="reserved">if</span>(!cmndOK) throw <span class="literal">"Command error for: "</span> + type + <span class="literal">" - "</span> + cmd;
+	<span class="reserved">return</span> cmndOK;
+
+}
+
+<span class="comment">/**
+ Closes the socket that was used to transmit data
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.close = <span class="reserved">function</span>()
+{ 
+	try
+	{
+		<span class="reserved">return</span> <span class="reserved">this</span>.socket.close();
+	}
+	catch(error){ $.writeln(<span class="literal">"BasicEmailer: Error closing socket: "</span> + error); }
+}
+
+
+<span class="comment">/**
+* Sends the email and attachments by connecting to the server and authorizing via POP.
+* Reestablishes the connection and sends the necessary commands to the SMTP server.
+* If there are attachments to be sent, encodes them into Base64 and writes them to the socket.
+* If any folders are selected in Bridge, they are ignored.
+*
+* <span class="attrib">@return</span> True if the mail was sent succesfully.
+* <span class="attrib">@type</span> Boolean
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.send = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> startDate = new Date();
+	$.writeln(<span class="literal">"IN BasicEmailer.send() = "</span> + startDate);
+
+	<span class="reserved">var</span> retval = false;
+
+	$.writeln(<span class="literal">"BasicEmailer.send(): Connecting ..."</span>);
+
+	<span class="comment">// Connect to the server</span>
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.connect(<span class="reserved">this</span>.mailServerName, <span class="reserved">this</span>.POP))
+	{
+		<span class="reserved">var</span> endDate = new Date();
+	    $.writeln(<span class="literal">"OUT BasicEmailer.send() (failed to connect) = "</span> + endDate);
+		<span class="reserved">return</span> retval;
+	}
+	<span class="comment">// Authorize</span>
+	<span class="reserved">this</span>.authorise();
+	<span class="comment">// Close the socket</span>
+	<span class="reserved">this</span>.close();
+
+	<span class="comment">// Reconnect and send the mail</span>
+	<span class="reserved">if</span>(<span class="reserved">this</span>.connect(<span class="reserved">this</span>.mailServerName, <span class="reserved">this</span>.SMTP))
+	{
+		try
+		{
+			<span class="comment">// Discard the greeting</span>
+			<span class="reserved">var</span> welcome = <span class="reserved">this</span>.socket.read();
+			$.writeln(<span class="literal">"BasicEmailer.send(): Sending message via: "</span> + welcome.substring(4));
+				
+			<span class="comment">// Issue EHLO and other commands</span>
+			<span class="reserved">this</span>.doCommand (<span class="literal">"EHLO "</span> + <span class="reserved">this</span>.sender, <span class="literal">"smtp"</span>);
+			<span class="reserved">this</span>.doCommand (<span class="literal">"MAIL FROM: "</span> + <span class="reserved">this</span>.sender, <span class="literal">"smtp"</span>);
+			<span class="reserved">this</span>.doCommand (<span class="literal">"RCPT TO: "</span> + <span class="reserved">this</span>.recipient, <span class="literal">"smtp"</span>);
+			<span class="reserved">this</span>.doCommand (<span class="literal">"DATA"</span>, <span class="literal">"smtp"</span>);
+
+			<span class="comment">// Send the optional headers</span>
+			<span class="reserved">this</span>.socket.write (<span class="literal">'From: "BasicEmailer" &lt;'</span> + <span class="reserved">this</span>.sender + <span class="literal">'&gt;\r\n'</span>);
+			<span class="reserved">this</span>.socket.write (<span class="literal">"To: "</span> + <span class="reserved">this</span>.recipient + <span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write (<span class="literal">"Subject: "</span> + <span class="reserved">this</span>.subject + <span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write (<span class="literal">"Date: "</span> + new Date().toString() +  <span class="literal">"\r\n"</span>);
+
+			<span class="comment">// Set the content type and the boundary</span>
+			<span class="reserved">this</span>.socket.write(<span class="literal">"MIME-Version: 1.0\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"Content-Type: multipart/mixed;\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">'\tboundary="'</span> + <span class="reserved">this</span>.boundary + <span class="literal">'"\r\n'</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"X-Mailer: Bridge Email Sample\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"This is a multi-part mesage in MIME format.\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"--"</span> + <span class="reserved">this</span>.boundary + <span class="literal">"\r\n"</span>);
+			
+			<span class="comment">// Send the message</span>
+			<span class="reserved">this</span>.socket.write(<span class="literal">"Content-Type: text/plain;\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"Content-Transfer-Encoding: 7bit\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="reserved">this</span>.message + <span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"--"</span> + <span class="reserved">this</span>.boundary + <span class="literal">"\r\n"</span>);
+
+			<span class="comment">// Check if there are any files to be added</span>
+			<span class="reserved">this</span>.addAttachment();
+			
+			<span class="comment">// End the message</span>
+			retval = <span class="reserved">this</span>.doCommand(<span class="literal">"."</span>, <span class="literal">"smtp"</span>);
+			
+			<span class="comment">// Quit and send</span>
+			<span class="reserved">this</span>.doCommand(<span class="literal">"QUIT"</span>, <span class="literal">"smtp"</span>);
+				
+			<span class="reserved">this</span>.close();
+
+	        <span class="reserved">var</span> endDate = new Date();
+	        $.writeln(<span class="literal">"OUT BasicEmailer.send() = "</span> + endDate);
+			<span class="reserved">return</span> retval;
+		
+		}
+		catch (e)
+		{
+			$.writeln(<span class="literal">"BasicEmailer: ERROR: "</span> + e);
+			<span class="reserved">this</span>.close();
+		}
+	}
+	<span class="reserved">var</span> endDate = new Date();
+	$.writeln(<span class="literal">"OUT BasicEmailer.send() = "</span> + endDate);
+
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+  Adds attachments to the email being sent
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.addAttachment = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> startDate = new Date();
+	$.writeln(<span class="literal">"IN BasicEmailer.addAttachment() = "</span> + startDate);
+
+	<span class="reserved">var</span> sels = app.document.selections;
+
+	<span class="comment">// Get the file selected in Bridge</span>
+	<span class="reserved">if</span>(sels.length != 0)
+	{
+
+		<span class="comment">// Loop through all selected thumbnails and email the images as attachments</span>
+		<span class="reserved">for</span>(<span class="reserved">var</span> j = 0;j &lt; sels.length;j++)
+		{
+			<span class="reserved">var</span> thumb = sels[j];
+		
+			<span class="comment">// Ignore folders</span>
+			<span class="reserved">if</span>(thumb.container) continue;
+
+			<span class="reserved">var</span> theFile = thumb.spec;
+			
+			<span class="comment">// Set the encoding to ensure we get characters we can convert correctly.</span>
+			theFile.encoding = <span class="literal">"binary"</span>;
+
+			<span class="comment">// Open, read, and close the file</span>
+			theFile.open(<span class="literal">"r"</span>);
+			<span class="reserved">var</span> contents = theFile.read();
+			theFile.close();
+		
+			<span class="comment">// Set the correct headers for the file type</span>
+			<span class="reserved">this</span>.socket.write(<span class="literal">"Content-type: "</span> + thumb.mimeType + <span class="literal">";\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">'\tname="'</span> + thumb.name + <span class="literal">'"\r\n'</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"Content-Transfer-Encoding: base64\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"Content-Disposition: attachment;\r\n"</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">'\tfilename="'</span> + thumb.name + <span class="literal">'"\r\n'</span>);
+			<span class="reserved">this</span>.socket.write(<span class="literal">"\r\n"</span>);
+
+			<span class="comment">// Encode the data</span>
+			<span class="reserved">var</span> encodedData = <span class="reserved">this</span>.encodeAttachment(contents);
+
+			<span class="comment">// Split the encoded data in 76 char lines</span>
+			<span class="reserved">var</span> dataLine = <span class="literal">""</span>;
+			<span class="reserved">var</span> counter = 0;
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; encodedData.length;i++)
+			{
+				dataLine += encodedData[i];
+				counter++;
+
+				<span class="comment">// if we hit the limit then write the line and reset everything</span>
+				<span class="reserved">if</span>(counter &gt; 75)
+				{
+					<span class="reserved">this</span>.socket.write(dataLine + <span class="literal">"\r\n"</span>);
+					dataLine = <span class="literal">""</span>;
+					counter = 0;
+				}
+			}
+
+			<span class="comment">// Don't forget the last few chars</span>
+			<span class="reserved">this</span>.socket.write(dataLine + <span class="literal">"\r\n"</span>);
+
+			<span class="reserved">this</span>.socket.write(<span class="literal">"\r\n"</span>);
+
+			<span class="reserved">this</span>.socket.write(<span class="literal">"--"</span> + <span class="reserved">this</span>.boundary + <span class="literal">"\r\n"</span>);
+
+			}<span class="comment">// end for</span>
+
+		<span class="reserved">this</span>.socket.write(<span class="literal">"--"</span> + <span class="reserved">this</span>.boundary + <span class="literal">"--\r\n"</span>);
+
+	}
+
+	<span class="reserved">var</span> endDate = new Date();
+	$.writeln(<span class="literal">"OUT BasicEmailer.addAttachment() = "</span> + endDate);
+}
+
+<span class="comment">/**
+ Accepts a string representing a binary file and encodes it as base64,
+ to allow attachments to be sent via email
+
+ <span class="attrib">@param</span> binaryString The string to encode
+ <span class="attrib">@type</span> String
+ <span class="attrib">@return</span> The base64-encoded string
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.encodeAttachment = <span class="reserved">function</span>(binaryString)
+{
+
+	<span class="comment">// Accepted b64 chars</span>
+	<span class="reserved">var</span> keyStr = <span class="literal">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="</span>;
+
+	<span class="reserved">var</span> encoded = <span class="literal">""</span>;
+	<span class="reserved">var</span> c1, c2, c3;
+	<span class="reserved">var</span> e1, e2, e3, e4;
+	<span class="reserved">var</span> i = 0;
+	
+	<span class="reserved">while</span>(i &lt; binaryString.length)
+	{
+		<span class="comment">// Get 3 chars starting at the begining of the binary string</span>
+		c1 = binaryString.charCodeAt(i++);
+		c2 = binaryString.charCodeAt(i++);
+		c3 = binaryString.charCodeAt(i++);
+
+		<span class="comment">//  Create 4 sets of 6 bits from the 3 ascii bytes</span>
+		e1 = c1 &gt;&gt; 2;
+		e2 = ((c1 &amp; 3) &lt;&lt; 4) | (c2 &gt;&gt; 4);
+		e3 = ((c2 &amp; 15) &lt;&lt; 2) | (c3 &gt;&gt; 6);
+		e4 = c3 &amp; 63;
+
+		<span class="comment">// Check that chrs 2 and 3 are correct, if not replace with special padding char</span>
+		<span class="reserved">if</span> (isNaN(c2))
+		{
+			e3 = e4 = 64;
+		} 
+		<span class="reserved">else</span> <span class="reserved">if</span> (isNaN(c3))
+		{
+			e4 = 64;
+		}
+
+		<span class="comment">// Add encoded chars to the return string</span>
+		encoded = encoded + keyStr.charAt(e1) + keyStr.charAt(e2) + 
+			keyStr.charAt(e3) + keyStr.charAt(e4);
+	}
+
+	<span class="reserved">return</span> encoded;
+
+}
+
+
+<span class="comment">/**
+ Functional part of this snippet.
+
+ Runs this sample, calling the helper functions defined below.
+ Creates the Socket object and applies mail settings, such as hostname, 
+ password, and so on. You must customize the code so that the mail 
+ settings correspond to your mail system and user accounts; otherwise, 
+ the sample fails and no emails are sent.
+
+ <span class="attrib">@return</span> True if the sample ran as expected, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() {
+	
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun()) 
+	{
+		<span class="reserved">return</span> false;
+	}
+	try 
+	{
+ 
+	    <span class="reserved">var</span> emailCommand = new MenuElement(<span class="literal">"command"</span>, <span class="literal">"SDK BasicEmailer: Send by Email"</span>, <span class="literal">"at the end of Thumbnail"</span>, <span class="literal">"BasicEmailMenu"</span>);
+   	    <span class="comment">// Execute the code in this block only once; if the menu item already existed,</span>
+   	    <span class="comment">// an exception is thrown above</span>
+		$.writeln(<span class="literal">"BasicEmailer.run(): created menu item, select file(s) and see its context-sensitive menu item"</span>);
+
+	    <span class="comment">// Take a note of this object</span>
+	    <span class="reserved">var</span> that = <span class="reserved">this</span>;
+
+	    <span class="comment">// ------------------ Handler to define behavior of menu item when it is executed  ------------------ </span>
+	    emailCommand.onSelect = <span class="reserved">function</span>(m)
+	    {
+		    <span class="comment">// Set the body of the email</span>
+		    that.buildMessage();
+
+		    <span class="comment">// Attempt to send the email</span>
+		    <span class="reserved">if</span>(that.send())
+		    {
+			    $.writeln(<span class="literal">"BasicEmailer: Email sent successfully"</span>);
+		    }
+		    <span class="reserved">else</span>
+		    {
+			    $.writeln(<span class="literal">"BasicEmailer: Email message not sent!"</span>);
+		    }
+	    }
+
+	    <span class="comment">// ------------------ Handler for menu item state being checked, should be very lightweight function ------------------ </span>
+	    emailCommand.onDisplay = <span class="reserved">function</span>(m)
+	    {
+		    <span class="reserved">var</span> s = app.document.selections;
+		    <span class="reserved">if</span>(s.length &gt; 0)
+		    {
+			    <span class="reserved">this</span>.enabled = true;
+		    }
+		    <span class="reserved">else</span>
+		    {
+			    <span class="reserved">this</span>.enabled = false;
+		    }
+	    }
+    		
+	    $.writeln(<span class="literal">"BasicEmailer loaded."</span>);
+	}
+	<span class="comment">// If we hit this handler, usually it's because you have tried multiple instantiations.</span>
+	catch(error) 
+	{ 
+		$.writeln(<span class="literal">"BasicEmailer.run() Error:"</span> + error);
+		$.writeln(<span class="literal">"\tNote that you only need run this snippet once, then use its menu item"</span>);
+		$.writeln(<span class="literal">"\tto send files"</span>);
+		<span class="reserved">return</span> false;
+	}
+	<span class="reserved">return</span> true;
+}
+
+<span class="comment">/**
+ Determines whether snippet can be run in the current context.  The snippet 
+ fails if these preconditions are not met:
+ &lt;ul&gt;
+ &lt;li&gt; Bridge must be running
+ &lt;/ul&gt;
+ 	<span class="attrib">@return</span> True if this snippet can run, false otherwise
+ 	<span class="attrib">@type</span> Boolean
+*/</span>
+BasicEmailer.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>() 
+{
+	<span class="reserved">var</span> retval = false;
+	
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) 
+	{ 
+
+        retval = ! ( (<span class="reserved">this</span>.username == <span class="literal">""</span>)  ||  (<span class="reserved">this</span>.password == <span class="literal">""</span>) 
+						|| (<span class="reserved">this</span>.sender == <span class="literal">""</span>) || (<span class="reserved">this</span>.recipient == <span class="literal">""</span>) || (<span class="reserved">this</span>.subject == <span class="literal">""</span>) 
+						||(<span class="reserved">this</span>.SMTP == 0) || (<span class="reserved">this</span>.POP == 0) 
+						|| (<span class="reserved">this</span>.mailServerName == <span class="literal">""</span>) );
+						
+		<span class="reserved">if</span>(!retval)
+		{
+			$.writeln(<span class="literal">"BasicEmailer: ERROR - Cannot run BasicEmailer"</span>);
+			$.writeln(<span class="literal">"BasicEmailer: Check your mail server configuration settings."</span>);
+		}
+
+		<span class="reserved">return</span> retval;
+	}
+
+	$.writeln(<span class="literal">"BasicEmailer: ERROR  - Cannot run BasicEmailer"</span>);
+	$.writeln(<span class="literal">"BasicEmailer: "</span> + <span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+  "main program": construct an anonymous instance and run it
+*/</span>
+<span class="reserved">if</span>(typeof(BasicEmailer_unitTest) == <span class="literal">"undefined"</span>) {
+	new BasicEmailer().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

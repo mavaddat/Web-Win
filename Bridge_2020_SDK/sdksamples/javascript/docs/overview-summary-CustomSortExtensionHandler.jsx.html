@@ -1,0 +1,1325 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="CustomSortExtensionHandler.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>CustomSortExtensionHandler.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Demonstrates how to implement a custom sorting and filters with a node-handling extension.
+<BR/><BR/><B>See:</B><UL>- <a href="SDKSystem.html#">SDKSystem</a><BR/>- <a href="SDKNode.html#">SDKNode</a><BR/>- <a href="BasicExtensionHandler.html#">BasicExtensionHandler</a><BR/>- <a href="CustomInfosetExtensionHandler.html#">CustomInfosetExtensionHandler</a><BR/>- <a href="CustomSearchExtensionHandler.html#">CustomSearchExtensionHandler</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="CustomSortExtensionHandler.html">CustomSortExtensionHandler</a></b></td>
+    <td>Demonstrates how to implement a custom sorting and filters with a node-handling extension.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/**
+<span class="attrib">@fileoverview</span> Demonstrates how to implement a custom sorting and filters with a node-handling extension.
+<span class="attrib">@class</span> Demonstrates how to implement a custom sorting and filters with a node-handling extension.
+
+&lt;h4&gt;Usage&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt; Make sure the icon files required by this sample are in the ./resources folder (BEHFileIconxx.png)
+&lt;li&gt; Run the snippet in the ExtendScript Toolkit (see Readme.txt) with Bridge C6 as the target;note, you can do this only once, 
+then you must restart Bridge to run this sample again.
+&lt;li&gt; In Bridge, select the new icon added to the Favorites panel
+&lt;li&gt;  View &gt; Sort &gt; 'By SDK: Custom Number' to sort the thumbnails according
+	to a number value stored in a custom Infoset for the thumbnail.
+&lt;li&gt;  View &gt; Sort &gt; 'By SDK: Custom String' to sort the thumbnails according
+	to a string stored in a custom Infoset for the thumbnail.
+&lt;li&gt;  View &gt; Sort &gt; 'By SDK: Custom XMP' to sort the thumbnails according
+	to some custom metadata stored in the thumbails metadata property.
+&lt;li&gt;Drag and drop thumbnails within the content pane to sort them manually.
+&lt;/ol&gt;
+
+&lt;h4&gt;Description&lt;/h4&gt;
+
+&lt;p&gt;Shows how to implement an ExtensionHandler and ExtensionModel with customized sorting of nodes in a
+content hierarchy.  This sample uses SortCriterion, FilterDescription and XMPMeta objects  from the Bridge scripting DOM
+to implement the custom sorts.  An additional property is also added to the ExtensionModel
+that is used to set and get manually sort settings.
+
+&lt;p&gt;To enable customized sorting, a method ExensionModel.getSortCriteria() has been defined.  The method
+adds several new sorting options to Bridge for handled nodes by adding SortCriterion objects the to the
+default list ( app.defaultSortCriteria ).  This extension has added three additional sort criterion.  These 
+demonstrate the two variations of SortCriterion objects that can be used, SortCriterion that relies on 
+Infoset data and SortCriterion that relies on XMP data.
+
+&lt;p&gt;For the handled nodes to support being sorted by XMP data, Bridge must be made
+aware of the nodes capabilities.  This is achieved by setting some of the capabilites of the node in
+the core infosets.  Setting the 'canGetXMP' and 'canSetXMP' properties of the itemContent
+infoset to 'true' will cause Bridge to look for the appropriate methods on the handler.
+
+&lt;p&gt;To set metadata on a node then its handler must implement the long running operaton 
+ExtensionHandler.setXMP().  In this sample, the methods create a ProgressOperator, which
+carries out the operation of adding or updating the XMP data for the selected node.  The 
+ProgressOperator can display a modal progress bar to give feedback of the ongoing operation.  
+To ensure the progress bar is visible, the operator should be passed to app.enqueueOperation().
+
+&lt;p&gt;This sample also supports manual sorting of nodes.  A manual sort does not have to rely on any 
+particular data set or metadata; it can simply be nodes sorted by the user and placed in a configuration 
+within the content pane.  Nodes can be dragged and dropped to arrange them in the desired manner.
+To keep the sort persistent then three additional methods must be defined on the model to support 
+manual sorting:
+
+	&lt;ul&gt;
+	&lt;li&gt;ExtensionModel.supportsUserSortOrder()
+	&lt;li&gt;ExtensionModel.setUserSortOrder()
+	&lt;li&gt;ExtensionModel.getUserSortOrder()
+	&lt;/ul&gt;
+
+&lt;h3&gt;ExtensionModel.supportsUserSortOrder&lt;/h3&gt;
+
+&lt;p&gt;This method will be called on a handled container node to determine wether nodes can be sorted 
+manually.
+
+&lt;h3&gt;ExtensionModel.setUserSortOrder&lt;/h3&gt;
+
+&lt;p&gt;If the manual sorting is supported, then this method is used to store the sort details.  A XML string is
+passed to this method which contains the sort details.  How these details are stored is implementation-dependent.  
+This sample uses a custom property on the model, ExtensionModel.sortXML, but any number
+of ways could be implemented, such as using the ExtensionModel.privateData property or even storing 
+the details in a file on disk.
+
+&lt;h3&gt;ExtensionModel.getUserSortOrder&lt;/h3&gt;
+
+&lt;p&gt;This method is called whenever Bridge needs to display the handled nodes in a manual sort.  An XML 
+string is returned containing the details of sort.  The XML string is in the following format:
+
+&lt;pre&gt;&amp;lt;dirinfo&amp;gt;
+   &amp;lt;files&amp;gt;
+  &amp;lt;item key='XXX' /&amp;gt;
+  &amp;lt;/files&amp;gt;
+  &amp;lt;/dirinfo&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;The item element has an attribute named 'key'.  This attribute holds a string which 
+is the name of the thumbnail and the date of creation.  The date will take the format:
+
+&lt;ul&gt;
+&lt;li&gt;YYYYMMDDHHMMSS
+&lt;/ul&gt;
+
+&lt;p&gt;For example, if we have a thumbnail named myFile which was created on 
+Monday, September 25th at 10:28 and 34 seconds the date string would be 
+20060925102834.  This is concatenated with the file name to give the attribute value of:
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;item hkey = &amp;quot;myFile20060925102834&amp;quot; /&amp;gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The date is retrieved from the immediate infoset  - core.immediate.creationDate - and
+the order of the item elements denotes the display order of the thumbnails.  For example, the thumbnail
+denoted as the first 'item' element is displayed first in the browser pane, the thumnail denoted as 
+second 'item' element is displayed second in the browser pane and etc, etc. If the creation date 
+will not be supported for the handled nodes (core.immediate.creationDate) then a string of 0 (zero) 
+is used to create the key.  For example:
+
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;item hkey = &amp;quot;myFile00000000000000&amp;quot; /&amp;gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The XML string is always in this format, even if the sort has been reversed.  You do not need to 
+consider the reverse order of the sort when building the XML string, if the sort is reversed then 
+Bridge can determine this.
+
+&lt;h4&gt;Filtering&lt;/h4&gt;
+
+&lt;p&gt;To add additional filters for custom nodes, the model must return an array of FilterDescription 
+objects when the ExtensionModel.getFilterCriteria() is called.  The array can add to the default list or 
+create an entirely new list.  This sample adds a custom filter to the default list, allowing the handled
+nodes to be filtered on a string value stored in a custom Infoset.
+
+&lt;p&gt;See the Bridge JavaScript Guide for more details of node-handling mechanisms
+you can implement.&lt;br /&gt;
+
+  <span class="attrib">@see</span> SDKSystem
+  <span class="attrib">@see</span> SDKNode
+  <span class="attrib">@see</span> BasicExtensionHandler
+  <span class="attrib">@see</span> CustomInfosetExtensionHandler
+  <span class="attrib">@see</span> CustomSearchExtensionHandler
+	
+<span class="attrib">@constructor</span>  Constructor.
+*/</span>
+<span class="reserved">function</span> CustomSortExtensionHandler() {
+
+	$.level = 1; <span class="comment">// Debugging level</span>
+	<span class="comment">/**
+	  The context in which this sample can run.
+	  <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tNeed to be running in context of Bridge\n"</span>;		
+}
+
+<span class="comment">/**
+ Functional part of this sample, creates several nodes of the new type, and one manager object,
+ which stores the node-identifying prefix and root node. 
+     
+ &lt;p&gt;Creates the ExtensionHandler object, whose definition includes
+ the 'makeModel()' method, which Bridge uses to create the ExtensionModel object 
+ at node-display time. 
+ 
+ Registers the ExtensionHandler, associating it with the node-identifying prefix.
+ 	<span class="attrib">@return</span> True if the sample ran as expected, false otherwise
+ 	<span class="attrib">@type</span> Boolean
+*/</span>
+CustomSortExtensionHandler.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		<span class="reserved">return</span> false;
+	}
+
+	$.writeln(<span class="literal">"About to run CustomSortExtensionHandler"</span>);
+
+	<span class="comment">// Make sure the XMP object is loaded and available so we can access a nodes metadata</span>
+	<span class="reserved">if</span>( XmpScriptLib == undefined ) {
+		<span class="reserved">if</span>( Folder.fs == <span class="literal">"Windows"</span> ) {
+			<span class="reserved">var</span> pathToLib = Folder.startup.fsName + <span class="literal">"/AdobeXMPScript.dll"</span>;
+		} <span class="reserved">else</span> {
+			<span class="reserved">var</span> pathToLib = Folder.startup.fsName + <span class="literal">"/AdobeXMPScript.framework"</span>;
+		}
+		<span class="reserved">var</span> libfile = new File( pathToLib );
+		<span class="reserved">var</span> XmpScriptLib = new ExternalObject(<span class="literal">"lib:"</span> + pathToLib );
+	}
+	
+	<span class="comment">// Create some nodes of the script-defined type </span>
+	<span class="reserved">var</span> root = new SDKNode(<span class="literal">"CustomSortRoot"</span>, true);
+
+	<span class="comment">// Sub node - /BehRoot/BehFolder1</span>
+	root.addNode(new SDKNode(<span class="literal">"CSFolder1"</span>, true));
+	
+	<span class="comment">// add a leaf node to the root</span>
+	<span class="reserved">var</span> lf = new SDKNode(<span class="literal">"RootLeaf"</span>, false);
+	root.addNode(lf);
+
+	<span class="reserved">var</span> n = new SDKNode(<span class="literal">"leaf1"</span>, false);
+	<span class="reserved">var</span> d = root.findChildNode(<span class="literal">"CSFolder1"</span>);
+	d.addNode(n);
+	
+	<span class="comment">// Add a few extra nodes so we can see the sorting easier</span>
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; 20;i++)
+	{
+		<span class="reserved">var</span> nd = new SDKNode(<span class="literal">"leaf"</span> + i, false);
+		nd.customNumber = (99-i);
+		<span class="reserved">if</span>(i % 2 == 0)
+		{
+			nd.customString = <span class="literal">"Z_"</span> + i;
+			nd.customNumber = (99+i);
+		}
+		root.addNode(nd);
+	}
+
+	<span class="comment">// Sub node - /BehRoot/BehFolder2</span>
+	root.addNode(new SDKNode(<span class="literal">"CSFolder2"</span>, true));
+	n = new SDKNode(<span class="literal">"leaf2"</span>, false);
+	d = root.findChildNode(<span class="literal">"CSFolder2"</span>);
+	d.addNode(n);
+	n = new SDKNode(<span class="literal">"leaf3"</span>, false);
+	d = root.findChildNode(<span class="literal">"CSFolder2"</span>);
+	d.addNode(n);
+
+	<span class="comment">// /BehRoot/BehFolder1/BehSubFolder1</span>
+	root.getChildNode(<span class="literal">"CSFolder2"</span>).addNode(new SDKNode(<span class="literal">"CSSubFolder1"</span>, true));
+
+	<span class="comment">// BehRoot/BehFolder1/BehSubFolder1/leaf4</span>
+	n = new SDKNode(<span class="literal">"leaf4"</span>, false);
+	d = root.findChildNode(<span class="literal">"CSSubFolder1"</span>);
+	d.addNode(n);
+
+	<span class="comment">// Create the manager object with the node-identifying prefix, </span>
+	<span class="comment">// and add the root node</span>
+	<span class="reserved">var</span> sys = new SDKSystem(<span class="literal">"bridge:csortNode:"</span>);
+	sys.addRoot(root);
+
+	<span class="comment">// Create the node extension handler object</span>
+	<span class="reserved">var</span> sortHandler = new ExtensionHandler(<span class="literal">"sortHandler"</span>);
+
+	<span class="comment">// Register the node handler and prefix	with the application</span>
+	app.registerExtension(sortHandler);
+	app.registerPrefix( <span class="literal">"bridge:csortNode:"</span>, sortHandler);
+
+	<span class="comment">/**
+		Required. Returns a canonical URI for the path.  If the path does not contain the 
+		registered prefix, the this method must append it to the path and return it.  For example: 
+		bridge:beNode:/CSRoot
+		<span class="attrib">@param</span> path The path of the node as a string
+	*/</span>
+	sortHandler.getBridgeUriForPath = <span class="reserved">function</span>(path)
+	{
+		<span class="reserved">return</span> path;
+	}
+
+	<span class="comment">/**
+		Extends the handler with a helper function so all the thumbnails can 
+		be collected for the search
+		<span class="attrib">@param</span> kids An array of SDK nodes.
+	*/</span>
+	ExtensionHandler.<span class="reserved">prototype</span>.getThumbsToSearch = <span class="reserved">function</span>(kids)
+	{	
+		<span class="reserved">for</span>(<span class="reserved">var</span> h = 0;h &lt; kids.length;h++)
+		{
+			<span class="reserved">if</span>(kids[h].isContainer())
+			{
+				<span class="reserved">this</span>.getThumbsToSearch(kids[h].getChildren()); <span class="comment">// node test</span>
+			}
+			sortHandler.thumbsToSearch.push(kids[h]);
+		}
+	}
+
+	<span class="comment">/**
+		Search implementation: Performs a search and returns the search result,	
+		a container Thumbnail object that contains the matching nodes.
+		The passed 'scope' is the Thumbnail object that the search starts from, and 
+		'spec' is the SearchSpecification object containing all search details as 
+		set by the user in the Find dialog.
+		
+		<span class="attrib">@param</span> scope  The Thumbnail to start searching from
+		<span class="attrib">@param</span> spec The SearchSpecification details
+	*/</span>
+	sortHandler.getBridgeUriForSearch = <span class="reserved">function</span>(scope, spec)
+	{
+		<span class="comment">// Create a search results node - give it a unique name for each search container created.</span>
+		<span class="reserved">var</span> randomnumber=Math.floor(Math.random()*101);
+		<span class="reserved">var</span> d = new Date();
+		<span class="reserved">var</span> postfix = d.getSeconds() + randomnumber;
+
+		<span class="reserved">var</span> sNode = new SDKNode(<span class="literal">"SearchNode"</span> + postfix, true)
+		sNode.children = new Array();
+		sys.addSearchNode(sNode); <span class="comment">// This overwrites any previous search node objects in the system</span>
+
+		<span class="reserved">var</span> sThumb = new Thumbnail(<span class="literal">"bridge:csNode:/SearchNode"</span> + postfix);
+		sThumb.core.children.cacheData.status = <span class="literal">"bad"</span>;
+
+		<span class="comment">// Get the scope specifiers (whether to search subfolders)</span>
+		<span class="reserved">var</span> searchScopes = spec.scopeSpecifiers;
+
+		<span class="comment">//  Create an array to hold the thumbnails to be checked against search criteria </span>
+		sortHandler.thumbsToSearch = new Array();
+
+		<span class="comment">// This is the node from which to start</span>
+		<span class="reserved">var</span> scopeNode = sys.getNodeFromPath(scope.uri);
+
+		<span class="reserved">var</span> children;
+		<span class="comment">// Check if the search is to include subfolders</span>
+		<span class="reserved">if</span>(searchScopes[0] == <span class="literal">"DoSubFolders"</span>)
+		{
+			<span class="comment">// Get the node children and find all the thumbnaiils we need to search through</span>
+			<span class="reserved">this</span>.getThumbsToSearch(scopeNode.getChildren());
+
+			children = sortHandler.thumbsToSearch;
+		}
+		<span class="reserved">else</span>
+		{
+			children = scopeNode.getChildren();
+		}
+		
+		<span class="comment">// Get the conditions of the search, as specified by the user</span>
+		<span class="reserved">var</span> conditions = spec.conditionList;
+
+		<span class="reserved">if</span>(spec.conjunction == <span class="literal">"or"</span>)	<span class="comment">// This search only supports an "OR" conjunction</span>
+		{
+			<span class="comment">// Check each thumbnail/node and see if the criteria match</span>
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; children.length;i++)
+			{
+				<span class="reserved">var</span> currentNode = children[i];
+							
+				<span class="reserved">for</span>(j = 0;j &lt; conditions.length;j++)
+				{
+					<span class="reserved">var</span> currentCon = conditions[j]
+					<span class="reserved">var</span> searchField = currentCon.searchField;
+					<span class="reserved">var</span> operand = currentCon.operand;
+
+					<span class="comment">// Get the values for the field/data we are searching against</span>
+					switch(searchField)
+					{
+						<span class="reserved">var</span> thumbFieldValue;
+						case <span class="literal">"CustomString"</span>:
+							thumbFieldValue = currentNode.getCustomString();
+							break;
+						case <span class="literal">"CustomNumber"</span>:
+							thumbFieldValue = currentNode.getCustomNumber();
+							break;
+						case <span class="literal">"CustomBool"</span>:
+							thumbFieldValue = currentNode.getCustomBool();
+							break;
+						case <span class="literal">"name"</span>:
+							thumbFieldValue = currentNode.getName();
+							break;
+					}
+
+					<span class="comment">// Check if anything matches the criteria</span>
+					<span class="comment">// This is an OR search, so when a node hits any match,</span>
+					<span class="comment">// add it to the children of the search container</span>
+					switch(currentCon.operatorType)
+					{
+						case <span class="literal">"equals"</span>:
+							<span class="reserved">if</span>(thumbFieldValue == operand || thumbFieldValue.toString() == operand) <span class="comment">// catches boolean values and strings</span>
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						case <span class="literal">"lessThanOrEqual"</span>:
+							<span class="reserved">if</span>(thumbFieldValue &lt;= operand)
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						case <span class="literal">"greaterThanOrEqual"</span>:
+							<span class="reserved">if</span>(thumbFieldValue &gt;= operand)
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						case <span class="literal">"endsWith"</span>:
+							<span class="reserved">var</span> s = thumbFieldValue.substr((thumbFieldValue.length - operand.length), operand.length );
+							<span class="reserved">if</span>(s == operand)
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						default:
+					} <span class="comment">// end switch				</span>
+				} <span class="comment">// end for condtions</span>
+			} <span class="comment">// end for children</span>
+		}
+		<span class="reserved">else</span> <span class="reserved">if</span>(spec.conjunction == <span class="literal">"and"</span>)  <span class="comment">// This search only supports "OR" searches; you can expand it to include "AND" searches.</span>
+		{
+			alert(<span class="literal">"SDK: CustomSortExtensionHandler:\nSample does not show this type of search!"</span>);
+		}
+
+		<span class="comment">// Helper function to check for the existence of a node before adding it to the search node</span>
+		<span class="reserved">function</span> addNodeToSearchResult(node)
+		{
+			<span class="reserved">var</span> matches = sNode.getChildren();
+			<span class="reserved">var</span> addNode = true;
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; matches.length;i++)
+			{
+				<span class="reserved">if</span>(matches[i].getPath() == node.getPath())
+				{
+					addNode = false;
+					break;
+				}
+			}
+
+			<span class="reserved">if</span>(addNode)
+			{
+				sNode.addNode(node);
+			}
+		}
+
+		<span class="comment">// Return the URI to the container (a Thumbnail object) holding the search results.</span>
+		<span class="reserved">return</span> sThumb.uri;
+	}
+
+	<span class="comment">/**
+		Creates an operator that performs the long running operation.  In this case, updates are
+		made to the this nodes XMP data.
+		
+		<span class="attrib">@param</span> targets
+		<span class="attrib">@param</span> xmpPackets
+		<span class="attrib">@param</span> timeoutInMs Optional. The number of microseconds after wich to abort the operation
+		<span class="attrib">@param</span> showUi Optional.  Wether to show the UI or not
+		<span class="attrib">@param</span> message Optional. A string to display via the progress UI		
+	*/</span>
+	sortHandler.setXMP = <span class="reserved">function</span>(targets, xmpPackets, timeoutInMs, showUi, message)
+	{
+		<span class="reserved">var</span> thumbs = targets;
+		<span class="reserved">var</span> xmpData = xmpPackets;
+			
+		<span class="reserved">var</span> op = new ProgressOperator(<span class="literal">"progress"</span>, thumbs);
+	
+		op.start = <span class="reserved">function</span>()
+		{
+			op.procStat = <span class="literal">"notStarted"</span>;
+			
+			op.opStat = <span class="literal">"incomplete"</span>;
+			app.operationChanged(<span class="reserved">this</span>);
+			
+			op.procStat = <span class="literal">"inProgress"</span>;
+
+			<span class="reserved">this</span>.processedNodeCount = 0;
+
+			app.operationChanged(<span class="reserved">this</span>);
+			
+			op.percComp = 1;
+			
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; thumbs.length;i++)
+			{
+
+				<span class="comment">// Only added so we can see the ProgressOperator UI in action</span>
+				<span class="reserved">for</span>(<span class="reserved">var</span> j = 0;j &lt; 10;j++)
+				{
+					$.sleep(50);
+				}
+				op.percComp += (100 / thumbs.length);
+				app.operationChanged( <span class="reserved">this</span> );
+				
+				<span class="reserved">var</span> t = thumbs[i];
+				t.core.metadata.metadata = new Metadata(xmpData[i]);
+				t.model.privateData.node.setMetadata(new Metadata(xmpData[i]));
+				
+				<span class="reserved">this</span>.processedNodeCount++;
+			}
+
+			op.percComp = 100;
+			op.opStat = <span class="literal">"succeeded"</span>;
+			op.procStat = <span class="literal">"completed"</span>;
+	
+			app.operationChanged( <span class="reserved">this</span> );
+			<span class="reserved">return</span>;
+		}
+
+		op.stop = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span>;
+		}
+	
+		op.getConflictInfo = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> <span class="literal">"unknown"</span>;
+		}
+	
+		op.getOperationStatus = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> op.opStat;
+		}
+	
+		op.getPercentageComplete = <span class="reserved">function</span>()
+		{ 
+			<span class="reserved">return</span> op.percComp;
+		}
+	
+		op.getProcessedNodeCount = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> <span class="reserved">this</span>.processedNodeCount;
+		}
+	
+		op.getProcessingStatus = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> op.procStat;
+		}
+	
+		op.getProgressMessage = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> <span class="literal">"Setting XMP on selected files"</span>;
+		}
+	
+		op.getTotalBytesTransferred = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> 0;
+		}
+	
+		op.getTotalNodeCount = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> thumbs.length;
+		}
+	
+		op.getType = <span class="reserved">function</span>()
+		{ 
+			<span class="reserved">return</span> <span class="literal">"progress"</span>;
+		}
+	
+		op.getUIPolicy = <span class="reserved">function</span>() 
+		{ 
+				<span class="reserved">return</span> <span class="reserved">this</span>.showUi;
+		}
+	
+		op.resume = <span class="reserved">function</span>() 
+		{ 
+			<span class="reserved">return</span> false;
+		}
+	
+		op.resolveConflict = <span class="reserved">function</span>() { }
+
+		app.enqueueOperation(op);
+		<span class="comment">//return op;</span>
+
+	}
+
+	<span class="reserved">var</span> wrapperObject = <span class="reserved">this</span>;
+	<span class="comment">/**
+		Required. Creates and returns an ExtensionModel instance.  Called each time a handled node
+		is displayed.  The model must also implement any methods that handle any required 
+		functionality, such as renaming a node.
+		<span class="attrib">@return</span> An ExtensionModel for this node
+		<span class="attrib">@type</span> ExtensionModel
+	*/</span>
+	sortHandler.makeModel = <span class="reserved">function</span>(path)
+	{
+			<span class="comment">// Add a a property to store the manual sort</span>
+		ExtensionModel.<span class="reserved">prototype</span>.sortXML = <span class="literal">""</span>;
+		sortModel = new ExtensionModel(path);
+		sortModel.path = path;
+		<span class="reserved">this</span>.path = path;
+		wrapperObject.initModel(sortModel, sys);
+		
+		<span class="reserved">return</span> sortModel;
+
+	} <span class="comment">// end makeModel</span>
+
+	<span class="comment">// Create the InfosetMemberDescription objects</span>
+	<span class="reserved">var</span> csDescriptions = new Array();
+	csDescriptions[0] = new InfosetMemberDescription( <span class="literal">"CustomString"</span>, <span class="literal">"String"</span> );
+	csDescriptions[1] = new InfosetMemberDescription( <span class="literal">"CustomNumber"</span>, <span class="literal">"Integer"</span> );
+	csDescriptions[2] = new InfosetMemberDescription( <span class="literal">"CustomDate"</span>, <span class="literal">"String"</span> );
+	csDescriptions[3] = new InfosetMemberDescription( <span class="literal">"CustomArray"</span>, <span class="literal">"Array of String"</span> );
+	csDescriptions[4] = new InfosetMemberDescription( <span class="literal">"CustomBool"</span>, <span class="literal">"Boolean"</span> );
+
+	<span class="comment">// Create the infoset</span>
+	<span class="reserved">var</span> customInfoset = new Infoset(<span class="literal">"customInfoset"</span>, csDescriptions);
+
+	<span class="comment">// Register the infoset</span>
+	app.registerInfoset(sortHandler, customInfoset);
+	
+	<span class="comment">// Event handler displays the Custom Infoset Data palette for handled thumbnails.</span>
+	onEvent = <span class="reserved">function</span>(event)
+	{
+		<span class="reserved">if</span>(event.object instanceof Document)
+		{			
+			<span class="reserved">if</span>(event.type == <span class="literal">"selectionsChanged"</span>)
+			{
+				<span class="reserved">if</span>(event.object.selections.length &gt; 0)
+				{
+					<span class="reserved">var</span> thumb = event.object.selections[0];	
+
+					<span class="reserved">if</span>(thumb.sortHandler)
+					{
+						stringText.text = thumb.sortHandler.customInfoset.CustomString;
+						numbersText.text = thumb.sortHandler.customInfoset.CustomNumber;
+						dateText.text = thumb.sortHandler.customInfoset.CustomDate;
+						arrStringText.text = thumb.sortHandler.customInfoset.CustomArray.toString();
+						boolList.selection = (thumb.sortHandler.customInfoset.CustomBool) ? 0 : 1;
+						customSearchDataPalette.content.visible = true;
+					} 
+					<span class="reserved">else</span>
+					{
+						customSearchDataPalette.content.visible= false;
+					}					
+				}
+				<span class="reserved">else</span>
+				{
+					customSearchDataPalette.content.visible= false;
+				}
+			}
+		}
+	}
+
+	<span class="comment">// Register the event handler</span>
+	app.eventHandlers.push({handler: onEvent});
+	
+	
+	<span class="comment">// Create  a palette to display the custom data</span>
+	<span class="reserved">var</span> customSearchDataPalette = new TabbedPalette(app.document, <span class="literal">"SDK: Custom Sort Infoset Data"</span>, <span class="literal">"SDKCus2tomInfoPaletteSort"</span>, <span class="literal">"script"</span>);
+	<span class="reserved">var</span> win = customSearchDataPalette.content;
+
+	<span class="reserved">var</span> stringLabel = win.add(<span class="literal">"statictext"</span>, [5, 9, 115, 25], <span class="literal">"Custom String"</span>);
+	<span class="reserved">var</span> stringText = win.add(<span class="literal">"edittext"</span>, [120, 5, 320, 25], <span class="literal">""</span>);
+	stringText.enabled = false;
+	
+	<span class="reserved">var</span> numbersLabel = win.add(<span class="literal">"statictext"</span>, [5, 39, 115, 55], <span class="literal">"Custom Number"</span>);
+	<span class="reserved">var</span> numbersText = win.add(<span class="literal">"edittext"</span>, [120, 35, 320, 55], <span class="literal">""</span>);
+	numbersText.enabled = false;
+
+	<span class="reserved">var</span> dateLabel = win.add(<span class="literal">"statictext"</span>, [5, 69, 115, 85], <span class="literal">"Custom Date"</span>);
+	<span class="reserved">var</span> dateText = win.add(<span class="literal">"edittext"</span>, [120, 65, 320, 85], <span class="literal">""</span>);
+	dateText.enabled = false;
+
+	<span class="reserved">var</span> arrLabel = win.add(<span class="literal">"statictext"</span>, [5, 99, 115, 115], <span class="literal">"Custom Array"</span>);
+	<span class="reserved">var</span> arrStringText = win.add(<span class="literal">"edittext"</span>, [120, 95, 320, 115], <span class="literal">""</span>);
+	arrStringText.enabled = false;
+	
+	<span class="reserved">var</span> boolLabel = win.add(<span class="literal">"statictext"</span>, [5, 129, 115, 145], <span class="literal">"Custom Boolean"</span>);
+	<span class="reserved">var</span> boolList = win.add(<span class="literal">"dropdownlist"</span>, [120, 125, 320, 145]);
+	<span class="reserved">var</span> tItem = boolList.add(<span class="literal">"item"</span>, <span class="literal">"True"</span>);
+	tItem.val = true;
+	<span class="reserved">var</span> fItem = boolList.add(<span class="literal">"item"</span>, <span class="literal">"False"</span>);
+	fItem.val = false;
+	boolList.enabled = false;
+	
+	<span class="comment">// Hide the palette until a handled node is selected</span>
+	customSearchDataPalette.content.visible = false;	
+	
+	<span class="comment">// create a thumbnail and add it to the Favorites panel</span>
+	<span class="reserved">var</span> t = new Thumbnail(<span class="literal">"bridge:csortNode:/CustomSortRoot"</span>);
+	app.favorites.insert(t);
+	t.refresh();
+
+	$.writeln(<span class="literal">"CustomSortExtensionHandler initialized successfully"</span>);
+	<span class="reserved">return</span> true;
+}
+
+
+<span class="comment">/**
+  Determines whether sample can be run given current context.  The sample
+  fails if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Bridge must be running
+  &lt;li&gt; Resource files must be available
+  &lt;/ul&gt;
+  <span class="attrib">@return</span> True if this sample can run, false otherwise
+  <span class="attrib">@type</span> Boolean
+*/</span>
+CustomSortExtensionHandler.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>() {
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) {
+	
+		<span class="reserved">for</span>(index in app.extensions)
+		{
+			<span class="reserved">if</span>(app.extensions[index].name == <span class="literal">"sortHandler"</span>)
+			{
+				$.writeln(<span class="literal">"ERROR: Cannont run twice! You must restart Bridge"</span>);
+				<span class="reserved">return</span> false;
+			}
+		}
+		<span class="reserved">return</span> true;
+	}
+	$.writeln(<span class="literal">"ERROR:: Cannot run CustomSortExtensionHandler"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+	Initialize the model and define the methods that this model supports
+	<span class="attrib">@param</span> sortModel The model for the handled nodes
+	<span class="attrib">@param</span> sys The manager object for the handled nodes
+*/</span>
+CustomSortExtensionHandler.<span class="reserved">prototype</span>.initModel = <span class="reserved">function</span>(sortModel, sys)
+{		
+		<span class="comment">/**
+			Implements the customization of the Find dialog for the custom search in handled nodes.
+			Creates and returns a SearchDefinition object used for the customization.
+			
+			<span class="attrib">@return</span> A customized SearchDefinition
+			<span class="attrib">@type</span> SearchDefinition
+		*/</span>
+		sortModel.getSearchDefinition = <span class="reserved">function</span>()
+		{
+
+			<span class="comment">// Criteria section</span>
+			<span class="comment">// Add values to the search field (left box) of the Criteria section</span>
+			<span class="reserved">var</span> searchField = <span class="literal">"CustomString"</span>;
+			<span class="reserved">var</span> opType = <span class="literal">"string"</span>;
+			<span class="reserved">var</span> searchFieldDisplay = <span class="literal">"Custom String"</span>;
+
+			<span class="reserved">var</span> searchCriteria1 = new SearchCriteria(searchField, opType, searchFieldDisplay);
+
+			<span class="comment">// Restrict values for the operator (middle box) of the Criteria section</span>
+			searchCriteria1.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"equals"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"lessThanOrEqual"</span>, <span class="literal">"greaterThanOrEqual"</span>, <span class="literal">"contains"</span>, 
+				<span class="literal">"doesNotContain"</span>, <span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+	
+			searchField = <span class="literal">"CustomNumber"</span>;
+			opType = <span class="literal">"float"</span>;
+			searchFieldDisplay = <span class="literal">"Custom Number"</span>;
+			<span class="reserved">var</span> searchCriteria2 = new SearchCriteria(searchField, opType, searchFieldDisplay);
+			searchCriteria2.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"contains"</span>, 	<span class="literal">"doesNotContain"</span>, <span class="literal">"endsWith"</span>, 
+				<span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+			
+			searchField = <span class="literal">"name"</span>;
+			opType = <span class="literal">"string"</span>;
+			searchFieldDisplay = <span class="literal">"Name"</span>;			
+			<span class="reserved">var</span> searchCriteria3 = new SearchCriteria(searchField, opType, searchFieldDisplay);
+			searchCriteria3.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"lessThanOrEqual"</span>, <span class="literal">"greaterThanOrEqual"</span>, <span class="literal">"contains"</span>, 
+				<span class="literal">"doesNotContain"</span>, <span class="literal">"endsWith"</span>, <span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+
+			searchField = <span class="literal">"CustomBool"</span>;
+			opType = <span class="literal">"boolean"</span>;
+			searchFieldDisplay = <span class="literal">"Custom Boolean"</span>;
+			
+			<span class="comment">// Create some Operand objects</span>
+			<span class="comment">// these populate the comparison-value choices in the far right box of the Criteria section</span>
+			<span class="reserved">var</span> op1 = new Operand(<span class="literal">"true"</span>, <span class="literal">"A true value"</span>);
+			<span class="reserved">var</span> op2 = new Operand(<span class="literal">"false"</span>, <span class="literal">"A false value"</span>);
+			<span class="reserved">var</span> myOperators = [op1, op2];
+
+			<span class="reserved">var</span> searchCriteria4 = new SearchCriteria(searchField, opType, searchFieldDisplay, myOperators);
+			searchCriteria4.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"lessThanOrEqual"</span>, <span class="literal">"greaterThanOrEqual"</span>, <span class="literal">"contains"</span>, 
+				<span class="literal">"doesNotContain"</span>, <span class="literal">"endsWith"</span>, <span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+
+			<span class="reserved">var</span> critList = [searchCriteria1, searchCriteria2, searchCriteria3, searchCriteria4];
+
+			<span class="comment">// Results section</span>
+			<span class="comment">//var rank1 = new Rank("RankValueName", "RankDisplayName");</span>
+			<span class="comment">//var rank2 = new Rank("RankValueName", "RankDisplayName");</span>
+
+			<span class="reserved">var</span> ranksArray = [];  <span class="comment">// These are optional, but empty arrays must be passed</span>
+
+			<span class="comment">// create some scopeSpecifier objects</span>
+			<span class="reserved">var</span> scope1 = new Scope( <span class="literal">"DoSubFolders"</span>, <span class="literal">"SDKSearch: Search subfolders"</span>);
+			<span class="reserved">var</span> scope2  = new Scope(<span class="literal">"DoHidden"</span>, <span class="literal">"SDKSearch: Search hidden files"</span>);
+			<span class="comment">// the scopeSpecifiers to an Array</span>
+			<span class="reserved">var</span> scopesArray = [scope1, scope2]; <span class="comment">// These are documented as optional, true but empty arrays must be passed</span>
+
+			<span class="reserved">var</span> searchDef = new SearchDefinition(critList, 10, ranksArray, scopesArray);
+			<span class="reserved">return</span> searchDef;
+		}
+			
+			<span class="comment">// Renames a node</span>
+		sortModel.setName = <span class="reserved">function</span>(name)
+		{
+
+			<span class="comment">// Get the parent of the node</span>
+			<span class="reserved">var</span> parent = <span class="reserved">this</span>.privateData.node.getParent();
+			<span class="reserved">var</span> update = new Thumbnail(sys.getPrefix() + parent.getPath());
+
+			<span class="comment">// Set the cache status to bad as we want a refresh to occur			</span>
+			update.core.children.cacheData.status = <span class="literal">"bad"</span>;
+
+			<span class="comment">// Change the name of the node</span>
+			<span class="reserved">this</span>.privateData.node.setName(name);
+
+			<span class="comment">// If the name has been changed whilst the node is viewed in a search results container</span>
+			<span class="reserved">if</span>(app.document.thumbnail.name == <span class="literal">"SearchNode"</span>)
+			{
+				app.document.thumbnail.core.children.cacheData.status = <span class="literal">"bad"</span>;
+			}
+
+			<span class="reserved">var</span> newURI = sys.getPrefix() + <span class="reserved">this</span>.privateData.node.getPath();
+			<span class="reserved">return</span> newURI;
+		} <span class="comment">// end setName</span>
+	
+		<span class="comment">// Creates a new container of the script defined type</span>
+		<span class="comment">// Must return an operator as this is a long running operation.</span>
+		<span class="comment">// Creates a new container of the script defined type</span>
+		<span class="comment">// Must return an operator as this is a long running operation.</span>
+		sortModel.createNewContainer = <span class="reserved">function</span>(name)
+		{
+			<span class="reserved">var</span> newNode = new SDKNode(name, true)
+			<span class="reserved">this</span>.privateData.node.addNode(newNode);
+
+			<span class="comment">// Set the cache status to bad as we want a refresh to occur			</span>
+			<span class="reserved">this</span>.privateData.cacheElement.children.cacheData.status = <span class="literal">"bad"</span>;
+			<span class="comment">//this.refreshInfoset("all"); </span>
+
+			<span class="reserved">return</span> sys.getPrefix() + newNode.getPath();
+		} <span class="comment">// end createNewContainer</span>
+	
+		<span class="comment">/**
+			Checks whether this node requires authentication.
+			<span class="attrib">@return</span> True if this node requires authentication, false otherwise
+			<span class="attrib">@type</span> Boolean
+		*/</span>
+		sortModel.needAuthentication = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> false;
+		}
+
+		<span class="comment">/**
+			Required.  Carries out any necessary authentication.
+		*/</span>
+		sortModel.authenticate = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span>;
+		}
+	
+		<span class="comment">/**
+			Required,  Checks if this node is a valid node.
+			<span class="attrib">@return</span> True if this node is valid, false otherwise
+			<span class="attrib">@type</span> Boolean
+		*/</span>			
+		sortModel.exists = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> true;
+		}
+
+		<span class="comment">/**
+			Required.  Called after the model is created, sets up any necessary data structures
+			that may be needed.
+		*/</span>
+		sortModel.initialize = <span class="reserved">function</span>()
+		{
+			<span class="reserved">this</span>.privateData.node = sys.getNodeFromPath(<span class="reserved">this</span>.path);
+		}
+		
+		<span class="comment">/**
+			Required.  Stores a back pointer to the cache that contains this model.
+			<span class="attrib">@param</span> cacheEelement The CacheElement that contains this model.
+		*/</span>	
+		sortModel.registerInterest = <span class="reserved">function</span>(cacheElement)
+		{
+			<span class="reserved">this</span>.privateData.cacheElement = cacheElement;
+		}
+		
+		<span class="comment">/**
+			Required. Removes the association between the CacheElement and
+			this model instance.
+		*/</span>	
+		sortModel.unregisterInterest = <span class="reserved">function</span>()
+		{
+			<span class="reserved">this</span>.privateData.cacheElement = undefined;
+		}
+	
+		<span class="comment">/**
+			Adds a custom filter criteria to Bridge.  Single FilterDescription is added to the default list of FilterDescription objects.
+			This allows hanlded nodes to be filtered based on a string value stored in a custom Infoet.
+		*/</span>	
+		sortModel.getFilterCriteria = <span class="reserved">function</span>()
+		{
+			<span class="reserved">var</span> defFilters = app.defaultFilterCriteria;
+			<span class="reserved">var</span> filter = new FilterDescription(<span class="literal">"customStringfilter"</span>, <span class="literal">"SDK: Custom Filter"</span>, <span class="literal">"string"</span>, <span class="literal">"sortHandler.customInfoset.CustomString"</span>, false);
+			defFilters.push(filter);
+			<span class="reserved">return</span> defFilters;
+		}
+
+		<span class="comment">/**
+			Adds custom SortCriterion to Bridge for handled nodes.
+			Three new sort options are added to Bridge's default sort criterion.  The first two use the custom infoset to sort Thumbnails. 
+			The third uses a custom namespace and custom XMP data.
+			<span class="attrib">@return</span> An array of SortCriterion objects
+		*/</span>
+		sortModel.getSortCriteria = <span class="reserved">function</span>()
+		{
+			<span class="reserved">var</span> dsc = app.defaultSortCriteria;
+			<span class="reserved">var</span> sc1 = new SortCriterion(<span class="literal">"sortSDKNumber"</span>, <span class="literal">"number"</span>, <span class="literal">"sortHandler.customInfoset.CustomNumber"</span>, <span class="literal">"SDK: Custom Number"</span>);
+			dsc.push(sc1);
+
+			<span class="reserved">var</span> sc2 = new SortCriterion(<span class="literal">"sortSDKString"</span>, <span class="literal">"string"</span>, <span class="literal">"sortHandler.customInfoset.CustomString"</span>, <span class="literal">"SDK: Custom String"</span>);
+			dsc.push(sc2);
+						
+			<span class="reserved">var</span> sc3 = new SortCriterion(<span class="literal">"sortSDKXMP"</span>, <span class="literal">"number"</span>, <span class="literal">"http://ns.adobe.bridge.sdk/a/"</span>, <span class="literal">"ID"</span>, <span class="literal">"SDK: Custom XMP"</span>);
+			dsc.push(sc3);
+
+			<span class="reserved">return</span> dsc;
+		}
+	
+		<span class="comment">/**
+			Returns the parent of this node
+		*/</span>
+		sortModel.getParent = <span class="reserved">function</span>()
+		{
+			<span class="reserved">var</span> parent = <span class="reserved">this</span>.privateData.node.getParent();
+			<span class="reserved">if</span>(parent != undefined)
+			{
+				<span class="reserved">return</span> (sys.getPrefix() + parent.getPath());
+			}
+		}
+	
+		sortModel.supportsUserSortOrder = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> true;
+		}
+
+		<span class="comment">/**
+			Stores the custom sort for this container
+		*/</span>
+		sortModel.setUserSortOrder = <span class="reserved">function</span>(inXML)
+		{
+			<span class="reserved">this</span>.sortXML = inXML;
+		}
+	
+		<span class="comment">/**
+			Return an XML string that gives the custom sort of the children
+			of this container.
+		*/</span>
+		sortModel.getUserSortOrder = <span class="reserved">function</span>()
+		{
+			<span class="reserved">if</span>(<span class="reserved">this</span>.sortXML == <span class="literal">""</span>)
+			{
+				<span class="reserved">var</span> xml = <span class="literal">"&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;&lt;dirinfo&gt;&lt;files&gt;"</span>;
+				<span class="reserved">var</span> children = <span class="reserved">this</span>.privateData.node.getChildren();
+				<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; children.length;i++)
+				{
+					<span class="comment">// Use 00000000000000 if creattiondate is not supported</span>
+					xml += <span class="literal">"&lt;item key='"</span> + children[i].getName() + <span class="literal">"00000000000000"</span> + <span class="literal">"' /&gt;"</span>;
+				}
+				xml += <span class="literal">"&lt;/files&gt;&lt;/dirinfo&gt;"</span>;
+				<span class="reserved">this</span>.sortXML = xml;
+			}
+			
+			<span class="reserved">return</span> <span class="reserved">this</span>.sortXML;
+		}
+	
+		sortModel.addToDrag = <span class="reserved">function</span>(pointerToOsDragObject)
+		{
+			<span class="reserved">return</span> true;
+		}
+	
+		sortModel.wouldAcceptDrop = <span class="reserved">function</span>(type, sources, osDragRef)
+		{
+			<span class="reserved">return</span> false;
+		}
+	
+		<span class="comment">/**
+			Required.  Updates the core node data and any custom node data
+			for this node.  Always set the CacheData.status after updating the node data.
+			<span class="attrib">@param</span> infosetName The name of the Infoset that is being updated.
+		*/</span>
+		sortModel.refreshInfoset = <span class="reserved">function</span>(infosetName)
+		{
+			<span class="reserved">var</span> infoset = <span class="reserved">this</span>.privateData.cacheElement[infosetName];
+			<span class="reserved">var</span> currentNode = <span class="reserved">this</span>.privateData.node;
+			try
+			{
+				<span class="reserved">if</span>(infosetName == <span class="literal">"immediate"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					<span class="reserved">if</span>(<span class="reserved">this</span>.privateData.node.getName().substr(0,10) == <span class="literal">"SearchNode"</span>)
+					{
+						infoset.name = <span class="literal">"SearchNode"</span>;
+					}
+					<span class="reserved">else</span>
+					{
+						infoset.displayPath = <span class="reserved">this</span>.path;
+						<span class="reserved">if</span>(!currentNode.isContainer())
+						{
+							infoset.fileUrl = currentNode.getFileUrl();
+						}							
+						infoset.isApplication = false;
+						infoset.isDeleted = false;
+						infosetisHidden = false;
+						infoset.isLink = false;
+						infoset.isPackage = false;
+						infoset.isSidecarFile = false;
+						infoset.name = currentNode.getName();
+						infoset.size = [1024, 0];
+						infoset.sortIndex = currentNode.getName();
+				
+					}
+				
+					infoset.isContainer = currentNode.isContainer();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="comment">// The capabilities of a handled node</span>
+				<span class="reserved">if</span>(infosetName == <span class="literal">"item"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+				
+					infoset.canBeDragSource = true;
+					infoset.canBeDropTarget  = true; 
+					infoset.canCreateNewContainer = true;
+					infoset.canCreateNewLink  = false;
+					infoset.canDelete = true; <span class="comment">// TODO - enabled for drag test</span>
+					infoset.canDuplicate = true; <span class="comment">// TODO - enabled for drag test</span>
+					infoset.canEject = false;
+					infoset.canGetFileUrl = true;
+					infoset.canSetName = true;
+
+					<span class="comment">//descriptors </span>
+					infoset.isExternalEditInProgress  = false;
+					infoset.isLinkToContainer = false;
+					infoset.isLockedByUser = false;
+					infoset.isNeverWritable = false;
+					infoset.isPhysicalFile = false;
+					infoset.noWritePermission = false;
+		
+					<span class="reserved">if</span>(<span class="reserved">this</span>.privateData.node.getName().substr(0,10) != <span class="literal">"SearchNode"</span>)
+					{
+						<span class="reserved">if</span>(<span class="reserved">this</span>.privateData.node.isContainer())
+						{
+							infoset.canSearch = true;
+						}
+					}
+					
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			
+				<span class="comment">// Add any children of this node to the children infoset</span>
+				<span class="reserved">if</span>(infosetName == <span class="literal">"children"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					<span class="reserved">var</span> arr = currentNode.getChildren();
+					<span class="reserved">for</span>(<span class="reserved">var</span> j = 0;j &lt; arr.length;j++)
+					{
+						infoset.addChild(sys.getPrefix() + arr[j].getPath());
+					}
+
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"icon"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.bitmap = <span class="reserved">this</span>.privateData.node.getIcon();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"thumbnail"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.thumbnail = currentNode.getThumb();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"quickMetadata"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.colorMode = -1;
+					infoset.hasRawSettings = false;
+					infoset.hasCrop = false;
+					infoset.height = 0;
+					infoset.rating = 0;
+					infoset.rotation = 0;
+					infoset.stockPhotoStatus = 0;
+					infoset.xResolution = 0;
+					infoset.yResolution = 0;
+					infoset.width = 0;
+
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="comment">// The capabilities of a handled node</span>
+				<span class="reserved">if</span>(infosetName == <span class="literal">"itemContent"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					<span class="comment">// capabilities</span>
+					infoset.canDoCameraRaw = false; 
+					infoset.canGetFullSize = false; 
+					infoset.canGetPreview = false;
+					infoset.canGetQuickPreview = false;
+					infoset.canGetThumbnail = false;
+					infoset.canGetXmp = true;
+					infoset.canLabelOrRate = true;
+					infoset.canRotate = false; 
+					infoset.canSetXmp = true;
+
+					<span class="comment">// descriptors</span>
+					infoset.dynamicMediaType = undefined;
+					infoset.fileFormat = (currentNode.isContainer()) ? <span class="literal">""</span> : <span class="literal">"SDKNode"</span>;  
+					infoset.hasSubContainers = (currentNode.isContainer()) ? true : false;  
+					infoset.mimeType = <span class="literal">"application/x-bridgesdknode"</span>;
+					infoset.pageCount = 1 
+					infoset.tooltip = (currentNode.isContainer()) ? <span class="literal">"SDK Node Container"</span> : <span class="literal">"SDK Leafe Node"</span>;
+
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			
+				<span class="reserved">if</span>(infosetName == <span class="literal">"cameraRaw"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.rawSupportType = 0;
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+				
+				<span class="reserved">if</span>(infosetName == <span class="literal">"preview"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.preview = currentNode.getPreview();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			
+				<span class="reserved">if</span>(infosetName == <span class="literal">"metadata"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.metadata = currentNode.getMetadata();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			
+				<span class="reserved">if</span>(infosetName == <span class="literal">"customInfoset"</span> || <span class="literal">"all"</span>)
+				{
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomString = currentNode.getCustomString();	
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomNumber = currentNode.getCustomNumber();
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomDate = currentNode.getCustomDate();
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomArray = currentNode.getCustomArray();
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomBool = currentNode.getCustomBool();
+	
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			}
+			catch(error) { $.writeln(<span class="literal">"ERROR: "</span> + error); }
+
+		} <span class="comment">// end refreshInfoset</span>
+
+		<span class="comment">/**
+			Required.  Returns the cache status of a node data set.
+			<span class="attrib">@param</span> infosetName The name of the Infoset in which to check the cache status		
+		*/</span>
+		sortModel.getCacheStatus = <span class="reserved">function</span>( infosetName)
+		{
+			<span class="reserved">if</span>(typeof <span class="reserved">this</span>.privateData.cacheElement == <span class="literal">"undefined"</span>)
+			{
+				<span class="reserved">return</span> <span class="literal">"bad"</span>;
+			}
+
+			<span class="reserved">if</span>(typeof <span class="reserved">this</span>.privateData.cacheElement.infosetName== <span class="literal">"undefined"</span>)
+			{
+				<span class="reserved">var</span> ce = <span class="reserved">this</span>.privateData.cacheElement;
+				<span class="reserved">var</span> info = ce[infosetName];
+				<span class="reserved">var</span> cd = info.cacheData;
+				<span class="reserved">var</span> stat = cd.status;
+				<span class="reserved">return</span> stat;
+			}
+
+			<span class="reserved">return</span> <span class="reserved">this</span>.privateData.cacheElement[infosetName].cacheData.status;
+		}
+		
+		<span class="comment">/**
+			Return 'undefined' from this method. Any private data structures will be
+			cleaned automatically
+		*/</span>
+		sortModel.terminate = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> undefined;
+		}
+	
+}
+
+<span class="comment">// Include the support classes</span>
+#include SDKSystem.jsx
+#include SDKNode.jsx
+
+<span class="comment">/**
+  "main program": construct an anonymous instance and run it
+*/</span>
+<span class="reserved">if</span>(typeof(CustomSortExtensionHandler_unitTest) == <span class="literal">"undefined"</span>) {
+	new CustomSortExtensionHandler().run();
+}</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

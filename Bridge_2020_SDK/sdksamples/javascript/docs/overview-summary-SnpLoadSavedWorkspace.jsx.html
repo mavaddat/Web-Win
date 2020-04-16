@@ -1,0 +1,327 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpLoadSavedWorkspace.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpLoadSavedWorkspace.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to load a previously saved workspace, which you have copied to
+ the appropriate location for saved workspaces.
+
+  <BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpLoadSavedWorkspace.html">SnpLoadSavedWorkspace</a></b></td>
+    <td>Shows how to load a previously saved workspace, which you have copied to the appropriate location for saved workspaces.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+ <span class="attrib">@fileoverview</span> Shows how to load a previously saved workspace, which you have copied to
+ the appropriate location for saved workspaces.
+
+  <span class="attrib">@class</span> Shows how to load a previously saved workspace, which you have copied to the appropriate location for saved workspaces.
+ 
+   &lt;h4&gt; Usage&lt;/h4&gt;
+   &lt;ol&gt;
+  &lt;li&gt; Copy the workspace file SDKINSTALL/sdksamples/javascript/resources/BridgeSDKCustomWSpace.workspace 
+	to the default location for saved workspaces:
+&lt;pre&gt;
+      In Windows: - C:\Program Files\Common Files\Adobe\Bridge CS6 Extensions\Workspaces
+      In Mac OS: /Library/Application Support/Adobe/Bridge CS6 Extensions/Workspaces/
+&lt;/pre&gt;
+  &lt;li&gt;Run the snippet in the ExtendScript Toolkit (see Readme.txt).
+  &lt;li&gt;Loads the previously saved workspace into Adobe Bridge, which uses a
+  a tabbed palette to show a Flash movie in the center of the browser window.  
+  &lt;/ol&gt;
+
+  &lt;h4&gt;Description&lt;/h4&gt;
+  Loads a previously saved workspace into Adobe Bridge.  The saved workspace in this snippet uses
+  a tabbed palette to show a Flash movie in the center of the browser window.  For this snippet to run, 
+  you must copy the workspace file to the workspaces folder as described above.
+   &lt;p&gt;
+  This sample recreates the palette that contains the Flash Player,using the same ID that
+  was used to create it originally, and loads the movie that is shown in 
+  that component. It then loads the workspace by calling Document.setWorkspace(), 
+  passing in ID with which the workspace was saved.  
+   &lt;p&gt;
+  To save a workspace with your own custom palette:
+  &lt;ul&gt;
+  &lt;li&gt; Create the TabbedPalette and show it in Adobe Bridge.
+  &lt;li&gt; Manually arrange the workspace by placing the palettes in the desired positions.
+  &lt;li&gt; Save the workspace by choosing Window &gt; Workspace &gt; Save Workspace.
+  &lt;/ul&gt;
+   &lt;p&gt;
+  To load the saved workspace:
+  &lt;ul&gt;
+  &lt;li&gt; Create a TabbedPalette with the same ID as originally used
+  &lt;li&gt; Load the workspace using Document.setWorkspace(workspaceID), with the same ID used to save it.
+  &lt;/ul&gt;
+     
+  <span class="attrib">@constructor</span> Constructor
+ */</span>
+<span class="reserved">function</span> SnpLoadSavedWorkspace() 
+{
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tNeed to be running in context of Bridge\n"</span>;	
+	
+	<span class="comment">/**
+	 The ID of the workspace to load
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.workspaceID = <span class="literal">"BridgeSDKCustomWSpace"</span>;	
+	
+	<span class="comment">// Tells us where this script is running from</span>
+	<span class="reserved">var</span> scriptsFile = new File($.fileName);
+	
+	<span class="comment">/**
+	 The Flash movie to load into Bridge
+	 <span class="attrib">@type</span> File
+	*/</span>
+	<span class="reserved">this</span>.flashFile = new File(scriptsFile.parent.fsName + <span class="literal">"/resources/SnpCreateFlashControl.swf"</span>);
+}
+
+<span class="comment">/**
+ Functional part of this snippet.  Creates the TabbedPalette that will be used 
+ by the saved workspace and then loads the workspace.
+ <span class="attrib">@return</span> True if the snippet ran as expected, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+SnpLoadSavedWorkspace.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>() 
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		<span class="reserved">return</span> false;
+	}
+	
+	$.writeln(<span class="literal">"About to run SnpLoadSavedWorkspace"</span>);
+	
+	<span class="comment">// Use the same ID that was used to create the TabbedPalette </span>
+	<span class="comment">// when the workspace was saved</span>
+	flashPalette = new TabbedPalette(app.document, <span class="literal">"From SnpLoadSavedWorkspace"</span>, <span class="literal">"SnpLoadSavedWorkspacePalette"</span>, <span class="literal">"script"</span>);
+	
+	<span class="comment">// Add the elements to the palette</span>
+	<span class="reserved">var</span> cBounds = flashPalette.content.bounds;
+	<span class="reserved">var</span> flashPlayer = flashPalette.content.add(<span class="literal">"flashplayer"</span>, cBounds);
+	
+	<span class="comment">// Force the layout manager to recalculate container sizes</span>
+	flashPalette.content.layout.layout(true);
+	
+	<span class="comment">// Load and play the Flash movie.</span>
+	flashPlayer.loadMovie(<span class="reserved">this</span>.flashFile);
+	
+	flashPalette.content.layout.layout(true);
+	
+	<span class="comment">// Resize the Flash Player when the palette is resized.</span>
+	flashPalette.content.onResize = <span class="reserved">function</span>()
+	{
+		flashPlayer.bounds = flashPalette.content.bounds;
+		flashPalette.content.layout.layout(true);
+	}
+
+	<span class="comment">// Load the workspace</span>
+	app.document.setWorkspace(<span class="reserved">this</span>.workspaceID);
+	
+	$.writeln(<span class="literal">"Ran SnpLoadSavedWorkspace"</span>);
+	
+	<span class="reserved">return</span> true;
+}
+
+<span class="comment">/**
+ Determines whether snippet can be run given current context.  The snippet 
+ fails if these preconditions are not met: 
+ &lt;ul&gt;
+ &lt;li&gt; Must run in Bridge
+ &lt;li&gt; The SWF file must exist in the file system.
+ &lt;/ul&gt;
+ <span class="attrib">@return</span> True is this snippet can run, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+SnpLoadSavedWorkspace.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+ {
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span> &amp;&amp; <span class="reserved">this</span>.flashFile.exists) 
+	{ 
+		<span class="reserved">return</span> true;
+	}
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpLoadSavedWorkspace"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpLoadSavedWorkspace_unitTest ) == <span class="literal">"undefined"</span>) {
+	new SnpLoadSavedWorkspace().run();
+}
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

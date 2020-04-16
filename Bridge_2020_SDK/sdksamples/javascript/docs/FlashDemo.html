@@ -1,0 +1,577 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN""http://www.w3.org/TR/REC-html40/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+FlashDemo
+</TITLE>
+<LINK REL ="stylesheet" TYPE="text/css" HREF="stylesheet.css" TITLE="Style">
+</HEAD>
+<SCRIPT>
+function asd()
+{
+parent.document.title="FlashDemo";
+}
+</SCRIPT>
+<BODY BGCOLOR="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=3 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">  <A HREF="overview-summary-FlashDemo.jsx.html"><FONT CLASS="NavBarFont1"><B>File</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev">&nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <!--TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"-->    <!--A HREF="deprecated-list.html"--><!--FONT CLASS="NavBarFont1">Deprecated</FONT--><!--/A--><!--&nbsp;</TD-->
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="index-all.html"--><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<B>AdobeBridgeCS6SDK</B>
+</EM>
+</TD
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="CustomSortExtensionHandler.html"><B>PREV CLASS</B></A><!-- 
+   NEXT CLASS 
+-->
+&nbsp;<A HREF="GLOBALS.html"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="FlashDemo.html" TARGET="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<!-- =========== END OF NAVBAR =========== -->
+<HR>
+
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>Class FlashDemo</H2>
+<PRE>Object
+   |
+   +--<b>FlashDemo</b>
+</PRE>
+
+
+<HR>
+<DL>
+   <!-- Class definition -->
+   <DT>class 
+   <B>FlashDemo</B>
+   
+
+</DL>
+   
+   <P>
+   <BR/>Shows how to communicate with a ScriptUI FlashPlayer in Adobe Bridge using ActionScript
+ 
+  <h4>Usage</h4>
+  
+  <ol>
+  <li> Read the section on <a href="#flashSec">Flash Player Security</a> below.
+  <li> Run the sample in the ExtendScript Toolkit (see Readme.txt), with Bridge CS6 as the target.
+   <li>The Flash-movie palette appears in the default top left corner of Bridge.
+  <li> On the first page of the Flash movie, click buttons to receive data from Bridge, 
+  which is displayed in the Flash Player.
+  <li> Click Next Page to show the second page. Click buttons to call JavaScript functions from the ActionScript environment
+         and pass data as arguments to the functions.
+  <li> Click Next Page to show the third page. In the Bridge menu bar, choose items from the 'SDK FlashDemo' menu to invoke 
+       ActionScript functions that pass various data values to the Flash application, to be displayed in the Flash Player.
+  <li> Click Next Page to show the fourth page. Select a thumbnail in Bridge to send data about the Thumbnail state to the Flash 
+   	application, which displays it in the Flash Player.
+  <li> Use the moving arrows to navigate between slides in the Flash Player.
+  </ol>
+   
+  <h4>Description</h4>
+
+<p>This sample shows how to use the ScriptUI FlashPlayer element to invoke JavaScript 
+  functions in ActionScript, and ActionsScript functions in JavaScript. It passes simple
+  data between the two scripting environments, and displays passed values.
+ 
+ <ul>
+  <li> Menu items invoke ActionScript functions that send data from the Flash environment,
+  	and display the received data in Bridge
+  <li> A Thumbnail event handler sends information about the selected Bridge Thumbnail
+       to ActionScript functions, which display the data in the Flash Player.
+  </ul>
+
+<p>The Flash application to be used with this sample must be located in the resources 
+  folder and have the same name as this sample. The application is a Flash presentation 
+  that has 4 slides.  Each slide has a layer named 'Actions' which contains an 
+  ActionScript script. The ActionScript scripts show how to import the ExternalInterface class, 
+  and how to register and call external functions, which are defined in this script.
+  The ActionScript source code is provided as a comment block in the
+  FlashDemo.JSX file. The compiled code for the scripts is in .\resources\FlashDemo.fla
+  
+<a name="flashSec"><h4>Flash Player Security</h4></a>
+
+   Adobe Bridge supports the Flash Player client-runtime security model. This affects which SWF files 
+   can be loaded into Bridge and run successfully. You must set the correct security permission
+   to allow the operation that the SWF file performs.
+   
+   There are 3 basic levels of security for local SWF files:  
+   <ul>
+	<li> Access the local file system only (default):  
+	A local SWF file can read from the local file system and 
+  	universal naming convention (UNC) network paths, but cannot communicate with the Internet.   
+  
+	<li> Access the network only:  
+	A local SWF file can access the network, but not the local file system where it is installed.
+  
+	<li> Access to the local file system and the network: 
+	A local SWF file can read from the local file system  where it is installed,
+ 	read and write to and from servers, and can cross-script other SWF files on
+  	either the network or the local file system. These files are trusted.
+  </ul>
+   
+   To create a SWF file that can 'access the local file system only' or 'access the network only',
+   edit the FLA file and do the following:
+
+  <li> In Adobe Flash, select File > Publish Settings
+  <li> In the dialog, select the Flash tab
+  <li> Set the option for 'Local playback security' to either  'access network only' or 'access local files only'
+<p>  
+  For more information on local file security  see:
+<p>
+<a href="http://livedocs.adobe.com/flex/3/html/05B_Security_03.html">http://livedocs.adobe.com/flex/3/html/05B_Security_03.html</a><br />
+
+<p>To allow a local file to be trusted,(that is, allow a SWF file to access both network and local files 
+  as well as allow cross scripting), you can either create a trust file, or use the Settings Manager. 
+  This sample and the accompanying SWF file have been created with the default permissions; therefore 
+  to run the sample correctly, you must use one of these techniques, as described in the following sections.
+  
+  <h4>Create a Trust File </h4>
+  
+  You can create a trust file in either the Global Flash Player Trust directory or in the User Flash Player Trust directory.  
+  A Trust file is a simple text file with a .cfg file extension, that contains the location to a local SWF file. 
+  For example, to run this sample as a trusted file on Windows, create a text file that contains the path and file name
+  (replacing SDKINSTALL with your local SDK installation location):
+  
+<pre>	SDKINSTALL\sdksamples\javascript\resources\FlashDemo.swf</pre>
+  
+<p>Save this text file with the extension .cfg in a folder named 'FlashPlayerTrust' (which you may need to
+create), in one of the following locations, depending on the platform and users for which the SWF should be trusted. 
+  
+<p>Global Flash Player Trust Directory
+<ul>
+	<li>In Windows: system\Macromed\Flash\FlashPlayerTrust
+	<ul>
+		<li>for example:<pre>C:\windows\system32\Macromed\Flash\FlashPlayerTrust</pre>
+	</ul>
+	<li>In Mac OS: app support/Macromedia/FlashPlayerTrust
+	<ul>
+		<li>for example:<pre>/Library/Application Support/Macromedia/FlashPlayerTrust</pre>
+	</ul>
+</ul>
+
+<p>User Flash Player Trust Directory
+<ul>
+	<li>In Windows: app data\Macromedia\Flash Player\#Security\FlashPlayerTrust
+	<ul>
+		<li>for example:<pre>C:\Documents and Settings\your-user-name\Application Data\Macromedia\Flash Player\#Security\FlashPlayerTrust</pre> 
+	</ul>
+	<li>In Mac OS: app data/Macromedia/Flash Player/#Security/FlashPlayerTrust
+	<ul>
+		<li>for example:<pre>/Users/your-user-name/Library/Preferences/Macromedia/Flash Player/#Security/FlashPlayerTrust</pre>
+	</ul>
+	</li>
+</ul> 
+
+  <h4>Use the Settings Manager </h4>
+
+   The Settings Manager allows you to make changes to various global settings, including whether to allow a SWF file
+   to be trusted.  When Bridge loads a non-trusted file that attempts a trusted action, the Flash 
+   Player presents a dialog giving the user the choice to navigate to the Settings Manager. 
+<ul>
+  <li>  When you run this sample (if you have not created a trust file for it) Bridge displays a security dialog
+   warning about the SWF file. Click 'Settings...' in this dialog. <br> 
+   The Adobe Flash Player Settings Manager opens in a web browser. 
+   (You may need to install the Adobe Flash Plugin before you see this page correctly.)
+  
+  <li> On the Global Security Settings tab (the default tab), click 'Edit Locations' and choose 'Add Location' from
+  	the drop down list. <br> A dialog appears showing the path of the SWF that Bridge is trying to load.
+
+  <li> Click 'Browse for files', navigate to the location of the SWF file (SDKINSTALL/javascript/resources/FlashDemo.swf)
+  	and click OK (There is no confirm dialog).
+
+  <li> Close the web browser and restart Bridge.
+ </ul>
+
+   Bridge can now play the Flash movie and data can be passed between the two scripting environments.
+
+  <p>For more  information on the Settings Manager and Trust files see:
+  
+  <p>
+   <a href="http://livedocs.adobe.com/flex/3/html/05B_Security_03.html">http://livedocs.adobe.com/flex/3/html/05B_Security_03.html</a><br />
+
+	<BR/><B>See:</B><UL>- <a href="SnpCreateFlashControl.html#">SnpCreateFlashControl</a></UL><I>Defined in <a href='overview-summary-FlashDemo.jsx.html'>FlashDemo.jsx</a></I><BR/><BR/>
+   </P>
+   
+   <HR>
+
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<!-- ======== END NESTED CLASS SUMMARY ======== -->
+
+
+<!-- =========== FIELD SUMMARY =========== -->
+
+   <A NAME="field_summary"><!-- --></A>
+      <TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+         <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+            <TD COLSPAN=2><FONT SIZE="+2">
+               <B>Field Summary</B></FONT></TD>
+         </TR>
+
+   <!-- This is one instance field summary -->
+   
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+   <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+   <CODE>&nbsp;File</CODE></FONT></TD>
+   <TD><CODE><B><A HREF="#flashFile">flashFile</A></B></CODE>
+   <BR>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Flash movie to load into Bridge</TD>
+   </TR>
+   
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+   <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+   <CODE>&nbsp;String</CODE></FONT></TD>
+   <TD><CODE><B><A HREF="#requiredContext">requiredContext</A></B></CODE>
+   <BR>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The context in which this snippet can run.</TD>
+   </TR>
+   
+
+   </TABLE>
+   &nbsp;
+   
+
+   
+
+<!-- =========== END FIELD SUMMARY =========== -->
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+   <TD>
+      <CODE>
+	 <B>
+	    <A HREF="FlashDemo.html#FlashDemo()">FlashDemo</A> 
+	 </B>
+	 ()
+      </CODE>
+      <BR>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      </TD>
+</TR>
+</TABLE>
+
+<!-- ======== END CONSTRUCTOR SUMMARY ======== -->
+
+&nbsp;
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TD COLSPAN=2><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TD>
+</TR>
+
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&nbsp;Boolean</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#canRun">canRun</A></B>()
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Determines whether snippet can be run given current context.
+      </TD>
+   </TR>
+
+   <TR BGCOLOR="white" CLASS="TableRowColor">
+      <TD ALIGN="right" VALIGN="top" WIDTH="1%">
+	 <FONT SIZE="-1">
+	    <CODE>&nbsp;Boolean</CODE>
+	 </FONT>
+      </TD>
+      <TD>
+	 <CODE>
+	    <B>
+	       <A HREF="#run">run</A></B>()
+	 </CODE>
+	 <BR>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 Functional part of this Snippet.
+      </TD>
+   </TR>
+
+
+</TABLE>
+
+
+
+<P>
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+<!-- ============ FIELD DETAIL START =========== -->
+
+   <A NAME="field_detail"><!-- --></A>
+   <TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+      <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+         <TD COLSPAN=1><FONT SIZE="+2"><B>Field Detail</B></FONT></TD>
+      </TR>
+   </TABLE>
+
+   
+   <A NAME="flashFile"><!-- --></A>
+   <H3>flashFile</H3>
+   <PRE>File&nbsp;<B>flashFile</B></PRE>
+   <UL>
+   The Flash movie to load into Bridge
+   
+   </UL>
+   <HR>
+   
+   <A NAME="requiredContext"><!-- --></A>
+   <H3>requiredContext</H3>
+   <PRE>String&nbsp;<B>requiredContext</B></PRE>
+   <UL>
+   The context in which this snippet can run.
+   
+   </UL>
+   <HR>
+   
+
+
+<!-- ============ FIELD DETAIL END =========== -->
+
+    <!-- ========= CONSTRUCTOR DETAIL START ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+   <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+      <TD COLSPAN=1>
+      <FONT SIZE="+2"><B>Constructor Detail</B></FONT>
+      </TD>
+   </TR>
+</TABLE>
+
+<A NAME="FlashDemo()"><!-- --></A><H3>
+FlashDemo</H3>
+<PRE><B>FlashDemo</B>()</PRE>
+
+
+
+
+   </UL>
+
+
+<!-- Constructor return value(s) -->
+
+<!-- End constructor return value(s) -->
+
+<!-- ADDITIONAL ATTRIBUTES -->
+
+<UL>   
+<B>See:</B><UL>- <a href="SnpCreateFlashControl.html#">SnpCreateFlashControl</a></UL>
+</UL>
+
+<HR/>
+<!-- END ADDITIONAL ATTRIBUTES  -->
+
+<!-- ========= CONSTRUCTOR DETAIL END ======== -->
+
+
+<!-- ============ METHOD DETAIL START ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" CELLPADDING="3" CELLSPACING="0" WIDTH="100%">
+   <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+      <TD COLSPAN=1><FONT SIZE="+2">
+         <B>Method Detail</B></FONT>
+      </TD>
+   </TR>
+</TABLE>
+
+<!-- One single method detail entry -->
+
+   <A NAME="canRun"><!-- --></A>
+   <H3>canRun</H3>
+   <PRE>Boolean <B>canRun</B>()</PRE>
+   
+      <UL>Determines whether snippet can be run given current context.  The snippet 
+ fails if these preconditions are not met:
+ <ul>
+ <li> Bridge must be running
+ <li> The Flash file must be available
+ </ul></UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+   <UL>
+   <B>Returns:</B>
+        <UL>
+        True if this snippet can run, false  otherwise   
+        </UL>
+   </UL>
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+   <A NAME="run"><!-- --></A>
+   <H3>run</H3>
+   <PRE>Boolean <B>run</B>()</PRE>
+   
+      <UL>Functional part of this Snippet.
+
+ Creates a TabbedPalette of type "script", and adds a FlashPlayer control, 
+ along with other text controls and buttons. Loads a Flash movie into the player, 
+ whose scripts define ActionScript functions that can be called from the 
+ player control. The movie starts playing automatically.
+
+ Adds a new menu to Bridge, with menu items that invoke the various
+ ActionScript functions. The functions pass data from the Flash scripting
+ environment to the Bridge scripting environment.
+
+ Defines an event handler for Bridge Thumbnails that sends data about the
+ Thumbnail state to the Flash scripting environment.</UL>
+   
+
+   <!-- METHOD PARAMETERS START -->
+   
+   <!-- METHOD PARAMETERS END -->
+
+   
+   <UL>
+   <B>Returns:</B>
+        <UL>
+        True if the snippet ran as expected, false otherwise   
+        </UL>
+   </UL>
+   
+
+   <!-- ADDITIONAL ATTRIBUTES START -->
+   
+   <!-- ADDITIONAL ATTRIBUTES  END -->
+<HR>
+
+
+
+<!-- ============ METHOD DETAIL END ========== -->
+
+<!-- ========= END OF CLASS DATA ========= -->
+
+<!-- ========== START OF NAVBAR ========== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0">
+<TR>
+<TD COLSPAN=3 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">  <A HREF="overview-summary-FlashDemo.jsx.html"><FONT CLASS="NavBarFont1"><B>File</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="overview-tree.html"><FONT CLASS="NavBarFont1"><b>Tree</b></FONT></A>&nbsp;</TD>
+  <!--TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1"-->    <!--A HREF="deprecated-list.html"--><!--FONT CLASS="NavBarFont1">Deprecated</FONT--><!--/A--><!--&nbsp;</TD-->
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<B>AdobeBridgeCS6SDK</B>
+</EM>
+</TD
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="CustomSortExtensionHandler.html"><B>PREV CLASS</B></A><!-- 
+   NEXT CLASS 
+-->
+&nbsp;<A HREF="GLOBALS.html"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="index.html" TARGET="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="FlashDemo.html" TARGET="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;
+<SCRIPT>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>
+</NOSCRIPT>
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+
+<!-- =========== END OF NAVBAR =========== -->
+
+<HR>
+<FONT SIZE="-1">
+http://www.adobe.com/devnet/bridge
+</FONT>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</BODY>
+</HTML>

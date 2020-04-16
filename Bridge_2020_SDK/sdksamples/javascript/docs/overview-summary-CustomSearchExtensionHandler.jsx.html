@@ -1,0 +1,945 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="CustomSearchExtensionHandler.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>CustomSearchExtensionHandler.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Demonstrates how to implement a custom node search with a node-handling extension.
+  <BR/><BR/><B>See:</B><UL>- <a href="SDKSystem.html#">SDKSystem</a><BR/>- <a href="SDKNode.html#">SDKNode</a><BR/>- <a href="BasicExtensionHandler.html#">BasicExtensionHandler</a><BR/>- <a href="CustomInfosetExtensionHandler.html#">CustomInfosetExtensionHandler</a><BR/>- <a href="CustomSortExtensionHandler.html#">CustomSortExtensionHandler</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="CustomSearchExtensionHandler.html">CustomSearchExtensionHandler</a></b></td>
+    <td>Demonstrates how to implement a custom node search with a node-handling extension.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Demonstrates how to implement a custom node search with a node-handling extension.
+  <span class="attrib">@class</span> Demonstrates how to implement a custom node search with a node-handling extension.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+ &lt;ol&gt;
+  &lt;li&gt; Make sure the icon files required by this sample are in the ./resources folder (BEHFileIconxx.png)
+  &lt;li&gt; Run the snippet in the ExtendScript Toolkit (see Readme.txt) with Bridge CS6 as the target; note you can do this only once, then you must restart Bridge for this sample.
+  &lt;li&gt; In Adobe Bridge, select the new icon added to the Favorites panel, which is named CSRoot.
+  &lt;li&gt; Navigate through the node hierarchy in the Content pane
+  &lt;li&gt; Choose Edit &gt; Find to open the Find dialog
+  &lt;li&gt; Select search criteria and click 'Find'
+  &lt;li&gt;If there are nodes in the hierarchy matching your search specification, you should see them returned in the Content pane within a  "SearchNode"
+  &lt;li&gt;You can use the Back button in the Bridge browser window to return you to the previous context of your search.
+ &lt;/ol&gt;
+ 
+  &lt;h4&gt;Description&lt;/h4&gt;
+ 
+  &lt;p&gt;Shows how to implement an ExtensionHandler and ExtensionModel with customized search
+ over a node hierarchy.  This sample uses SearchDefinition, SearchCriteria, SearchSpecification and 
+  SearchCondition objects from the Bridge scripting DOM to implement the custom search features.
+
+  &lt;p&gt;The getSearchDefinition() method in the script-defined ExtensionModel returns a
+  SearchDefinition object, which Bridge uses to display a customized Find dialog.   The Find dialog
+  has 3 sections; the Source section, the Criteria section and the Results section.
+  
+ &lt;p&gt;The Source section shows the current thumbnail, at which to start the search.
+  
+  &lt;p&gt;In the Criteria section, each of the 3 elements is customized using SearchCriteria and Operand objects.
+  Custom search field values include 'Custom String'  and 'Custom Boolean'. 
+  	&lt;ul&gt;
+  	&lt;li&gt; When the search field 'Custom String' is selected, additional custom operators
+  		are shown in the center field.
+  	&lt;li&gt; When the search field 'Custom Boolean' is selected, the operand field 
+  		on the right dispalys a drop-down list with two choices.
+	&lt;/ul&gt;
+
+ &lt;p&gt;The Results section displays two custom check boxes, "SDKSearch: Search subfolders"
+  and "SDKSearch: Search hidden files". If you select "SDKSearch: Search subfolders"
+  the search is performed recursively through subfolders. (The other checkbox is not considered.)
+
+  &lt;p&gt;This search only supports "OR" searches; you can expand it to include "AND" searches.
+
+  &lt;p&gt;The script-defined node extensions are defined by two supporting classes, SDKSystem and
+  SDKNode; see the documentation on these classes for more detail on their capabilities.
+
+&lt;p&gt;The  run() function of this sample creates several nodes of the type SDKNode, and one manager (SDKSystem) object. 
+   It stores the node-identifying prefix and root node in the SDKSystem (manager) object. 
+    
+   &lt;p&gt;The run() function also creates the ExtensionHandler object, whose definition includes
+   the 'makeModel()' method, which Bridge uses to create the ExtensionModel object 
+   at node-display time. The run() function also registers the ExtensionHandler, 
+   associating it with the node-identifying prefix.
+    
+   &lt;p&gt;See the Adobe Bridge CS6 JavaScript Guide for more details of node-handling mechanisms
+   you can implement.&lt;br /&gt;
+
+  <span class="attrib">@see</span> SDKSystem
+  <span class="attrib">@see</span> SDKNode
+  <span class="attrib">@see</span> BasicExtensionHandler
+  <span class="attrib">@see</span> CustomInfosetExtensionHandler
+  <span class="attrib">@see</span> CustomSortExtensionHandler
+
+  <span class="attrib">@constructor</span>  Constructor.
+*/</span>
+<span class="reserved">function</span> CustomSearchExtensionHandler() {
+
+	$.level = 1; <span class="comment">// Debugging level</span>
+	<span class="comment">/**
+	  The context in which this sample can run.
+	  <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tNeed to be running in context of Bridge\n"</span>;		
+}
+
+<span class="comment">/**
+ Functional part of this sample, creates several nodes of the type SDKNode, and one manager (SDKSystem) object,
+ which stores the node-identifying prefix and root node. 
+     
+ &lt;p&gt;Also creates the ExtensionHandler object, whose definition includes
+ the 'makeModel()' method, which Bridge uses to create the ExtensionModel object 
+ at node-display time. 
+ 
+ &lt;p&gt;The handler defines the getBridgeUriForSearch() method, and the model defines 
+ the getSearchDefinition() method, which together implement the custom search.
+ 
+ Registers the ExtensionHandler, associating it with the node-identifying prefix.
+ 	<span class="attrib">@return</span> True if the sample ran as expected, false otherwise
+ 	<span class="attrib">@type</span> Boolean
+*/</span>
+CustomSearchExtensionHandler.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun())
+	{
+		<span class="reserved">return</span> false;
+	}
+
+	$.writeln(<span class="literal">"About to run CustomSearchExtensionHandler"</span>);
+	
+	<span class="comment">// Create some nodes of the script-defined type </span>
+	<span class="reserved">var</span> root = new SDKNode(<span class="literal">"CSRoot"</span>, true);
+
+	<span class="comment">// Sub node - /BehRoot/BehFolder1</span>
+	root.addNode(new SDKNode(<span class="literal">"CSFolder1"</span>, true));
+	
+	<span class="comment">// add a leaf node to the root</span>
+	<span class="reserved">var</span> lf = new SDKNode(<span class="literal">"RootLeaf"</span>, false);
+	root.addNode(lf);
+
+	<span class="reserved">var</span> n = new SDKNode(<span class="literal">"leaf1"</span>, false);
+	<span class="reserved">var</span> d = root.findChildNode(<span class="literal">"CSFolder1"</span>);
+	d.addNode(n);
+
+	<span class="comment">// Sub node - /BehRoot/BehFolder2</span>
+	root.addNode(new SDKNode(<span class="literal">"CSFolder2"</span>, true));
+	n = new SDKNode(<span class="literal">"leaf2"</span>, false);
+	d = root.findChildNode(<span class="literal">"CSFolder2"</span>);
+	d.addNode(n);
+	n = new SDKNode(<span class="literal">"leaf3"</span>, false);
+	d = root.findChildNode(<span class="literal">"CSFolder2"</span>);
+	d.addNode(n);
+
+	<span class="comment">// /BehRoot/BehFolder1/BehSubFolder1</span>
+	root.getChildNode(<span class="literal">"CSFolder2"</span>).addNode(new SDKNode(<span class="literal">"CSSubFolder1"</span>, true));
+
+	<span class="comment">// BehRoot/BehFolder1/BehSubFolder1/leaf4</span>
+	n = new SDKNode(<span class="literal">"leaf4"</span>, false);
+	d = root.findChildNode(<span class="literal">"CSSubFolder1"</span>);
+	d.addNode(n);
+
+	<span class="comment">// Create the manager object with the node-identifying prefix, </span>
+	<span class="comment">// and add the root node</span>
+	<span class="reserved">var</span> sys = new SDKSystem(<span class="literal">"bridge:csNode:"</span>);
+	sys.addRoot(root);
+
+	<span class="comment">// Create the node extension handler object</span>
+	<span class="reserved">var</span> csHandler = new ExtensionHandler(<span class="literal">"csHandler"</span>);
+
+	<span class="comment">// Register the node handler and prefix	with the application</span>
+	app.registerExtension(csHandler);
+	app.registerPrefix( <span class="literal">"bridge:csNode:"</span>, csHandler);
+
+	<span class="comment">/**
+		Required. Returns a canonical URI for the path.  If the path does not contain the 
+		registered prefix, the this method must append it to the path and return it.  For example: 
+		bridge:beNode:/CSRoot
+		<span class="attrib">@param</span> path The path of the node as a string
+	*/</span>
+	csHandler.getBridgeUriForPath = <span class="reserved">function</span>(path)
+	{
+		<span class="reserved">return</span> path;
+	}
+
+	<span class="comment">/**
+		Extends the handler with a helper function so all the thumbnails can 
+		be collected for the search
+		<span class="attrib">@param</span> kids An array of SDK nodes.
+	*/</span>
+	ExtensionHandler.<span class="reserved">prototype</span>.getThumbsToSearch = <span class="reserved">function</span>(kids)
+	{	
+		<span class="reserved">for</span>(<span class="reserved">var</span> h = 0;h &lt; kids.length;h++)
+		{
+			<span class="reserved">if</span>(kids[h].isContainer())
+			{
+				<span class="reserved">this</span>.getThumbsToSearch(kids[h].getChildren()); <span class="comment">// node test</span>
+			}
+			
+			csHandler.thumbsToSearch.push(kids[h]);
+		}
+	}
+
+	<span class="comment">/**
+		Search implementation: Performs a search and returns the search result,	
+		a container Thumbnail object that contains the matching nodes.
+		The passed 'scope' is the Thumbnail object that the search starts from, and 
+		'spec' is the SearchSpecification object containing all search details as 
+		set by the user in the Find dialog.
+		
+		<span class="attrib">@param</span> scope  The Thumbnail to start searching from
+		<span class="attrib">@param</span> spec The SearchSpecification details
+	*/</span>
+	csHandler.getBridgeUriForSearch = <span class="reserved">function</span>(scope, spec)
+	{
+		<span class="comment">// Create a search results node - give it a unique name for each search container created.</span>
+		<span class="reserved">var</span> randomnumber=Math.floor(Math.random()*101);
+		<span class="reserved">var</span> d = new Date();
+		<span class="reserved">var</span> postfix = d.getSeconds() + randomnumber;
+
+		<span class="reserved">var</span> sNode = new SDKNode(<span class="literal">"SearchNode"</span> + postfix, true)
+		sNode.children = new Array();
+		sys.addSearchNode(sNode); <span class="comment">// This overwrites any previous search node objects in the system</span>
+
+		<span class="reserved">var</span> sThumb = new Thumbnail(<span class="literal">"bridge:csNode:/SearchNode"</span> + postfix);
+		sThumb.core.children.cacheData.status = <span class="literal">"bad"</span>;
+
+		<span class="comment">// Get the scope specifiers (whether to search subfolders)</span>
+		<span class="reserved">var</span> searchScopes = spec.scopeSpecifiers;
+
+		<span class="comment">//  Create an array to hold the thumbnails to be checked against search criteria </span>
+		csHandler.thumbsToSearch = new Array();
+
+		<span class="comment">// This is the node from which to start</span>
+		<span class="reserved">var</span> scopeNode = sys.getNodeFromPath(scope.uri);
+
+		<span class="reserved">var</span> children;
+		<span class="comment">// Check if the search is to include subfolders</span>
+		<span class="reserved">if</span>(searchScopes[0] == <span class="literal">"DoSubFolders"</span>)
+		{
+			<span class="comment">// Get the node children and find all the thumbnaiils we need to search through</span>
+			<span class="reserved">this</span>.getThumbsToSearch(scopeNode.getChildren());
+
+			children = csHandler.thumbsToSearch;
+		}
+		<span class="reserved">else</span>
+		{
+			children = scopeNode.getChildren();
+		}
+		
+		<span class="comment">// Get the conditions of the search, as specified by the user</span>
+		<span class="reserved">var</span> conditions = spec.conditionList;
+
+		<span class="reserved">if</span>(spec.conjunction == <span class="literal">"or"</span>)	<span class="comment">// This search only supports an "OR" conjunction</span>
+		{
+			<span class="comment">// Check each thumbnail/node and see if the criteria match</span>
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; children.length;i++)
+			{
+				<span class="reserved">var</span> currentNode = children[i];
+							
+				<span class="reserved">for</span>(j = 0;j &lt; conditions.length;j++)
+				{
+					<span class="reserved">var</span> currentCon = conditions[j]
+					<span class="reserved">var</span> searchField = currentCon.searchField;
+					<span class="reserved">var</span> operand = currentCon.operand;
+
+					<span class="comment">// Get the values for the field/data we are searching against</span>
+					switch(searchField)
+					{
+						<span class="reserved">var</span> thumbFieldValue;
+						case <span class="literal">"CustomString"</span>:
+							thumbFieldValue = currentNode.getCustomString();
+							break;
+						case <span class="literal">"CustomNumber"</span>:
+							thumbFieldValue = currentNode.getCustomNumber();
+							break;
+						case <span class="literal">"CustomBool"</span>:
+							thumbFieldValue = currentNode.getCustomBool();
+							break;
+						case <span class="literal">"name"</span>:
+							thumbFieldValue = currentNode.getName();
+							break;
+					}
+
+					<span class="comment">// Check if anything matches the criteria</span>
+					<span class="comment">// This is an OR search, so when a node hits any match,</span>
+					<span class="comment">// add it to the children of the search container</span>
+					switch(currentCon.operatorType)
+					{
+						case <span class="literal">"equals"</span>:
+							<span class="reserved">if</span>(thumbFieldValue == operand || thumbFieldValue.toString() == operand) <span class="comment">// catches boolean values and strings</span>
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						case <span class="literal">"lessThanOrEqual"</span>:
+							<span class="reserved">if</span>(thumbFieldValue &lt;= operand)
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						case <span class="literal">"greaterThanOrEqual"</span>:
+							<span class="reserved">if</span>(thumbFieldValue &gt;= operand)
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						case <span class="literal">"endsWith"</span>:
+							<span class="reserved">var</span> s = thumbFieldValue.substr((thumbFieldValue.length - operand.length), operand.length );
+							<span class="reserved">if</span>(s == operand)
+							{
+								addNodeToSearchResult(currentNode);
+							}
+							break;
+						default:
+					} <span class="comment">// end switch				</span>
+				} <span class="comment">// end for condtions</span>
+			} <span class="comment">// end for children</span>
+		}
+		<span class="reserved">else</span> <span class="reserved">if</span>(spec.conjunction == <span class="literal">"and"</span>)  <span class="comment">// This search only supports "OR" searches; you can expand it to include "AND" searches.</span>
+		{
+			alert(<span class="literal">"SDK: CustomSearchExtensionHandler:\nSample does not show this type of search!"</span>);
+		}
+
+		<span class="comment">// Helper function to check for the existence of a node before adding it to the search node</span>
+		<span class="reserved">function</span> addNodeToSearchResult(node)
+		{
+			<span class="reserved">var</span> matches = sNode.getChildren();
+			<span class="reserved">var</span> addNode = true;
+			<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; matches.length;i++)
+			{
+				<span class="reserved">if</span>(matches[i].getPath() == node.getPath())
+				{
+					addNode = false;
+					break;
+				}
+			}
+
+			<span class="reserved">if</span>(addNode)
+			{
+				sNode.addNode(node);
+			}
+		}
+
+		<span class="comment">// Return the URI to the container (a Thumbnail object) holding the search results.</span>
+		<span class="reserved">return</span> sThumb.uri;
+	}
+
+	<span class="reserved">var</span> wrapperObject = <span class="reserved">this</span>;
+	<span class="comment">/**
+		Required. Creates and returns an ExtensionModel instance.  Called each time a handled node
+		is displayed.  The model must also implement any methods that handle any required 
+		functionality, such as renaming a node.
+		<span class="attrib">@return</span> An ExtensionModel for this node
+		<span class="attrib">@type</span> ExtensionModel
+	*/</span>
+	csHandler.makeModel = <span class="reserved">function</span>(path)
+	{
+
+		csModel = new ExtensionModel(path);
+		csModel.path = path;
+		<span class="reserved">this</span>.path = path;
+		wrapperObject.initModel(csModel, sys);
+			
+		<span class="reserved">return</span> csModel;
+
+	} <span class="comment">// end makeModel</span>
+
+	<span class="comment">// Create the InfosetMemberDescription objects</span>
+	<span class="reserved">var</span> csDescriptions = new Array();
+	csDescriptions[0] = new InfosetMemberDescription( <span class="literal">"CustomString"</span>, <span class="literal">"String"</span> );
+	csDescriptions[1] = new InfosetMemberDescription( <span class="literal">"CustomNumber"</span>, <span class="literal">"Number"</span> );
+	csDescriptions[2] = new InfosetMemberDescription( <span class="literal">"CustomDate"</span>, <span class="literal">"String"</span> );
+	csDescriptions[3] = new InfosetMemberDescription( <span class="literal">"CustomArray"</span>, <span class="literal">"Array of String"</span> );
+	csDescriptions[4] = new InfosetMemberDescription( <span class="literal">"CustomBool"</span>, <span class="literal">"Boolean"</span> );
+
+	<span class="comment">// Create the infoset</span>
+	<span class="reserved">var</span> customInfoset = new Infoset(<span class="literal">"customInfoset"</span>, csDescriptions);
+
+	<span class="comment">// Register the infoset</span>
+	app.registerInfoset(csHandler, customInfoset);
+	
+	<span class="comment">// Event handler displays the Custom Infoset Data palette for handled thumbnails.</span>
+	onEvent = <span class="reserved">function</span>(event)
+	{
+		<span class="reserved">if</span>(event.object instanceof Document)
+		{			
+			<span class="reserved">if</span>(event.type == <span class="literal">"selectionsChanged"</span>)
+			{
+				<span class="reserved">if</span>(event.object.selections.length &gt; 0)
+				{
+					<span class="reserved">var</span> thumb = event.object.selections[0];	
+
+					<span class="reserved">if</span>(thumb.csHandler)
+					{
+						stringText.text = thumb.csHandler.customInfoset.CustomString;
+						numbersText.text = thumb.csHandler.customInfoset.CustomNumber;
+						dateText.text = thumb.csHandler.customInfoset.CustomDate;
+						arrStringText.text = thumb.csHandler.customInfoset.CustomArray.toString();
+						boolList.selection = (thumb.csHandler.customInfoset.CustomBool) ? 0 : 1;
+						customSearchDataPalette.content.visible = true;
+					} 
+					<span class="reserved">else</span>
+					{
+						customSearchDataPalette.content.visible= false;
+					}					
+				}
+				<span class="reserved">else</span>
+				{
+					customSearchDataPalette.content.visible= false;
+				}
+			}
+		}
+	}
+
+	<span class="comment">// Register the event handler</span>
+	app.eventHandlers.push({handler: onEvent});
+	
+	
+	<span class="comment">// Create  a palette to display the custom data</span>
+	<span class="reserved">var</span> customSearchDataPalette = new TabbedPalette(app.document, <span class="literal">"SDK: Custom Search Infoset Data"</span>, <span class="literal">"SDKCustomInfoPaletteSearch"</span>, <span class="literal">"script"</span>);
+	<span class="reserved">var</span> win = customSearchDataPalette.content;
+
+	<span class="reserved">var</span> stringLabel = win.add(<span class="literal">"statictext"</span>, [5, 9, 115, 25], <span class="literal">"Custom String"</span>);
+	<span class="reserved">var</span> stringText = win.add(<span class="literal">"edittext"</span>, [120, 5, 320, 25], <span class="literal">""</span>);
+	stringText.enabled = false;
+	
+	<span class="reserved">var</span> numbersLabel = win.add(<span class="literal">"statictext"</span>, [5, 39, 115, 55], <span class="literal">"Custom Number"</span>);
+	<span class="reserved">var</span> numbersText = win.add(<span class="literal">"edittext"</span>, [120, 35, 320, 55], <span class="literal">""</span>);
+	numbersText.enabled = false;
+
+	<span class="reserved">var</span> dateLabel = win.add(<span class="literal">"statictext"</span>, [5, 69, 115, 85], <span class="literal">"Custom Date"</span>);
+	<span class="reserved">var</span> dateText = win.add(<span class="literal">"edittext"</span>, [120, 65, 320, 85], <span class="literal">""</span>);
+	dateText.enabled = false;
+
+	<span class="reserved">var</span> arrLabel = win.add(<span class="literal">"statictext"</span>, [5, 99, 115, 115], <span class="literal">"Custom Array"</span>);
+	<span class="reserved">var</span> arrStringText = win.add(<span class="literal">"edittext"</span>, [120, 95, 320, 115], <span class="literal">""</span>);
+	arrStringText.enabled = false;
+	
+	<span class="reserved">var</span> boolLabel = win.add(<span class="literal">"statictext"</span>, [5, 129, 115, 145], <span class="literal">"Custom Boolean"</span>);
+	<span class="reserved">var</span> boolList = win.add(<span class="literal">"dropdownlist"</span>, [120, 125, 320, 145]);
+	<span class="reserved">var</span> tItem = boolList.add(<span class="literal">"item"</span>, <span class="literal">"True"</span>);
+	tItem.val = true;
+	<span class="reserved">var</span> fItem = boolList.add(<span class="literal">"item"</span>, <span class="literal">"False"</span>);
+	fItem.val = false;
+	boolList.enabled = false;
+	
+	<span class="comment">// Hide the palette until a handled node is selected</span>
+	customSearchDataPalette.content.visible = false;	
+	
+	<span class="comment">// create a thumbnail and add it to the Favorites panel</span>
+	<span class="reserved">var</span> t = new Thumbnail(<span class="literal">"bridge:csNode:/CSRoot"</span>);
+	app.favorites.insert(t);
+	t.refresh();
+
+	$.writeln(<span class="literal">"CustomSearchExtensionHandler initialized successfully"</span>);
+	<span class="reserved">return</span> true;
+}
+
+
+<span class="comment">/**
+  Determines whether sample can be run given current context.  The sample
+  fails if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Bridge must be running
+  &lt;li&gt; Resource files must be available
+  &lt;/ul&gt;
+  <span class="attrib">@return</span> True if this sample can run, false otherwise
+  <span class="attrib">@type</span> Boolean
+*/</span>
+CustomSearchExtensionHandler.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>() {
+	
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) {
+	
+		<span class="reserved">for</span>(index in app.extensions)
+		{
+			<span class="reserved">if</span>(app.extensions[index].name == <span class="literal">"csHandler"</span>)
+			{
+				$.writeln(<span class="literal">"ERROR: Cannont run twice! You must restart Bridge"</span>);
+				<span class="reserved">return</span> false;
+			}
+		}
+		<span class="reserved">return</span> true;
+	}
+	$.writeln(<span class="literal">"ERROR:: Cannot run CustomSearchExtensionHandler"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+	Initialize the model and define the methods that this model supports
+	<span class="attrib">@param</span> behModel The model for the handled nodes
+	<span class="attrib">@param</span> sys The manager object for the handled nodes
+*/</span>
+CustomSearchExtensionHandler.<span class="reserved">prototype</span>.initModel = <span class="reserved">function</span>(csModel, sys)
+{
+		<span class="comment">/**
+			Implements the customization of the Find dialog for the custom search in handled nodes.
+			Creates and returns a SearchDefinition object used for the customization.
+			
+			<span class="attrib">@return</span> A customized SearchDefinition
+			<span class="attrib">@type</span> SearchDefinition
+		*/</span>
+		csModel.getSearchDefinition = <span class="reserved">function</span>()
+		{
+
+			<span class="comment">// Criteria section</span>
+			<span class="comment">// Add values to the search field (left box) of the Criteria section</span>
+			<span class="reserved">var</span> searchField = <span class="literal">"CustomString"</span>;
+			<span class="reserved">var</span> opType = <span class="literal">"string"</span>;
+			<span class="reserved">var</span> searchFieldDisplay = <span class="literal">"Custom String"</span>;
+
+			<span class="reserved">var</span> searchCriteria1 = new SearchCriteria(searchField, opType, searchFieldDisplay);
+
+			<span class="comment">// Restrict values for the operator (middle box) of the Criteria section</span>
+			searchCriteria1.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"equals"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"lessThanOrEqual"</span>, <span class="literal">"greaterThanOrEqual"</span>, <span class="literal">"contains"</span>, 
+				<span class="literal">"doesNotContain"</span>, <span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+	
+			searchField = <span class="literal">"CustomNumber"</span>;
+			opType = <span class="literal">"float"</span>;
+			searchFieldDisplay = <span class="literal">"Custom Number"</span>;
+			<span class="reserved">var</span> searchCriteria2 = new SearchCriteria(searchField, opType, searchFieldDisplay);
+			searchCriteria2.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"contains"</span>, 	<span class="literal">"doesNotContain"</span>, <span class="literal">"endsWith"</span>, 
+				<span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+			
+			searchField = <span class="literal">"name"</span>;
+			opType = <span class="literal">"string"</span>;
+			searchFieldDisplay = <span class="literal">"Name"</span>;			
+			<span class="reserved">var</span> searchCriteria3 = new SearchCriteria(searchField, opType, searchFieldDisplay);
+			searchCriteria3.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"lessThanOrEqual"</span>, <span class="literal">"greaterThanOrEqual"</span>, <span class="literal">"contains"</span>, 
+				<span class="literal">"doesNotContain"</span>, <span class="literal">"endsWith"</span>, <span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+
+			searchField = <span class="literal">"CustomBool"</span>;
+			opType = <span class="literal">"boolean"</span>;
+			searchFieldDisplay = <span class="literal">"Custom Boolean"</span>;
+			
+			<span class="comment">// Create some Operand objects</span>
+			<span class="comment">// these populate the comparison-value choices in the far right box of the Criteria section</span>
+			<span class="reserved">var</span> op1 = new Operand(<span class="literal">"true"</span>, <span class="literal">"A true value"</span>);
+			<span class="reserved">var</span> op2 = new Operand(<span class="literal">"false"</span>, <span class="literal">"A false value"</span>);
+			<span class="reserved">var</span> myOperators = [op1, op2];
+
+			<span class="reserved">var</span> searchCriteria4 = new SearchCriteria(searchField, opType, searchFieldDisplay, myOperators);
+			searchCriteria4.operatorTypesToDisable = [<span class="literal">"exists"</span>, <span class="literal">"doesNotExist"</span>, <span class="literal">"doesNotEqual"</span>, <span class="literal">"less"</span>, 
+				<span class="literal">"lessThanOrEqual"</span>, <span class="literal">"greaterThanOrEqual"</span>, <span class="literal">"contains"</span>, 
+				<span class="literal">"doesNotContain"</span>, <span class="literal">"endsWith"</span>, <span class="literal">"startsWith"</span>, <span class="literal">"greater"</span>];
+
+			<span class="reserved">var</span> critList = [searchCriteria1, searchCriteria2, searchCriteria3, searchCriteria4];
+
+			<span class="comment">// Results section</span>
+			<span class="comment">//var rank1 = new Rank("RankValueName", "RankDisplayName");</span>
+			<span class="comment">//var rank2 = new Rank("RankValueName", "RankDisplayName");</span>
+
+			<span class="reserved">var</span> ranksArray = [];  <span class="comment">// These are optional, but empty arrays must be passed</span>
+
+			<span class="comment">// create some scopeSpecifier objects</span>
+			<span class="reserved">var</span> scope1 = new Scope( <span class="literal">"DoSubFolders"</span>, <span class="literal">"SDKSearch: Search subfolders"</span>);
+			<span class="reserved">var</span> scope2  = new Scope(<span class="literal">"DoHidden"</span>, <span class="literal">"SDKSearch: Search hidden files"</span>);
+			<span class="comment">// the scopeSpecifiers to an Array</span>
+			<span class="reserved">var</span> scopesArray = [scope1, scope2]; <span class="comment">// These are documented as optional, true but empty arrays must be passed</span>
+
+			try
+			{
+				<span class="reserved">var</span> searchDef = new SearchDefinition(critList, 10, ranksArray, scopesArray);
+			}
+			catch(error) { alert(error); }
+
+			<span class="reserved">return</span> searchDef;
+		
+		}
+	
+		<span class="comment">/**
+			Checks whether this node requires authentication.
+			<span class="attrib">@return</span> True if this node requires authentication, false otherwise
+			<span class="attrib">@type</span> Boolean
+		*/</span>
+		csModel.needAuthentication = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> false;
+		}
+
+		<span class="comment">/**
+			Required.  Carries out any necessary authentication.
+		*/</span>
+		csModel.authenticate = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span>;
+		}
+	
+		<span class="comment">/**
+			Required,  Checks if this node is a valid node.
+			<span class="attrib">@return</span> True if this node is valid, false otherwise
+			<span class="attrib">@type</span> Boolean
+		*/</span>			
+		csModel.exists = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span> true;
+		}
+
+		<span class="comment">/**
+			Required.  Called after the model is created, sets up any necessary data structures
+			that may be needed.
+		*/</span>
+		csModel.initialize = <span class="reserved">function</span>()
+		{
+			<span class="reserved">this</span>.privateData.node = sys.getNodeFromPath(<span class="reserved">this</span>.path);
+		}
+		
+		<span class="comment">/**
+			Required.  Stores a back pointer to the cache that contains this model.
+			<span class="attrib">@param</span> cacheEelement The CacheElement that contains this model.
+		*/</span>	
+		csModel.registerInterest = <span class="reserved">function</span>(cacheElement)
+		{
+			<span class="reserved">this</span>.privateData.cacheElement = cacheElement;
+		}
+		
+		<span class="comment">/**
+			Required. Removes the association between the CacheElement and
+			this model instance.
+		*/</span>	
+		csModel.unregisterInterest = <span class="reserved">function</span>()
+		{
+			<span class="reserved">this</span>.privateData.cacheElement = undefined;
+		}
+	
+		<span class="comment">/**
+			Returns the parent of this node
+		*/</span>
+		csModel.getParent = <span class="reserved">function</span>()
+		{
+			<span class="reserved">var</span> parent = <span class="reserved">this</span>.privateData.node.getParent();
+			<span class="reserved">if</span>(parent != undefined)
+			{
+				<span class="reserved">return</span> (sys.getPrefix() + parent.getPath());
+			}
+		}
+	
+		<span class="comment">/**
+			Required.  Updates the core node data and any custom node data
+			for this node.  Always set the CacheData.status after updating the node data.
+			<span class="attrib">@param</span> infosetName The name of the Infoset that is being updated.
+		*/</span>
+		csModel.refreshInfoset = <span class="reserved">function</span>(infosetName)
+		{
+			<span class="reserved">var</span> infoset = <span class="reserved">this</span>.privateData.cacheElement[infosetName];
+			<span class="reserved">var</span> currentNode = <span class="reserved">this</span>.privateData.node;
+			try
+			{
+				<span class="reserved">if</span>(infosetName == <span class="literal">"immediate"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					<span class="reserved">if</span>(currentNode.getName().substr(0,10) == <span class="literal">"SearchNode"</span>)
+					{
+						infoset.name = <span class="literal">"SearchNode"</span>;
+					}
+					<span class="reserved">else</span>
+					{
+						infoset.name = currentNode.getName();
+						infoset.isLink = false;
+					}				
+
+					infoset.isContainer = currentNode.isContainer();
+						 
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="comment">// The capabilities of a handled node</span>
+				<span class="reserved">if</span>(infosetName == <span class="literal">"item"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					<span class="reserved">if</span>(currentNode.getName().substr(0,10) != <span class="literal">"SearchNode"</span>)
+					{
+						<span class="reserved">if</span>(currentNode.isContainer())
+						{
+							infoset.canSearch = true;
+						}
+					}
+					
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			
+				<span class="comment">// Add any children of this node to the children infoset</span>
+				<span class="reserved">if</span>(infosetName == <span class="literal">"children"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					<span class="reserved">var</span> arr = currentNode.getChildren();
+					<span class="reserved">for</span>(<span class="reserved">var</span> j = 0;j &lt; arr.length;j++)
+					{
+						infoset.addChild(sys.getPrefix() + arr[j].getPath());
+					}
+
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"icon"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.bitmap = currentNode.getIcon();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"thumbnail"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.thumbnail = currentNode.getThumb();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"quickMetadata"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+
+					infoset.colorMode = -1;
+					infoset.hasRawSetting = false;
+					infoset.hasCrop = false;
+					infoset.height = 300;
+					infoset.rating = 0;
+					infoset.rotation = 90;
+					infoset.stockPhotoStatus = 0;
+					infoset.xResolution = 0;
+					infosetyResolution = 0;
+					infoset.width = 300;
+
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="comment">// The capabilities of a handled node</span>
+				<span class="reserved">if</span>(infosetName == <span class="literal">"itemContent"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.canGetPreview = false;
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+
+				<span class="reserved">if</span>(infosetName == <span class="literal">"preview"</span> || infosetName == <span class="literal">"all"</span>)
+				{
+					infoset.preview = currentNode.getPreview();
+					infoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			
+				<span class="reserved">if</span>(infosetName == <span class="literal">"customInfoset"</span> || <span class="literal">"all"</span>)
+				{
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomString = <span class="reserved">this</span>.privateData.node.getCustomString();	
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomNumber = <span class="reserved">this</span>.privateData.node.getCustomNumber();
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomDate = <span class="reserved">this</span>.privateData.node.getCustomDate();
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomArray = <span class="reserved">this</span>.privateData.node.getCustomArray();
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.CustomBool = <span class="reserved">this</span>.privateData.node.getCustomBool();
+	
+					<span class="reserved">this</span>.privateData.cacheElement.customInfoset.cacheData.status = <span class="literal">"good"</span>;
+				}
+			}
+			catch(error) { alert(error); }
+
+		} <span class="comment">// end refreshInfoset</span>
+
+		<span class="comment">/**
+			Required.  Returns the cache status of a node data set.
+			<span class="attrib">@param</span> infosetName The name of the Infoset in which to check the cache status		
+		*/</span>
+		csModel.getCacheStatus = <span class="reserved">function</span>( infosetName)
+		{
+			<span class="reserved">if</span>(typeof <span class="reserved">this</span>.privateData.cacheElement == <span class="literal">"undefined"</span>)
+			{
+				<span class="reserved">return</span> <span class="literal">"bad"</span>;
+			}
+
+			<span class="reserved">if</span>(typeof <span class="reserved">this</span>.privateData.cacheElement.infosetName== <span class="literal">"undefined"</span>)
+			{
+				<span class="reserved">var</span> ce = <span class="reserved">this</span>.privateData.cacheElement;
+				<span class="reserved">var</span> info = ce[infosetName];
+				<span class="reserved">var</span> cd = info.cacheData;
+				<span class="reserved">var</span> stat = cd.status;
+				<span class="reserved">return</span> stat;
+			}
+
+			<span class="reserved">return</span> <span class="reserved">this</span>.privateData.cacheElement[infosetName].cacheData.status;
+		}
+		
+		<span class="comment">/**
+			Required.  Acts as a destructor for this instance.  Return 'undefined' from 
+			this method. Any private data structures will be cleaned automatically
+		*/</span>
+		csModel.terminate = <span class="reserved">function</span>()
+		{
+			<span class="reserved">return</span>;
+		}		
+}
+
+<span class="comment">// Include the support classes</span>
+#include SDKSystem.jsx
+#include SDKNode.jsx
+
+<span class="comment">/**
+  "main program": construct an anonymous instance and run it
+*/</span>
+<span class="reserved">if</span>(typeof(CustomSearchExtensionHandler_unitTest) == <span class="literal">"undefined"</span>) {
+	new CustomSearchExtensionHandler().run();
+}</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

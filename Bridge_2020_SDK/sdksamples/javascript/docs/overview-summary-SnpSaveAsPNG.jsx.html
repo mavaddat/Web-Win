@@ -1,0 +1,317 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpSaveAsPNG.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpSaveAsPNG.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to send one or more files from Adobe Bridge CS6 to Adobe Photoshop CS6 to be saved in PNG format.
+  <BR/><BR/>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpSaveAsPNG.html">SnpSaveAsPNG</a></b></td>
+    <td>Shows how to send files from Adobe Bridge CS6 to Adobe Photoshop CS6 to be saved in PNG format.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+  <span class="attrib">@fileoverview</span> Shows how to send one or more files from Adobe Bridge CS6 to Adobe Photoshop CS6 to be saved in PNG format.
+  <span class="attrib">@class</span> Shows how to send files from Adobe Bridge CS6 to Adobe Photoshop CS6 to be saved in PNG format.
+ 
+  &lt;h4&gt;Usage&lt;/h4&gt;
+  &lt;ol&gt;
+  &lt;li&gt; Make sure you have Adobe Bridge CS6 and Adobe Photoshop CS6 running
+  &lt;li&gt; In ExtendScript Toolkit set Target &gt; Bridge CS6
+  &lt;li&gt; In Bridge, select at least one thumbnail representing an image file of a type that you would be able to open with Adobe Photoshop CS6.
+  &lt;li&gt; Run this snippet
+  &lt;li&gt;You should see PNG image files created from the thumbnails you selected, in the same folder. The PNG image filename
+  should begin snp... and match the first part of the image filename originally selected; for example, if you chose image- so if you chose myImage.psd, the
+  output file would be snpmyImage.png.
+  &lt;/ol&gt;
+ 
+   &lt;h4&gt; Description&lt;/h4&gt;
+  Uses interapplication messaging to send files from Bridge to Photoshop to be saved in PNG format.
+  Based on the thumbnail selection in Bridge, creates an array of one or more files,  
+  and passes the serialized array to Photoshop in a BridgeTalk message.  When Photoshop receives 
+  the message, it reconstructs the array and begins processing the files. 
+&lt;p&gt; One or more files can be selected to be saved into PNG format.
+  The script does not run if folders are selected. 
+  If you try to process two files with the same filename (not counting the extension, 
+  such as pic1.gif and pic1.psd), both files are saved as snppic1.png, so that the first
+  to be saved is overwritten by the second.&lt;br /&gt;
+
+  <span class="attrib">@constructor</span> Constructor
+ */</span>
+<span class="reserved">function</span> SnpSaveAsPNG()
+{
+	<span class="comment">/**
+	 The context in which this snippet can run.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tExecute against Bridge main engine.\nAdobe Bridge CS6 and Adobe Photoshop CS6 must be running.\n"</span> 
+		+ <span class="literal">"At least one thumbnail selected that is not a folder."</span>;
+	$.level = 2; <span class="comment">// Debugging level</span>
+}
+
+<span class="comment">/**
+ Functional part of this snippet.  Creates the BridgeTalk message to send to Photoshop.
+ <span class="attrib">@return</span> True if the snippet ran as expected, false otherwise. Returns false if no files are
+ selected in Bridge or Photoshop is not running.
+ <span class="attrib">@type</span> Boolean
+*/</span>
+SnpSaveAsPNG.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun()) {
+		retval = false;	
+		<span class="reserved">return</span> retval;
+	}
+	<span class="comment">// Get the selected thumbnails</span>
+	<span class="reserved">var</span> t = app.document.selections;
+
+	<span class="comment">// Create an array of files</span>
+	<span class="reserved">var</span> files = new Array();
+	<span class="reserved">for</span>(<span class="reserved">var</span> i = 0;i &lt; t.length;i++)
+	{
+		<span class="reserved">if</span>(t[i].spec instanceof File)
+		{
+			files.push(t[i].spec);
+		}
+	}
+	<span class="comment">// Create the message</span>
+	<span class="reserved">if</span>(files.length &gt; 0)
+	{
+		<span class="reserved">var</span> scr = <span class="literal">"$.writeln('SnpSaveAsPNG:: in Photoshop: received file(s)...');"</span>; 
+		<span class="comment">// Serialize the array into a string</span>
+		scr += <span class="literal">"var thumbs = eval("</span> + files.toSource() + <span class="literal">");"</span>  <span class="comment">// must serialize / deserialize objects to be sent  </span>
+		scr += <span class="literal">"for(var i = 0; i &lt; thumbs.length;i++){ "</span>;
+		scr += <span class="literal">"photoshop.open(new File(thumbs[i]));"</span>;
+		scr += <span class="literal">"thePNGFile = new File(thumbs[i].path + '/' + 'snp' + thumbs[i].name);"</span>;
+		scr += <span class="literal">"options = new PNGSaveOptions();"</span>;
+		scr += <span class="literal">"activeDocument.saveAs (thePNGFile ,options , true, Extension.LOWERCASE);"</span>;
+		scr += <span class="literal">"activeDocument.close(SaveOptions.DONOTSAVECHANGES);"</span>;
+		scr += <span class="literal">"$.writeln('SnpSaveAsPNG:: in Photoshop: ' + '  image ' + thumbs[i].fsName + ' saved as a PNG.');"</span>;
+		scr += <span class="literal">"}"</span>;
+
+		<span class="comment">// Create and initialize the message object</span>
+		<span class="reserved">var</span> bt = new BridgeTalk();
+		bt.target = <span class="literal">"photoshop"</span>;
+		bt.body = scr;
+		<span class="comment">// Define message callbacks</span>
+		bt.onError = <span class="reserved">function</span>(eObj){ retval = false; $.writeln(eObj.body); }
+
+		bt.onResult = <span class="reserved">function</span>(obj) 
+		{ 
+			$.writeln(<span class="literal">"SnpSaveAsPNG:: in Bridge: Done (onResult message received)."</span>);
+		}
+		<span class="comment">// Send the message</span>
+		bt.send();
+	}
+	<span class="reserved">else</span>
+	{
+		retval = false;
+	}
+
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+ Determines whether snippet can be run given current context.  The snippet will
+ fail if these preconditions are not met: 
+ &lt;ul&gt;
+ &lt;li&gt; Must run in Bridge
+ &lt;li&gt; Photoshop must be running
+ &lt;li&gt; At least one file must be selected in Bridge
+ &lt;/ul&gt;
+
+ <span class="attrib">@return</span> True if this snippet can run, false otherwise
+ <span class="attrib">@type</span> Boolean
+*/</span>
+SnpSaveAsPNG.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+{	
+	
+	<span class="comment">// Needs to be running in Bridge, Photoshop must be running and at least</span>
+	<span class="comment">// one selection. </span>
+	<span class="reserved">if</span>((BridgeTalk.appName == <span class="literal">"bridge"</span>) &amp;&amp; (BridgeTalk.isRunning(<span class="literal">"photoshop"</span>))
+		&amp;&amp; (app.document.selections.length &gt; 0)) 
+	{
+		<span class="reserved">return</span> true;
+	}
+	<span class="comment">// Fail if these preconditions are not met. Needs to be Bridge</span>
+	<span class="comment">// and there has to be a selection of files only.</span>
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpSaveAsPNG"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+ "main program": construct an anonymous instance and run it
+*/</span>
+new SnpSaveAsPNG().run();
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

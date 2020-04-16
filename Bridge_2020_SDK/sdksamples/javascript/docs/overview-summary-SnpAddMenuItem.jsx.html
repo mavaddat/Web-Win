@@ -1,0 +1,310 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="SnpAddMenuItem.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>SnpAddMenuItem.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		Shows how to add a custom menu element to Bridge.
+   <BR/><BR/><B>See:</B><UL>- <a href="SnpAddContextMenuItem.html#">SnpAddContextMenuItem</a></UL>
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>Class Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="SnpAddMenuItem.html">SnpAddMenuItem</a></b></td>
+    <td>Shows how to add a custom menu element to Bridge.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview"><span class="comment">////////////////////////////////////////////////////////////////////////////</span>
+<span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<span class="comment">// Copyright 2008 Adobe Systems Incorporated</span>
+<span class="comment">// All Rights Reserved</span>
+<span class="comment">//</span>
+<span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this file in accordance with the</span>
+<span class="comment">// terms of the Adobe license agreement accompanying it.  If you have received this file from a</span>
+<span class="comment">// source other than Adobe, then your use, modification, or distribution of it requires the prior</span>
+<span class="comment">// written permission of Adobe.</span>
+<span class="comment">/////////////////////////////////////////////////////////////////////////////</span>
+
+<span class="comment">/** 
+   <span class="attrib">@fileoverview</span> Shows how to add a custom menu element to Bridge.
+   <span class="attrib">@class</span> Shows how to add a custom menu element to Bridge.
+  
+   &lt;h4&gt;Usage&lt;/h4&gt;
+   
+      &lt;ol&gt;
+      &lt;li&gt;Run the snippet in the ExtendScript Toolkit (see Readme.txt)
+      &lt;li&gt;This creates a new context-sensitive menu item.
+      &lt;li&gt; In Bridge, select SnpAddMenu &gt; SnpAddMenuItem
+      &lt;/ol&gt;
+ 
+   &lt;h4&gt;Description&lt;/h4&gt;
+  
+   &lt;p&gt;Shows how to add a custom menu element to Bridge.
+   
+   &lt;p&gt;The script adds a new menu to the menu bar after the Help menu, with one menu item command. 
+   When selected, the command displays a message dialog.
+
+   &lt;p&gt;The script can only be run once within a Bridge session; you must restart Bridge to run it again.
+   This avoids the creation of duplicate menu elements with slightly different behavior.&lt;br /&gt;
+   
+   <span class="attrib">@see</span> SnpAddContextMenuItem
+ 
+  <span class="attrib">@constructor</span> Constructor
+ */</span>
+<span class="reserved">function</span> SnpAddMenuItem()
+{
+	<span class="comment">/**
+	 The context in which this snippet can run; Bridge must be running.
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.requiredContext = <span class="literal">"\tAdobe Bridge must be running.\n\tExecute against Bridge CS6 as the target.\n"</span>;
+	
+	<span class="comment">/**
+	 The unique identifier for the menu 
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.menuID = <span class="literal">"snpAddMenuItem"</span>;
+	
+	<span class="comment">/**
+	 The unique identifier for the menu item command
+	 <span class="attrib">@type</span> String
+	*/</span>
+	<span class="reserved">this</span>.menuCommandID = <span class="literal">"snpAddMenuItemSub"</span>;
+	
+	$.level = 1; <span class="comment">// Debugging level</span>
+}
+
+<span class="comment">/**
+  Functional part of this snippet. 
+
+  Adds the menu and command to Bridge and defines the command behavior 
+  using an event handler for the onSelect event.
+
+  &lt;p&gt;Can only run once in a session. You must restart Bridge to test any change you make in the code.
+
+  <span class="attrib">@return</span> True if the snippet ran as expected, false otherwise.
+  <span class="attrib">@type</span> boolean
+*/</span>
+SnpAddMenuItem.<span class="reserved">prototype</span>.run = <span class="reserved">function</span>()
+{
+	<span class="reserved">var</span> retval = true;
+	<span class="reserved">if</span>(!<span class="reserved">this</span>.canRun()) {
+		retval = false;	
+		<span class="reserved">return</span> retval;
+	}
+
+	<span class="comment">// Create the menu element</span>
+	<span class="reserved">var</span> newMenu = new MenuElement( <span class="literal">"menu"</span>, <span class="literal">"SDK SnpAddMenu"</span>, <span class="literal">"after Help"</span>, <span class="reserved">this</span>.menuID );
+
+	<span class="comment">// Create the menu item</span>
+	<span class="reserved">var</span> alertCommand = new MenuElement( <span class="literal">"command"</span>, <span class="literal">"SDK SnpAddMenu: Item"</span>, <span class="literal">"at the end of "</span> + <span class="reserved">this</span>.menuID, <span class="reserved">this</span>.menuCommandID );
+
+	<span class="comment">// Define the behavior (what happens when the item is selected)</span>
+	alertCommand.onSelect = <span class="reserved">function</span> (m) 
+	{ 
+		<span class="reserved">var</span> txt = m.text;
+		<span class="comment">// Display result as UI, as this is UI sample</span>
+		alert(<span class="literal">"'"</span> + txt + <span class="literal">"' was chosen menu item"</span>);
+	}
+	
+	<span class="reserved">return</span> retval;
+}
+
+<span class="comment">/**
+  Determines whether snippet can be run given current context.  The snippet 
+  fails if these preconditions are not met:
+  &lt;ul&gt;
+  &lt;li&gt; Must be running in Bridge
+  &lt;li&gt; Must only be executed once in a session
+  &lt;/ul&gt;
+ 
+  <span class="attrib">@return</span> True if this snippet can run, false otherwise
+  <span class="attrib">@type</span> boolean
+*/</span>
+SnpAddMenuItem.<span class="reserved">prototype</span>.canRun = <span class="reserved">function</span>()
+{	
+	<span class="comment">// Must run in Bridge </span>
+	<span class="reserved">if</span>(BridgeTalk.appName == <span class="literal">"bridge"</span>) {
+	
+		<span class="comment">// Stop the menu element from being added again if the snippet has already run</span>
+		<span class="reserved">if</span>((MenuElement.find(<span class="reserved">this</span>.menuID)) &amp;&amp; (MenuElement.find(<span class="reserved">this</span>.menuCommandID)))
+		{
+			$.writeln(<span class="literal">"Error:Menu element already exists!\nRestart Bridge to run this snippet again."</span>);
+			<span class="reserved">return</span> false;
+		}
+	
+		<span class="reserved">return</span> true;
+	}
+	
+	<span class="comment">// Fail if these preconditions are not met.  </span>
+	<span class="comment">// Bridge must be running,</span>
+	<span class="comment">// The menu must not already exist.</span>
+	$.writeln(<span class="literal">"ERROR:: Cannot run SnpAddMenuItem"</span>);
+	$.writeln(<span class="reserved">this</span>.requiredContext);
+	<span class="reserved">return</span> false;
+}
+
+<span class="comment">/**
+  "main program": construct an anonymous instance and run it,
+  as long as we are not unit-testing this snippet.
+*/</span>
+<span class="reserved">if</span>(typeof(SnpAddMenuItem_unitTest ) == <span class="literal">"undefined"</span>) {
+	new SnpAddMenuItem().run();
+}
+
+</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

@@ -168,8 +168,8 @@ if (BridgeTalk.appName == "bridge" )	 {
 	LT_FileCollector.SEARCH_LIMIT_PER_TASK = 250;
 	
 	// Collectable files
-	LT_FileCollector.COLLECTABLE_EXTENSIONS = ["bmp", "gif", "giff", "jpeg", "jpg", "pct", "pic", "psd", "png", "tif", "tiff"];
-	LT_FileCollector.COLLECTABLE_FILETYPES = ["BMP ", "GIFf", "JPEG", "PICT", "8BIM", "8BPS", "PNGf", "TIFF"]; 
+	LT_FileCollector.COLLECTABLE_EXTENSIONS = ["bmp", "gif", "giff", "jpeg", "jpg", "pct", "pdf", "pic", "psd", "png", "tif", "tiff"];
+	LT_FileCollector.COLLECTABLE_FILETYPES = ["BMP ", "GIFf", "JPEG", "PICT", "8BIM", "8BPS", "PDF", "PNGf", "TIFF"]; 
 			
 	/** Starts file collection.
 		@param callbackOnStop function to be called when search completes

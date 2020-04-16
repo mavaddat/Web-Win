@@ -1,0 +1,32 @@
+<html>
+<head>
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Bridge UI/HTML Intergration</title>
+</head>
+
+<body>
+For File: <input type="text" name="fname" size="65" value="" /><br /><br />
+
+<input type="button" title="Get File Info" name="go" value="Get File Info"
+	onclick="var ret = call('getFileInfo', window.fname.value); var info = eval(ret);
+						window.thename.value = info.name;
+						window.created.value = info.created;
+						window.path.value = info.path;
+						var h = document.getElementById('hiddenField');
+						if(info.def){ h.style.visibility = 'visible';} else { h.style.visibility = 'hidden'; } " />
+
+<br /><br />
+
+<div id="hiddenField" style="visibility: hidden;">
+File does not exist! Using default file.
+</div>
+
+<br />
+Filename: <input type="text" title="The name" name="thename" size="70" />
+<br /><br />
+Created On: <input type="text" title="created" name="created" size="70" />
+<br /><br />
+Location: <input type="text" title="path" name="path" size="70" />
+<br /><br />
+</BODY>
+</HTML>

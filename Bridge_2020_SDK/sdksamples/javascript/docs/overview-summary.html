@@ -1,0 +1,541 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+AdobeBridgeCS6SDK Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="AdobeBridgeCS6SDK Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>Overview</b></font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1"> <font class="NavBarFont1">File</font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>AdobeBridgeCS6SDK</h2>
+	
+</center>
+
+	
+		<p>
+			This document is the API Specification for 
+			AdobeBridgeCS6SDK.
+		</p>
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		This is documentation for the JavaScript sample code in the Adobe Bridge CS6 SDK.
+All the sample code contained within the SDK should be run from the ExtendScript Toolkit (ESTK) CS6.
+
+The sample code can be divided into two main categories:
+<p>
+
+1. Code snippets, which are fragments of scripting code demonstrating an API call or small set of API calls.
+These cover topics such as:
+<ul>
+<li>Using ScriptUI to create user interfaces from scripting; these code snippets 
+can be run with ExtendScript Toolkit as the target, without Bridge launched.</li>
+<li>Using the Bridge scripting API to create Bridge-specific user interface components. 
+For instance, contributing panelettes to the Inspector panel.</li>
+<li>Exploring the Bridge scripting API that goes beyond creating Bridge-specific UI; for instance, 
+working with XMP-based metadata.</li>
+</ul>
+
+2. More elaborate samples, which are typically longer scripts demonstrating extensibility. 
+These samples cover topics such as:
+<ul>
+<li>How to extend the node-handling behaviour of Adobe Bridge CS6. </li>
+<li>Communicating with other systems, for instance, via FTP or email.</li>
+</ul>
+
+<h4>Running the Snippets</h4>
+Snippets can be found in JavaScript (.jsx) files, where the filename begins with "Snp". Samples have names that describe
+the intent of the sample. Almost all JavaScript files can be executed directly in the ESTK, with the exception
+of some helper JavaScript files (for instance, SDKNode.jsx, SDKSystem.jsx)
+
+The snippets contain instructional comments that explain how to run the snippet and what, if any, additional context needs to
+be set up for the snippet to run correctly.
+To run a snippet, we recommend you perform the following steps:
+<ol>
+<li>Start Adobe Bridge CS6.
+<li>Start ExtendScript Toolkit CS6.
+<li>From ExtendScript Toolkit, open the .jsx file that you want to run.
+<li>In the "targets" drop-down list, select Bridge CS6 / Main Engine.
+<li>Check the documentation for the snippet you want to run to find the preconditions it requires; 
+for instance, some snippets or samples require you to select one or more thumbnails in Bridge of a particular
+kind before running the code.
+<li>Return to the ExtendScript Toolkit and run the snippet 
+    using the Run button (rightward-pointing triangle) above the editor
+    window.
+</ol>
+
+<h4>Running the Samples</h4>
+Samples can be found in JavaScript (.jsx) files; one sample file may contain several JavaScript classes.  
+Samples are run in the same manner as the snippets, from within the ExtendScript Toolkit.  
+Check the documentation within each sample for any preconditions that may be required in order to run the sample successfully.
+
+<h4>About the Snippets and Samples</h4>
+The snippets and samples are intended as instructional code.  
+Most debug information and feedback from the snippets is via the JavaScript console 
+in the ExtendScript Toolkit. Unless it is their main purpose or essential to their operations, 
+the snippets avoid creating user interface elements in Adobe Bridge CS6, 
+to keep the code as straightforward as possible.
+<p>
+Most of the snippets have two methods in common, <span class="reserved">canRun()</span> and <span class="reserved">run()</span>.  
+The <span class="reserved">run()</span> methods contain
+most of the functional code. The <span class="reserved">canRun()</span> method checks if the correct context has been setup for the snippet to run, for example that Bridge is actually running.  Some snippets do not contain a <span class="reserved">canRun()</span> as they can always be run regardless of whether the target is ExtendScript Toolkit or Adobe Bridge CS6.  If a snippet has run and the result is not as expected then check the JavaScript console in the ESTK.
+
+<p>The source code for all snippets and samples can also be found within these pages.  
+<p>
+<hr>
+<table border="1" cellpadding="3" cellspacing="0" width="100%">
+    	<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    		<td colspan=2><font size="+2">
+  		  	<b>Snippets Broken down by Area</b></font>
+    
+ 		</td>
+    	</tr>
+
+
+	<tr>
+		<td width="15%">Bridge API</td>
+		<td>
+<a href="SnpAddPreferencesPanel.html">SnpAddPreferencesPanel</a>
+<a href="SnpDefineAppClosingHandler.html">SnpDefineAppClosingHandler</a>
+<a href="SnpInspectMetadata.html">SnpInspectMetadata</a>
+<a href="SnpLoadSavedWorkspace.html">SnpLoadSavedWorkspace</a>
+<a href="SnpListenDocEvents.html">SnpListenDocEvents</a>
+<a href="SnpModifyMetadata.html">SnpModifyMetadata</a>
+<a href="SnpRotateImage.html">SnpRotateImage</a>
+<a href="SnpSaveAsJPEG.html">SnpSaveAsJPEG</a>
+<a href="SnpScheduleTask.html">SnpScheduleTask</a>
+		</td>
+	</tr>
+
+
+
+	<tr>
+		<td width="15%">Bridge UI</td>
+		<td>
+<a href="FlashDemo.html">FlashDemo</a>
+<a href="SnpAddContextMenuItem.html">SnpAddContextMenuItem</a> <a href="SnpAddMenuItem.html">SnpAddMenuItem</a>
+<a href="SnpAddScriptUINavBar.html">SnpAddScriptUINavBar</a>
+<a href="SnpCreateFlashControl.html">SnpCreateFlashControl</a>
+<a href="SnpCreateIconInspectorPanel.html">SnpCreateIconInspectorPanel</a>
+<a href="SnpCreateTabbedPaletteScriptUI.html">SnpCreateTabbedPaletteScriptUI</a>
+<a href="SnpCreateTextInspectorPanel.html">SnpCreateTextInspectorPanel</a>
+<a href="SnpCreateThumbInspectorPanel.html">SnpCreateThumbInspectorPanel</a>
+<a href="SnpCreateWebTabbedPalette.html">SnpCreateWebTabbedPalette</a>
+<a href="SnpLoadSavedWorkspace.html">SnpLoadSavedWorkspace</a>
+
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width="15%">Script UI</td>
+		<td>
+<a href="AlertBoxBuilder1.html">AlertBoxBuilder1</a>
+<a href="AlertBoxBuilder2.html">AlertBoxBuilder2</a>
+<a href="ColorSelector.html">ColorSelector</a>
+<a href="FlashDemo.html">FlashDemo</a>
+<a href="SnpAddScriptUINavBar.html">SnpAddScriptUINavBar</a>
+<a href="SnpCreateCheckBoxRadioButtons.html">SnpCreateCheckBoxRadioButtons</a>
+<a href="SnpCreateDialog.html">SnpCreateDialog</a>
+<a href="SnpCreateDynamicScriptUI.html">SnpCreateDynamicScriptUI</a>
+<a href="SnpCreateFlashControl.html">SnpCreateFlashControl</a>
+<a href="SnpCreateProgressBar.html">SnpCreateProgressBar</a>
+<a href="SnpCreateSlider.html">SnpCreateSlider</a>
+<a href="SnpCreateTabbedPaletteScriptUI.html">SnpCreateTabbedPaletteScriptUI</a>
+<a href="SnpCreateTreeView.html">SnpCreateTreeView</a>
+<a href="SnpCreateUIAddMethod.html">SnpCreateUIAddMethod</a>
+<a href="SnpCreateUIResourceSpec.html">SnpCreateUIResourceSpec</a>
+<a href="SnpCustomLayoutManager.html">SnpCustomLayoutManager</a>
+
+
+		</td>
+	</tr>
+
+
+	<tr>
+		<td width="15%">Node Extensibility</td>
+		<td>
+<a href="BasicExtensionHandler.html">BasicExtensionHandler</a>
+<a href="CustomInfosetExtensionHandler.html">CustomInfosetExtensionHandler</a>
+<a href="CustomSearchExtensionHandler.html">CustomSearchExtensionHandler</a>
+<a href="SDKNode.html">SDKNode</a>
+<a href="SDKSystem.html">SDKSystem</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td width="15%">Inter-Application Communication</td>
+		<td>
+<a href="SnpOpenInPhotoshop.html">SnpOpenInPhotoshop</a> <a href="SnpSaveAsPNG.html">SnpSaveAsPNG</a>
+<a href="SnpSendArray.html">SnpSendArray</a>
+<a href="SnpSendCustomObject.html">SnpSendCustomObject</a>
+<a href="SnpSendDOMObject.html">SnpSendDOMObject</a>
+<a href="SnpSendMessage.html">SnpSendMessage</a>
+<a href="SnpSendMessageToInDesign.html">SnpSendMessageToInDesign</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td width="15%">External Communication</td>
+		<td>
+<a href="AsynchronousFtp.html">AsynchronousFtp</a>
+<a href="BackgroundEmailer.html">BackgroundEmailer</a>
+<a href="BasicEmailer.html">BasicEmailer</a>
+<a href="BasicFTP.html">BasicFTP</a>
+
+		</td>
+	</tr>
+	
+
+</table>
+
+	
+</p>
+
+<hr>
+
+
+    <table border="1" cellpadding="3" cellspacing="0" width="100%">
+    <tr bgcolor="#CCCCFF" class="TableHeadingColor">
+    <td colspan=2><font size="+2">
+    
+        <b>File Summary</b>
+    
+    </font></td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-AsynchronousFTP.jsx.html">AsynchronousFTP.jsx</a></b></td>
+    <td>Sample that shows hows to upload files asynchronously from Adobe Bridge to an FTP server; to run this, you must modify the code and supply FTP settings to access your own FTP server.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-BackgroundEmailer.jsx.html">BackgroundEmailer.jsx</a></b></td>
+    <td>Sample using the Socket object to send email with attachments as a background (scheduled) task.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-BasicEmailer.jsx.html">BasicEmailer.jsx</a></b></td>
+    <td>Shows how to use the Socket object to send emails with attachments from Bridge.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-BasicExtensionHandler.jsx.html">BasicExtensionHandler.jsx</a></b></td>
+    <td>Demonstrates a basic implementation of a node-handling extension, in which the model is read-only.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-BasicFTP.jsx.html">BasicFTP.jsx</a></b></td>
+    <td>Shows how to upload and download files to and from an FTP server.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-CustomInfosetExtensionHandler.jsx.html">CustomInfosetExtensionHandler.jsx</a></b></td>
+    <td>Demonstrates a basic implementation of a node-handling extension with a custom Infoset.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-CustomSearchExtensionHandler.jsx.html">CustomSearchExtensionHandler.jsx</a></b></td>
+    <td>Demonstrates how to implement a custom node search with a node-handling extension.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-CustomSortExtensionHandler.jsx.html">CustomSortExtensionHandler.jsx</a></b></td>
+    <td>Demonstrates how to implement a custom sorting and filters with a node-handling extension.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-FlashDemo.jsx.html">FlashDemo.jsx</a></b></td>
+    <td>Shows how to communicate with a ScriptUI FlashPlayer in Adobe Bridge using ActionScript
+  </td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-FlashExportToJpeg.jsx.html">FlashExportToJpeg.jsx</a></b></td>
+    <td>Sample that shows a Flash Palette in Bridge that exports the current items selected in Bridge to JPEG files.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SDKNode.jsx.html">SDKNode.jsx</a></b></td>
+    <td>Supporting class; backing node for extension handling samples.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SDKSystem.jsx.html">SDKSystem.jsx</a></b></td>
+    <td>Supporting class; manages the backing nodes used for extension handling samples.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpAddContextMenuItem.jsx.html">SnpAddContextMenuItem.jsx</a></b></td>
+    <td>Shows how to add a custom menu element to a context menu in Bridge.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpAddMenuItem.jsx.html">SnpAddMenuItem.jsx</a></b></td>
+    <td>Shows how to add a custom menu element to Bridge.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpAddPreferencesPanel.jsx.html">SnpAddPreferencesPanel.jsx</a></b></td>
+    <td>Shows how to add a custom option to the Preferences dialog.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpAddScriptUINavBar.jsx.html">SnpAddScriptUINavBar.jsx</a></b></td>
+    <td>Shows how to display ScriptUI components in the bottom navigation bar.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpCreateFlashControl.jsx.html">SnpCreateFlashControl.jsx</a></b></td>
+    <td>Shows how to load and run a Flash movie in Bridge using the ScriptUI FlashPlayer.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpCreateIconInspectorPanel.jsx.html">SnpCreateIconInspectorPanel.jsx</a></b></td>
+    <td>Shows how to create and display an object-inspector panel  using the InpsectorPanel object, 
+                with an icon-list-type subpanel, an IconListPanelette object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpCreateTabbedPaletteScriptUI.jsx.html">SnpCreateTabbedPaletteScriptUI.jsx</a></b></td>
+    <td>Shows how to create a TabbedPalette in Bridge with ScriptUI components.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpCreateTextInspectorPanel.jsx.html">SnpCreateTextInspectorPanel.jsx</a></b></td>
+    <td>Shows how to create and display an object-inspector panel  using the InpsectorPanel object, 
+         with a text-type subpanel, a TextPanelette object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpCreateThumbInspectorPanel.jsx.html">SnpCreateThumbInspectorPanel.jsx</a></b></td>
+    <td>Shows how to create and display an object-inspector panel using the InpsectorPanel object, 
+     with a thumbnail-type subpanel, a ThumbnailPanelette object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpCreateWebTabbedPalette.jsx.html">SnpCreateWebTabbedPalette.jsx</a></b></td>
+    <td>Shows how to create a TabbedPalette that shows a Web page.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpDefineAppClosingHandler.jsx.html">SnpDefineAppClosingHandler.jsx</a></b></td>
+    <td>Shows how to create an event handler that responds to the application close event.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpInspectMetadata.jsx.html">SnpInspectMetadata.jsx</a></b></td>
+    <td>Shows how to acquire metadata for a selected thumbnail using XMP external object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpListenDocEvents.jsx.html">SnpListenDocEvents.jsx</a></b></td>
+    <td>Shows how to create separate event handlers for different events.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpLoadSavedWorkspace.jsx.html">SnpLoadSavedWorkspace.jsx</a></b></td>
+    <td>Shows how to load a previously saved workspace, which you have copied to
+ the appropriate location for saved workspaces.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpModifyMetadata.jsx.html">SnpModifyMetadata.jsx</a></b></td>
+    <td>Shows how to acquire and update metadata for a selected thumbnail using XMP external object.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpMoveTabbedPalette.jsx.html">SnpMoveTabbedPalette.jsx</a></b></td>
+    <td>Shows how to place a TabbedPalette in Bridge in a custom location via scripting.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpOpenInPhotoshop.jsx.html">SnpOpenInPhotoshop.jsx</a></b></td>
+    <td>Shows how to use the cross-DOM to open a file selected in Bridge 
+   	in another Adobe application.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpRotateImage.jsx.html">SnpRotateImage.jsx</a></b></td>
+    <td>Shows how to use a BitmapData object to create and rotate images.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSaveAsJPEG.jsx.html">SnpSaveAsJPEG.jsx</a></b></td>
+    <td>Shows how to save multiple files as JPEG images using BitmapData.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSaveAsPNG.jsx.html">SnpSaveAsPNG.jsx</a></b></td>
+    <td>Shows how to send one or more files from Adobe Bridge CS6 to Adobe Photoshop CS6 to be saved in PNG format.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpScheduleTask.jsx.html">SnpScheduleTask.jsx</a></b></td>
+    <td>Shows how to schedule a task in Bridge.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSendArray.jsx.html">SnpSendArray.jsx</a></b></td>
+    <td>Shows how to pass an array from Adobe Photoshop CS6 to Bridge CS6
+  	in response to a BridgeTalk message.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSendCustomObject.jsx.html">SnpSendCustomObject.jsx</a></b></td>
+    <td>Shows how to pass a custom JavaScript object from Adobe Bridge CS6 to another
+  	application (Adobe Photoshop CS6) in a BridgeTalk message, and pass it back in a response.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSendDOMObject.jsx.html">SnpSendDOMObject.jsx</a></b></td>
+    <td>Shows how to pass a scripting DOM object from Adobe Photoshop CS6 to Bridge CS6
+  	in a BridgeTalk message.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSendMessage.jsx.html">SnpSendMessage.jsx</a></b></td>
+    <td>Demonstrates basic cross-application communication using BridgeTalk messages, between Bridge CS6 and Photoshop CS6.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpSendMessageToInDesign.jsx.html">SnpSendMessageToInDesign.jsx</a></b></td>
+    <td>Demonstrates basic cross-application communication using BridgeTalk messages, communicating between Bridge CS6 and InDesign CS6.</td>
+    </tr>
+    
+    <tr bgcolor="white" class="TableRowColor">
+    <td width="15%"><b><a href="overview-summary-SnpTemplate.jsx.html">SnpTemplate.jsx</a></b></td>
+    <td>The template for writing snippets.</td>
+    </tr>
+    
+    </table>
+    <hr/> 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev"> &nbsp;<font class="NavBarFont1Rev"><b>Overview</b></font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1"> <font class="NavBarFont1">File</font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b>AdobeBridgeCS6SDK</b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+http://www.adobe.com/devnet/bridge
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Mon Jun 18 17:15:34 2012</div>
+</body>
+</html>

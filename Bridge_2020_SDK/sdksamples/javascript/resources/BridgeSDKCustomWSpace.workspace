@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<workspace name='BridgeSDKCustomWSpace' version='201' visible='true' thumbsize='72' mode='thumbnail' scroll='auto'>
+	<show thumbsOnly='false' hidden='false' reject='true' folders='true' />
+	<sort order='name' reversed='false' />
+	<bounds top='41' left='1275' right='2551' bottom='967' maximized='false' />
+
+	<hubset width='0.1731974929571' visible='true' position='0'>
+		<hub height='0.3452088534832'>
+			<tab name='favoritesTab' selected='false' />
+			<tab name='foldersTab' selected='true' />
+		</hub>
+		<hub height='0.6068795919418'>
+			<tab name='filterTab' selected='true' />
+		</hub>
+	</hubset>
+
+	<hubset width='0' visible='true' position='1'>
+		<hub height='0.9803439974785'>
+			<tab name='contentTab' selected='false' />
+			<tab name='SnpLoadSavedWorkspacePalette' selected='true' />
+		</hub>
+	</hubset>
+
+	<hubset width='0.7931034564972' visible='true' position='2'>
+		<hub height='0.3808353841305'>
+			<tab name='cinemaPreviewTab' selected='true' />
+		</hub>
+		<hub height='0.5712530612946'>
+			<tab name='metadataTab' selected='true' />
+			<tab name='keywordsTab' selected='false' />
+		</hub>
+	</hubset>
+
+</workspace>
