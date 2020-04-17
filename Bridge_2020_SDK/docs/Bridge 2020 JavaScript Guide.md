@@ -2961,7 +2961,7 @@ Defining an ExtensionModel
 | Adds this model object to the                 |                     |
 | platform-specific drag object.                |                     |
 +-----------------------------------------------+---------------------+
-| **authenticate** ()                           | > undefined         |
+| **authenticate**()                           | > undefined         |
 |                                               |                     |
 | Required. Handles any required authentication |                     |
 | for this node.                                |                     |
@@ -2986,7 +2986,7 @@ Defining an ExtensionModel
 | Returns false if the operation cannot be      |                     |
 | performed on this node.                       |                     |
 +-----------------------------------------------+---------------------+
-| **exists** ()                                 | > Boolean           |
+| **exists**()                                 | > Boolean           |
 |                                               |                     |
 | Required. Reports whether this node is valid  |                     |
 | according to this model.                      |                     |
@@ -3005,7 +3005,7 @@ Defining an ExtensionModel
 |                                               |                     |
 | Retrieves a display name for this node.       |                     |
 +-----------------------------------------------+---------------------+
-| **getFilterCriteria** ()                      | > Array of          |
+| **getFilterCriteria**()                      | > Array of          |
 |                                               | >                   |
 | Creates the full set of filter criteria that  | > FilterDescription |
 | can be applied to this container node. These  |                     |
@@ -3013,12 +3013,12 @@ Defining an ExtensionModel
 | Adobe Bridge displays the contents of this    |                     |
 | container.                                    |                     |
 +-----------------------------------------------+---------------------+
-| **getParent** ()                              | > String            |
+| **getParent**()                              | > String            |
 |                                               |                     |
 | Returns the Bridge URI of the parent node of  |                     |
 | this node.                                    |                     |
 +-----------------------------------------------+---------------------+
-| **getPhysicalName** ()                        | > String            |
+| **getPhysicalName**()                        | > String            |
 |                                               |                     |
 | Returns the complete file name of this node.  |                     |
 +-----------------------------------------------+---------------------+
@@ -3026,13 +3026,13 @@ Defining an ExtensionModel
 +-------------------------------------------+-------------------------+
 | **Method**                                | > **Return type**       |
 +===========================================+=========================+
-| **getSearchDefinition** ()                | > SearchDefinition      |
+| **getSearchDefinition**()                | > SearchDefinition      |
 |                                           |                         |
 | Creates a search definition with which to |                         |
 | populate the Find dialog when it is       |                         |
 | invoked for this node.                    |                         |
 +-------------------------------------------+-------------------------+
-| **getSearchDetails** ()                   | > SearchDetails         |
+| **getSearchDetails**()                   | > SearchDetails         |
 |                                           |                         |
 | Retrieves or recreates the search         |                         |
 | specification and target node that were   |                         |
@@ -3042,7 +3042,7 @@ Defining an ExtensionModel
 | ExtensionHandler.getBridgeURIForSearch()  |                         |
 | method.                                   |                         |
 +-------------------------------------------+-------------------------+
-| **getSortCriteria** ()                    | > Array of SortCriteria |
+| **getSortCriteria**()                    | > Array of SortCriteria |
 |                                           |                         |
 | Creates the full set of sorting criteria  |                         |
 | for member nodes of this container node.  |                         |
@@ -3052,7 +3052,7 @@ Defining an ExtensionModel
 | or append criteria, or return the set     |                         |
 | unchanged.                                |                         |
 +-------------------------------------------+-------------------------+
-| **getUserSortOrder** ()                   | > String                |
+| **getUserSortOrder**()                   | > String                |
 |                                           |                         |
 | Retrieves the opaque XML code             |                         |
 | representing a user-defined sorting order |                         |
@@ -3060,7 +3060,7 @@ Defining an ExtensionModel
 | model, as previously saved by the         |                         |
 | setUserSortOrder() method.                |                         |
 +-------------------------------------------+-------------------------+
-| **initialize** ()                         | > undefined             |
+| **initialize**()                         | > undefined             |
 |                                           |                         |
 | Required. A constructor for the model     |                         |
 | instance for this node. Creates any       |                         |
@@ -3073,12 +3073,12 @@ Defining an ExtensionModel
 | Adobe Bridge needs to display a handled   |                         |
 | node.                                     |                         |
 +-------------------------------------------+-------------------------+
-| **lock ()**                               | > Boolean               |
+| **lock()**                               | > Boolean               |
 |                                           |                         |
 | Makes the file associated with this node  |                         |
 | read-only.                                |                         |
 +-------------------------------------------+-------------------------+
-| **needAuthentication** ()                 | > Boolean               |
+| **needAuthentication**()                 | > Boolean               |
 |                                           |                         |
 | Reports whether this node requires        |                         |
 | authentication.                           |                         |
@@ -3169,7 +3169,7 @@ Defining an ExtensionModel
 +-------------------------------------------------+-------------------+
 | **Method**                                      | > **Return type** |
 +=================================================+===================+
-| **terminate** ()                                | > undefined       |
+| **terminate**()                                | > undefined       |
 |                                                 |                   |
 | Required. A destructor for the model instance.  |                   |
 |                                                 |                   |
@@ -3184,7 +3184,7 @@ Defining an ExtensionModel
 |     > which is normally handled by the          |                   |
 |     > JavaScript garbage collector.             |                   |
 +-------------------------------------------------+-------------------+
-| **unlock** ()                                   | > Boolean         |
+| **unlock**()                                   | > Boolean         |
 |                                                 |                   |
 | Makes the file associated with this node        |                   |
 | read-write.                                     |                   |
@@ -3198,13 +3198,13 @@ Defining an ExtensionModel
 | reference to the cache object, typically in the |                   |
 | model's privateData property.                   |                   |
 +-------------------------------------------------+-------------------+
-| **unregisterStructuralInterest** ()             | > undefined       |
+| **unregisterStructuralInterest**()             | > undefined       |
 |                                                 |                   |
 | Removes the instruction to update the           |                   |
 | associated cache when changes occur in children |                   |
 | of a displayed node.                            |                   |
 +-------------------------------------------------+-------------------+
-| **verifyExternalChanges** ()                    | > undefined       |
+| **verifyExternalChanges**()                    | > undefined       |
 |                                                 |                   |
 | Called when the user attempts to view data in   |                   |
 | this model\'s children core data set, and its   |                   |
@@ -3513,7 +3513,7 @@ Defining Long-Running Operations
 +----------------------------------------+----------------------------+
 | **Method**                             | > **Return type**          |
 +========================================+============================+
-| **getConflictInfo** ()                 | > String                   |
+| **getConflictInfo**()                 | > String                   |
 |                                        |                            |
 | Returns a description of a file-system |                            |
 | conflict that prevents the operation   |                            |
@@ -3522,19 +3522,19 @@ Defining Long-Running Operations
 | suitable for display in a              |                            |
 | conflict-resolution dialog.            |                            |
 +----------------------------------------+----------------------------+
-| **getPercentageComplete** ()           | > Number \[0..100\]        |
+| **getPercentageComplete**()           | > Number \[0..100\]        |
 |                                        |                            |
 | Returns the percentage of the          |                            |
 | operation that has currently been      |                            |
 | completed. Used in displaying the      |                            |
 | Progress dialog.                       |                            |
 +----------------------------------------+----------------------------+
-| **getProcessedNodeCount** ()           | > Number                   |
+| **getProcessedNodeCount**()           | > Number                   |
 |                                        |                            |
 | Returns the number of source nodes     |                            |
 | that have been processed so far.       |                            |
 +----------------------------------------+----------------------------+
-| **getProcessingStatus** ()             | > String, one of:          |
+| **getProcessingStatus**()             | > String, one of:          |
 +----------------------------------------+----------------------------+
 | Returns the current overall status of  | > notStarted inProgress    |
 | the operation with respect to Adobe    |                            |
@@ -3543,7 +3543,7 @@ Defining Long-Running Operations
 +----------------------------------------+----------------------------+
 | paused by the user, or has finished.   | > awaitingResume completed |
 +----------------------------------------+----------------------------+
-| **getProgressMessage** ()              | > String                   |
+| **getProgressMessage**()              | > String                   |
 |                                        |                            |
 | Returns a message suitable for display |                            |
 | in the Progress dialog.                |                            |
@@ -3552,24 +3552,24 @@ Defining Long-Running Operations
 +----------------------------------+----------------------------------+
 | **Method**                       | > **Return type**                |
 +==================================+==================================+
-| **getTotalBytesTransferred** ()  | > Number                         |
+| **getTotalBytesTransferred**()  | > Number                         |
 |                                  |                                  |
 | Returns the current number of    |                                  |
 | bytes that have been transferred |                                  |
 | to the target in the course of   |                                  |
 | this operation.                  |                                  |
 +----------------------------------+----------------------------------+
-| **getTotalNodeCount** ()         | > Number                         |
+| **getTotalNodeCount**()         | > Number                         |
 |                                  |                                  |
 | Returns the total number of      |                                  |
 | source nodes to be operated on.  |                                  |
 +----------------------------------+----------------------------------+
-| **getType** ()                   | > String, one of:                |
+| **getType**()                   | > String, one of:                |
 |                                  | >                                |
 | Returns the subclass type of     | > modal progress                 |
 | this operator.                   |                                  |
 +----------------------------------+----------------------------------+
-| **resume** ()                    | > Boolean, true if the operation |
+| **resume**()                    | > Boolean, true if the operation |
 |                                  | > can be resumed.                |
 | Sets up the operator to resume   |                                  |
 | execution after it has been      |                                  |
@@ -3593,14 +3593,14 @@ Defining Long-Running Operations
 | conflicts' onpage |                                  |
 | 56](#resolving-conflicts). |                                  |
 +----------------------------------+----------------------------------+
-| **start** ()                     | > undefined                      |
+| **start**()                     | > undefined                      |
 |                                  |                                  |
 | > Begins execution of the        |                                  |
 | > operation after Adobe Bridge   |                                  |
 | > enqueues it, following a call  |                                  |
 | > to app.enqueueOperation().     |                                  |
 +----------------------------------+----------------------------------+
-| **stop** ()                      | > undefined                      |
+| **stop**()                      | > undefined                      |
 |                                  |                                  |
 | Halts execution of the operation |                                  |
 | when the operator is stopped by  |                                  |
